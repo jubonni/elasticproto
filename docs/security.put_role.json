@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.633270",
         "api_name": "security.put_role",
         "stability": "stable",
         "visibility": "public",

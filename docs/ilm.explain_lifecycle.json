@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.329272",
         "api_name": "ilm.explain_lifecycle",
         "stability": "stable",
         "visibility": "public",

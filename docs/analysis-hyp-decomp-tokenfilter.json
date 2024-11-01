@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.422288",
         "size": 5238,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-hyp-decomp-tokenfilter.html",
         "type": "documentation",

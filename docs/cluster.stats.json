@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.247286",
         "api_name": "cluster.stats",
         "stability": "stable",
         "visibility": "public",

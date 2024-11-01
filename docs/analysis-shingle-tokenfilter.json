@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:10.238272",
         "size": 11091,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-shingle-tokenfilter.html",
         "type": "documentation",

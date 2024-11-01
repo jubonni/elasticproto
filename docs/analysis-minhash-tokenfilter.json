@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.674271",
         "size": 6908,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-minhash-tokenfilter.html",
         "type": "documentation",

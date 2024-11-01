@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.510272",
         "api_name": "ml.update_filter",
         "stability": "stable",
         "visibility": "public",

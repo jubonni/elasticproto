@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.600272",
         "api_name": "security.delete_role",
         "stability": "stable",
         "visibility": "public",

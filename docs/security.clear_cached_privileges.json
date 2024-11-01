@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.592273",
         "api_name": "security.clear_cached_privileges",
         "stability": "stable",
         "visibility": "public",

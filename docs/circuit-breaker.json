@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:08.849275",
         "size": 9906,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/circuit-breaker.html",
         "type": "documentation",

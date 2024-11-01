@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.631274",
         "api_name": "security.oidc_prepare_authentication",
         "stability": "stable",
         "visibility": "public",

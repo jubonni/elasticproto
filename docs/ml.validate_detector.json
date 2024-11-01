@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.516271",
         "api_name": "ml.validate_detector",
         "stability": "stable",
         "visibility": "private",

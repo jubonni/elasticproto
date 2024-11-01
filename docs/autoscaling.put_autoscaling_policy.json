@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.183271",
         "api_name": "autoscaling.put_autoscaling_policy",
         "stability": "stable",
         "visibility": "private",

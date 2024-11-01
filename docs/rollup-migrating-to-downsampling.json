@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.666272",
         "size": 4346,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rollup-migrating-to-downsampling.html",
         "type": "documentation",

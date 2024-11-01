@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.277286",
         "api_name": "connector.update_native",
         "stability": "experimental",
         "visibility": "public",

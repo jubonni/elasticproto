@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.559276",
         "api_name": "rollup.stop_job",
         "stability": "experimental",
         "visibility": "public",

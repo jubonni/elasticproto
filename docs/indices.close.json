@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.345272",
         "api_name": "indices.close",
         "stability": "stable",
         "visibility": "public",

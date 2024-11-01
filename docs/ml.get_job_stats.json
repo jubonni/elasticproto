@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.474270",
         "api_name": "ml.get_job_stats",
         "stability": "stable",
         "visibility": "public",

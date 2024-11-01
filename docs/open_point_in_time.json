@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.530272",
         "api_name": "open_point_in_time",
         "stability": "stable",
         "visibility": "public",

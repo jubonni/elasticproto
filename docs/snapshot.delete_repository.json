@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.675273",
         "api_name": "snapshot.delete_repository",
         "stability": "stable",
         "visibility": "public",

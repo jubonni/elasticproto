@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:10.297271",
         "size": 853,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-span-term-query.html",
         "type": "documentation",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.122286",
         "size": 11346,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/disk-based-shard-allocation.html",
         "type": "documentation",

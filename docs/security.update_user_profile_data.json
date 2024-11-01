@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.649281",
         "api_name": "security.update_user_profile_data",
         "stability": "stable",
         "visibility": "private",

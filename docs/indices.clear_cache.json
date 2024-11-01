@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.343277",
         "api_name": "indices.clear_cache",
         "stability": "stable",
         "visibility": "public",

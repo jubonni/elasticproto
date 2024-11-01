@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.420274",
         "api_name": "ingest.get_geoip_database",
         "stability": "stable",
         "visibility": "public",

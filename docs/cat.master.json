@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.196281",
         "api_name": "cat.master",
         "stability": "stable",
         "visibility": "public",

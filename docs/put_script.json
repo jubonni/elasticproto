@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.536272",
         "api_name": "put_script",
         "stability": "stable",
         "visibility": "public",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.136274",
         "size": 4996,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-downsample-data-stream.html",
         "type": "documentation",

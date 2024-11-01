@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.655273",
         "api_name": "slm.delete_lifecycle",
         "stability": "stable",
         "visibility": "public",

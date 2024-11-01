@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.725275",
         "size": 17623,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html",
         "type": "documentation",

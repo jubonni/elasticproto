@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.513271",
         "api_name": "ml.update_model_snapshot",
         "stability": "stable",
         "visibility": "public",

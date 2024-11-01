@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.221278",
         "api_name": "ccr.forget_follower",
         "stability": "stable",
         "visibility": "public",

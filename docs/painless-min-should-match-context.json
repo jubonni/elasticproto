@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.856273",
         "size": 2104,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-min-should-match-context.html",
         "type": "documentation",

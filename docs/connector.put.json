@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.254285",
         "api_name": "connector.put",
         "stability": "experimental",
         "visibility": "public",

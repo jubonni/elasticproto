@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.290282",
         "api_name": "delete_by_query",
         "stability": "stable",
         "visibility": "public",

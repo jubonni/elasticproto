@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:08.859325",
         "size": 2179,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/clean-up-snapshot-repo-api.html",
         "type": "documentation",

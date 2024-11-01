@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.351272",
         "api_name": "indices.delete_alias",
         "stability": "stable",
         "visibility": "public",

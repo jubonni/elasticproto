@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.908274",
         "size": 15768,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/phrase-suggester.html",
         "type": "documentation",

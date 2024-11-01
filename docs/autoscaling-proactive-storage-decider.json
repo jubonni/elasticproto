@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.944275",
         "size": 1731,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-proactive-storage-decider.html",
         "type": "documentation",

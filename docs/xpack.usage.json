@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.782301",
         "api_name": "xpack.usage",
         "stability": "stable",
         "visibility": "public",

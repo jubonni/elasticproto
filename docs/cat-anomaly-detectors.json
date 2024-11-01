@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:08.759275",
         "size": 10584,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-anomaly-detectors.html",
         "type": "documentation",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.396278",
         "api_name": "indices.rollover",
         "stability": "stable",
         "visibility": "public",

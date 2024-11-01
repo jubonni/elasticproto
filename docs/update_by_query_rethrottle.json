@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.744273",
         "api_name": "update_by_query_rethrottle",
         "stability": "stable",
         "visibility": "public",

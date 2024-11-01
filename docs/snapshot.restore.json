@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.684275",
         "api_name": "snapshot.restore",
         "stability": "stable",
         "visibility": "public",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:10.062282",
         "size": 945,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/repeated-snapshot-failures.html",
         "type": "documentation",

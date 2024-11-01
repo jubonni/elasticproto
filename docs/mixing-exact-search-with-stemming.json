@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:10.335286",
         "size": 5150,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mixing-exact-search-with-stemming.html",
         "type": "documentation",

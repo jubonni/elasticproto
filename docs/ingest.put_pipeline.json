@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.426272",
         "api_name": "ingest.put_pipeline",
         "stability": "stable",
         "visibility": "public",

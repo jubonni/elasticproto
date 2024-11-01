@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.729276",
         "api_name": "transform.preview_transform",
         "stability": "stable",
         "visibility": "public",

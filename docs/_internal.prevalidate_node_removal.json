@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.795276",
         "api_name": "_internal.prevalidate_node_removal",
         "stability": "stable",
         "visibility": "private",

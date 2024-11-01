@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.231270",
         "api_name": "clear_scroll",
         "stability": "stable",
         "visibility": "public",

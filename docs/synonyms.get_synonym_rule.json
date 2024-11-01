@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.702274",
         "api_name": "synonyms.get_synonym_rule",
         "stability": "stable",
         "visibility": "public",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.853276",
         "size": 915,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-metric-agg-init-context.html",
         "type": "documentation",

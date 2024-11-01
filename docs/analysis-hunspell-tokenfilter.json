@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.419273",
         "size": 6735,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-hunspell-tokenfilter.html",
         "type": "documentation",

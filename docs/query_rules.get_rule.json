@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.539280",
         "api_name": "query_rules.get_rule",
         "stability": "stable",
         "visibility": "public",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.788275",
         "api_name": "_internal.get_desired_balance",
         "stability": "experimental",
         "visibility": "private",

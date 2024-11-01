@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.421293",
         "api_name": "ingest.get_ip_location_database",
         "stability": "stable",
         "visibility": "public",

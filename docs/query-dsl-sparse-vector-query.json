@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:10.298276",
         "size": 9456,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-sparse-vector-query.html",
         "type": "documentation",

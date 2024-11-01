@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.591273",
         "api_name": "security.clear_api_key_cache",
         "stability": "stable",
         "visibility": "public",

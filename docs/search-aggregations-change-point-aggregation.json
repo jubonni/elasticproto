@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:08.837275",
         "size": 4260,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-change-point-aggregation.html",
         "type": "documentation",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.881273",
         "size": 9500,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-watcher-transform-context.html",
         "type": "documentation",

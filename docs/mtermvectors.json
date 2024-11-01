@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.521287",
         "api_name": "mtermvectors",
         "stability": "stable",
         "visibility": "public",

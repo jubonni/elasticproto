@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.528277",
         "size": 30415,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/jwt-auth-realm.html",
         "type": "documentation",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.202310",
         "size": 2048,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/api-java-execute-watch.html",
         "type": "documentation",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.462274",
         "api_name": "ml.forecast",
         "stability": "stable",
         "visibility": "public",

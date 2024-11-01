@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.434271",
         "api_name": "license.post_start_basic",
         "stability": "stable",
         "visibility": "public",

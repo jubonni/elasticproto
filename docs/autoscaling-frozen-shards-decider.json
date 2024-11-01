@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.254272",
         "size": 768,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-frozen-shards-decider.html",
         "type": "documentation",

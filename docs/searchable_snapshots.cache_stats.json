@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.565272",
         "api_name": "searchable_snapshots.cache_stats",
         "stability": "experimental",
         "visibility": "public",

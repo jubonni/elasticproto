@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.497272",
         "api_name": "ml.put_trained_model_alias",
         "stability": "stable",
         "visibility": "public",

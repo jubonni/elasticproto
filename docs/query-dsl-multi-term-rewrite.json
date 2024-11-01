@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.729279",
         "size": 4833,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-term-rewrite.html",
         "type": "documentation",

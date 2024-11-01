@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.628274",
         "api_name": "security.invalidate_token",
         "stability": "stable",
         "visibility": "public",

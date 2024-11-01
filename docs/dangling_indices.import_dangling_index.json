@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.287273",
         "api_name": "dangling_indices.import_dangling_index",
         "stability": "stable",
         "visibility": "public",

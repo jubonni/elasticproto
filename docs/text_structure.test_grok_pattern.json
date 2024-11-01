@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.722273",
         "api_name": "text_structure.test_grok_pattern",
         "stability": "stable",
         "visibility": "public",

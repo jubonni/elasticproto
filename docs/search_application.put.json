@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.576289",
         "api_name": "search_application.put",
         "stability": "experimental",
         "visibility": "public",

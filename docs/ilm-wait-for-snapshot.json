@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.452272",
         "size": 1140,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-wait-for-snapshot.html",
         "type": "documentation",

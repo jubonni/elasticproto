@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.403312",
         "api_name": "indices.split",
         "stability": "stable",
         "visibility": "public",

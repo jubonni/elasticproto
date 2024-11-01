@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.566271",
         "api_name": "searchable_snapshots.clear_cache",
         "stability": "experimental",
         "visibility": "public",

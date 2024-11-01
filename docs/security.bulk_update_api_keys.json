@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.589273",
         "api_name": "security.bulk_update_api_keys",
         "stability": "stable",
         "visibility": "public",

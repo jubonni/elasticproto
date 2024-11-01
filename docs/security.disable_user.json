@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.605275",
         "api_name": "security.disable_user",
         "stability": "stable",
         "visibility": "public",

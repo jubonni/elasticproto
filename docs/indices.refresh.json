@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.391272",
         "api_name": "indices.refresh",
         "stability": "stable",
         "visibility": "public",

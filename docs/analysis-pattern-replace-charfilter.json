@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.893274",
         "size": 6163,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-pattern-replace-charfilter.html",
         "type": "documentation",

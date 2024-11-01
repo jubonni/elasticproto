@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.639279",
         "api_name": "security.query_user",
         "stability": "stable",
         "visibility": "public",

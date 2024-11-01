@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.442271",
         "api_name": "migration.get_feature_upgrade_status",
         "stability": "stable",
         "visibility": "public",

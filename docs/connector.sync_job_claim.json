@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.260271",
         "api_name": "connector.sync_job_claim",
         "stability": "experimental",
         "visibility": "public",

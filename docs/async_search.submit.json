@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.179273",
         "api_name": "async_search.submit",
         "stability": "stable",
         "visibility": "public",

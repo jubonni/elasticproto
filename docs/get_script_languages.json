@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.324283",
         "api_name": "get_script_languages",
         "stability": "stable",
         "visibility": "public",

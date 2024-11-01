@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.603275",
         "api_name": "security.delete_service_token",
         "stability": "stable",
         "visibility": "public",

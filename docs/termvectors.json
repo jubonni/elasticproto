@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.715273",
         "api_name": "termvectors",
         "stability": "stable",
         "visibility": "public",

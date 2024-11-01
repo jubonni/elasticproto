@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.550280",
         "size": 4004,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-length-tokenfilter.html",
         "type": "documentation",

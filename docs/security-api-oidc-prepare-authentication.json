@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.807274",
         "size": 6653,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-oidc-prepare-authentication.html",
         "type": "documentation",

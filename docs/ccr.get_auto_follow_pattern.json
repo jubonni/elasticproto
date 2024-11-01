@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.222273",
         "api_name": "ccr.get_auto_follow_pattern",
         "stability": "stable",
         "visibility": "public",

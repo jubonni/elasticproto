@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.290272",
         "size": 2000,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-async-sql-search-status-api.html",
         "type": "documentation",

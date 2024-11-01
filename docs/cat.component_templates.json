@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.189271",
         "api_name": "cat.component_templates",
         "stability": "stable",
         "visibility": "public",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.268287",
         "api_name": "connector.update_active_filtering",
         "stability": "experimental",
         "visibility": "public",

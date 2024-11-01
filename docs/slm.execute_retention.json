@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.657278",
         "api_name": "slm.execute_retention",
         "stability": "stable",
         "visibility": "public",

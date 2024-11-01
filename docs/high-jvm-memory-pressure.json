@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.401271",
         "size": 3593,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/high-jvm-memory-pressure.html",
         "type": "documentation",

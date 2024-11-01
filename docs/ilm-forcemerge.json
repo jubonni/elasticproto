@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.440271",
         "size": 2762,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-forcemerge.html",
         "type": "documentation",

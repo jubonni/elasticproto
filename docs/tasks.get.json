@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.709275",
         "api_name": "tasks.get",
         "stability": "experimental",
         "visibility": "public",

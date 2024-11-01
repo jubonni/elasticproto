@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.827273",
         "size": 2504,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-bucket-selector-agg-context.html",
         "type": "documentation",

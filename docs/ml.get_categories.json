@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.466271",
         "api_name": "ml.get_categories",
         "stability": "stable",
         "visibility": "public",

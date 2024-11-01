@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.757296",
         "api_name": "watcher.put_watch",
         "stability": "stable",
         "visibility": "public",

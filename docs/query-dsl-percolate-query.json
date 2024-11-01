@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.905274",
         "size": 22911,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-percolate-query.html",
         "type": "documentation",

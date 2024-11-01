@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:10.477273",
         "size": 18086,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/tutorial-migrate-data-stream-from-ilm-to-dsl.html",
         "type": "documentation",

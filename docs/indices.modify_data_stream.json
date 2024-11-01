@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.380274",
         "api_name": "indices.modify_data_stream",
         "stability": "stable",
         "visibility": "public",

@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.271277",
         "api_name": "connector.update_error",
         "stability": "experimental",
         "visibility": "public",

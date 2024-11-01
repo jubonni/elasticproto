@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.321277",
         "api_name": "get",
         "stability": "stable",
         "visibility": "public",

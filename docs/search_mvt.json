@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.581274",
         "api_name": "search_mvt",
         "stability": "experimental",
         "visibility": "public",

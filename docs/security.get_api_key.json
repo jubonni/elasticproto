@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.611273",
         "api_name": "security.get_api_key",
         "stability": "stable",
         "visibility": "public",

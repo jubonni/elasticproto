@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.281272",
         "api_name": "connector.update_service_type",
         "stability": "experimental",
         "visibility": "public",

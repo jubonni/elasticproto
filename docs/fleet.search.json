@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.319273",
         "api_name": "fleet.search",
         "stability": "experimental",
         "visibility": "public",

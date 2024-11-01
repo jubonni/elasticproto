@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.587279",
         "api_name": "security.bulk_delete_role",
         "stability": "stable",
         "visibility": "public",

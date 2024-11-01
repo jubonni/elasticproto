@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:09.852274",
         "size": 892,
         "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-metric-agg-combine-context.html",
         "type": "documentation",

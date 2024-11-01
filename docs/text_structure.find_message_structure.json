@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.718273",
         "api_name": "text_structure.find_message_structure",
         "stability": "stable",
         "visibility": "public",

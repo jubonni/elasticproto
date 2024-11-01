@@ -1,6 +1,5 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:07:11.285271",
         "api_name": "dangling_indices.delete_dangling_index",
         "stability": "stable",
         "visibility": "public",

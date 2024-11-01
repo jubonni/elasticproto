@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.049582",
+        "timestamp": "2024-11-01T03:07:11.481276",
         "api_name": "ml.get_trained_models",
         "stability": "stable",
         "visibility": "public",
@@ -39,7 +39,7 @@
             "tags": "list",
             "exclude_generated": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

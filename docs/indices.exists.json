@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.821582",
+        "timestamp": "2024-11-01T03:07:11.359275",
         "api_name": "indices.exists",
         "stability": "stable",
         "visibility": "public",
@@ -31,7 +31,7 @@
             "flat_settings": "boolean",
             "include_defaults": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

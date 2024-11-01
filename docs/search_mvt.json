@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.153590",
+        "timestamp": "2024-11-01T03:07:11.581274",
         "api_name": "search_mvt",
         "stability": "experimental",
         "visibility": "public",
@@ -49,7 +49,7 @@
             "track_total_hits": "boolean|long",
             "with_labels": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

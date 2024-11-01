@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.142581",
+        "timestamp": "2024-11-01T03:07:11.571277",
         "api_name": "search_application.delete_behavioral_analytics",
         "stability": "experimental",
         "visibility": "public",
@@ -24,7 +24,7 @@
             }
         ],
         "parameter_types": {},
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

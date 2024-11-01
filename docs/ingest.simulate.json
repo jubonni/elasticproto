@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.971582",
+        "timestamp": "2024-11-01T03:07:11.427274",
         "api_name": "ingest.simulate",
         "stability": "stable",
         "visibility": "public",
@@ -34,7 +34,7 @@
         "parameter_types": {
             "verbose": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

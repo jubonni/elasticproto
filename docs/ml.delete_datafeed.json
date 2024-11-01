@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.015583",
+        "timestamp": "2024-11-01T03:07:11.449271",
         "api_name": "ml.delete_datafeed",
         "stability": "stable",
         "visibility": "public",
@@ -26,7 +26,7 @@
         "parameter_types": {
             "force": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

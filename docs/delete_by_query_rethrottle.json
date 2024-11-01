@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.748580",
+        "timestamp": "2024-11-01T03:07:11.291271",
         "api_name": "delete_by_query_rethrottle",
         "stability": "stable",
         "visibility": "public",
@@ -26,7 +26,7 @@
         "parameter_types": {
             "requests_per_second": "number"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

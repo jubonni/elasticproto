@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.259598",
+        "timestamp": "2024-11-01T03:07:11.694273",
         "api_name": "sql.query",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
         "parameter_types": {
             "format": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

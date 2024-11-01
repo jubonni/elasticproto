@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.791580",
+        "timestamp": "2024-11-01T03:07:11.332271",
         "api_name": "ilm.migrate_to_data_tiers",
         "stability": "stable",
         "visibility": "public",
@@ -20,7 +20,7 @@
         "parameter_types": {
             "dry_run": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

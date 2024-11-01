@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.996586",
+        "timestamp": "2024-11-01T03:07:11.440290",
         "api_name": "mget",
         "stability": "stable",
         "visibility": "public",
@@ -42,7 +42,7 @@
             "_source_excludes": "list",
             "_source_includes": "list"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

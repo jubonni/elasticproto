@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.803608",
+        "timestamp": "2024-11-01T03:07:11.343277",
         "api_name": "indices.clear_cache",
         "stability": "stable",
         "visibility": "public",
@@ -39,7 +39,7 @@
             "index": "list",
             "request": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

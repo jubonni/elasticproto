@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.938583",
+        "timestamp": "2024-11-01T03:07:11.426272",
         "api_name": "ingest.put_pipeline",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "master_timeout": "time",
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

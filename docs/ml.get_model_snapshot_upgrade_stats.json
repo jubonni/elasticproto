@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.046580",
+        "timestamp": "2024-11-01T03:07:11.478273",
         "api_name": "ml.get_model_snapshot_upgrade_stats",
         "stability": "stable",
         "visibility": "public",
@@ -30,7 +30,7 @@
         "parameter_types": {
             "allow_no_match": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

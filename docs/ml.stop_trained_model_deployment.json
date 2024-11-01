@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.077582",
+        "timestamp": "2024-11-01T03:07:11.507271",
         "api_name": "ml.stop_trained_model_deployment",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "allow_no_match": "boolean",
             "force": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

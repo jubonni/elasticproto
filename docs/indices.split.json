@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.892584",
+        "timestamp": "2024-11-01T03:07:11.403312",
         "api_name": "indices.split",
         "stability": "stable",
         "visibility": "public",
@@ -33,7 +33,7 @@
             "master_timeout": "time",
             "wait_for_active_shards": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

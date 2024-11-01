@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.778605",
+        "timestamp": "2024-11-01T03:07:11.319273",
         "api_name": "fleet.search",
         "stability": "experimental",
         "visibility": "public",
@@ -29,7 +29,7 @@
             "wait_for_checkpoints_timeout": "time",
             "allow_partial_search_results": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

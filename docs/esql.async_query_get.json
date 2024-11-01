@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.762581",
+        "timestamp": "2024-11-01T03:07:11.304273",
         "api_name": "esql.async_query_get",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "keep_alive": "time",
             "drop_null_columns": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.879586",
+        "timestamp": "2024-11-01T03:07:11.402283",
         "api_name": "indices.simulate_template",
         "stability": "stable",
         "visibility": "public",
@@ -35,7 +35,7 @@
             "master_timeout": "time",
             "include_defaults": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

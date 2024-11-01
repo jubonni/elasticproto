@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.865579",
+        "timestamp": "2024-11-01T03:07:11.398274",
         "api_name": "indices.shard_stores",
         "stability": "stable",
         "visibility": "public",
@@ -35,7 +35,7 @@
             "allow_no_indices": "boolean",
             "expand_wildcards": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

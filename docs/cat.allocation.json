@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.598584",
+        "timestamp": "2024-11-01T03:07:11.188272",
         "api_name": "cat.allocation",
         "stability": "stable",
         "visibility": "public",
@@ -39,7 +39,7 @@
             "s": "list",
             "v": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

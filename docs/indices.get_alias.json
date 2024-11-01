@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.831582",
+        "timestamp": "2024-11-01T03:07:11.370273",
         "api_name": "indices.get_alias",
         "stability": "stable",
         "visibility": "public",
@@ -62,7 +62,7 @@
             "allow_no_indices": "boolean",
             "expand_wildcards": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

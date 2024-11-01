@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.029580",
+        "timestamp": "2024-11-01T03:07:11.462274",
         "api_name": "ml.forecast",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "expires_in": "time",
             "max_model_memory": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

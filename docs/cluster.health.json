@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.683579",
+        "timestamp": "2024-11-01T03:07:11.238272",
         "api_name": "cluster.health",
         "stability": "stable",
         "visibility": "public",
@@ -42,7 +42,7 @@
             "wait_for_no_initializing_shards": "boolean",
             "wait_for_status": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.018583",
+        "timestamp": "2024-11-01T03:07:11.450273",
         "api_name": "ml.delete_expired_data",
         "stability": "stable",
         "visibility": "public",
@@ -33,7 +33,7 @@
             "requests_per_second": "number",
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

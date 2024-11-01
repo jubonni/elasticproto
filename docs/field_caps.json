@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.771583",
+        "timestamp": "2024-11-01T03:07:11.313272",
         "api_name": "field_caps",
         "stability": "stable",
         "visibility": "public",
@@ -41,7 +41,7 @@
             "types": "list",
             "include_empty_fields": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

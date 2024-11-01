@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.676579",
+        "timestamp": "2024-11-01T03:07:11.232272",
         "api_name": "cluster.allocation_explain",
         "stability": "stable",
         "visibility": "public",
@@ -23,7 +23,7 @@
             "include_yes_decisions": "boolean",
             "include_disk_info": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

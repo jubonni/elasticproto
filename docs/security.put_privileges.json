@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.211584",
+        "timestamp": "2024-11-01T03:07:11.632272",
         "api_name": "security.put_privileges",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
         "parameter_types": {
             "refresh": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

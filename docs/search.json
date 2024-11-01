@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.134587",
+        "timestamp": "2024-11-01T03:07:11.563270",
         "api_name": "search",
         "stability": "stable",
         "visibility": "public",
@@ -77,7 +77,7 @@
             "rest_total_hits_as_int": "boolean",
             "include_named_queries_score": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

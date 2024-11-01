@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.278600",
+        "timestamp": "2024-11-01T03:07:11.723273",
         "api_name": "transform.delete_transform",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "delete_dest_index": "boolean",
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

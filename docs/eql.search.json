@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.759581",
+        "timestamp": "2024-11-01T03:07:11.301288",
         "api_name": "eql.search",
         "stability": "stable",
         "visibility": "public",
@@ -29,7 +29,7 @@
             "keep_on_completion": "boolean",
             "keep_alive": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

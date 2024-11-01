@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.275579",
+        "timestamp": "2024-11-01T03:07:11.720277",
         "api_name": "text_structure.find_structure",
         "stability": "stable",
         "visibility": "public",
@@ -34,7 +34,7 @@
             "timestamp_format": "string",
             "explain": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

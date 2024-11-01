@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.048579",
+        "timestamp": "2024-11-01T03:07:11.480271",
         "api_name": "ml.get_records",
         "stability": "stable",
         "visibility": "public",
@@ -34,7 +34,7 @@
             "sort": "string",
             "desc": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

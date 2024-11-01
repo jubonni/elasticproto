@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.754582",
+        "timestamp": "2024-11-01T03:07:11.295273",
         "api_name": "enrich.get_policy",
         "stability": "stable",
         "visibility": "public",
@@ -32,7 +32,7 @@
         "parameter_types": {
             "master_timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

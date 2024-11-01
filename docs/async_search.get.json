@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.561594",
+        "timestamp": "2024-11-01T03:07:11.176272",
         "api_name": "async_search.get",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "keep_alive": "time",
             "typed_keys": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

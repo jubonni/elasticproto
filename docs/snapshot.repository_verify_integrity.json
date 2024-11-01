@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.251579",
+        "timestamp": "2024-11-01T03:07:11.682276",
         "api_name": "snapshot.repository_verify_integrity",
         "stability": "experimental",
         "visibility": "private",
@@ -33,7 +33,7 @@
             "verify_blob_contents": "boolean",
             "max_bytes_per_sec": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

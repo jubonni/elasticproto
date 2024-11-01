@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.862584",
+        "timestamp": "2024-11-01T03:07:11.395272",
         "api_name": "indices.resolve_index",
         "stability": "stable",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "ignore_unavailable": "boolean",
             "allow_no_indices": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.973580",
+        "timestamp": "2024-11-01T03:07:11.429275",
         "api_name": "knn_search",
         "stability": "experimental",
         "visibility": "public",
@@ -27,7 +27,7 @@
         "parameter_types": {
             "routing": "list"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

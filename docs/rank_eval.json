@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.119581",
+        "timestamp": "2024-11-01T03:07:11.547276",
         "api_name": "rank_eval",
         "stability": "stable",
         "visibility": "public",
@@ -37,7 +37,7 @@
             "expand_wildcards": "enum",
             "search_type": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.306579",
+        "timestamp": "2024-11-01T03:07:11.765282",
         "api_name": "watcher.stats",
         "stability": "stable",
         "visibility": "public",
@@ -39,7 +39,7 @@
             "metric": "list",
             "emit_stacktraces": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

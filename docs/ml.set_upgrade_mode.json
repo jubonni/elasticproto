@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.071579",
+        "timestamp": "2024-11-01T03:07:11.501271",
         "api_name": "ml.set_upgrade_mode",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
             "enabled": "boolean",
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

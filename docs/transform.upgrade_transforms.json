@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.290579",
+        "timestamp": "2024-11-01T03:07:11.737272",
         "api_name": "transform.upgrade_transforms",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
             "dry_run": "boolean",
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

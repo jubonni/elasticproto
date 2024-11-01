@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.580583",
+        "timestamp": "2024-11-01T03:07:11.182271",
         "api_name": "autoscaling.get_autoscaling_policy",
         "stability": "stable",
         "visibility": "private",
@@ -26,7 +26,7 @@
         "parameter_types": {
             "master_timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

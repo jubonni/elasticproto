@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.829585",
+        "timestamp": "2024-11-01T03:07:11.367272",
         "api_name": "indices.forcemerge",
         "stability": "stable",
         "visibility": "public",
@@ -38,7 +38,7 @@
             "only_expunge_deletes": "boolean",
             "wait_for_completion": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

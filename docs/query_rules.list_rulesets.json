@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.115594",
+        "timestamp": "2024-11-01T03:07:11.541272",
         "api_name": "query_rules.list_rulesets",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
             "from": "int",
             "size": "int"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

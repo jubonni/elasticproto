@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.291580",
+        "timestamp": "2024-11-01T03:07:11.739279",
         "api_name": "update",
         "stability": "stable",
         "visibility": "public",
@@ -41,7 +41,7 @@
             "if_primary_term": "number",
             "require_alias": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.277583",
+        "timestamp": "2024-11-01T03:07:11.722273",
         "api_name": "text_structure.test_grok_pattern",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
         "parameter_types": {
             "ecs_compatibility": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

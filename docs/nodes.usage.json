@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.101581",
+        "timestamp": "2024-11-01T03:07:11.529286",
         "api_name": "nodes.usage",
         "stability": "stable",
         "visibility": "public",
@@ -68,7 +68,7 @@
         "parameter_types": {
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

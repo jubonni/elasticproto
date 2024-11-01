@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.649582",
+        "timestamp": "2024-11-01T03:07:11.210273",
         "api_name": "cat.shards",
         "stability": "stable",
         "visibility": "public",
@@ -39,7 +39,7 @@
             "time": "enum",
             "v": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

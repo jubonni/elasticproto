@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.023578",
+        "timestamp": "2024-11-01T03:07:11.455270",
         "api_name": "ml.delete_trained_model",
         "stability": "stable",
         "visibility": "public",
@@ -27,7 +27,7 @@
             "timeout": "time",
             "force": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

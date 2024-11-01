@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.701586",
+        "timestamp": "2024-11-01T03:07:11.251277",
         "api_name": "connector.list",
         "stability": "experimental",
         "visibility": "public",
@@ -25,7 +25,7 @@
             "service_type": "list",
             "query": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

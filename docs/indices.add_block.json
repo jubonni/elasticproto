@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.800579",
+        "timestamp": "2024-11-01T03:07:11.340272",
         "api_name": "indices.add_block",
         "stability": "stable",
         "visibility": "public",
@@ -34,7 +34,7 @@
             "allow_no_indices": "boolean",
             "expand_wildcards": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

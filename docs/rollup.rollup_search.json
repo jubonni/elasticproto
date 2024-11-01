@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.130580",
+        "timestamp": "2024-11-01T03:07:11.557272",
         "api_name": "rollup.rollup_search",
         "stability": "experimental",
         "visibility": "public",
@@ -28,7 +28,7 @@
             "typed_keys": "boolean",
             "rest_total_hits_as_int": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

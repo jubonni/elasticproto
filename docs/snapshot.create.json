@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.244583",
+        "timestamp": "2024-11-01T03:07:11.669275",
         "api_name": "snapshot.create",
         "stability": "stable",
         "visibility": "public",
@@ -32,7 +32,7 @@
             "master_timeout": "time",
             "wait_for_completion": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

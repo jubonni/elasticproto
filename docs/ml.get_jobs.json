@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.041579",
+        "timestamp": "2024-11-01T03:07:11.473274",
         "api_name": "ml.get_jobs",
         "stability": "stable",
         "visibility": "public",
@@ -33,7 +33,7 @@
             "allow_no_match": "boolean",
             "exclude_generated": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.121581",
+        "timestamp": "2024-11-01T03:07:11.548271",
         "api_name": "reindex",
         "stability": "stable",
         "visibility": "public",
@@ -27,7 +27,7 @@
             "slices": "number|string",
             "max_docs": "number"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

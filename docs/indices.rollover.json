@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.863583",
+        "timestamp": "2024-11-01T03:07:11.396278",
         "api_name": "indices.rollover",
         "stability": "stable",
         "visibility": "public",
@@ -47,7 +47,7 @@
             "lazy": "boolean",
             "target_failure_store": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

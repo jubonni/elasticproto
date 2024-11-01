@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.197582",
+        "timestamp": "2024-11-01T03:07:11.619283",
         "api_name": "security.get_settings",
         "stability": "stable",
         "visibility": "public",
@@ -20,7 +20,7 @@
         "parameter_types": {
             "master_timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

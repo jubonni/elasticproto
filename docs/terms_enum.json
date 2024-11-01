@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.271580",
+        "timestamp": "2024-11-01T03:07:11.714280",
         "api_name": "terms_enum",
         "stability": "stable",
         "visibility": "public",
@@ -25,7 +25,7 @@
             }
         ],
         "parameter_types": {},
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

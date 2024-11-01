@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.055579",
+        "timestamp": "2024-11-01T03:07:11.487290",
         "api_name": "ml.post_data",
         "stability": "stable",
         "visibility": "public",
@@ -27,7 +27,7 @@
             "reset_start": "string",
             "reset_end": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

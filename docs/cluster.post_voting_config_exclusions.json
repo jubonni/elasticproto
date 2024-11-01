@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.687610",
+        "timestamp": "2024-11-01T03:07:11.241271",
         "api_name": "cluster.post_voting_config_exclusions",
         "stability": "stable",
         "visibility": "public",
@@ -23,7 +23,7 @@
             "timeout": "time",
             "master_timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

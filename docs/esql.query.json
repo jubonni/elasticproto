@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.763579",
+        "timestamp": "2024-11-01T03:07:11.306273",
         "api_name": "esql.query",
         "stability": "stable",
         "visibility": "public",
@@ -22,7 +22,7 @@
             "delimiter": "string",
             "drop_null_columns": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

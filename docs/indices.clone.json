@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.804583",
+        "timestamp": "2024-11-01T03:07:11.344272",
         "api_name": "indices.clone",
         "stability": "stable",
         "visibility": "public",
@@ -33,7 +33,7 @@
             "master_timeout": "time",
             "wait_for_active_shards": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

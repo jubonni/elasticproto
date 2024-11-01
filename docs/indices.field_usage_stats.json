@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.825580",
+        "timestamp": "2024-11-01T03:07:11.365271",
         "api_name": "indices.field_usage_stats",
         "stability": "experimental",
         "visibility": "public",
@@ -29,7 +29,7 @@
             "allow_no_indices": "boolean",
             "expand_wildcards": "enum"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

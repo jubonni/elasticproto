@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.092580",
+        "timestamp": "2024-11-01T03:07:11.522272",
         "api_name": "nodes.clear_repositories_metering_archive",
         "stability": "experimental",
         "visibility": "public",
@@ -28,7 +28,7 @@
             }
         ],
         "parameter_types": {},
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

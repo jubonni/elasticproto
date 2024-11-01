@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.245590",
+        "timestamp": "2024-11-01T03:07:11.672370",
         "api_name": "snapshot.create_repository",
         "stability": "stable",
         "visibility": "public",
@@ -29,7 +29,7 @@
             "timeout": "time",
             "verify": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

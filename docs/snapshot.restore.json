@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.252581",
+        "timestamp": "2024-11-01T03:07:11.684275",
         "api_name": "snapshot.restore",
         "stability": "stable",
         "visibility": "public",
@@ -31,7 +31,7 @@
             "master_timeout": "time",
             "wait_for_completion": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

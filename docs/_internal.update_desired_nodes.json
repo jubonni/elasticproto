@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.316578",
+        "timestamp": "2024-11-01T03:07:11.796282",
         "api_name": "_internal.update_desired_nodes",
         "stability": "experimental",
         "visibility": "private",
@@ -30,7 +30,7 @@
         "parameter_types": {
             "dry_run": "boolean"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:54.974581",
+        "timestamp": "2024-11-01T03:07:11.430271",
         "api_name": "license.delete",
         "stability": "stable",
         "visibility": "public",
@@ -21,7 +21,7 @@
             "master_timeout": "time",
             "timeout": "time"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

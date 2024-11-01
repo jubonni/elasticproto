@@ -1,6 +1,6 @@
 {
     "meta": {
-        "timestamp": "2024-11-01T03:02:55.074580",
+        "timestamp": "2024-11-01T03:07:11.504272",
         "api_name": "ml.start_trained_model_deployment",
         "stability": "stable",
         "visibility": "public",
@@ -34,7 +34,7 @@
             "timeout": "time",
             "wait_for": "string"
         },
-        "doc_version": "8.15"
+        "type": "api_spec"
     },
     "doc": {
         "documentation": {

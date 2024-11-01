@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.797599",
+        "api_name": "ilm.start",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ilm",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-start.html",
+        "elastic_url": "https://www.elastic.co/ilm/start.html",
+        "treat_json_as_key_value": false,
+        "title": "Start the index lifecycle management (ILM) plugin.",
+        "paths": [
+            {
+                "path": "/_ilm/start",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-start.html",
+            "description": "Start the index lifecycle management (ILM) plugin."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ilm/start",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {}
+    }
+}

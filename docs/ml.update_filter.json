@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.080581",
+        "api_name": "ml.update_filter",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-update-filter.html",
+        "elastic_url": "https://www.elastic.co/ml/update_filter.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the description of a filter, adds items, or removes items.",
+        "paths": [
+            {
+                "path": "/_ml/filters/{filter_id}/_update",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "filter_id": {
+                        "type": "string",
+                        "description": "The ID of the filter to update"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-update-filter.html",
+            "description": "Updates the description of a filter, adds items, or removes items."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/filters/{filter_id}/_update",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "filter_id": {
+                            "type": "string",
+                            "description": "The ID of the filter to update"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The filter update",
+            "required": true
+        }
+    }
+}

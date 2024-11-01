@@ -1,0 +1,87 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.848581",
+        "api_name": "indices.put_data_lifecycle",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/data-streams-put-lifecycle.html",
+        "elastic_url": "https://www.elastic.co/indices/put_data_lifecycle.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the data stream lifecycle of the selected data streams.",
+        "paths": [
+            {
+                "path": "/_data_stream/{name}/_lifecycle",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of data streams whose lifecycle will be updated; use `*` to set the lifecycle to all data streams"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "expand_wildcards": "enum",
+            "timeout": "time",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/data-streams-put-lifecycle.html",
+            "description": "Updates the data stream lifecycle of the selected data streams."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_data_stream/{name}/_lifecycle",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of data streams whose lifecycle will be updated; use `*` to set the lifecycle to all data streams"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "expand_wildcards": {
+                "type": "enum",
+                "options": [
+                    "open",
+                    "closed",
+                    "hidden",
+                    "none",
+                    "all"
+                ],
+                "default": "open",
+                "description": "Whether wildcard expressions should get expanded to open or closed indices (default: open)"
+            },
+            "timeout": {
+                "type": "time",
+                "description": "Explicit timestamp for the document"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        },
+        "body": {
+            "description": "The data stream lifecycle configuration that consist of the data retention"
+        }
+    }
+}

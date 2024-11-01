@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.234580",
+        "api_name": "slm.execute_lifecycle",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "slm",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/slm-api-execute-lifecycle.html",
+        "elastic_url": "https://www.elastic.co/slm/execute_lifecycle.html",
+        "treat_json_as_key_value": false,
+        "title": "Immediately creates a snapshot according to the lifecycle policy, without waiting for the scheduled time.",
+        "paths": [
+            {
+                "path": "/_slm/policy/{policy_id}/_execute",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "policy_id": {
+                        "type": "string",
+                        "description": "The id of the snapshot lifecycle policy to be executed"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/slm-api-execute-lifecycle.html",
+            "description": "Immediately creates a snapshot according to the lifecycle policy, without waiting for the scheduled time."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_slm/policy/{policy_id}/_execute",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "policy_id": {
+                            "type": "string",
+                            "description": "The id of the snapshot lifecycle policy to be executed"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {}
+    }
+}

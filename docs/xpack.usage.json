@@ -1,0 +1,54 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.310590",
+        "api_name": "xpack.usage",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "xpack",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/usage-api.html",
+        "elastic_url": "https://www.elastic.co/xpack/usage.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves usage information about the installed X-Pack features.",
+        "paths": [
+            {
+                "path": "/_xpack/usage",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/usage-api.html",
+            "description": "Retrieves usage information about the installed X-Pack features."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_xpack/usage",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for watch write operation"
+            }
+        }
+    }
+}

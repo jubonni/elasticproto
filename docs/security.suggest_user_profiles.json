@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.224579",
+        "api_name": "security.suggest_user_profiles",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/security-api-suggest-user-profile.html",
+        "elastic_url": "https://www.elastic.co/security/suggest_user_profiles.html",
+        "treat_json_as_key_value": false,
+        "title": "Get suggestions for user profiles that match specified search criteria.",
+        "paths": [
+            {
+                "path": "/_security/profile/_suggest",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "data": "list"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/security-api-suggest-user-profile.html",
+            "description": "Get suggestions for user profiles that match specified search criteria."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/profile/_suggest",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "data": {
+                "type": "list",
+                "description": "A comma-separated list of keys for which the corresponding application data are retrieved."
+            }
+        },
+        "body": {
+            "description": "The suggestion definition for user profiles",
+            "required": false
+        }
+    }
+}

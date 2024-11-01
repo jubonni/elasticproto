@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.256580",
+        "api_name": "sql.delete_async",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "sql",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/delete-async-sql-search-api.html",
+        "elastic_url": "https://www.elastic.co/sql/delete_async.html",
+        "treat_json_as_key_value": false,
+        "title": "Deletes an async SQL search or a stored synchronous SQL search. If the search is still running, the API cancels it.",
+        "paths": [
+            {
+                "path": "/_sql/async/delete/{id}",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The async search ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/delete-async-sql-search-api.html",
+            "description": "Deletes an async SQL search or a stored synchronous SQL search. If the search is still running, the API cancels it."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_sql/async/delete/{id}",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The async search ID"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

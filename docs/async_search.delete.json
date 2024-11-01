@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.558585",
+        "api_name": "async_search.delete",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "async_search",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/async-search.html",
+        "elastic_url": "https://www.elastic.co/async_search/delete.html",
+        "treat_json_as_key_value": false,
+        "title": "Deletes an async search by ID. If the search is still running, the search request will be cancelled. Otherwise, the saved search results are deleted.",
+        "paths": [
+            {
+                "path": "/_async_search/{id}",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The async search ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/async-search.html",
+            "description": "Deletes an async search by ID. If the search is still running, the search request will be cancelled. Otherwise, the saved search results are deleted."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_async_search/{id}",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The async search ID"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

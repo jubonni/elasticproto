@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.062579",
+        "api_name": "ml.put_data_frame_analytics",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-dfanalytics.html",
+        "elastic_url": "https://www.elastic.co/ml/put_data_frame_analytics.html",
+        "treat_json_as_key_value": false,
+        "title": "Instantiates a data frame analytics job.",
+        "paths": [
+            {
+                "path": "/_ml/data_frame/analytics/{id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The ID of the data frame analytics to create"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-dfanalytics.html",
+            "description": "Instantiates a data frame analytics job."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/data_frame/analytics/{id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The ID of the data frame analytics to create"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The data frame analytics configuration",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.832580",
+        "api_name": "indices.get_data_lifecycle",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/data-streams-get-lifecycle.html",
+        "elastic_url": "https://www.elastic.co/indices/get_data_lifecycle.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns the data stream lifecycle of the selected data streams.",
+        "paths": [
+            {
+                "path": "/_data_stream/{name}/_lifecycle",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of data streams to get; use `*` to get all data streams"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "expand_wildcards": "enum",
+            "include_defaults": "boolean",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/data-streams-get-lifecycle.html",
+            "description": "Returns the data stream lifecycle of the selected data streams."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_data_stream/{name}/_lifecycle",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of data streams to get; use `*` to get all data streams"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "expand_wildcards": {
+                "type": "enum",
+                "options": [
+                    "open",
+                    "closed",
+                    "hidden",
+                    "none",
+                    "all"
+                ],
+                "default": "open",
+                "description": "Whether wildcard expressions should get expanded to open or closed indices (default: open)"
+            },
+            "include_defaults": {
+                "type": "boolean",
+                "description": "Return all relevant default configurations for the data stream (default: false)"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

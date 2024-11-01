@@ -1,0 +1,116 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.090579",
+        "api_name": "msearch_template",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "msearch_template",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html",
+        "elastic_url": "https://www.elastic.co/msearch_template.html",
+        "treat_json_as_key_value": false,
+        "title": "Allows to execute several search template operations in one request.",
+        "paths": [
+            {
+                "path": "/_msearch/template",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            },
+            {
+                "path": "/{index}/_msearch/template",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "list",
+                        "description": "A comma-separated list of index names to use as default"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "search_type": "enum",
+            "typed_keys": "boolean",
+            "max_concurrent_searches": "number",
+            "rest_total_hits_as_int": "boolean",
+            "ccs_minimize_roundtrips": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-multi-search.html",
+            "description": "Allows to execute several search template operations in one request."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/x-ndjson"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_msearch/template",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                },
+                {
+                    "path": "/{index}/_msearch/template",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "list",
+                            "description": "A comma-separated list of index names to use as default"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "search_type": {
+                "type": "enum",
+                "options": [
+                    "query_then_fetch",
+                    "dfs_query_then_fetch"
+                ],
+                "description": "Search operation type"
+            },
+            "typed_keys": {
+                "type": "boolean",
+                "description": "Specify whether aggregation and suggester names should be prefixed by their respective types in the response"
+            },
+            "max_concurrent_searches": {
+                "type": "number",
+                "description": "Controls the maximum number of concurrent searches the multi search api will execute"
+            },
+            "rest_total_hits_as_int": {
+                "type": "boolean",
+                "description": "Indicates whether hits.total should be rendered as an integer or an object in the rest search response",
+                "default": false
+            },
+            "ccs_minimize_roundtrips": {
+                "type": "boolean",
+                "description": "Indicates whether network round-trips should be minimized as part of cross-cluster search requests execution",
+                "default": "true"
+            }
+        },
+        "body": {
+            "description": "The request definitions (metadata-search request definition pairs), separated by newlines",
+            "required": true,
+            "serialize": "bulk"
+        }
+    }
+}

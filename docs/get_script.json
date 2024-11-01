@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.781580",
+        "api_name": "get_script",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "get_script",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html",
+        "elastic_url": "https://www.elastic.co/get_script.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns a script.",
+        "paths": [
+            {
+                "path": "/_scripts/{id}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "Script ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html",
+            "description": "Returns a script."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_scripts/{id}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "Script ID"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.066592",
+        "api_name": "ml.put_trained_model_alias",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-trained-models-aliases.html",
+        "elastic_url": "https://www.elastic.co/ml/put_trained_model_alias.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates a new model alias (or reassigns an existing one) to refer to the trained model",
+        "paths": [
+            {
+                "path": "/_ml/trained_models/{model_id}/model_aliases/{model_alias}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "model_alias": {
+                        "type": "string",
+                        "description": "The trained model alias to update"
+                    },
+                    "model_id": {
+                        "type": "string",
+                        "description": "The trained model where the model alias should be assigned"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "reassign": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-trained-models-aliases.html",
+            "description": "Creates a new model alias (or reassigns an existing one) to refer to the trained model"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/trained_models/{model_id}/model_aliases/{model_alias}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "model_alias": {
+                            "type": "string",
+                            "description": "The trained model alias to update"
+                        },
+                        "model_id": {
+                            "type": "string",
+                            "description": "The trained model where the model alias should be assigned"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "reassign": {
+                "type": "boolean",
+                "description": "If the model_alias already exists and points to a separate model_id, this parameter must be true. Defaults to false."
+            }
+        }
+    }
+}

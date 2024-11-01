@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.670603",
+        "api_name": "ccr.resume_auto_follow_pattern",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ccr",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ccr-resume-auto-follow-pattern.html",
+        "elastic_url": "https://www.elastic.co/ccr/resume_auto_follow_pattern.html",
+        "treat_json_as_key_value": false,
+        "title": "Resumes an auto-follow pattern that has been paused",
+        "paths": [
+            {
+                "path": "/_ccr/auto_follow/{name}/resume",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the auto follow pattern to resume discovering new indices to follow."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ccr-resume-auto-follow-pattern.html",
+            "description": "Resumes an auto-follow pattern that has been paused"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ccr/auto_follow/{name}/resume",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the auto follow pattern to resume discovering new indices to follow."
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "master_timeout": {
+                "type": "time",
+                "description": "Explicit operation timeout for connection to master node"
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.262584",
+        "api_name": "synonyms.delete_synonym",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "synonyms",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/delete-synonyms-set.html",
+        "elastic_url": "https://www.elastic.co/synonyms/delete_synonym.html",
+        "treat_json_as_key_value": false,
+        "title": "Deletes a synonym set",
+        "paths": [
+            {
+                "path": "/_synonyms/{id}",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the synonyms set to be deleted"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/delete-synonyms-set.html",
+            "description": "Deletes a synonym set"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_synonyms/{id}",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The id of the synonyms set to be deleted"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

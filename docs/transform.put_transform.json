@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.284579",
+        "api_name": "transform.put_transform",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "transform",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-transform.html",
+        "elastic_url": "https://www.elastic.co/transform/put_transform.html",
+        "treat_json_as_key_value": false,
+        "title": "Instantiates a transform.",
+        "paths": [
+            {
+                "path": "/_transform/{transform_id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "transform_id": {
+                        "type": "string",
+                        "description": "The id of the new transform."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "defer_validation": "boolean",
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-transform.html",
+            "description": "Instantiates a transform."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_transform/{transform_id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "transform_id": {
+                            "type": "string",
+                            "description": "The id of the new transform."
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "defer_validation": {
+                "type": "boolean",
+                "required": false,
+                "description": "If validations should be deferred until transform starts, defaults to false."
+            },
+            "timeout": {
+                "type": "time",
+                "required": false,
+                "description": "Controls the time to wait for the transform to start"
+            }
+        },
+        "body": {
+            "description": "The transform definition",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.039579",
+        "api_name": "ml.get_filters",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-get-filter.html",
+        "elastic_url": "https://www.elastic.co/ml/get_filters.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves filters.",
+        "paths": [
+            {
+                "path": "/_ml/filters",
+                "methods": [
+                    "GET"
+                ]
+            },
+            {
+                "path": "/_ml/filters/{filter_id}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "filter_id": {
+                        "type": "string",
+                        "description": "The ID of the filter to fetch"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "from": "int",
+            "size": "int"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-get-filter.html",
+            "description": "Retrieves filters."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/filters",
+                    "methods": [
+                        "GET"
+                    ]
+                },
+                {
+                    "path": "/_ml/filters/{filter_id}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "filter_id": {
+                            "type": "string",
+                            "description": "The ID of the filter to fetch"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "from": {
+                "type": "int",
+                "description": "skips a number of filters"
+            },
+            "size": {
+                "type": "int",
+                "description": "specifies a max number of filters to get"
+            }
+        }
+    }
+}

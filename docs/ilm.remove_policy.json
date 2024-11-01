@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.795611",
+        "api_name": "ilm.remove_policy",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ilm",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-remove-policy.html",
+        "elastic_url": "https://www.elastic.co/ilm/remove_policy.html",
+        "treat_json_as_key_value": false,
+        "title": "Removes the assigned lifecycle policy and stops managing the specified index",
+        "paths": [
+            {
+                "path": "/{index}/_ilm/remove",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "string",
+                        "description": "The name of the index to remove policy on"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-remove-policy.html",
+            "description": "Removes the assigned lifecycle policy and stops managing the specified index"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/{index}/_ilm/remove",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "string",
+                            "description": "The name of the index to remove policy on"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {}
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.283579",
+        "api_name": "transform.preview_transform",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "transform",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/preview-transform.html",
+        "elastic_url": "https://www.elastic.co/transform/preview_transform.html",
+        "treat_json_as_key_value": false,
+        "title": "Previews a transform.",
+        "paths": [
+            {
+                "path": "/_transform/{transform_id}/_preview",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "transform_id": {
+                        "type": "string",
+                        "description": "The id of the transform to preview."
+                    }
+                }
+            },
+            {
+                "path": "/_transform/_preview",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/preview-transform.html",
+            "description": "Previews a transform."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_transform/{transform_id}/_preview",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "transform_id": {
+                            "type": "string",
+                            "description": "The id of the transform to preview."
+                        }
+                    }
+                },
+                {
+                    "path": "/_transform/_preview",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "required": false,
+                "description": "Controls the time to wait for the preview"
+            }
+        },
+        "body": {
+            "description": "The definition for the transform to preview",
+            "required": false
+        }
+    }
+}

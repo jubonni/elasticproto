@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.217579",
+        "api_name": "security.query_user",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-query-user.html",
+        "elastic_url": "https://www.elastic.co/security/query_user.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves information for Users using a subset of query DSL",
+        "paths": [
+            {
+                "path": "/_security/_query/user",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "with_profile_uid": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-query-user.html",
+            "description": "Retrieves information for Users using a subset of query DSL"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/_query/user",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "body": {
+            "description": "From, size, query, sort and search_after",
+            "required": false
+        },
+        "params": {
+            "with_profile_uid": {
+                "type": "boolean",
+                "default": false,
+                "description": "flag to retrieve profile uid (if exists) associated with the user"
+            }
+        }
+    }
+}

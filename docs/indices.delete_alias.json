@@ -1,0 +1,111 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.812586",
+        "api_name": "indices.delete_alias",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-aliases.html",
+        "elastic_url": "https://www.elastic.co/indices/delete_alias.html",
+        "treat_json_as_key_value": false,
+        "title": "Deletes an alias.",
+        "paths": [
+            {
+                "path": "/{index}/_alias/{name}",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "list",
+                        "description": "A comma-separated list of index names (supports wildcards); use `_all` for all indices"
+                    },
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of aliases to delete (supports wildcards); use `_all` to delete all aliases for the specified indices."
+                    }
+                }
+            },
+            {
+                "path": "/{index}/_aliases/{name}",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "list",
+                        "description": "A comma-separated list of index names (supports wildcards); use `_all` for all indices"
+                    },
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of aliases to delete (supports wildcards); use `_all` to delete all aliases for the specified indices."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-aliases.html",
+            "description": "Deletes an alias."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/{index}/_alias/{name}",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "list",
+                            "description": "A comma-separated list of index names (supports wildcards); use `_all` for all indices"
+                        },
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of aliases to delete (supports wildcards); use `_all` to delete all aliases for the specified indices."
+                        }
+                    }
+                },
+                {
+                    "path": "/{index}/_aliases/{name}",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "list",
+                            "description": "A comma-separated list of index names (supports wildcards); use `_all` for all indices"
+                        },
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of aliases to delete (supports wildcards); use `_all` to delete all aliases for the specified indices."
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "description": "Explicit timestamp for the document"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

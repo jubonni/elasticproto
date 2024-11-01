@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.206580",
+        "api_name": "security.invalidate_api_key",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-invalidate-api-key.html",
+        "elastic_url": "https://www.elastic.co/security/invalidate_api_key.html",
+        "treat_json_as_key_value": false,
+        "title": "Invalidates one or more API keys.",
+        "paths": [
+            {
+                "path": "/_security/api_key",
+                "methods": [
+                    "DELETE"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-invalidate-api-key.html",
+            "description": "Invalidates one or more API keys."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/api_key",
+                    "methods": [
+                        "DELETE"
+                    ]
+                }
+            ]
+        },
+        "body": {
+            "description": "The api key request to invalidate API key(s)",
+            "required": true
+        }
+    }
+}

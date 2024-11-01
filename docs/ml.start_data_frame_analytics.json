@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.073581",
+        "api_name": "ml.start_data_frame_analytics",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/start-dfanalytics.html",
+        "elastic_url": "https://www.elastic.co/ml/start_data_frame_analytics.html",
+        "treat_json_as_key_value": false,
+        "title": "Starts a data frame analytics job.",
+        "paths": [
+            {
+                "path": "/_ml/data_frame/analytics/{id}/_start",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The ID of the data frame analytics to start"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/start-dfanalytics.html",
+            "description": "Starts a data frame analytics job."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/data_frame/analytics/{id}/_start",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The ID of the data frame analytics to start"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "required": false,
+                "description": "Controls the time to wait until the task has started. Defaults to 20 seconds"
+            }
+        },
+        "body": {
+            "description": "The start data frame analytics parameters"
+        }
+    }
+}

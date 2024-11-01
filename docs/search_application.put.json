@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.148581",
+        "api_name": "search_application.put",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "search_application",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/put-search-application.html",
+        "elastic_url": "https://www.elastic.co/search_application/put.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates or updates a search application.",
+        "paths": [
+            {
+                "path": "/_application/search_application/{name}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the search application to be created or updated"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "create": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/put-search-application.html",
+            "description": "Creates or updates a search application."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_application/search_application/{name}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the search application to be created or updated"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "create": {
+                "type": "boolean",
+                "description": "If true, requires that a search application with the specified resource_id does not already exist. (default: false)"
+            }
+        },
+        "body": {
+            "description": "The search application configuration, including `indices`",
+            "required": true
+        }
+    }
+}

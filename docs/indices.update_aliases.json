@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.904585",
+        "api_name": "indices.update_aliases",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-aliases.html",
+        "elastic_url": "https://www.elastic.co/indices/update_aliases.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates index aliases.",
+        "paths": [
+            {
+                "path": "/_aliases",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-aliases.html",
+            "description": "Updates index aliases."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_aliases",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "description": "Request timeout"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        },
+        "body": {
+            "description": "The definition of `actions` to perform",
+            "required": true
+        }
+    }
+}

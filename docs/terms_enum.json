@@ -1,0 +1,67 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.271580",
+        "api_name": "terms_enum",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "terms_enum",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-terms-enum.html",
+        "elastic_url": "https://www.elastic.co/terms_enum.html",
+        "treat_json_as_key_value": false,
+        "title": "The terms enum API  can be used to discover terms in the index that begin with the provided string. It is designed for low-latency look-ups used in auto-complete scenarios.",
+        "paths": [
+            {
+                "path": "/{index}/_terms_enum",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "list",
+                        "description": "A comma-separated list of index names to search; use `_all` or empty string to perform the operation on all indices"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-terms-enum.html",
+            "description": "The terms enum API  can be used to discover terms in the index that begin with the provided string. It is designed for low-latency look-ups used in auto-complete scenarios."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/{index}/_terms_enum",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "list",
+                            "description": "A comma-separated list of index names to search; use `_all` or empty string to perform the operation on all indices"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {},
+        "body": {
+            "description": "field name, string which is the prefix expected in matching terms, timeout and size for max number of results"
+        }
+    }
+}

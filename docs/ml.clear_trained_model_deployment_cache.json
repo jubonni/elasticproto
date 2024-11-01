@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.008579",
+        "api_name": "ml.clear_trained_model_deployment_cache",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/clear-trained-model-deployment-cache.html",
+        "elastic_url": "https://www.elastic.co/ml/clear_trained_model_deployment_cache.html",
+        "treat_json_as_key_value": false,
+        "title": "Clear the cached results from a trained model deployment",
+        "paths": [
+            {
+                "path": "/_ml/trained_models/{model_id}/deployment/cache/_clear",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "model_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the trained model.",
+                        "required": true
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/clear-trained-model-deployment-cache.html",
+            "description": "Clear the cached results from a trained model deployment"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/trained_models/{model_id}/deployment/cache/_clear",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "model_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the trained model.",
+                            "required": true
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

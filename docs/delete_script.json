@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.749581",
+        "api_name": "delete_script",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "delete_script",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html",
+        "elastic_url": "https://www.elastic.co/delete_script.html",
+        "treat_json_as_key_value": false,
+        "title": "Deletes a script.",
+        "paths": [
+            {
+                "path": "/_scripts/{id}",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "Script ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-scripting.html",
+            "description": "Deletes a script."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_scripts/{id}",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "Script ID"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "description": "Explicit operation timeout"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

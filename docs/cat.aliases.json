@@ -1,0 +1,114 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.596588",
+        "api_name": "cat.aliases",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "cat",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cat-alias.html",
+        "elastic_url": "https://www.elastic.co/cat/aliases.html",
+        "treat_json_as_key_value": false,
+        "title": "Shows information about currently configured aliases to indices including filter and routing infos.",
+        "paths": [
+            {
+                "path": "/_cat/aliases",
+                "methods": [
+                    "GET"
+                ]
+            },
+            {
+                "path": "/_cat/aliases/{name}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of alias names to return"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "format": "string",
+            "h": "list",
+            "help": "boolean",
+            "s": "list",
+            "v": "boolean",
+            "expand_wildcards": "enum"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cat-alias.html",
+            "description": "Shows information about currently configured aliases to indices including filter and routing infos."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "text/plain",
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_cat/aliases",
+                    "methods": [
+                        "GET"
+                    ]
+                },
+                {
+                    "path": "/_cat/aliases/{name}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of alias names to return"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "format": {
+                "type": "string",
+                "description": "a short version of the Accept header, e.g. json, yaml"
+            },
+            "h": {
+                "type": "list",
+                "description": "Comma-separated list of column names to display"
+            },
+            "help": {
+                "type": "boolean",
+                "description": "Return help information",
+                "default": false
+            },
+            "s": {
+                "type": "list",
+                "description": "Comma-separated list of column names or column aliases to sort by"
+            },
+            "v": {
+                "type": "boolean",
+                "description": "Verbose mode. Display column headers",
+                "default": false
+            },
+            "expand_wildcards": {
+                "type": "enum",
+                "options": [
+                    "open",
+                    "closed",
+                    "hidden",
+                    "none",
+                    "all"
+                ],
+                "default": "all",
+                "description": "Whether to expand wildcard expression to concrete indices that are open, closed or both."
+            }
+        }
+    }
+}

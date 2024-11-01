@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.290579",
+        "api_name": "transform.upgrade_transforms",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "transform",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/upgrade-transforms.html",
+        "elastic_url": "https://www.elastic.co/transform/upgrade_transforms.html",
+        "treat_json_as_key_value": false,
+        "title": "Upgrades all transforms.",
+        "paths": [
+            {
+                "path": "/_transform/_upgrade",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "dry_run": "boolean",
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/upgrade-transforms.html",
+            "description": "Upgrades all transforms."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_transform/_upgrade",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "dry_run": {
+                "type": "boolean",
+                "required": false,
+                "description": "Whether to only check for updates but don't execute"
+            },
+            "timeout": {
+                "type": "time",
+                "required": false,
+                "description": "Controls the time to wait for the upgrade"
+            }
+        }
+    }
+}

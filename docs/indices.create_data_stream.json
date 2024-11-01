@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.808580",
+        "api_name": "indices.create_data_stream",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/data-streams.html",
+        "elastic_url": "https://www.elastic.co/indices/create_data_stream.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates a data stream",
+        "paths": [
+            {
+                "path": "/_data_stream/{name}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the data stream"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/data-streams.html",
+            "description": "Creates a data stream"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_data_stream/{name}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the data stream"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "description": "Specify timeout for acknowledging the cluster state update"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

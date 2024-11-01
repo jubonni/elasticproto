@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.743579",
+        "api_name": "dangling_indices.list_dangling_indices",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "dangling_indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-gateway-dangling-indices.html",
+        "elastic_url": "https://www.elastic.co/dangling_indices/list_dangling_indices.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns all dangling indices.",
+        "paths": [
+            {
+                "path": "/_dangling",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-gateway-dangling-indices.html",
+            "description": "Returns all dangling indices."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_dangling",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {}
+    }
+}

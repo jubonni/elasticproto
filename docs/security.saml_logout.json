@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.221579",
+        "api_name": "security.saml_logout",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-saml-logout.html",
+        "elastic_url": "https://www.elastic.co/security/saml_logout.html",
+        "treat_json_as_key_value": false,
+        "title": "Invalidates an access token and a refresh token that were generated via the SAML Authenticate API",
+        "paths": [
+            {
+                "path": "/_security/saml/logout",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-saml-logout.html",
+            "description": "Invalidates an access token and a refresh token that were generated via the SAML Authenticate API"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/saml/logout",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "body": {
+            "description": "The tokens to invalidate",
+            "required": true
+        }
+    }
+}

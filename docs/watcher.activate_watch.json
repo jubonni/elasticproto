@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.297585",
+        "api_name": "watcher.activate_watch",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "watcher",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-activate-watch.html",
+        "elastic_url": "https://www.elastic.co/watcher/activate_watch.html",
+        "treat_json_as_key_value": false,
+        "title": "Activates a currently inactive watch.",
+        "paths": [
+            {
+                "path": "/_watcher/watch/{watch_id}/_activate",
+                "methods": [
+                    "PUT",
+                    "POST"
+                ],
+                "parts": {
+                    "watch_id": {
+                        "type": "string",
+                        "description": "Watch ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-activate-watch.html",
+            "description": "Activates a currently inactive watch."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_watcher/watch/{watch_id}/_activate",
+                    "methods": [
+                        "PUT",
+                        "POST"
+                    ],
+                    "parts": {
+                        "watch_id": {
+                            "type": "string",
+                            "description": "Watch ID"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

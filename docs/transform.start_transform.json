@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.287582",
+        "api_name": "transform.start_transform",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "transform",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/start-transform.html",
+        "elastic_url": "https://www.elastic.co/transform/start_transform.html",
+        "treat_json_as_key_value": false,
+        "title": "Starts one or more transforms.",
+        "paths": [
+            {
+                "path": "/_transform/{transform_id}/_start",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "transform_id": {
+                        "type": "string",
+                        "description": "The id of the transform to start"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "from": "string",
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/start-transform.html",
+            "description": "Starts one or more transforms."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_transform/{transform_id}/_start",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "transform_id": {
+                            "type": "string",
+                            "description": "The id of the transform to start"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "from": {
+                "type": "string",
+                "required": false,
+                "description": "Restricts the set of transformed entities to those changed after this time"
+            },
+            "timeout": {
+                "type": "time",
+                "required": false,
+                "description": "Controls the time to wait for the transform to start"
+            }
+        }
+    }
+}

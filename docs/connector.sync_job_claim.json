@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.712582",
+        "api_name": "connector.sync_job_claim",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/claim-connector-sync-job-api.html",
+        "elastic_url": "https://www.elastic.co/connector/sync_job_claim.html",
+        "treat_json_as_key_value": false,
+        "title": "Claims a connector sync job.",
+        "paths": [
+            {
+                "path": "/_connector/_sync_job/{connector_sync_job_id}/_claim",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_sync_job_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector sync job to be claimed."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/claim-connector-sync-job-api.html",
+            "description": "Claims a connector sync job."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/_sync_job/{connector_sync_job_id}/_claim",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_sync_job_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector sync job to be claimed."
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "Data to claim a sync job.",
+            "required": true
+        }
+    }
+}

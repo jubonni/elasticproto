@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.824580",
+        "api_name": "indices.explain_data_lifecycle",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/data-streams-explain-lifecycle.html",
+        "elastic_url": "https://www.elastic.co/indices/explain_data_lifecycle.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves information about the index's current data stream lifecycle, such as any potential encountered error, time since creation etc.",
+        "paths": [
+            {
+                "path": "/{index}/_lifecycle/explain",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "string",
+                        "description": "The name of the index to explain"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "include_defaults": "boolean",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/data-streams-explain-lifecycle.html",
+            "description": "Retrieves information about the index's current data stream lifecycle, such as any potential encountered error, time since creation etc."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/{index}/_lifecycle/explain",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "string",
+                            "description": "The name of the index to explain"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "include_defaults": {
+                "type": "boolean",
+                "description": "indicates if the API should return the default values the system uses for the index's lifecycle"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

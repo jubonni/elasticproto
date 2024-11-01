@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.774581",
+        "api_name": "fleet.global_checkpoints",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "fleet",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-global-checkpoints.html",
+        "elastic_url": "https://www.elastic.co/fleet/global_checkpoints.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns the current global checkpoints for an index. This API is design for internal use by the fleet server project.",
+        "paths": [
+            {
+                "path": "/{index}/_fleet/global_checkpoints",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "string",
+                        "description": "The name of the index."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "wait_for_advance": "boolean",
+            "wait_for_index": "boolean",
+            "checkpoints": "list",
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-global-checkpoints.html",
+            "description": "Returns the current global checkpoints for an index. This API is design for internal use by the fleet server project."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/{index}/_fleet/global_checkpoints",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "string",
+                            "description": "The name of the index."
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "wait_for_advance": {
+                "type": "boolean",
+                "description": "Whether to wait for the global checkpoint to advance past the specified current checkpoints",
+                "default": "false"
+            },
+            "wait_for_index": {
+                "type": "boolean",
+                "description": "Whether to wait for the target index to exist and all primary shards be active",
+                "default": "false"
+            },
+            "checkpoints": {
+                "type": "list",
+                "description": "Comma separated list of checkpoints",
+                "default": ""
+            },
+            "timeout": {
+                "type": "time",
+                "description": "Timeout to wait for global checkpoint to advance",
+                "default": "30s"
+            }
+        }
+    }
+}

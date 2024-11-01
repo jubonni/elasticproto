@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.225580",
+        "api_name": "security.update_api_key",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-update-api-key.html",
+        "elastic_url": "https://www.elastic.co/security/update_api_key.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates attributes of an existing API key.",
+        "paths": [
+            {
+                "path": "/_security/api_key/{id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The ID of the API key to update"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-update-api-key.html",
+            "description": "Updates attributes of an existing API key."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/api_key/{id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The ID of the API key to update"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The API key request to update attributes of an API key.",
+            "required": false
+        }
+    }
+}

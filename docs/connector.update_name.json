@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.731580",
+        "api_name": "connector.update_name",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-connector-name-description-api.html",
+        "elastic_url": "https://www.elastic.co/connector/update_name.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the name and/or description fields in the connector document.",
+        "paths": [
+            {
+                "path": "/_connector/{connector_id}/_name",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector to be updated."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-connector-name-description-api.html",
+            "description": "Updates the name and/or description fields in the connector document."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/{connector_id}/_name",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector to be updated."
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "An object containing the connector's name and/or description.",
+            "required": true
+        }
+    }
+}

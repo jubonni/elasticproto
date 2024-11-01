@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.105580",
+        "api_name": "profiling.flamegraph",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "profiling",
+        "url": "https://www.elastic.co/guide/en/observability/current/universal-profiling.html",
+        "elastic_url": "https://www.elastic.co/profiling/flamegraph.html",
+        "treat_json_as_key_value": false,
+        "title": "Extracts a UI-optimized structure to render flamegraphs from Universal Profiling.",
+        "paths": [
+            {
+                "path": "/_profiling/flamegraph",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/observability/current/universal-profiling.html",
+            "description": "Extracts a UI-optimized structure to render flamegraphs from Universal Profiling."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_profiling/flamegraph",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "body": {
+            "description": "The filter conditions for the flamegraph",
+            "required": true
+        }
+    }
+}

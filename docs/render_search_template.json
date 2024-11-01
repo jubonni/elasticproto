@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.122581",
+        "api_name": "render_search_template",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "render_search_template",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/render-search-template-api.html",
+        "elastic_url": "https://www.elastic.co/render_search_template.html",
+        "treat_json_as_key_value": false,
+        "title": "Allows to use the Mustache language to pre-render a search definition.",
+        "paths": [
+            {
+                "path": "/_render/template",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            },
+            {
+                "path": "/_render/template/{id}",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The id of the stored search template"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/render-search-template-api.html",
+            "description": "Allows to use the Mustache language to pre-render a search definition."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_render/template",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                },
+                {
+                    "path": "/_render/template/{id}",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The id of the stored search template"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The search definition template and its params"
+        }
+    }
+}

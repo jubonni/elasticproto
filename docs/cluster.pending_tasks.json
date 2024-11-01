@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.686588",
+        "api_name": "cluster.pending_tasks",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "cluster",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cluster-pending.html",
+        "elastic_url": "https://www.elastic.co/cluster/pending_tasks.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns a list of any cluster-level changes (e.g. create index, update mapping,\nallocate or fail shard) which have not yet been executed.",
+        "paths": [
+            {
+                "path": "/_cluster/pending_tasks",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "local": "boolean",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cluster-pending.html",
+            "description": "Returns a list of any cluster-level changes (e.g. create index, update mapping,\nallocate or fail shard) which have not yet been executed."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_cluster/pending_tasks",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "local": {
+                "type": "boolean",
+                "description": "Return local information, do not retrieve the state from master node (default: false)"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        }
+    }
+}

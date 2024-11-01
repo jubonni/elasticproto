@@ -1,0 +1,54 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.579584",
+        "api_name": "autoscaling.get_autoscaling_capacity",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "autoscaling",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-get-autoscaling-capacity.html",
+        "elastic_url": "https://www.elastic.co/autoscaling/get_autoscaling_capacity.html",
+        "treat_json_as_key_value": false,
+        "title": "Gets the current autoscaling capacity based on the configured autoscaling policy. Designed for indirect use by ECE/ESS and ECK. Direct use is not supported.",
+        "paths": [
+            {
+                "path": "/_autoscaling/capacity",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-get-autoscaling-capacity.html",
+            "description": "Gets the current autoscaling capacity based on the configured autoscaling policy. Designed for indirect use by ECE/ESS and ECK. Direct use is not supported."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_autoscaling/capacity",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "master_timeout": {
+                "type": "time",
+                "description": "Timeout for processing on master node"
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.701586",
+        "api_name": "connector.list",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/list-connector-api.html",
+        "elastic_url": "https://www.elastic.co/connector/list.html",
+        "treat_json_as_key_value": false,
+        "title": "Lists all connectors.",
+        "paths": [
+            {
+                "path": "/_connector",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "from": "int",
+            "size": "int",
+            "index_name": "list",
+            "connector_name": "list",
+            "service_type": "list",
+            "query": "string"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/list-connector-api.html",
+            "description": "Lists all connectors."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "from": {
+                "type": "int",
+                "default": 0,
+                "description": "Starting offset (default: 0)"
+            },
+            "size": {
+                "type": "int",
+                "default": 100,
+                "description": "Specifies a max number of results to get (default: 100)"
+            },
+            "index_name": {
+                "type": "list",
+                "description": "A comma-separated list of connector index names to fetch connector documents for"
+            },
+            "connector_name": {
+                "type": "list",
+                "description": "A comma-separated list of connector names to fetch connector documents for"
+            },
+            "service_type": {
+                "type": "list",
+                "description": "A comma-separated list of connector service types to fetch connector documents for"
+            },
+            "query": {
+                "type": "string",
+                "description": "A search string for querying connectors, filtering results by matching against connector names, descriptions, and index names"
+            }
+        }
+    }
+}

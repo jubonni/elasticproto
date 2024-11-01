@@ -1,0 +1,83 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.257578",
+        "api_name": "sql.get_async",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "sql",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/get-async-sql-search-api.html",
+        "elastic_url": "https://www.elastic.co/sql/get_async.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns the current status and available results for an async SQL search or stored synchronous SQL search",
+        "paths": [
+            {
+                "path": "/_sql/async/{id}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The async search ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "delimiter": "string",
+            "format": "string",
+            "keep_alive": "time",
+            "wait_for_completion_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/get-async-sql-search-api.html",
+            "description": "Returns the current status and available results for an async SQL search or stored synchronous SQL search"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_sql/async/{id}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The async search ID"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "delimiter": {
+                "type": "string",
+                "description": "Separator for CSV results",
+                "default": ","
+            },
+            "format": {
+                "type": "string",
+                "description": "Short version of the Accept header, e.g. json, yaml"
+            },
+            "keep_alive": {
+                "type": "time",
+                "description": "Retention period for the search and its results",
+                "default": "5d"
+            },
+            "wait_for_completion_timeout": {
+                "type": "time",
+                "description": "Duration to wait for complete results"
+            }
+        }
+    }
+}

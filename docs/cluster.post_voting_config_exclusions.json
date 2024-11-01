@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.687610",
+        "api_name": "cluster.post_voting_config_exclusions",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "cluster",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/voting-config-exclusions.html",
+        "elastic_url": "https://www.elastic.co/cluster/post_voting_config_exclusions.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the cluster voting config exclusions by node ids or node names.",
+        "paths": [
+            {
+                "path": "/_cluster/voting_config_exclusions",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "node_ids": "string",
+            "node_names": "string",
+            "timeout": "time",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/voting-config-exclusions.html",
+            "description": "Updates the cluster voting config exclusions by node ids or node names."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_cluster/voting_config_exclusions",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "node_ids": {
+                "type": "string",
+                "description": "A comma-separated list of the persistent ids of the nodes to exclude from the voting configuration. If specified, you may not also specify ?node_names."
+            },
+            "node_names": {
+                "type": "string",
+                "description": "A comma-separated list of the names of the nodes to exclude from the voting configuration. If specified, you may not also specify ?node_ids."
+            },
+            "timeout": {
+                "type": "time",
+                "description": "Explicit operation timeout",
+                "default": "30s"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Timeout for submitting request to master",
+                "default": "30s"
+            }
+        }
+    }
+}

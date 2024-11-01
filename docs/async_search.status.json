@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.566583",
+        "api_name": "async_search.status",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "async_search",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/async-search.html",
+        "elastic_url": "https://www.elastic.co/async_search/status.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves the status of a previously submitted async search request given its ID.",
+        "paths": [
+            {
+                "path": "/_async_search/status/{id}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The async search ID"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "keep_alive": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/async-search.html",
+            "description": "Retrieves the status of a previously submitted async search request given its ID."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_async_search/status/{id}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The async search ID"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "keep_alive": {
+                "type": "time",
+                "description": "Specify the time interval in which the results (partial or final) for this search will be available"
+            }
+        }
+    }
+}

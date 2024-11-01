@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.840581",
+        "api_name": "indices.get_template",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-get-template-v1.html",
+        "elastic_url": "https://www.elastic.co/indices/get_template.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns an index template.",
+        "paths": [
+            {
+                "path": "/_template",
+                "methods": [
+                    "GET"
+                ]
+            },
+            {
+                "path": "/_template/{name}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "list",
+                        "description": "The comma separated names of the index templates"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "flat_settings": "boolean",
+            "master_timeout": "time",
+            "local": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-get-template-v1.html",
+            "description": "Returns an index template."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_template",
+                    "methods": [
+                        "GET"
+                    ]
+                },
+                {
+                    "path": "/_template/{name}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "list",
+                            "description": "The comma separated names of the index templates"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "flat_settings": {
+                "type": "boolean",
+                "description": "Return settings in flat format (default: false)"
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Explicit operation timeout for connection to master node"
+            },
+            "local": {
+                "type": "boolean",
+                "description": "Return local information, do not retrieve the state from master node (default: false)"
+            }
+        }
+    }
+}

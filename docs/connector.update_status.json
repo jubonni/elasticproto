@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.738583",
+        "api_name": "connector.update_status",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-connector-status-api.html",
+        "elastic_url": "https://www.elastic.co/connector/update_status.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the status of the connector.",
+        "paths": [
+            {
+                "path": "/_connector/{connector_id}/_status",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector to be updated."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-connector-status-api.html",
+            "description": "Updates the status of the connector."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/{connector_id}/_status",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector to be updated."
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "An object containing the connector's status.",
+            "required": true
+        }
+    }
+}

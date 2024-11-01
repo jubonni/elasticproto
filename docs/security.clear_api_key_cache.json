@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.165580",
+        "api_name": "security.clear_api_key_cache",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-api-key-cache.html",
+        "elastic_url": "https://www.elastic.co/security/clear_api_key_cache.html",
+        "treat_json_as_key_value": false,
+        "title": "Clear a subset or all entries from the API key cache.",
+        "paths": [
+            {
+                "path": "/_security/api_key/{ids}/_clear_cache",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "ids": {
+                        "type": "list",
+                        "description": "A comma-separated list of IDs of API keys to clear from the cache"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-api-key-cache.html",
+            "description": "Clear a subset or all entries from the API key cache."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/api_key/{ids}/_clear_cache",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "ids": {
+                            "type": "list",
+                            "description": "A comma-separated list of IDs of API keys to clear from the cache"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {}
+    }
+}

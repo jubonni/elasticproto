@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.231580",
+        "api_name": "shutdown.put_node",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "shutdown",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current",
+        "elastic_url": "https://www.elastic.co/shutdown/put_node.html",
+        "treat_json_as_key_value": false,
+        "title": "Adds a node to be shut down. Designed for indirect use by ECE/ESS and ECK. Direct use is not supported.",
+        "paths": [
+            {
+                "path": "/_nodes/{node_id}/shutdown",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "node_id": {
+                        "type": "string",
+                        "description": "The node id of node to be shut down"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current",
+            "description": "Adds a node to be shut down. Designed for indirect use by ECE/ESS and ECK. Direct use is not supported."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_nodes/{node_id}/shutdown",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "node_id": {
+                            "type": "string",
+                            "description": "The node id of node to be shut down"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {},
+        "body": {
+            "description": "The shutdown type definition to register",
+            "required": true
+        }
+    }
+}

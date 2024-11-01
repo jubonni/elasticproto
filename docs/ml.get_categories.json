@@ -1,0 +1,118 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.033582",
+        "api_name": "ml.get_categories",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-get-category.html",
+        "elastic_url": "https://www.elastic.co/ml/get_categories.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves anomaly detection job results for one or more categories.",
+        "paths": [
+            {
+                "path": "/_ml/anomaly_detectors/{job_id}/results/categories/{category_id}",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "job_id": {
+                        "type": "string",
+                        "description": "The name of the job"
+                    },
+                    "category_id": {
+                        "type": "long",
+                        "description": "The identifier of the category definition of interest"
+                    }
+                }
+            },
+            {
+                "path": "/_ml/anomaly_detectors/{job_id}/results/categories",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "job_id": {
+                        "type": "string",
+                        "description": "The name of the job"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "from": "int",
+            "size": "int",
+            "partition_field_value": "string"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-get-category.html",
+            "description": "Retrieves anomaly detection job results for one or more categories."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/anomaly_detectors/{job_id}/results/categories/{category_id}",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "job_id": {
+                            "type": "string",
+                            "description": "The name of the job"
+                        },
+                        "category_id": {
+                            "type": "long",
+                            "description": "The identifier of the category definition of interest"
+                        }
+                    }
+                },
+                {
+                    "path": "/_ml/anomaly_detectors/{job_id}/results/categories",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "job_id": {
+                            "type": "string",
+                            "description": "The name of the job"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "from": {
+                "type": "int",
+                "description": "skips a number of categories"
+            },
+            "size": {
+                "type": "int",
+                "description": "specifies a max number of categories to get"
+            },
+            "partition_field_value": {
+                "type": "string",
+                "description": "Specifies the partition to retrieve categories for. This is optional, and should never be used for jobs where per-partition categorization is disabled."
+            }
+        },
+        "body": {
+            "description": "Category selection details if not provided in URI"
+        }
+    }
+}

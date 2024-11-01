@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.070582",
+        "api_name": "ml.revert_model_snapshot",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-revert-snapshot.html",
+        "elastic_url": "https://www.elastic.co/ml/revert_model_snapshot.html",
+        "treat_json_as_key_value": false,
+        "title": "Reverts to a specific snapshot.",
+        "paths": [
+            {
+                "path": "/_ml/anomaly_detectors/{job_id}/model_snapshots/{snapshot_id}/_revert",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "job_id": {
+                        "type": "string",
+                        "description": "The ID of the job to fetch"
+                    },
+                    "snapshot_id": {
+                        "type": "string",
+                        "description": "The ID of the snapshot to revert to"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "delete_intervening_results": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-revert-snapshot.html",
+            "description": "Reverts to a specific snapshot."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/anomaly_detectors/{job_id}/model_snapshots/{snapshot_id}/_revert",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "job_id": {
+                            "type": "string",
+                            "description": "The ID of the job to fetch"
+                        },
+                        "snapshot_id": {
+                            "type": "string",
+                            "description": "The ID of the snapshot to revert to"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "delete_intervening_results": {
+                "type": "boolean",
+                "description": "Should we reset the results back to the time of the snapshot?"
+            }
+        },
+        "body": {
+            "description": "Reversion options"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.728599",
+        "api_name": "connector.update_filtering_validation",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-connector-filtering-api.html",
+        "elastic_url": "https://www.elastic.co/connector/update_filtering_validation.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the validation info of the draft filtering rules.",
+        "paths": [
+            {
+                "path": "/_connector/{connector_id}/_filtering/_validation",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector to be updated."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/update-connector-filtering-api.html",
+            "description": "Updates the validation info of the draft filtering rules."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/{connector_id}/_filtering/_validation",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector to be updated."
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "Validation info for the draft filtering rules",
+            "required": true
+        }
+    }
+}

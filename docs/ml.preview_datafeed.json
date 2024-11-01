@@ -1,0 +1,96 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.056579",
+        "api_name": "ml.preview_datafeed",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-preview-datafeed.html",
+        "elastic_url": "https://www.elastic.co/ml/preview_datafeed.html",
+        "treat_json_as_key_value": false,
+        "title": "Previews a datafeed.",
+        "paths": [
+            {
+                "path": "/_ml/datafeeds/{datafeed_id}/_preview",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "datafeed_id": {
+                        "type": "string",
+                        "description": "The ID of the datafeed to preview"
+                    }
+                }
+            },
+            {
+                "path": "/_ml/datafeeds/_preview",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "start": "string",
+            "end": "string"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-preview-datafeed.html",
+            "description": "Previews a datafeed."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/datafeeds/{datafeed_id}/_preview",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "datafeed_id": {
+                            "type": "string",
+                            "description": "The ID of the datafeed to preview"
+                        }
+                    }
+                },
+                {
+                    "path": "/_ml/datafeeds/_preview",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "start": {
+                "type": "string",
+                "required": false,
+                "description": "The start time from where the datafeed preview should begin"
+            },
+            "end": {
+                "type": "string",
+                "required": false,
+                "description": "The end time when the datafeed preview should stop"
+            }
+        },
+        "body": {
+            "description": "The datafeed config and job config with which to execute the preview",
+            "required": false
+        }
+    }
+}

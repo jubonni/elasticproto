@@ -1,0 +1,54 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.311582",
+        "api_name": "_internal.delete_desired_balance",
+        "stability": "experimental",
+        "visibility": "private",
+        "main_component": "_internal",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-desired-balance.html",
+        "elastic_url": "https://www.elastic.co/_internal/delete_desired_balance.html",
+        "treat_json_as_key_value": false,
+        "title": "This API is a diagnostics API and the output should not be relied upon for building applications.",
+        "paths": [
+            {
+                "path": "/_internal/desired_balance",
+                "methods": [
+                    "DELETE"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-desired-balance.html",
+            "description": "This API is a diagnostics API and the output should not be relied upon for building applications."
+        },
+        "stability": "experimental",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_internal/desired_balance",
+                    "methods": [
+                        "DELETE"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "master_timeout": {
+                "type": "time",
+                "description": "Timeout for connection to master node"
+            }
+        }
+    }
+}

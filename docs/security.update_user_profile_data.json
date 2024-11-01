@@ -1,0 +1,90 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.228586",
+        "api_name": "security.update_user_profile_data",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-update-user-profile-data.html",
+        "elastic_url": "https://www.elastic.co/security/update_user_profile_data.html",
+        "treat_json_as_key_value": false,
+        "title": "Update application specific data for the user profile of the given unique ID.",
+        "paths": [
+            {
+                "path": "/_security/profile/{uid}/_data",
+                "methods": [
+                    "PUT",
+                    "POST"
+                ],
+                "parts": {
+                    "uid": {
+                        "type": "string",
+                        "description": "An unique identifier of the user profile"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "if_seq_no": "number",
+            "if_primary_term": "number",
+            "refresh": "enum"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-update-user-profile-data.html",
+            "description": "Update application specific data for the user profile of the given unique ID."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/profile/{uid}/_data",
+                    "methods": [
+                        "PUT",
+                        "POST"
+                    ],
+                    "parts": {
+                        "uid": {
+                            "type": "string",
+                            "description": "An unique identifier of the user profile"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "if_seq_no": {
+                "type": "number",
+                "description": "only perform the update operation if the last operation that has changed the document has the specified sequence number"
+            },
+            "if_primary_term": {
+                "type": "number",
+                "description": "only perform the update operation if the last operation that has changed the document has the specified primary term"
+            },
+            "refresh": {
+                "type": "enum",
+                "options": [
+                    "true",
+                    "false",
+                    "wait_for"
+                ],
+                "description": "If `true` (the default) then refresh the affected shards to make this operation visible to search, if `wait_for` then wait for a refresh to make this operation visible to search, if `false` then do nothing with refreshes."
+            }
+        },
+        "body": {
+            "description": "The application data to update",
+            "required": true
+        }
+    }
+}

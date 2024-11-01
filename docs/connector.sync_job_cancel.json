@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.710581",
+        "api_name": "connector.sync_job_cancel",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cancel-connector-sync-job-api.html",
+        "elastic_url": "https://www.elastic.co/connector/sync_job_cancel.html",
+        "treat_json_as_key_value": false,
+        "title": "Cancels a connector sync job.",
+        "paths": [
+            {
+                "path": "/_connector/_sync_job/{connector_sync_job_id}/_cancel",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_sync_job_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector sync job to be canceled"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cancel-connector-sync-job-api.html",
+            "description": "Cancels a connector sync job."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/_sync_job/{connector_sync_job_id}/_cancel",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_sync_job_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector sync job to be canceled"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

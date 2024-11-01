@@ -1,0 +1,86 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.029580",
+        "api_name": "ml.forecast",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-forecast.html",
+        "elastic_url": "https://www.elastic.co/ml/forecast.html",
+        "treat_json_as_key_value": false,
+        "title": "Predicts the future behavior of a time series by using its historical behavior.",
+        "paths": [
+            {
+                "path": "/_ml/anomaly_detectors/{job_id}/_forecast",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "job_id": {
+                        "type": "string",
+                        "description": "The ID of the job to forecast for"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "duration": "time",
+            "expires_in": "time",
+            "max_model_memory": "string"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-forecast.html",
+            "description": "Predicts the future behavior of a time series by using its historical behavior."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/anomaly_detectors/{job_id}/_forecast",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "job_id": {
+                            "type": "string",
+                            "description": "The ID of the job to forecast for"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "duration": {
+                "type": "time",
+                "required": false,
+                "description": "The duration of the forecast"
+            },
+            "expires_in": {
+                "type": "time",
+                "required": false,
+                "description": "The time interval after which the forecast expires. Expired forecasts will be deleted at the first opportunity."
+            },
+            "max_model_memory": {
+                "type": "string",
+                "required": false,
+                "description": "The max memory able to be used by the forecast. Default is 20mb."
+            }
+        },
+        "body": {
+            "description": "Query parameters can be specified in the body",
+            "required": false
+        }
+    }
+}

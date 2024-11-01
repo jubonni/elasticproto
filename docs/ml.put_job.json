@@ -1,0 +1,95 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.063597",
+        "api_name": "ml.put_job",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-put-job.html",
+        "elastic_url": "https://www.elastic.co/ml/put_job.html",
+        "treat_json_as_key_value": false,
+        "title": "Instantiates an anomaly detection job.",
+        "paths": [
+            {
+                "path": "/_ml/anomaly_detectors/{job_id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "job_id": {
+                        "type": "string",
+                        "description": "The ID of the job to create"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "ignore_unavailable": "boolean",
+            "allow_no_indices": "boolean",
+            "ignore_throttled": "boolean",
+            "expand_wildcards": "enum"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-put-job.html",
+            "description": "Instantiates an anomaly detection job."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/anomaly_detectors/{job_id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "job_id": {
+                            "type": "string",
+                            "description": "The ID of the job to create"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "ignore_unavailable": {
+                "type": "boolean",
+                "description": "Ignore unavailable indexes (default: false). Only set if datafeed_config is provided."
+            },
+            "allow_no_indices": {
+                "type": "boolean",
+                "description": "Ignore if the source indices expressions resolves to no concrete indices (default: true). Only set if datafeed_config is provided."
+            },
+            "ignore_throttled": {
+                "type": "boolean",
+                "description": "Ignore indices that are marked as throttled (default: true). Only set if datafeed_config is provided."
+            },
+            "expand_wildcards": {
+                "type": "enum",
+                "options": [
+                    "open",
+                    "closed",
+                    "hidden",
+                    "none",
+                    "all"
+                ],
+                "description": "Whether source index expressions should get expanded to open or closed indices (default: open). Only set if datafeed_config is provided."
+            }
+        },
+        "body": {
+            "description": "The job",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.616590",
+        "api_name": "cat.help",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "cat",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cat.html",
+        "elastic_url": "https://www.elastic.co/cat/help.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns help for the Cat APIs.",
+        "paths": [
+            {
+                "path": "/_cat",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "help": "boolean",
+            "s": "list"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cat.html",
+            "description": "Returns help for the Cat APIs."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "text/plain"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_cat",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "help": {
+                "type": "boolean",
+                "description": "Return help information",
+                "default": false
+            },
+            "s": {
+                "type": "list",
+                "description": "Comma-separated list of column names or column aliases to sort by"
+            }
+        }
+    }
+}

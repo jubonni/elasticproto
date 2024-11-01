@@ -1,0 +1,86 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.855582",
+        "api_name": "indices.put_template",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-templates-v1.html",
+        "elastic_url": "https://www.elastic.co/indices/put_template.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates or updates an index template.",
+        "paths": [
+            {
+                "path": "/_template/{name}",
+                "methods": [
+                    "PUT",
+                    "POST"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the template"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "order": "number",
+            "create": "boolean",
+            "master_timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-templates-v1.html",
+            "description": "Creates or updates an index template."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_template/{name}",
+                    "methods": [
+                        "PUT",
+                        "POST"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the template"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "order": {
+                "type": "number",
+                "description": "The order for this template when merging multiple matching ones (higher numbers are merged later, overriding the lower numbers)"
+            },
+            "create": {
+                "type": "boolean",
+                "description": "Whether the index template should only be added if new or can also replace an existing one",
+                "default": false
+            },
+            "master_timeout": {
+                "type": "time",
+                "description": "Specify timeout for connection to master"
+            }
+        },
+        "body": {
+            "description": "The template definition",
+            "required": true
+        }
+    }
+}

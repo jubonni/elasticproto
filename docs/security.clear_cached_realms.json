@@ -1,0 +1,67 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.167580",
+        "api_name": "security.clear_cached_realms",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-cache.html",
+        "elastic_url": "https://www.elastic.co/security/clear_cached_realms.html",
+        "treat_json_as_key_value": false,
+        "title": "Evicts users from the user cache. Can completely clear the cache or evict specific users.",
+        "paths": [
+            {
+                "path": "/_security/realm/{realms}/_clear_cache",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "realms": {
+                        "type": "list",
+                        "description": "Comma-separated list of realms to clear"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "usernames": "list"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-cache.html",
+            "description": "Evicts users from the user cache. Can completely clear the cache or evict specific users."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/realm/{realms}/_clear_cache",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "realms": {
+                            "type": "list",
+                            "description": "Comma-separated list of realms to clear"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "usernames": {
+                "type": "list",
+                "description": "Comma-separated list of usernames to clear from the cache",
+                "required": false
+            }
+        }
+    }
+}

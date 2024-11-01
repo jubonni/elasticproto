@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.129582",
+        "api_name": "rollup.put_job",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "rollup",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/rollup-put-job.html",
+        "elastic_url": "https://www.elastic.co/rollup/put_job.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates a rollup job.",
+        "paths": [
+            {
+                "path": "/_rollup/job/{id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The ID of the job to create"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/rollup-put-job.html",
+            "description": "Creates a rollup job."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_rollup/job/{id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The ID of the job to create"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The job configuration",
+            "required": true
+        }
+    }
+}

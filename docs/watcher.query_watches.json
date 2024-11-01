@@ -1,0 +1,56 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.304580",
+        "api_name": "watcher.query_watches",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "watcher",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-query-watches.html",
+        "elastic_url": "https://www.elastic.co/watcher/query_watches.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves stored watches.",
+        "paths": [
+            {
+                "path": "/_watcher/_query/watches",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-query-watches.html",
+            "description": "Retrieves stored watches."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_watcher/_query/watches",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {},
+        "body": {
+            "description": "From, size, query, sort and search_after",
+            "required": false
+        }
+    }
+}

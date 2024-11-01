@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.720610",
+        "api_name": "connector.sync_job_update_stats",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/set-connector-sync-job-stats-api.html",
+        "elastic_url": "https://www.elastic.co/connector/sync_job_update_stats.html",
+        "treat_json_as_key_value": false,
+        "title": "Updates the stats fields in the connector sync job document.",
+        "paths": [
+            {
+                "path": "/_connector/_sync_job/{connector_sync_job_id}/_stats",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_sync_job_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector sync job to be updated."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/set-connector-sync-job-stats-api.html",
+            "description": "Updates the stats fields in the connector sync job document."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/_sync_job/{connector_sync_job_id}/_stats",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_sync_job_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector sync job to be updated."
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The stats to update for the connector sync job.",
+            "required": true
+        }
+    }
+}

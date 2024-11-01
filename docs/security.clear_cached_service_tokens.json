@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.170598",
+        "api_name": "security.clear_cached_service_tokens",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-service-token-caches.html",
+        "elastic_url": "https://www.elastic.co/security/clear_cached_service_tokens.html",
+        "treat_json_as_key_value": false,
+        "title": "Evicts tokens from the service account token caches.",
+        "paths": [
+            {
+                "path": "/_security/service/{namespace}/{service}/credential/token/{name}/_clear_cache",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "namespace": {
+                        "type": "string",
+                        "description": "An identifier for the namespace"
+                    },
+                    "service": {
+                        "type": "string",
+                        "description": "An identifier for the service name"
+                    },
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of service token names"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-service-token-caches.html",
+            "description": "Evicts tokens from the service account token caches."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/service/{namespace}/{service}/credential/token/{name}/_clear_cache",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "namespace": {
+                            "type": "string",
+                            "description": "An identifier for the namespace"
+                        },
+                        "service": {
+                            "type": "string",
+                            "description": "An identifier for the service name"
+                        },
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of service token names"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {}
+    }
+}

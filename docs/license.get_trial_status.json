@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.988581",
+        "api_name": "license.get_trial_status",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "license",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/get-trial-status.html",
+        "elastic_url": "https://www.elastic.co/license/get_trial_status.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves information about the status of the trial license.",
+        "paths": [
+            {
+                "path": "/_license/trial_status",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/get-trial-status.html",
+            "description": "Retrieves information about the status of the trial license."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_license/trial_status",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {}
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.819590",
+        "api_name": "indices.downsample",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/xpack-rollup.html",
+        "elastic_url": "https://www.elastic.co/indices/downsample.html",
+        "treat_json_as_key_value": false,
+        "title": "Downsample an index",
+        "paths": [
+            {
+                "path": "/{index}/_downsample/{target_index}",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "string",
+                        "description": "The index to downsample",
+                        "required": true
+                    },
+                    "target_index": {
+                        "type": "string",
+                        "description": "The name of the target index to store downsampled data",
+                        "required": true
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/xpack-rollup.html",
+            "description": "Downsample an index"
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/{index}/_downsample/{target_index}",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "string",
+                            "description": "The index to downsample",
+                            "required": true
+                        },
+                        "target_index": {
+                            "type": "string",
+                            "description": "The name of the target index to store downsampled data",
+                            "required": true
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {},
+        "body": {
+            "description": "The downsampling configuration",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.704582",
+        "api_name": "connector.put",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/create-connector-api.html",
+        "elastic_url": "https://www.elastic.co/connector/put.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates or updates a connector.",
+        "paths": [
+            {
+                "path": "/_connector/{connector_id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector to be created or updated."
+                    }
+                }
+            },
+            {
+                "path": "/_connector",
+                "methods": [
+                    "PUT"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/create-connector-api.html",
+            "description": "Creates or updates a connector."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/{connector_id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector to be created or updated."
+                        }
+                    }
+                },
+                {
+                    "path": "/_connector",
+                    "methods": [
+                        "PUT"
+                    ]
+                }
+            ]
+        },
+        "body": {
+            "description": "The connector configuration.",
+            "required": false
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.229580",
+        "api_name": "shutdown.delete_node",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "shutdown",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current",
+        "elastic_url": "https://www.elastic.co/shutdown/delete_node.html",
+        "treat_json_as_key_value": false,
+        "title": "Removes a node from the shutdown list. Designed for indirect use by ECE/ESS and ECK. Direct use is not supported.",
+        "paths": [
+            {
+                "path": "/_nodes/{node_id}/shutdown",
+                "methods": [
+                    "DELETE"
+                ],
+                "parts": {
+                    "node_id": {
+                        "type": "string",
+                        "description": "The node id of node to be removed from the shutdown state"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current",
+            "description": "Removes a node from the shutdown list. Designed for indirect use by ECE/ESS and ECK. Direct use is not supported."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_nodes/{node_id}/shutdown",
+                    "methods": [
+                        "DELETE"
+                    ],
+                    "parts": {
+                        "node_id": {
+                            "type": "string",
+                            "description": "The node id of node to be removed from the shutdown state"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {}
+    }
+}

@@ -1,0 +1,88 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.801580",
+        "api_name": "indices.analyze",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "indices",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-analyze.html",
+        "elastic_url": "https://www.elastic.co/indices/analyze.html",
+        "treat_json_as_key_value": false,
+        "title": "Performs the analysis process on a text and return the tokens breakdown of the text.",
+        "paths": [
+            {
+                "path": "/_analyze",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            },
+            {
+                "path": "/{index}/_analyze",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "index": {
+                        "type": "string",
+                        "description": "The name of the index to scope the operation"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "index": "string"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/indices-analyze.html",
+            "description": "Performs the analysis process on a text and return the tokens breakdown of the text."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_analyze",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                },
+                {
+                    "path": "/{index}/_analyze",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "index": {
+                            "type": "string",
+                            "description": "The name of the index to scope the operation"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "index": {
+                "type": "string",
+                "description": "The name of the index to scope the operation"
+            }
+        },
+        "body": {
+            "description": "Define analyzer/tokenizer parameters and the text on which the analysis should be performed"
+        }
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.181581",
+        "api_name": "security.disable_user",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-disable-user.html",
+        "elastic_url": "https://www.elastic.co/security/disable_user.html",
+        "treat_json_as_key_value": false,
+        "title": "Disables users in the native realm.",
+        "paths": [
+            {
+                "path": "/_security/user/{username}/_disable",
+                "methods": [
+                    "PUT",
+                    "POST"
+                ],
+                "parts": {
+                    "username": {
+                        "type": "string",
+                        "description": "The username of the user to disable"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "refresh": "enum"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-disable-user.html",
+            "description": "Disables users in the native realm."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/user/{username}/_disable",
+                    "methods": [
+                        "PUT",
+                        "POST"
+                    ],
+                    "parts": {
+                        "username": {
+                            "type": "string",
+                            "description": "The username of the user to disable"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "refresh": {
+                "type": "enum",
+                "options": [
+                    "true",
+                    "false",
+                    "wait_for"
+                ],
+                "description": "If `true` (the default) then refresh the affected shards to make this operation visible to search, if `wait_for` then wait for a refresh to make this operation visible to search, if `false` then do nothing with refreshes."
+            }
+        }
+    }
+}

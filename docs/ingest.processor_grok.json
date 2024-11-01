@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.932583",
+        "api_name": "ingest.processor_grok",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ingest",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/grok-processor.html#grok-processor-rest-get",
+        "elastic_url": "https://www.elastic.co/ingest/processor_grok.html",
+        "treat_json_as_key_value": false,
+        "title": "Returns a list of the built-in patterns.",
+        "paths": [
+            {
+                "path": "/_ingest/processor/grok",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/grok-processor.html#grok-processor-rest-get",
+            "description": "Returns a list of the built-in patterns."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ingest/processor/grok",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {}
+    }
+}

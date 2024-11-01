@@ -1,0 +1,63 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.259598",
+        "api_name": "sql.query",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "sql",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-search-api.html",
+        "elastic_url": "https://www.elastic.co/sql/query.html",
+        "treat_json_as_key_value": false,
+        "title": "Executes a SQL request",
+        "paths": [
+            {
+                "path": "/_sql",
+                "methods": [
+                    "POST",
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "format": "string"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-search-api.html",
+            "description": "Executes a SQL request"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_sql",
+                    "methods": [
+                        "POST",
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "format": {
+                "type": "string",
+                "description": "a short version of the Accept header, e.g. json, yaml"
+            }
+        },
+        "body": {
+            "description": "Use the `query` element to start a query. Use the `cursor` element to continue a query.",
+            "required": true
+        }
+    }
+}

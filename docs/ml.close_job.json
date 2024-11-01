@@ -1,0 +1,85 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.009586",
+        "api_name": "ml.close_job",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-close-job.html",
+        "elastic_url": "https://www.elastic.co/ml/close_job.html",
+        "treat_json_as_key_value": false,
+        "title": "Closes one or more anomaly detection jobs. A job can be opened and closed multiple times throughout its lifecycle.",
+        "paths": [
+            {
+                "path": "/_ml/anomaly_detectors/{job_id}/_close",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "job_id": {
+                        "type": "string",
+                        "description": "The name of the job to close"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "allow_no_match": "boolean",
+            "force": "boolean",
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-close-job.html",
+            "description": "Closes one or more anomaly detection jobs. A job can be opened and closed multiple times throughout its lifecycle."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/anomaly_detectors/{job_id}/_close",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "job_id": {
+                            "type": "string",
+                            "description": "The name of the job to close"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "allow_no_match": {
+                "type": "boolean",
+                "required": false,
+                "description": "Whether to ignore if a wildcard expression matches no jobs. (This includes `_all` string or when no jobs have been specified)"
+            },
+            "force": {
+                "type": "boolean",
+                "required": false,
+                "description": "True if the job should be forcefully closed"
+            },
+            "timeout": {
+                "type": "time",
+                "description": "Controls the time to wait until a job has closed. Default to 30 minutes"
+            }
+        },
+        "body": {
+            "description": "The URL params optionally sent in the body",
+            "required": false
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.790580",
+        "api_name": "ilm.get_status",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "ilm",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-get-status.html",
+        "elastic_url": "https://www.elastic.co/ilm/get_status.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves the current index lifecycle management (ILM) status.",
+        "paths": [
+            {
+                "path": "/_ilm/status",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-get-status.html",
+            "description": "Retrieves the current index lifecycle management (ILM) status."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ilm/status",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {}
+    }
+}

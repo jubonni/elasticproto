@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.763579",
+        "api_name": "esql.query",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "esql",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-query-api.html",
+        "elastic_url": "https://www.elastic.co/esql/query.html",
+        "treat_json_as_key_value": false,
+        "title": "Executes an ESQL request",
+        "paths": [
+            {
+                "path": "/_query",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "format": "string",
+            "delimiter": "string",
+            "drop_null_columns": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-query-api.html",
+            "description": "Executes an ESQL request"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_query",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "format": {
+                "type": "string",
+                "description": "a short version of the Accept header, e.g. json, yaml"
+            },
+            "delimiter": {
+                "type": "string",
+                "description": "The character to use between values within a CSV row. Only valid for the csv format.",
+                "default": false
+            },
+            "drop_null_columns": {
+                "type": "boolean",
+                "description": "Should entirely null columns be removed from the results? Their name and type will be returning in a new `all_columns` section.",
+                "default": false
+            }
+        },
+        "body": {
+            "description": "Use the `query` element to start a query. Use `columnar` to format the answer.",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.676579",
+        "api_name": "cluster.allocation_explain",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "cluster",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cluster-allocation-explain.html",
+        "elastic_url": "https://www.elastic.co/cluster/allocation_explain.html",
+        "treat_json_as_key_value": false,
+        "title": "Provides explanations for shard allocations in the cluster.",
+        "paths": [
+            {
+                "path": "/_cluster/allocation/explain",
+                "methods": [
+                    "GET",
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {
+            "master_timeout": "time",
+            "include_yes_decisions": "boolean",
+            "include_disk_info": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/cluster-allocation-explain.html",
+            "description": "Provides explanations for shard allocations in the cluster."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_cluster/allocation/explain",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {
+            "master_timeout": {
+                "type": "time",
+                "description": "Timeout for connection to master node"
+            },
+            "include_yes_decisions": {
+                "type": "boolean",
+                "description": "Return 'YES' decisions in explanation (default: false)"
+            },
+            "include_disk_info": {
+                "type": "boolean",
+                "description": "Return information about disk usage and shard sizes (default: false)"
+            }
+        },
+        "body": {
+            "description": "The index, shard, and primary flag to explain. Empty means 'explain a randomly-chosen unassigned shard'"
+        }
+    }
+}

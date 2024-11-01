@@ -1,0 +1,65 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:54.714580",
+        "api_name": "connector.sync_job_error",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "connector",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/set-connector-sync-job-error-api.html",
+        "elastic_url": "https://www.elastic.co/connector/sync_job_error.html",
+        "treat_json_as_key_value": false,
+        "title": "Sets an error for a connector sync job.",
+        "paths": [
+            {
+                "path": "/_connector/_sync_job/{connector_sync_job_id}/_error",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "connector_sync_job_id": {
+                        "type": "string",
+                        "description": "The unique identifier of the connector sync job to set an error for."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/set-connector-sync-job-error-api.html",
+            "description": "Sets an error for a connector sync job."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_connector/_sync_job/{connector_sync_job_id}/_error",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "connector_sync_job_id": {
+                            "type": "string",
+                            "description": "The unique identifier of the connector sync job to set an error for."
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "The error to set in the connector sync job.",
+            "required": true
+        }
+    }
+}

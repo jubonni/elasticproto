@@ -1,0 +1,73 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.267596",
+        "api_name": "synonyms.put_synonym_rule",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "synonyms",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/put-synonym-rule.html",
+        "elastic_url": "https://www.elastic.co/synonyms/put_synonym_rule.html",
+        "treat_json_as_key_value": false,
+        "title": "Creates or updates a synonym rule in a synonym set",
+        "paths": [
+            {
+                "path": "/_synonyms/{set_id}/{rule_id}",
+                "methods": [
+                    "PUT"
+                ],
+                "parts": {
+                    "set_id": {
+                        "type": "string",
+                        "description": "The id of the synonym set to be updated with the synonym rule"
+                    },
+                    "rule_id": {
+                        "type": "string",
+                        "description": "The id of the synonym rule to be updated or created"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/put-synonym-rule.html",
+            "description": "Creates or updates a synonym rule in a synonym set"
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_synonyms/{set_id}/{rule_id}",
+                    "methods": [
+                        "PUT"
+                    ],
+                    "parts": {
+                        "set_id": {
+                            "type": "string",
+                            "description": "The id of the synonym set to be updated with the synonym rule"
+                        },
+                        "rule_id": {
+                            "type": "string",
+                            "description": "The id of the synonym rule to be updated or created"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "Synonym rule",
+            "required": true
+        }
+    }
+}

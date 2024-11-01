@@ -1,0 +1,58 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.131579",
+        "api_name": "rollup.start_job",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "rollup",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/rollup-start-job.html",
+        "elastic_url": "https://www.elastic.co/rollup/start_job.html",
+        "treat_json_as_key_value": false,
+        "title": "Starts an existing, stopped rollup job.",
+        "paths": [
+            {
+                "path": "/_rollup/job/{id}/_start",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "id": {
+                        "type": "string",
+                        "description": "The ID of the job to start"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/rollup-start-job.html",
+            "description": "Starts an existing, stopped rollup job."
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_rollup/job/{id}/_start",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "id": {
+                            "type": "string",
+                            "description": "The ID of the job to start"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

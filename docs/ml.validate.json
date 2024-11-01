@@ -1,0 +1,54 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.086583",
+        "api_name": "ml.validate",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "ml",
+        "url": "https://www.elastic.co/guide/en/machine-learning/current/ml-jobs.html",
+        "elastic_url": "https://www.elastic.co/ml/validate.html",
+        "treat_json_as_key_value": false,
+        "title": "Validates an anomaly detection job.",
+        "paths": [
+            {
+                "path": "/_ml/anomaly_detectors/_validate",
+                "methods": [
+                    "POST"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/machine-learning/current/ml-jobs.html",
+            "description": "Validates an anomaly detection job."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_ml/anomaly_detectors/_validate",
+                    "methods": [
+                        "POST"
+                    ]
+                }
+            ]
+        },
+        "params": {},
+        "body": {
+            "description": "The job config",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.192581",
+        "api_name": "security.get_role",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-role.html",
+        "elastic_url": "https://www.elastic.co/security/get_role.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves roles in the native realm.",
+        "paths": [
+            {
+                "path": "/_security/role/{name}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "list",
+                        "description": "A comma-separated list of role names"
+                    }
+                }
+            },
+            {
+                "path": "/_security/role",
+                "methods": [
+                    "GET"
+                ]
+            }
+        ],
+        "parameter_types": {},
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-role.html",
+            "description": "Retrieves roles in the native realm."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/role/{name}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "list",
+                            "description": "A comma-separated list of role names"
+                        }
+                    }
+                },
+                {
+                    "path": "/_security/role",
+                    "methods": [
+                        "GET"
+                    ]
+                }
+            ]
+        },
+        "params": {}
+    }
+}

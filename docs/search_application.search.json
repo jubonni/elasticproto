@@ -1,0 +1,76 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.151582",
+        "api_name": "search_application.search",
+        "stability": "experimental",
+        "visibility": "public",
+        "main_component": "search_application",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/search-application-search.html",
+        "elastic_url": "https://www.elastic.co/search_application/search.html",
+        "treat_json_as_key_value": false,
+        "title": "Perform a search against a search application",
+        "paths": [
+            {
+                "path": "/_application/search_application/{name}/_search",
+                "methods": [
+                    "GET",
+                    "POST"
+                ],
+                "parts": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the search application to be searched"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "typed_keys": "boolean"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/master/search-application-search.html",
+            "description": "Perform a search against a search application"
+        },
+        "stability": "experimental",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_application/search_application/{name}/_search",
+                    "methods": [
+                        "GET",
+                        "POST"
+                    ],
+                    "parts": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the search application to be searched"
+                        }
+                    }
+                }
+            ]
+        },
+        "body": {
+            "description": "Search parameters, including template parameters that override defaults",
+            "required": false
+        },
+        "params": {
+            "typed_keys": {
+                "type": "boolean",
+                "default": false,
+                "description": "Specify whether aggregation and suggester names should be prefixed by their respective types in the response"
+            }
+        }
+    }
+}

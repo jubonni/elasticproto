@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.201580",
+        "api_name": "security.get_user_profile",
+        "stability": "stable",
+        "visibility": "private",
+        "main_component": "security",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-user-profile.html",
+        "elastic_url": "https://www.elastic.co/security/get_user_profile.html",
+        "treat_json_as_key_value": false,
+        "title": "Retrieves user profiles for the given unique ID(s).",
+        "paths": [
+            {
+                "path": "/_security/profile/{uid}",
+                "methods": [
+                    "GET"
+                ],
+                "parts": {
+                    "uid": {
+                        "type": "list",
+                        "description": "A comma-separated list of unique identifier for user profiles"
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "data": "list"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-user-profile.html",
+            "description": "Retrieves user profiles for the given unique ID(s)."
+        },
+        "stability": "stable",
+        "visibility": "private",
+        "headers": {
+            "accept": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_security/profile/{uid}",
+                    "methods": [
+                        "GET"
+                    ],
+                    "parts": {
+                        "uid": {
+                            "type": "list",
+                            "description": "A comma-separated list of unique identifier for user profiles"
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "data": {
+                "type": "list",
+                "description": "A comma-separated list of keys for which the corresponding application data are retrieved."
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T03:02:55.286584",
+        "api_name": "transform.schedule_now_transform",
+        "stability": "stable",
+        "visibility": "public",
+        "main_component": "transform",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/schedule-now-transform.html",
+        "elastic_url": "https://www.elastic.co/transform/schedule_now_transform.html",
+        "treat_json_as_key_value": false,
+        "title": "Schedules now a transform.",
+        "paths": [
+            {
+                "path": "/_transform/{transform_id}/_schedule_now",
+                "methods": [
+                    "POST"
+                ],
+                "parts": {
+                    "transform_id": {
+                        "type": "string",
+                        "required": true,
+                        "description": "The id of the transform."
+                    }
+                }
+            }
+        ],
+        "parameter_types": {
+            "timeout": "time"
+        },
+        "doc_version": "8.15"
+    },
+    "doc": {
+        "documentation": {
+            "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/schedule-now-transform.html",
+            "description": "Schedules now a transform."
+        },
+        "stability": "stable",
+        "visibility": "public",
+        "headers": {
+            "accept": [
+                "application/json"
+            ],
+            "content_type": [
+                "application/json"
+            ]
+        },
+        "url": {
+            "paths": [
+                {
+                    "path": "/_transform/{transform_id}/_schedule_now",
+                    "methods": [
+                        "POST"
+                    ],
+                    "parts": {
+                        "transform_id": {
+                            "type": "string",
+                            "required": true,
+                            "description": "The id of the transform."
+                        }
+                    }
+                }
+            ]
+        },
+        "params": {
+            "timeout": {
+                "type": "time",
+                "required": false,
+                "description": "Controls the time to wait for the scheduling to take place"
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.083068",
+        "size": 1992,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/registered-domain-processor.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "registered-domain-processor",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[registered-domain-processor]]\n=== Registered domain processor\n++++\n<titleabbrev>Registered domain</titleabbrev>\n++++\n\nExtracts the registered domain (also known as the effective top-level domain or\neTLD), sub-domain, and top-level domain from a fully qualified domain name\n(FQDN). Uses the registered domains defined in the\nhttps://publicsuffix.org/[Mozilla Public Suffix List].\n\n[[registered-domain-options]]\n.Registered Domain Options\n[options=\"header\"]\n|======\n| Name               | Required | Default | Description\n| `field`            | yes      |         | Field containing the source FQDN.\n| `target_field`     | no       | `<empty string>` | Object field containing\nextracted domain components. If an `<empty string>`, the processor adds\ncomponents to the document's root.\n| `ignore_missing`   | no       | `true`  | If `true` and any required fields\nare missing, the processor quietly exits without modifying the document.\n\ninclude::common-options.asciidoc[]\n|======\n\n[discrete]\n[[registered-domain-processor-ex]]\n===== Examples\n\nThe following example illustrates the use of the registered domain processor:\n\n[source,console]\n----\nPOST _ingest/pipeline/_simulate\n{\n  \"pipeline\": {\n    \"processors\": [\n      {\n        \"registered_domain\": {\n          \"field\": \"fqdn\",\n          \"target_field\": \"url\"\n        }\n      }\n    ]\n  },\n  \"docs\": [\n    {\n      \"_source\": {\n        \"fqdn\": \"www.example.ac.uk\"\n      }\n    }\n  ]\n}\n----\n\nWhich produces the following result:\n\n[source,console-result]\n----\n{\n  \"docs\": [\n    {\n      \"doc\": {\n        ...\n        \"_source\": {\n          \"fqdn\": \"www.example.ac.uk\",\n          \"url\": {\n            \"subdomain\": \"www\",\n            \"registered_domain\": \"example.ac.uk\",\n            \"top_level_domain\": \"ac.uk\",\n            \"domain\": \"www.example.ac.uk\"\n          }\n        }\n      }\n    }\n  ]\n}\n----\n// TESTRESPONSE[s/\\.\\.\\./\"_index\":\"_index\",\"_id\":\"_id\",\"_version\":\"-3\",\"_ingest\":{\"timestamp\":$body.docs.0.doc._ingest.timestamp},/]\n"
+}

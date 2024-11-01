@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.763071",
+        "size": 1532,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/unfreeze-index-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "unfreeze-index-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[unfreeze-index-api]]\n=== Unfreeze index API\n++++\n<titleabbrev>Unfreeze index</titleabbrev>\n++++\n\n[WARNING]\n.Deprecated in 7.14\n====\nIn 8.0, we removed the ability to freeze an index. In previous versions,\nfreezing an index reduced its memory overhead. However, frozen indices are no\nlonger useful due to\nhttps://www.elastic.co/blog/significantly-decrease-your-elasticsearch-heap-memory-usage[recent\nimprovements in heap memory usage].\nYou can use this API to unfreeze indices that were frozen in 7.x. Frozen indices\nare not related to the frozen data tier.\n====\n\nUnfreezes an index.\n\n[[unfreeze-index-api-request]]\n==== {api-request-title}\n\n`POST /<index>/_unfreeze`\n\n[[unfreeze-index-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-indices,index privilege>> for the target index or index alias.\n\n[[unfreeze-index-api-desc]]\n==== {api-description-title}\n\nWhen a frozen index is unfrozen, the index goes through the normal recovery\nprocess and becomes writeable again.\n\n[[unfreeze-index-api-path-parms]]\n==== {api-path-parms-title}\n\n`<index>`::\n  (Required, string) Identifier for the index.\n\n[[unfreeze-index-api-examples]]\n==== {api-examples-title}\n\nThe following example unfreezes an index:\n\n[source,console]\n--------------------------------------------------\nPOST /my-index-000001/_unfreeze\n--------------------------------------------------\n// TEST[s/^/PUT my-index-000001\\n/]\n// TEST[skip:unable to ignore deprecation warning]\n"
+}

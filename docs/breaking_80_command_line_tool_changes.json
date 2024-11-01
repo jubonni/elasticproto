@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.671066",
+        "size": 581,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/breaking_80_command_line_tool_changes.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "breaking_80_command_line_tool_changes",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[breaking_80_command_line_tool_changes]]\n==== Command line tool changes\n\nTIP: {ess-skip-section}\n\n[[migrate-tool-removed]]\n.The `elasticsearch-migrate` tool has been removed.\n[%collapsible]\n====\n*Details* +\nThe `elasticsearch-migrate` tool provided a way to convert file\nrealm users and roles into the native realm. It has been deprecated\nsince {es} 7.2.0. Users and roles should now be created in the native\nrealm directly.\n\n*Impact* +\nDiscontinue use of the `elasticsearch-migrate` tool. Attempts to use the\n`elasticsearch-migrate` tool will result in an error.\n====\n"
+}

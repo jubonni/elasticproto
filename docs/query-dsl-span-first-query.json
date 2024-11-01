@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.495069",
+        "size": 552,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-span-first-query.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "query-dsl-span-first-query",
+        "version": "8.15"
+    },
+    "doc": "[[query-dsl-span-first-query]]\n=== Span first query\n++++\n<titleabbrev>Span first</titleabbrev>\n++++\n\nMatches spans near the beginning of a field. Here is an example:\n\n[source,console]\n--------------------------------------------------\nGET /_search\n{\n  \"query\": {\n    \"span_first\": {\n      \"match\": {\n        \"span_term\": { \"user.id\": \"kimchy\" }\n      },\n      \"end\": 3\n    }\n  }\n}\n--------------------------------------------------\n\nThe `match` clause can be any other span type query. The `end` controls\nthe maximum end position permitted in a match.\n"
+}

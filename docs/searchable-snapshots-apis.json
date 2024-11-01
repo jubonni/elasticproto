@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.349066",
+        "size": 518,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/searchable-snapshots-apis.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "searchable-snapshots-apis",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[searchable-snapshots-apis]]\n== Searchable snapshots APIs\n\nYou can use the following APIs to perform searchable snapshots operations.\n\n* <<searchable-snapshots-api-mount-snapshot,Mount snapshot>>\n* <<searchable-snapshots-api-cache-stats,Cache statistics>>\n* <<searchable-snapshots-api-stats,Shard statistics>>\n* <<searchable-snapshots-api-clear-cache,Clear cache>>\n\ninclude::mount-snapshot.asciidoc[]\ninclude::node-cache-stats.asciidoc[]\ninclude::shard-stats.asciidoc[]\ninclude::clear-cache.asciidoc[]\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.941066",
+        "size": 1925,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-disable-user-profile.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "security-api-disable-user-profile",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-disable-user-profile]]\n=== Disable user profile API\n++++\n<titleabbrev>Disable user profile</titleabbrev>\n++++\n\nNOTE: The user profile feature is designed only for use by {kib} and\nElastic\u2019s {observability}, {ents}, and {elastic-sec} solutions. Individual\nusers and external applications should not call this API directly. Elastic reserves\nthe right to change or remove this feature in future releases without prior notice.\n\nDisables a user profile so it's not visible in\n<<security-api-suggest-user-profile,user profile searches>>.\n\n[[security-api-disable-user-profile-request]]\n==== {api-request-title}\n\n`POST /_security/profile/<uid>/_disable`\n\n`PUT /_security/profile/<uid>/_disable`\n\n[[security-api-disable-user-profile-prereqs]]\n==== {api-prereq-title}\n\nTo use this API, you must have the `manage_user_profile` cluster privilege.\n\n[[security-api-disable-user-profile-desc]]\n==== {api-description-title}\n\nWhen you <<security-api-activate-user-profile,activate a user profile>>, it's\nautomatically enabled and visible in user profile searches. You can use the\ndisable user profile API to disable a user profile so it's not visible in\nthese searches.\n\nTo re-enable a disabled user profile, use the\n<<security-api-enable-user-profile,enable user profile API>> .\n\n[[security-api-disable-user-profile-path-params]]\n==== {api-path-parms-title}\n\n`<uid>`::\n(Required, string) Unique identifier for the user profile.\n\n[[security-api-disable-user-profile-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=refresh]\n\n\n\n[[security-api-disable-user-profile-example]]\n==== {api-examples-title}\n\nThe following request disables the user profile for a `uid` matching\n`u_79HkWkwmnBH5gqFKwoxggWPjEBOur1zLPXQPEl1VBW0_0`:\n\n[source,console]\n----\nPOST /_security/profile/u_79HkWkwmnBH5gqFKwoxggWPjEBOur1zLPXQPEl1VBW0_0/_disable\n----\n// TEST[setup:user_profiles]\n\n"
+}

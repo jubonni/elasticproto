@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.961068",
+        "size": 587,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-predicates.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-predicates",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[esql-predicates]]\n=== `IS NULL` and `IS NOT NULL` predicates\n\n//tag::body[]\nFor NULL comparison, use the `IS NULL` and `IS NOT NULL` predicates:\n\n[source.merge.styled,esql]\n----\ninclude::{esql-specs}/null.csv-spec[tag=is-null]\n----\n[%header.monospaced.styled,format=dsv,separator=|]\n|===\ninclude::{esql-specs}/null.csv-spec[tag=is-null-result]\n|===\n\n[source.merge.styled,esql]\n----\ninclude::{esql-specs}/null.csv-spec[tag=is-not-null]\n----\n[%header.monospaced.styled,format=dsv,separator=|]\n|===\ninclude::{esql-specs}/null.csv-spec[tag=is-not-null-result]\n|===\n//end::body[]"
+}

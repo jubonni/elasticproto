@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.766067",
+        "size": 891,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/network.host.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "network.host",
+        "version": "8.15"
+    },
+    "doc": "[[network.host]]\n[discrete]\n==== Network host setting\n\nBy default, {es} only binds to loopback addresses such as `127.0.0.1` and\n`[::1]`. This is sufficient to run a cluster of one or more nodes on a single\nserver for development and testing, but a\n<<high-availability-cluster-design,resilient production cluster>> must involve\nnodes on other servers. There are many <<modules-network,network settings>> but\nusually all you need to configure is `network.host`:\n\n[source,yaml]\n--------------------------------------------------\nnetwork.host: 192.168.1.10\n--------------------------------------------------\n\nIMPORTANT: When you provide a value for `network.host`, {es} assumes that you\nare moving from development mode to production mode, and upgrades a number of\nsystem startup checks from warnings to exceptions. See the differences between\n<<dev-vs-prod,development and production modes>>.\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.876068",
+        "size": 2119,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-similarity-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-similarity-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-similarity-context]]\n=== Similarity context\n\nUse a Painless script to create a\n{ref}/index-modules-similarity.html[similarity] equation for scoring\ndocuments in a query.\n\n*Variables*\n\n`weight` (`float`, read-only)::\n        The weight as calculated by a <<painless-weight-context,weight script>>\n\n`query.boost` (`float`, read-only)::\n        The boost value if provided by the query. If this is not provided the\n        value is `1.0f`.\n\n`field.docCount` (`long`, read-only)::\n        The number of documents that have a value for the current field.\n\n`field.sumDocFreq` (`long`, read-only)::\n        The sum of all terms that exist for the current field. If this is not\n        available the value is `-1`.\n\n`field.sumTotalTermFreq` (`long`, read-only)::\n        The sum of occurrences in the index for all the terms that exist in the\n        current field. If this is not available the value is `-1`.\n\n`term.docFreq` (`long`, read-only)::\n        The number of documents that contain the current term in the index.\n\n`term.totalTermFreq` (`long`, read-only)::\n        The total occurrences of the current term in the index.\n\n`doc.length` (`long`, read-only)::\n        The number of tokens the current document has in the current field. This\n        is decoded from the stored {ref}/norms.html[norms] and may be approximate for\n        long fields\n\n`doc.freq` (`long`, read-only)::\n        The number of occurrences of the current term in the current\n        document for the current field.\n\nNote that the `query`, `field`, and `term` variables are also available to the\n<<painless-weight-context,weight context>>. They are more efficiently used\nthere, as they are constant for all documents.\n\nFor queries that contain multiple terms, the script is called once for each\nterm with that term's calculated weight, and the results are summed. Note that some\nterms might have a `doc.freq` value of `0` on a document, for example if a query\nuses synonyms.\n\n*Return*\n\n`double`::\n        The similarity score for the current document.\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available."
+}

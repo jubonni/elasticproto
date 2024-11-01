@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.152080",
+        "size": 781,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-frozen-storage-decider.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "autoscaling-frozen-storage-decider",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[autoscaling-frozen-storage-decider]]\n=== Frozen storage decider\n\nThe {cloud}/ec-autoscaling.html[autoscaling] frozen storage decider (`frozen_storage`) calculates the local storage\nrequired to search the current set of partially mounted indices based on a\npercentage of the total data set size of such indices. It signals that\nadditional storage capacity is necessary when existing capacity is less than the\npercentage multiplied by total data set size.\n\nThe frozen storage decider is enabled for all policies governing frozen data\nnodes and has no configuration options.\n\n[[autoscaling-frozen-storage-decider-settings]]\n==== Configuration settings\n\n`percentage`::\n(Optional, number value)\nPercentage of local storage relative to the data set size. Defaults to 5.\n"
+}

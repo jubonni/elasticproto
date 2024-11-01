@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.838067",
+        "size": 1447,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-filter-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-filter-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-filter-context]]\n=== Filter context\n\nUse a Painless script as a {ref}/query-dsl-script-query.html[filter] in a\nquery to include and exclude documents.\n\n\n*Variables*\n\n`params` (`Map`, read-only)::\n        User-defined parameters passed in as part of the query.\n\n`doc` (`Map`, read-only)::\n        Contains the fields of the current document where each field is a\n        `List` of values.\n\n*Return*\n\n`boolean`::\n        Return `true` if the current document should be returned as a result of\n        the query, and `false` otherwise.\n\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n\n*Example*\n\nTo run this example, first follow the steps in\n<<painless-context-examples, context examples>>.\n\nThis script finds all unsold documents that cost less than $25.\n\n[source,Painless]\n----\ndoc['sold'].value == false && doc['cost'].value < 25\n----\n\nDefining `cost` as a script parameter enables the cost to be configured\nin the script query request. For example, the following request finds\nall available theatre seats for evening performances that are under $25.\n\n[source,console]\n----\nGET seats/_search\n{\n  \"query\": {\n    \"bool\": {\n      \"filter\": {\n        \"script\": {\n          \"script\": {\n            \"source\": \"doc['sold'].value == false && doc['cost'].value < params.cost\",\n            \"params\": {\n              \"cost\": 25\n            }\n          }\n        }\n      }\n    }\n  }\n}\n----\n// TEST[setup:seats]\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.057069",
+        "size": 893,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-using.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-using",
+        "version": "8.15"
+    },
+    "doc": "[[esql-using]]\n== Using {esql}\n\n<<esql-rest>>::\nInformation about using the <<esql-apis,{esql} query APIs>>.\n\n<<esql-kibana>>::\nUsing {esql} in {kib} to query and aggregate your data, create visualizations,\nand set up alerts.\n\n<<esql-elastic-security>>::\nUsing {esql} in {elastic-sec} to investigate events in Timeline, create\ndetection rules, and build {esql} queries using Elastic AI Assistant.\n\n<<esql-multi-index>>::\nUsing {esql} to query multiple indexes and resolve field type mismatches.\n\n<<esql-cross-clusters>>::\nUsing {esql} to query across multiple clusters.\n\n<<esql-task-management>>::\nUsing the <<tasks,task management API>> to list and cancel {esql} queries.\n\ninclude::esql-rest.asciidoc[]\ninclude::esql-kibana.asciidoc[]\ninclude::esql-security-solution.asciidoc[]\ninclude::esql-multi-index.asciidoc[]\ninclude::esql-across-clusters.asciidoc[]\ninclude::task-management.asciidoc[]\n"
+}

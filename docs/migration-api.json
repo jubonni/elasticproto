@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.664071",
+        "size": 310,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/migration-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "migration-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[migration-api]]\n== Migration APIs\n\nThe migration APIs power {kib}'s **Upgrade Assistant** feature.\n\ninclude::apis/shared-migration-apis-tip.asciidoc[]\n\n* <<migration-api-deprecation>>\n* <<feature-migration-api>>\n\ninclude::apis/deprecation.asciidoc[]\ninclude::apis/feature-migration.asciidoc[]\n"
+}

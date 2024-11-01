@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.963067",
+        "size": 1124,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/release-notes-8.8.1.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "release-notes-8.8.1",
+        "version": "8.15"
+    },
+    "doc": "[[release-notes-8.8.1]]\n== {es} version 8.8.1\n\nAlso see <<breaking-changes-8.8,Breaking changes in 8.8>>.\n\n[[bug-8.8.1]]\n[float]\n=== Bug fixes\n\nData streams::\n* Allow the removal of an in-use template if there are other ones matching the dependent data streams {es-pull}96286[#96286]\n\nGeo::\n* API rest compatibility for type parameter in `geo_bounding_box` query {es-pull}96317[#96317]\n\nRollup::\n* Do not copy `index.default_pipeline` and `index.final_pipeline` {es-pull}96494[#96494] (issue: {es-issue}96478[#96478])\n\nTSDB::\n* Expand start and end time to nanoseconds during coordinator rewrite when needed {es-pull}96035[#96035] (issue: {es-issue}96030[#96030])\n* Fix NPE when indexing a document that just has been deleted in a tsdb index {es-pull}96461[#96461]\n\nTransform::\n* Improve error message on transform `_update` conflict {es-pull}96432[#96432]\n* Report version conflict on concurrent updates {es-pull}96293[#96293] (issue: {es-issue}96311[#96311])\n\n[[enhancement-8.8.1]]\n[float]\n=== Enhancements\n\nQuery Languages::\n* Reduce nesting of same bool queries {es-pull}96265[#96265] (issue: {es-issue}96236[#96236])\n\n\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.981066",
+        "size": 562,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/drop-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "drop-processor",
+        "version": "8.15"
+    },
+    "doc": "[[drop-processor]]\n=== Drop processor\n++++\n<titleabbrev>Drop</titleabbrev>\n++++\n\nDrops the document without raising any errors. This is useful to prevent the document from\ngetting indexed based on some condition.\n\n[[drop-options]]\n.Drop Options\n[options=\"header\"]\n|======\n| Name              | Required  | Default  | Description\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"drop\": {\n    \"if\" : \"ctx.network_name == 'Guest'\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

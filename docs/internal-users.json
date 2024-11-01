@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.470069",
+        "size": 763,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/internal-users.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "internal-users",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[internal-users]]\n=== Internal users\n\nNOTE: These users are designed for internal use by {es} only. Authenticating with these users is not supported.\n\nThe {stack-security-features} use eight _internal_ users (`_system`, `_xpack`,\n`_xpack_security`, `_async_search`, `_security_profile`, `_data_stream_lifecycle`, `_synonyms` and `_storage`),\nwhich are responsible for the operations that take place inside an {es} cluster.\n\nThese users are only used by requests that originate from within the cluster.\nFor this reason, they cannot be used to authenticate against the API and there\nis no password to manage or reset.\n\nFrom time-to-time you may find a reference to one of these users inside your\nlogs, including <<enable-audit-logging,audit logs>>.\n"
+}

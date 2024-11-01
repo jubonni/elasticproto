@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.261068",
+        "size": 780,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rollup-agg-limitations.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "rollup-agg-limitations",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[rollup-agg-limitations]]\n=== {rollup-cap} aggregation limitations\n\ndeprecated::[8.11.0,\"Rollups will be removed in a future version. Please <<rollup-migrating-to-downsampling,migrate>> to <<downsampling,downsampling>> instead.\"]\n\nThere are some limitations to how fields can be rolled up / aggregated. This page highlights the major limitations so that\nyou are aware of them.\n\n[discrete]\n==== Limited aggregation components\n\nThe Rollup functionality allows fields to be grouped with the following aggregations:\n\n- Date Histogram aggregation\n- Histogram aggregation\n- Terms aggregation\n\nAnd the following metrics are allowed to be specified for numeric fields:\n\n- Min aggregation\n- Max aggregation\n- Sum aggregation\n- Average aggregation\n- Value Count aggregation\n"
+}

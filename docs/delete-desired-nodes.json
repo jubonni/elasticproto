@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.883066",
+        "size": 1419,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-desired-nodes.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "delete-desired-nodes",
+        "version": "8.15"
+    },
+    "doc": "[[delete-desired-nodes]]\n=== Delete desired nodes API\n++++\n<titleabbrev>Delete desired nodes</titleabbrev>\n++++\n\nNOTE: {cloud-only}\n\nDelete desired nodes.\n\n[[delete-desired-nodes-request]]\n==== {api-request-title}\n\n//////////////////////////\n[source,console]\n--------------------------------------------------\nPUT /_internal/desired_nodes/history/1\n{\n    \"nodes\" : [\n        {\n            \"settings\" : {\n                 \"node.name\" : \"instance-000187\",\n                 \"node.external_id\": \"instance-000187\",\n                 \"node.roles\" : [\"data_hot\", \"master\"],\n                 \"node.attr.data\" : \"hot\",\n                 \"node.attr.logical_availability_zone\" : \"zone-0\"\n            },\n            \"processors\" : 8.0,\n            \"memory\" : \"58gb\",\n            \"storage\" : \"2tb\"\n        }\n    ]\n}\n--------------------------------------------------\n// TESTSETUP\n//////////////////////////\n\n[source,console]\n--------------------------------------------------\nDELETE /_internal/desired_nodes\n--------------------------------------------------\n// TEST\n\n[[delete-desired-nodes-desc]]\n==== {api-description-title}\n\nThis API deletes the desired nodes.\n\n[[delete-desired-nodes-examples]]\n==== {api-examples-title}\n\nThis example deletes the current desired nodes.\n\n[source,console]\n--------------------------------------------------\nDELETE /_internal/desired_nodes\n--------------------------------------------------\n// TEST\n"
+}

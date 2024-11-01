@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.322069",
+        "size": 1307,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/high-availability.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "high-availability",
+        "version": "8.15"
+    },
+    "doc": "[[high-availability]]\n= Set up a cluster for high availability\n\n[partintro]\n--\nYour data is important to you. Keeping it safe and available is important\nto {es}. Sometimes your cluster may experience hardware failure or a power\nloss. To help you plan for this, {es} offers a number of features\nto achieve high availability despite failures.\n\n* With proper planning, a cluster can be\n  <<high-availability-cluster-design,designed for resilience>> to many of the\n  things that commonly go wrong, from the loss of a single node or network\n  connection right up to a zone-wide outage such as power loss.\n\n* You can use <<xpack-ccr,{ccr}>> to replicate data to a remote _follower_\n  cluster which may be in a different data centre or even on a different\n  continent from the leader cluster. The follower cluster acts as a hot\n  standby, ready for you to fail over in the event of a disaster so severe that\n  the leader cluster fails. The follower cluster can also act as a geo-replica\n  to serve searches from nearby clients.\n\n* The last line of defence against data loss is to take\n  <<snapshots-take-snapshot,regular snapshots>> of your cluster so that you can\n  restore a completely fresh copy of it elsewhere if needed.\n--\n\ninclude::high-availability/cluster-design.asciidoc[]\n\ninclude::ccr/index.asciidoc[]\n"
+}

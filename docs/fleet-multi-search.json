@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.135072",
+        "size": 1638,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/fleet-multi-search.html",
+        "type": "documentation",
+        "role": [
+            "xpack",
+            "child_attributes"
+        ],
+        "has_code": false,
+        "title": "fleet-multi-search",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[fleet-multi-search]]\n=== Fleet multi search API\n++++\n<titleabbrev>Fleet multi search</titleabbrev>\n++++\n\nExecutes several <<fleet-search,fleet searches>> with a single API request.\n\nThe API follows the same structure as the <<search-multi-search, multi search>> API. However,\nsimilar to the fleet search API, it supports the `wait_for_checkpoints` parameter.\n\nNOTE: The fleet multi search API is designed for indirect use through fleet server. Direct use is\nnot supported. Elastic reserves the right to change or remove this feature in future releases\nwithout prior notice.\n\n[[fleet-multi-search-api-request]]\n==== {api-request-title}\n\n`GET /_fleet/_fleet_msearch`\n\n`GET /<index>/_fleet/_fleet_msearch`\n\n[[fleet-multi-search-api-path-params]]\n==== {api-path-parms-title}\n\n`<target>`::\n(Optional, string)\nA single target to search. If the target is an index alias, it must resolve to a single index.\n\n[role=\"child_attributes\"]\n[[fleet-multi-search-api-query-parms]]\n==== {api-query-parms-title}\n\n`wait_for_checkpoints`::\n(Optional, list) A comma separated list of checkpoints. When configured, the search API will\nonly be executed on a shard after the relevant checkpoint has become visible for search.\nDefaults to an empty list which will cause Elasticsearch to immediately execute the search.\n\n`allow_partial_search_results`::\n(Optional, Boolean)\nIf `true`, returns partial results if there are shard request timeouts or\n<<shard-failures,shard failures>>. If `false`, returns an error with\nno partial results. Defaults to the configured cluster setting `search.default_allow_partial_results` which\nis `true` by default.\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.633065",
+        "size": 1688,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-api-key-cache.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-clear-api-key-cache",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-clear-api-key-cache]]\n=== Clear API key cache API\n++++\n<titleabbrev>Clear API key cache</titleabbrev>\n++++\n\nEvicts a subset of all entries from the API key cache.\nThe cache is also automatically cleared on state changes of the security index.\n\n[[security-api-clear-api-key-cache-request]]\n==== {api-request-title}\n\n`POST /_security/api_key/<ids>/_clear_cache`\n\n[[security-api-clear-api-key-cache-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have at least the `manage_security` cluster\nprivilege.\n\n[[security-api-clear-api-key-cache-desc]]\n==== {api-description-title}\n\nFor more information about API keys, see <<security-api-create-api-key>>,\n<<security-api-get-api-key>>, and <<security-api-invalidate-api-key>>.\n\n[[security-api-clear-api-key-cache-path-params]]\n==== {api-path-parms-title}\n\n`<ids>`::\n(Required, string)\nComma-separated list of API key IDs to evict from the API key cache. To evict\nall API keys, use `*`. Does not support other wildcard patterns.\n\n[[security-api-clear-api-key-cache-example]]\n==== {api-examples-title}\n\nThe clear API key cache API evicts entries from the API key cache.\nFor example, to clear the entry of API key with ID `yVGMr3QByxdh1MSaicYx`.\n\n[source,console]\n--------------------------------------------------\nPOST /_security/api_key/yVGMr3QByxdh1MSaicYx/_clear_cache\n--------------------------------------------------\n\nSpecify multiple API keys as a comma-separated list.\n\n[source,console]\n----\nPOST /_security/api_key/yVGMr3QByxdh1MSaicYx,YoiMaqREw0YVpjn40iMg/_clear_cache\n----\n\nTo clear all entries from the API key cache, use `*`.\n\n[source,console]\n----\nPOST /_security/api_key/*/_clear_cache\n----"
+}

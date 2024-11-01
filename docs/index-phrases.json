@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.407072",
+        "size": 435,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-phrases.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "index-phrases",
+        "version": "8.15"
+    },
+    "doc": "[[index-phrases]]\n=== `index_phrases`\n\nIf enabled, two-term word combinations ('shingles') are indexed into a separate\nfield. This allows exact phrase queries (no slop) to run more efficiently, at the expense\nof a larger index. Note that this works best when stopwords are not removed,\nas phrases containing stopwords will not use the subsidiary field and will fall\nback to a standard phrase query. Accepts `true` or `false` (default)."
+}

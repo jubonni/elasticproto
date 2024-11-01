@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.009067",
+        "size": 504,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/eql-apis.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "eql-apis",
+        "version": "8.15"
+    },
+    "doc": "[[eql-apis]]\n== EQL APIs\n\n<<eql,Event Query Language (EQL)>> is a query language for event-based time series data,\nsuch as logs, metrics, and traces. For an overview of EQL and related tutorials,\nsee <<eql>>.\n\n* <<eql-search-api>>\n* <<get-async-eql-search-api>>\n* <<get-async-eql-status-api>>\n* <<delete-async-eql-search-api>>\n\ninclude::delete-async-eql-search-api.asciidoc[]\n\ninclude::eql-search-api.asciidoc[]\n\ninclude::get-async-eql-search-api.asciidoc[]\n\ninclude::get-async-eql-status-api.asciidoc[]\n"
+}

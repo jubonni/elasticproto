@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.421069",
+        "size": 1832,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/searchable-snapshots-api-stats.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "searchable-snapshots-api-stats",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[searchable-snapshots-api-stats]]\n=== Searchable snapshot statistics API\n++++\n<titleabbrev>Searchable snapshot statistics</titleabbrev>\n++++\n\nexperimental::[]\n\nRetrieves statistics about searchable snapshots.\n\n[[searchable-snapshots-api-stats-request]]\n==== {api-request-title}\n\n`GET /_searchable_snapshots/stats`\n\n`GET /<target>/_searchable_snapshots/stats`\n\n[[searchable-snapshots-api-stats-prereqs]]\n==== {api-prereq-title}\n\nIf the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API. You must also\nhave the `manage` <<privileges-list-indices,index privileges>> for the target\ndata stream or index.\n\n[[searchable-snapshots-api-stats-desc]]\n==== {api-description-title}\n\n\n[[searchable-snapshots-api-stats-path-params]]\n==== {api-path-parms-title}\n\n`<target>`::\n(Optional, string)\nComma-separated list of data streams and indices to retrieve statistics for. To\nretrieve statistics for all data streams and indices, omit this parameter.\n\n\n[[searchable-snapshots-api-stats-example]]\n==== {api-examples-title}\n////\n[source,console]\n-----------------------------------\nPUT /docs\n{\n  \"settings\" : {\n    \"index.number_of_shards\" : 1,\n    \"index.number_of_replicas\" : 0\n  }\n}\n\nPUT /_snapshot/my_repository/my_snapshot?wait_for_completion=true\n{\n  \"include_global_state\": false,\n  \"indices\": \"docs\"\n}\n\nDELETE /docs\n\nPOST /_snapshot/my_repository/my_snapshot/_mount?wait_for_completion=true\n{\n  \"index\": \"docs\",\n  \"renamed_index\": \"my-index\"\n}\n-----------------------------------\n// TEST[setup:setup-repository]\n////\n\nRetrieves the statistics of the index `my-index`:\n\n[source,console]\n--------------------------------------------------\nGET /my-index/_searchable_snapshots/stats\n--------------------------------------------------\n// TEST[continued]\n"
+}

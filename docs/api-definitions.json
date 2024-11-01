@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.858066",
+        "size": 279,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/api-definitions.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "api-definitions",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[api-definitions]]\n== Definitions\n\nThe role mappings resource definition you can find below is used in APIs related \nto {security-features}.\n\n  * <<role-mapping-resources,Role mappings>>\n\n\ninclude::{es-ref-dir}/rest-api/security/role-mapping-resources.asciidoc[]\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.808068",
+        "size": 2323,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ccr-upgrading.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "ccr-upgrading",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ccr-upgrading]]\n=== Upgrading clusters using {ccr}\n++++\n<titleabbrev>Upgrading clusters</titleabbrev>\n++++\n\nClusters that are actively using {ccr} require a careful approach to upgrades.\nThe following conditions could cause index following to fail during rolling\nupgrades:\n\n* Clusters that have not yet been upgraded will reject new index settings or\nmapping types that are replicated from an upgraded cluster.\n* Nodes in a cluster that has not been upgraded will reject index files from a\nnode in an upgraded cluster when index following tries to fall back to\nfile-based recovery. This limitation is due to Lucene not being forward\ncompatible.\n\nThe approach to running a rolling upgrade on clusters where {ccr} is\nenabled differs based on uni-directional and bi-directional index following.\n\n[[ccr-uni-directional-upgrade]]\n==== Uni-directional index following\nIn a uni-directional configuration, one cluster contains only\nleader indices, and the other cluster contains only follower indices that\nreplicate the leader indices.\n\nIn this strategy, the cluster with follower indices should be upgraded\nfirst and the cluster with leader indices should be upgraded last.\nUpgrading the clusters in this order ensures that index following can continue\nduring the upgrade without downtime.\n\nYou can also use this strategy to upgrade a\n<<ccr-chained-replication,replication chain>>. Start by upgrading clusters at\nthe end of the chain and working your way back to the cluster that contains the\nleader indices.\n\nFor example, consider a configuration where Cluster A contains all leader\nindices. Cluster B follows indices in Cluster A, and Cluster C follows indices\nin Cluster B.\n\n--\n  Cluster A\n          ^--Cluster B\n                     ^--Cluster C\n--\n\nIn this configuration, upgrade the clusters in the following order:\n\n. Cluster C\n. Cluster B\n. Cluster A\n\n[[ccr-bi-directional-upgrade]]\n==== Bi-directional index following\n\nIn a bi-directional configuration, each cluster contains both leader and\nfollower indices.\n\nWhen upgrading clusters in this configuration,\n<<ccr-pause-replication,pause all index following>> and\n<<ccr-auto-follow-pause,pause auto-follow patterns>> prior to\nupgrading both clusters.\n\nAfter upgrading both clusters, resume index following and resume replication\nof auto-follow patterns.\n"
+}

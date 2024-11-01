@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.536067",
+        "size": 1224,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/starting-elasticsearch.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "starting-elasticsearch",
+        "version": "8.15"
+    },
+    "doc": "[[starting-elasticsearch]]\n== Starting Elasticsearch\n\nThe method for starting {es} varies depending on how you installed it. \n\n[discrete]\n[[start-targz]]\n=== Archive packages (`.tar.gz`)\n\nIf you installed {es} with a `.tar.gz` package, you can start {es} from the \ncommand line.  \n\n[discrete]\ninclude::install/targz-start.asciidoc[]\n\n[discrete]\ninclude::install/targz-daemon.asciidoc[]\n\n[discrete]\n[[start-zip]]\n=== Archive packages (`.zip`)\n\nIf you installed {es} on Windows with a `.zip` package, you can start {es} from \nthe command line. If you want {es} to start automatically at boot time without \nany user interaction, <<windows-service,install {es} as a service>>.\n\n[discrete]\ninclude::install/zip-windows-start.asciidoc[]\n\n[discrete]\n[[start-deb]]\n=== Debian packages\n\n[discrete]\n[[start-es-deb-systemd]]\ninclude::install/systemd.asciidoc[]\n\n[discrete]\n[[start-docker]]\n=== Docker images\n\nIf you installed a Docker image, you can start {es} from the command line. There \nare different methods depending on whether you're using development mode or \nproduction mode. See <<docker-cli-run-dev-mode>>. \n\n[discrete]\n[[start-rpm]]\n=== RPM packages\n\n[discrete]\n[[start-es-rpm-systemd]]\ninclude::install/systemd.asciidoc[]\n"
+}

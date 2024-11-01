@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.614067",
+        "size": 1386,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-charfilters.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "analysis-charfilters",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-charfilters]]\n== Character filters reference\n\n_Character filters_ are used to preprocess the stream of characters before it\nis passed to the <<analysis-tokenizers,tokenizer>>.\n\nA character filter receives the original text as a stream of characters and\ncan transform the stream by adding, removing, or changing characters. For\ninstance, a character filter could be used to convert Hindu-Arabic numerals\n(\u0660\u200e\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668\u200e\u0669\u200e) into their Arabic-Latin equivalents (0123456789), or to strip HTML\nelements like `<b>` from the stream.\n\n\nElasticsearch has a number of built in character filters which can be used to build\n<<analysis-custom-analyzer,custom analyzers>>.\n\n<<analysis-htmlstrip-charfilter,HTML Strip Character Filter>>::\n\nThe `html_strip` character filter strips out HTML elements like `<b>` and\ndecodes HTML entities like `&amp;`.\n\n<<analysis-mapping-charfilter,Mapping Character Filter>>::\n\nThe `mapping` character filter replaces any occurrences of the specified\nstrings with the specified replacements.\n\n<<analysis-pattern-replace-charfilter,Pattern Replace Character Filter>>::\n\nThe `pattern_replace` character filter replaces any characters matching a\nregular expression with the specified replacement.\n\ninclude::charfilters/htmlstrip-charfilter.asciidoc[]\n\ninclude::charfilters/mapping-charfilter.asciidoc[]\n\ninclude::charfilters/pattern-replace-charfilter.asciidoc[]\n"
+}

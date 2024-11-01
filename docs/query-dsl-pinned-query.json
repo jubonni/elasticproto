@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.927076",
+        "size": 2150,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-pinned-query.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "query-dsl-pinned-query",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[query-dsl-pinned-query]]\n=== Pinned Query\nPromotes selected documents to rank higher than those matching a given query.\nThis feature is typically used to guide searchers to curated documents that are\npromoted over and above any \"organic\" matches for a search.\nThe promoted or \"pinned\" documents are identified using the document IDs stored in\nthe <<mapping-id-field,`_id`>> field.\n\n==== Example request\n\n[source,console]\n--------------------------------------------------\nGET /_search\n{\n  \"query\": {\n    \"pinned\": {\n      \"ids\": [ \"1\", \"4\", \"100\" ],\n      \"organic\": {\n        \"match\": {\n          \"description\": \"iphone\"\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n\n[[pinned-query-top-level-parameters]]\n==== Top-level parameters for `pinned`\n\n`ids`::\n(Optional, array) <<mapping-id-field, Document IDs>> listed in the order they are to appear in results.\nRequired if `docs` is not specified.\n`docs`::\n(Optional, array) Documents listed in the order they are to appear in results.\nRequired if `ids` is not specified.\nYou can specify the following attributes for each document:\n+\n--\n`_id`::\n(Required, string) The unique <<mapping-id-field, document ID>>.\n\n`_index`::\n(Optional, string) The index that contains the document.\n--\n`organic`::\nAny choice of query used to rank documents which will be ranked below the \"pinned\" documents.\n\n==== Pin documents in a specific index\n\nIf you're searching over multiple indices, you can pin a document within a specific index using `docs`:\n\n[source,console]\n--------------------------------------------------\nGET /_search\n{\n  \"query\": {\n    \"pinned\": {\n      \"docs\": [\n        {\n          \"_index\": \"my-index-000001\", <1>\n          \"_id\": \"1\"\n        },\n        {\n          \"_id\": \"4\" <2>\n        }\n      ],\n      \"organic\": {\n        \"match\": {\n          \"description\": \"iphone\"\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n\n<1> The document with id `1` from `my-index-000001` will be the first result.\n<2> When `_index` is missing, all documents with id `4` from the queried indices will be pinned with the same score.\n"
+}

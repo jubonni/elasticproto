@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.033067",
+        "size": 2252,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-functions-operators.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-functions-operators",
+        "version": "8.15"
+    },
+    "doc": "[[esql-functions-operators]]\n=== {esql} functions and operators\n++++\n<titleabbrev>Functions and operators</titleabbrev>\n++++\n\n{esql} provides a comprehensive set of functions and operators for working with data.\nThe reference documentation is divided into the following categories:\n\n[[esql-functions]]\n==== Functions overview\n\n.*Aggregate functions*\n[%collapsible]\n====\ninclude::functions/aggregation-functions.asciidoc[tag=agg_list]\n====\n\n.*Grouping functions*\n[%collapsible]\n====\ninclude::functions/grouping-functions.asciidoc[tag=group_list]\n====\n\n.*Conditional functions and expressions*\n[%collapsible]\n====\ninclude::functions/conditional-functions-and-expressions.asciidoc[tag=cond_list]\n====\n\n// <Type-specific functions alphabetically ordered>\n\n.*Date and time functions*\n[%collapsible]\n====\ninclude::functions/date-time-functions.asciidoc[tag=date_list]\n====\n\n.*IP functions*\n[%collapsible]\n====\ninclude::functions/ip-functions.asciidoc[tag=ip_list]\n====\n\n.*Math functions*\n[%collapsible]\n====\ninclude::functions/math-functions.asciidoc[tag=math_list]\n====\n\n.*Spatial functions*\n[%collapsible]\n====\ninclude::functions/spatial-functions.asciidoc[tag=spatial_list]\n====\n\n.*String functions*\n[%collapsible]\n====\ninclude::functions/string-functions.asciidoc[tag=string_list]\n====\n\n// </Type-specific functions alphabetically ordered>\n\n.*Type conversion functions*\n[%collapsible]\n====\ninclude::functions/type-conversion-functions.asciidoc[tag=type_list]\n====\n\n.*Multi value functions*\n[%collapsible]\n====\ninclude::functions/mv-functions.asciidoc[tag=mv_list]\n====\n\n[[esql-operators-overview]]\n==== Operators overview\n\n.*Operators*\n[%collapsible]\n====\ninclude::functions/operators.asciidoc[tag=op_list]\n====\n\ninclude::functions/aggregation-functions.asciidoc[]\ninclude::functions/grouping-functions.asciidoc[]\ninclude::functions/conditional-functions-and-expressions.asciidoc[]\ninclude::functions/date-time-functions.asciidoc[]\ninclude::functions/ip-functions.asciidoc[]\ninclude::functions/math-functions.asciidoc[]\ninclude::functions/spatial-functions.asciidoc[]\ninclude::functions/string-functions.asciidoc[]\ninclude::functions/type-conversion-functions.asciidoc[]\ninclude::functions/mv-functions.asciidoc[]\ninclude::functions/operators.asciidoc[]\n"
+}

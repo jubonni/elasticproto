@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.792067",
+        "size": 1322,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/norms.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "norms",
+        "version": "8.15"
+    },
+    "doc": "[[norms]]\n=== `norms`\n\nNorms store various normalization factors that are later used at query time\nin order to compute the score of a document relatively to a query.\n\nAlthough useful for scoring, norms also require quite a lot of disk\n(typically in the order of one byte per document per field in your index, even\nfor documents that don't have this specific field). As a consequence, if you\ndon't need scoring on a specific field, you should disable norms on that\nfield. In particular, this is the case for fields that are used solely for\nfiltering or aggregations.\n\nTIP: Norms can be disabled on existing fields using\nthe <<indices-put-mapping,update mapping API>>.\n\nNorms can be disabled (but not reenabled after the fact), using the\n<<indices-put-mapping,update mapping API>> like so:\n\n[source,console]\n------------\nPUT my-index-000001/_mapping\n{\n  \"properties\": {\n    \"title\": {\n      \"type\": \"text\",\n      \"norms\": false\n    }\n  }\n}\n------------\n// TEST[s/^/PUT my-index-000001\\n/]\n\nNOTE: Norms will not be removed instantly, but will be removed as old segments\nare merged into new segments as you continue indexing new documents. Any score\ncomputation on a field that has had norms removed might return inconsistent\nresults since some documents won't have norms anymore while other documents\nmight still have norms.\n"
+}

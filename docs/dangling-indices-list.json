@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.815065",
+        "size": 1530,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/dangling-indices-list.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "dangling-indices-list",
+        "version": "8.15"
+    },
+    "doc": "[[dangling-indices-list]]\n=== List dangling indices API\n++++\n<titleabbrev>List dangling indices</titleabbrev>\n++++\n\nLists dangling indices.\n\n[[dangling-indices-list-api-request]]\n==== {api-request-title}\n\n[source,console]\n--------------------------------------------------\nGET /_dangling\n--------------------------------------------------\n// TEST[skip:TBD]\n\n[[dangling-indices-list-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[dangling-indices-list-api-desc]]\n==== {api-description-title}\n\n// tag::dangling-index-description[]\nIf {es} encounters index data that is absent from the current cluster\nstate, those indices are considered to be dangling. For example,\nthis can happen if you delete more than\n`cluster.indices.tombstones.size` indices while an {es} node is offline.\n// end::dangling-index-description[]\n\nUse this API to list dangling indices, which you can then\n<<dangling-index-import,import>> or <<dangling-index-delete,delete>>.\n\n\n[[dangling-indices-list-api-example]]\n==== {api-examples-title}\n\nThe API returns the following response:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"dangling_indices\": [\n   {\n    \"index_name\": \"my-index-000001\",\n    \"index_uuid\": \"zmM4e0JtBkeUjiHD-MihPQ\",\n    \"creation_date_millis\": 1589414451372,\n    \"node_ids\": [\n      \"pL47UN3dAb2d5RCWP6lQ3e\"\n    ]\n   }\n  ]\n}\n--------------------------------------------------\n"
+}

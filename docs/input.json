@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.464068",
+        "size": 947,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/input.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "input",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[input]]\n== {watcher} inputs\n++++\n<titleabbrev>Inputs</titleabbrev>\n++++\n\nWhen a watch is triggered, its _input_ loads data into the execution \ncontext. This payload is accessible during the subsequent watch execution \nphases. For example, you can base a watch's condition on the data loaded by its\ninput.\n\n{watcher} supports four input types: \n\n* <<input-simple,`simple`>>: load static data into the execution context.\n* <<input-search,`search`>>: load the results of a search into the execution \ncontext.\n* <<input-http,`http`>>: load the results of an HTTP request into the execution\ncontext.\n* <<input-chain,`chain`>>: use a series of inputs to load data into the \nexecution context.\n\nNOTE: If you don't define an input for a watch, an empty payload is loaded\n      into the execution context.\n\ninclude::input/simple.asciidoc[]\n\ninclude::input/search.asciidoc[]\n\ninclude::input/http.asciidoc[]\n\ninclude::input/chain.asciidoc[]\n"
+}

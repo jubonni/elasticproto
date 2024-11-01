@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.322069",
+        "size": 345,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size-settings.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "heap-size-settings",
+        "version": "8.15"
+    },
+    "doc": "[[heap-size-settings]]\n[discrete]\n==== Heap size settings\n\nBy default, {es} automatically sets the JVM heap size based on a node's\n<<node-roles,roles>> and total memory.\nWe recommend the default sizing for most production environments.\n\nIf needed, you can override the default sizing by manually\n<<set-jvm-heap-size,setting the JVM heap size>>.\n"
+}

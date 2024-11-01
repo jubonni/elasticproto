@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.904071",
+        "size": 1359,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-delete-role.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-delete-role",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-delete-role]]\n=== Delete roles API\n++++\n<titleabbrev>Delete roles</titleabbrev>\n++++\n\nRemoves roles in the native realm.\n\n[[security-api-delete-role-request]]\n==== {api-request-title}\n\n`DELETE /_security/role/<name>` \n\n\n[[security-api-delete-role-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have at least the `manage_security` cluster privilege.\n\n\n[[security-api-delete-role-desc]]\n==== {api-description-title}\n\nThe role management APIs are generally the preferred way to manage roles, rather than using\n<<roles-management-file,file-based role management>>. The delete roles API cannot remove roles that are defined in roles files.\n\n[[security-api-delete-role-path-params]]\n==== {api-path-parms-title}\n\n`name`::\n  (string) The name of the role. \n\n[[security-api-delete-role-example]]\n==== {api-examples-title}\n\nThe following example deletes a `my_admin_role` role:\n\n[source,console]\n--------------------------------------------------\nDELETE /_security/role/my_admin_role\n--------------------------------------------------\n// TEST[setup:admin_role]\n\nIf the role is successfully deleted, the request returns `{\"found\": true}`.\nOtherwise, `found` is set to false.\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"found\" : true\n}\n--------------------------------------------------\n\n"
+}

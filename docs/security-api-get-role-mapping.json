@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.262068",
+        "size": 2413,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-role-mapping.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-get-role-mapping",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-get-role-mapping]]\n=== Get role mappings API\n++++\n<titleabbrev>Get role mappings</titleabbrev>\n++++\n\nRetrieves role mappings.\n\n[[security-api-get-role-mapping-request]]\n==== {api-request-title}\n\n`GET /_security/role_mapping` +\n\n`GET /_security/role_mapping/<name>`\n\n[[security-api-get-role-mapping-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have at least the `read_security` cluster privilege.\n\n[[security-api-get-role-mapping-desc]]\n==== {api-description-title}\n\nRole mappings define which roles are assigned to each user. For more information,\nsee <<mapping-roles>>.\n\nThe role mapping APIs are generally the preferred way to manage role mappings\nrather than using <<mapping-roles-file,role mapping files>>.\nThe get role mappings API cannot retrieve role mappings that are defined\nin role mapping files.\n\n[[security-api-get-role-mapping-path-params]]\n==== {api-path-parms-title}\n\n`name`::\n  (Optional, string) The distinct name that identifies the role mapping. The name\n  is used solely as an identifier to facilitate interaction via the API; it does\n  not affect the behavior of the mapping in any way. You can specify multiple\n  mapping names as a comma-separated list. If you do not specify this\n  parameter, the API returns information about all role mappings.\n\n[[security-api-get-role-mapping-response-body]]\n==== {api-response-body-title}\n\nA successful call retrieves an object, where the keys are the\nnames of the request mappings, and the values are the JSON representation of\nthose mappings. For more information, see\n<<role-mapping-resources>>.\n\n[[security-api-get-role-mapping-response-codes]]\n==== {api-response-codes-title}\n\nIf there is no mapping with the requested name, the\nresponse will have status code `404`.\n\n\n[[security-api-get-role-mapping-example]]\n==== {api-examples-title}\n\nThe following example retrieves information about the `mapping1` role mapping:\n\n[source,console]\n--------------------------------------------------\nGET /_security/role_mapping/mapping1\n--------------------------------------------------\n// TEST[setup:role_mapping]\n\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"mapping1\": {\n    \"enabled\": true,\n    \"roles\": [\n      \"user\"\n    ],\n    \"rules\": {\n      \"field\": {\n        \"username\": \"*\"\n      }\n    },\n    \"metadata\": {}\n  }\n}\n--------------------------------------------------\n"
+}

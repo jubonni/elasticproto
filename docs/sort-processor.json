@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.490067",
+        "size": 1000,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sort-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "sort-processor",
+        "version": "8.15"
+    },
+    "doc": "[[sort-processor]]\n=== Sort processor\n++++\n<titleabbrev>Sort</titleabbrev>\n++++\n\nSorts the elements of an array ascending or descending. Homogeneous arrays of numbers will be sorted\nnumerically, while arrays of strings or heterogeneous arrays of strings + numbers will be sorted lexicographically.\nThrows an error when the field is not an array.\n\n[[sort-options]]\n.Sort Options\n[options=\"header\"]\n|======\n| Name              | Required  | Default  | Description\n| `field`           | yes       | -        | The field to be sorted\n| `order`           | no        | `\"asc\"`  | The sort order to use. Accepts `\"asc\"` or `\"desc\"`.\n| `target_field`    | no        | `field`  | The field to assign the sorted value to, by default `field` is updated in-place\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"sort\": {\n    \"field\": \"array_field_to_sort\",\n    \"order\": \"desc\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

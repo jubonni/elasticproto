@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.770069",
+        "size": 2285,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/convert-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "convert-processor",
+        "version": "8.15"
+    },
+    "doc": "[[convert-processor]]\n=== Convert processor\n++++\n<titleabbrev>Convert</titleabbrev>\n++++\n\nConverts a field in the currently ingested document to a different type, such as converting a string to an integer.\nIf the field value is an array, all members will be converted.\n\nThe supported types include: `integer`, `long`, `float`, `double`, `string`, `boolean`, `ip`, and `auto`.\n\nSpecifying `boolean` will set the field to true if its string value is equal to `true` (ignore case), to\nfalse if its string value is equal to `false` (ignore case), or it will throw an exception otherwise.\n\nSpecifying `ip` will set the target field to the value of `field` if it contains a valid IPv4 or IPv6 address\nthat can be indexed into an <<ip,IP field type>>.\n\nSpecifying `auto` will attempt to convert the string-valued `field` into the closest non-string, non-IP type.\nFor example, a field whose value is `\"true\"` will be converted to its respective boolean type: `true`. Do note\nthat float takes precedence of double in `auto`. A value of `\"242.15\"` will \"automatically\" be converted to\n`242.15` of type `float`. If a provided field cannot be appropriately converted, the processor will\nstill process successfully and leave the field value as-is. In such a case, `target_field` will\nbe updated with the unconverted field value.\n\n[[convert-options]]\n.Convert Options\n[options=\"header\"]\n|======\n| Name             | Required  | Default  | Description\n| `field`          | yes       | -        | The field whose value is to be converted\n| `target_field`   | no        | `field`  | The field to assign the converted value to, by default `field` is updated in-place\n| `type`           | yes       | -        | The type to convert the existing value to\n| `ignore_missing` | no        | `false`  | If `true` and `field` does not exist or is `null`, the processor quietly exits without modifying the document\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\nPUT _ingest/pipeline/my-pipeline-id\n{\n  \"description\": \"converts the content of the id field to an integer\",\n  \"processors\" : [\n    {\n      \"convert\" : {\n        \"field\" : \"id\",\n        \"type\": \"integer\"\n      }\n    }\n  ]\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

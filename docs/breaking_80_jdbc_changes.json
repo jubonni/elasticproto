@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.513066",
+        "size": 1021,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/breaking_80_jdbc_changes.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "breaking_80_jdbc_changes",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[breaking_80_jdbc_changes]]\n==== SQL JDBC changes\n\n.JDBC driver returns geometry objects as well-known-text string instead of `org.elasticsearch.geo` objects.\n[%collapsible]\n====\n*Details* +\nTo reduce the dependency of the JDBC driver onto Elasticsearch classes, the JDBC driver returns geometry data\nas strings using the WKT (well-known text) format instead of classes from the `org.elasticsearch.geometry`.\nUsers can choose the geometry library desired to convert the string representation into a full-blown objects\neither such as the `elasticsearch-geo` library (which returned the object `org.elasticsearch.geo` as before),\njts or spatial4j.\n\n*Impact* +\nBefore upgrading, replace any `org.elasticsearch.geo` classes on the `ResultSet#getObject` or `ResultSet#setObject`\nElasticsearch JDBC driver with their WKT representation by simply calling `toString` or\n`org.elasticsearch.geometry.utils.WellKnownText#toWKT/fromWKT` methods.\n\nThis change does NOT impact users that do not use geometry classes.\n\n====\n"
+}

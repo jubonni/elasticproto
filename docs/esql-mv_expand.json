@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.746078",
+        "size": 511,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-mv_expand.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-mv_expand",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[esql-mv_expand]]\n=== `MV_EXPAND`\n\npreview::[]\n\nThe `MV_EXPAND` processing command expands multivalued columns into one row per\nvalue, duplicating other columns.\n\n**Syntax**\n\n[source,esql]\n----\nMV_EXPAND column\n----\n\n*Parameters*\n\n`column`::\nThe multivalued column to expand.\n\n*Example*\n\n[source.merge.styled,esql]\n----\ninclude::{esql-specs}/mv_expand.csv-spec[tag=simple]\n----\n[%header.monospaced.styled,format=dsv,separator=|]\n|===\ninclude::{esql-specs}/mv_expand.csv-spec[tag=simple-result]\n|===\n"
+}

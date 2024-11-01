@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.846068",
+        "size": 603,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-lambdas.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "painless-lambdas",
+        "version": "8.15"
+    },
+    "doc": "[[painless-lambdas]]\n=== Lambdas\nLambda expressions and method references work the same as in https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html[Java].\n\n[source,painless]\n---------------------------------------------------------\nlist.removeIf(item -> item == 2);\nlist.removeIf((int item) -> item == 2);\nlist.removeIf((int item) -> { item == 2 });\nlist.sort((x, y) -> x - y);\nlist.sort(Integer::compare);\n---------------------------------------------------------\n\nYou can make method references to functions within the script with `this`,\nfor example `list.sort(this::mycompare)`."
+}

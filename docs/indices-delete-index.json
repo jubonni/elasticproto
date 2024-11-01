@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.893065",
+        "size": 1774,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-index.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-delete-index",
+        "version": "8.15"
+    },
+    "doc": "[[indices-delete-index]]\n=== Delete index API\n++++\n<titleabbrev>Delete index</titleabbrev>\n++++\n\nDeletes one or more indices.\n\n[source,console]\n----\nDELETE /my-index-000001\n----\n// TEST[setup:my_index]\n\n[[delete-index-api-request]]\n==== {api-request-title}\n\n`DELETE /<index>`\n\n[[delete-index-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `delete_index`\nor `manage` <<privileges-list-indices,index privilege>> for the target index.\n\n[[delete-index-api-desc]]\n==== {api-description-title}\n\nDeleting an index deletes its documents, shards, and metadata. It does not\ndelete related {kib} components, such as {data-sources}, visualizations, or\ndashboards.\n\nYou cannot delete the current write index of a data stream. To delete the\nindex, you must <<data-streams-rollover,roll over>> the data stream so a new\nwrite index is created. You can then use the delete index API to delete the\nprevious write index.\n\n[[delete-index-api-path-params]]\n==== {api-path-parms-title}\n\n`<index>`::\n(Required, string) Comma-separated list of indices to delete. You cannot specify\n<<aliases,index aliases>>.\n+\nBy default, this parameter does not support wildcards (`*`) or `_all`. To use\nwildcards or `_all`, set the\n<<action-destructive-requires-name,`action.destructive_requires_name`>> cluster\nsetting to `false`.\n\n[[delete-index-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=allow-no-indices]\n+\nDefaults to `true`.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=expand-wildcards]\n+\nDefaults to `open,closed`.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=index-ignore-unavailable]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n"
+}

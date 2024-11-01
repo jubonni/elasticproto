@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.107069",
+        "size": 1346,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/file-descriptors.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "file-descriptors",
+        "version": "8.15"
+    },
+    "doc": "[[file-descriptors]]\n=== File Descriptors\n\n[NOTE]\nThis is only relevant for Linux and macOS and can be safely ignored if running\nElasticsearch on Windows. On Windows that JVM uses an\nhttps://msdn.microsoft.com/en-us/library/windows/desktop/aa363858(v=vs.85).aspx[API]\nlimited only by available resources.\n\nElasticsearch uses a lot of file descriptors or file handles. Running out of\nfile descriptors can be disastrous and will most probably lead to data loss.\nMake sure to increase the limit on the number of open files descriptors for\nthe user running Elasticsearch to 65,535 or higher.\n\nFor the `.zip` and `.tar.gz` packages, set <<ulimit,`ulimit -n 65535`>> as\nroot before starting Elasticsearch,   or set `nofile` to `65535` in\n<<limits.conf,`/etc/security/limits.conf`>>.\n\nOn macOS, you must also pass the JVM option `-XX:-MaxFDLimit`\nto Elasticsearch in order for it to make use of the higher file descriptor limit.\n\nRPM and Debian packages already default the maximum number of file\ndescriptors to 65535 and do not require further configuration.\n\nYou can check the `max_file_descriptors` configured for each node\nusing the <<cluster-nodes-stats>> API, with:\n\n[source,console]\n--------------------------------------------------\nGET _nodes/stats/process?filter_path=**.max_file_descriptors\n--------------------------------------------------\n"
+}

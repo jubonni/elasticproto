@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.895068",
+        "size": 2665,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rollup-delete-job.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "rollup-delete-job",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[rollup-delete-job]]\n=== Delete {rollup-jobs} API\n[subs=\"attributes\"]\n++++\n<titleabbrev>Delete {rollup-jobs}</titleabbrev>\n++++\n\ndeprecated::[8.11.0,\"Rollups will be removed in a future version. Use <<downsampling,downsampling>> instead.\"]\n\nDeletes an existing {rollup-job}.\n\n[[rollup-delete-job-request]]\n==== {api-request-title}\n\n`DELETE _rollup/job/<job_id>`\n\n[[rollup-delete-job-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have `manage` or\n`manage_rollup` cluster privileges to use this API. For more information, see\n<<security-privileges>>.\n\n[[rollup-delete-job-desc]]\n==== {api-description-title}\n\nA job must be *stopped* first before it can be deleted. If you attempt to delete\na started job, an error occurs. Similarly, if you attempt to delete a\nnonexistent job, an exception occurs.\n\n[IMPORTANT]\n===============================\nWhen a job is deleted, that only removes the process that is actively monitoring\nand rolling up data. It does not delete any previously rolled up data. This is\nby design; a user may wish to roll up a static dataset. Because the dataset is\nstatic, once it has been fully rolled up there is no need to keep the indexing\nrollup job around (as there will be no new data). So the job can be deleted,\nleaving behind the rolled up data for analysis.\n\nIf you wish to also remove the rollup data, and the rollup index only contains\nthe data for a single job, you can simply delete the whole rollup index. If the\nrollup index stores data from several jobs, you must issue a delete-by-query\nthat targets the rollup job's ID in the rollup index.\n\n[source,js]\n--------------------------------------------------\nPOST my_rollup_index/_delete_by_query\n{\n  \"query\": {\n    \"term\": {\n      \"_rollup.id\": \"the_rollup_job_id\"\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n===============================\n\n[[rollup-delete-job-path-params]]\n==== {api-path-parms-title}\n\n`<job_id>`::\n  (Required, string) Identifier for the job.\n\n[[rollup-delete-job-response-codes]]\n==== {api-response-codes-title}\n\n`404` (Missing resources)::\n  This code indicates that there are no resources that match the request. It\n  occurs if you try to delete a job that doesn't exist.\n\n[[rollup-delete-job-example]]\n==== {api-example-title}\n\nIf we have a rollup job named `sensor`, it can be deleted with:\n\n[source,console]\n--------------------------------------------------\nDELETE _rollup/job/sensor\n--------------------------------------------------\n// TEST[setup:sensor_rollup_job]\n\nWhich will return the response:\n\n[source,console-result]\n----\n{\n  \"acknowledged\": true\n}\n----\n"
+}

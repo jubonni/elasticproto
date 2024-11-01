@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.998080",
+        "size": 1163,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-enable-user.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-enable-user",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-enable-user]]\n=== Enable users API\n++++\n<titleabbrev>Enable users</titleabbrev>\n++++\n\nEnables users in the native realm. \n\n\n[[security-api-enable-user-request]]\n==== {api-request-title}\n\n`PUT /_security/user/<username>/_enable` \n\n\n[[security-api-enable-user-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have at least the `manage_security` cluster privilege.\n\n[[security-api-enable-user-desc]]\n==== {api-description-title}\n\nBy default, when you create users, they are enabled. You can use this enable \nusers API and the <<security-api-disable-user,disable users API>> to change that attribute. \n\nFor more information about the native realm, see \n<<realms>> and <<native-realm>>. \n\n[[security-api-enable-user-path-params]]\n==== {api-path-parms-title}\n\n`username`::\n  (Required, string) An identifier for the user.\n\n\n[[security-api-enable-user-example]]\n==== {api-examples-title}\n\nThe following example enables the user `jacknich`:\n\n[source,console]\n--------------------------------------------------\nPUT /_security/user/jacknich/_enable\n--------------------------------------------------\n// TEST[setup:jacknich_user]\n"
+}

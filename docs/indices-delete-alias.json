@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.862069",
+        "size": 1161,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-alias.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-delete-alias",
+        "version": "8.15"
+    },
+    "doc": "[[indices-delete-alias]]\n=== Delete alias API\n++++\n<titleabbrev>Delete alias</titleabbrev>\n++++\n\nRemoves a data stream or index from an <<aliases,alias>>.\n\n[source,console]\n----\nDELETE my-data-stream/_alias/my-alias\n----\n// TEST[setup:my_data_stream]\n// TEST[s/^/PUT my-data-stream\\/_alias\\/my-alias\\n/]\n// TEST[teardown:data_stream_cleanup]\n\n[[delete-alias-api-request]]\n==== {api-request-title}\n\n`DELETE <target>/_alias/<alias>`\n\n`DELETE <target>/_aliases/<alias>`\n\n[[delete-alias-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-indices,index privilege>> for the alias and it data streams or\nindices.\n\n[[delete-alias-api-path-params]]\n==== {api-path-parms-title}\n\n`<alias>`::\n(Required, string) Comma-separated list of aliases to remove. Supports wildcards\n(`*`). To remove all aliases, use `*` or `_all`.\n\n`<target>`::\n(Required, string) Comma-separated list of data streams or indices used to limit\nthe request. Supports wildcards (`*`).\n\n[[delete-alias-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.236068",
+        "size": 2274,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-get-template.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "indices-get-template",
+        "version": "8.15"
+    },
+    "doc": "[[indices-get-template]]\n=== Get index template API [[getting-templates]]\n++++\n<titleabbrev>Get index template</titleabbrev>\n++++\n\nReturns information about one or more index templates.\n\n////\n\n[source,console]\n--------------------------------------------------\nPUT /_index_template/template_1\n{\n  \"index_patterns\" : [\"te*\"],\n  \"priority\" : 1,\n  \"template\": {\n    \"settings\" : {\n      \"number_of_shards\" : 2\n    }\n  }\n}\n--------------------------------------------------\n// TESTSETUP\n\n[source,console]\n--------------------------------------------------\nDELETE _index_template/template_*\n--------------------------------------------------\n// TEARDOWN\n\n////\n\n[source,console]\n--------------------------------------------------\nGET /_index_template/template_1\n--------------------------------------------------\n\n[[get-template-api-request]]\n==== {api-request-title}\n\n`GET /_index_template/<index-template>`\n\n[[get-template-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`manage_index_templates` or `manage` <<privileges-list-cluster,cluster\nprivilege>> to use this API, or the `monitor` cluster privilege to retrieve templates.\n\n[[get-template-api-path-params]]\n==== {api-path-parms-title}\n\n(Optional, string) The name of the template to return. Accepts wildcard\nexpressions. If omitted, all templates are returned.\n\n[[get-template-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{docdir}/rest-api/common-parms.asciidoc[tag=flat-settings]\n\ninclude::{docdir}/rest-api/common-parms.asciidoc[tag=local]\n\ninclude::{docdir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\n`include_defaults`::\n(Optional, Boolean) Functionality in preview:[]. If `true`, return all default settings in the response.\nDefaults to `false`.\n\n[[get-template-api-example]]\n==== {api-examples-title}\n\n\n[[get-template-api-wildcard-ex]]\n===== Get index templates using a wildcard expression\n\n[source,console]\n--------------------------------------------------\nGET /_index_template/temp*\n--------------------------------------------------\n\n\n[[get-template-api-all-ex]]\n===== Get all index templates\n\n[source,console]\n--------------------------------------------------\nGET /_index_template\n--------------------------------------------------\n"
+}

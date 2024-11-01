@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.907066",
+        "size": 1920,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-snapshot-api.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "delete-snapshot-api",
+        "version": "8.15"
+    },
+    "doc": "[[delete-snapshot-api]]\n=== Delete snapshot API\n++++\n<titleabbrev>Delete snapshot</titleabbrev>\n++++\n\nDeletes a <<snapshot-restore,snapshot>>.\n\n////\n[source,console]\n----\nPUT /_snapshot/my_repository\n{\n  \"type\": \"fs\",\n  \"settings\": {\n    \"location\": \"my_backup_location\"\n  }\n}\n\nPUT /_snapshot/my_repository/my_snapshot?wait_for_completion=true\n\nPUT /_snapshot/my_repository/snapshot_2?wait_for_completion=true\n\nPUT /_snapshot/my_repository/snapshot_3?wait_for_completion=true\n----\n// TESTSETUP\n////\n\n[source,console]\n-----------------------------------\nDELETE /_snapshot/my_repository/my_snapshot\n-----------------------------------\n\n[[delete-snapshot-api-request]]\n==== {api-request-title}\n\n`DELETE /_snapshot/<repository>/<snapshot>`\n\n[[delete-snapshot-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[delete-snapshot-api-path-params]]\n==== {api-path-parms-title}\n\n`<repository>`::\n(Required, string)\nName of the repository to delete a snapshot from.\n\n`<snapshot>`::\n(Required, string)\nComma-separated list of snapshot names to delete. Also accepts wildcards (`*`).\n\n[[delete-snapshot-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\n`wait_for_completion`::\n(Optional, Boolean) If `true`, the request returns a response when the matching\nsnapshots are all deleted. If `false`, the request returns a response as soon as\nthe deletes are scheduled. Defaults to `true`.\n\n[[delete-snapshot-api-example]]\n==== {api-example-title}\n\nThe following request deletes `snapshot_2` and `snapshot_3` from the repository named `my_repository`.\n\n[source,console]\n----\nDELETE /_snapshot/my_repository/snapshot_2,snapshot_3\n----\n\nThe API returns the following response:\n\n[source,console-result]\n----\n{\n  \"acknowledged\" : true\n}\n----\n"
+}

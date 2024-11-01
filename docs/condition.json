@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.692065",
+        "size": 1658,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/condition.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "condition",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[condition]]\n== {watcher} conditions\n++++\n<titleabbrev>Conditions</titleabbrev>\n++++\n\nWhen a watch is triggered, its condition determines whether or not to execute\nthe watch actions. {watcher} supports the following condition types:\n\n* <<condition-always,`always`>>: The condition always evaluates to `true`, so the watch actions are always performed.\n* <<condition-never,`never`>>: The condition always evaluates to `false`, so the watch\nactions are never executed.\n* <<condition-compare,`compare`>>: perform simple comparisons against values\nin the watch payload to determine whether or not to execute the watch actions.\n* <<condition-array-compare,`array_compare`>>: compare an array of values in the\nwatch payload to a given value to determine whether or not to execute the watch\nactions.\n* <<condition-script,`script`>>: use a script to determine whether or not to\nexecute the watch actions.\n\nNOTE: If you omit the condition definition from a watch, the condition defaults\n      to `always`.\n\nWhen a condition is evaluated, it has full access to the watch execution context,\nincluding the watch payload (`ctx.payload.*`). The <<condition-script,script>>,\n<<condition-compare,compare>>  and <<condition-array-compare,array_compare>>\nconditions can use the payload data to determine whether or not the necessary\nconditions are met.\n\nIn addition to the watch wide condition, you can also configure conditions\nper <<action-conditions,action>>.\n\ninclude::condition/always.asciidoc[]\n\ninclude::condition/never.asciidoc[]\n\ninclude::condition/compare.asciidoc[]\n\ninclude::condition/array-compare.asciidoc[]\n\ninclude::condition/script.asciidoc[]\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.365067",
+        "size": 1689,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-and-snapshots.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "index-lifecycle-and-snapshots",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[index-lifecycle-and-snapshots]]\n== Restore a managed data stream or index\n\nTo <<restore-snapshot-api,restore>> managed indices, ensure that the {ilm-init}\npolicies referenced by the indices exist. If necessary, you can restore\n{ilm-init} policies by setting\n<<restore-snapshot-api-request-body,`include_global_state`>> to `true`. \n\nWhen you restore a managed index or a data stream with managed backing indices, \n{ilm-init} automatically resumes executing the restored indices' policies.\nA restored index's `min_age` is relative to when it was originally created or rolled over, \nnot its restoration time. \nPolicy actions are performed on the same schedule whether or not \nan index has been restored from a snapshot.\nIf you restore an index that was accidentally deleted half way through its month long lifecycle,\nit proceeds normally through the last two weeks of its lifecycle.\n\nIn some cases, you might want to prevent {ilm-init} from immediately executing\nits policy on a restored index.\nFor example, if you are restoring an older snapshot you might want to \nprevent it from rapidly progressing through all of its lifecycle phases. \nYou might want to add or update documents before it's marked read-only or shrunk, \nor prevent the index from being immediately deleted.\n\nTo prevent {ilm-init} from executing a restored index's policy:\n\n1. Temporarily <<ilm-stop,stop {ilm-init}>>. This pauses execution of _all_ {ilm-init} policies.\n2. Restore the snapshot.\n3. <<ilm-remove-policy,Remove the policy>> from the index or perform whatever actions you need to \n   before {ilm-init} resumes policy execution. \n4. <<ilm-start,Restart {ilm-init}>> to resume policy execution.\n"
+}

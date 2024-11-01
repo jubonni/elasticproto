@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.829067",
+        "size": 1479,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-valid-job.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ml-valid-job",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-valid-job]]\n= Validate {anomaly-jobs} API\n++++\n<titleabbrev>Validate jobs</titleabbrev>\n++++\n\nValidates {anomaly-job} configuration information.\n\n[[ml-valid-job-request]]\n== {api-request-title}\n\n`POST _ml/anomaly_detectors/_validate`\n\n[[ml-valid-job-prereqs]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n[[ml-valid-job-desc]]\n== {api-description-title}\n\nThis API enables you to validate the {anomaly-job} configuration before you\ncreate the job.\n\n[[ml-valid-job-request-body]]\n== {api-request-body-title}\n\nFor a list of the properties that you can specify in the body of this API,\nsee <<ml-put-job-request-body>>.\n\n[[ml-valid-job-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nPOST _ml/anomaly_detectors/_validate\n{\n  \"description\": \"Unusual response times by airlines\",\n  \"analysis_config\": {\n    \"bucket_span\": \"300S\",\n    \"detectors\": [\n      {\n        \"function\": \"metric\",\n        \"field_name\": \"responsetime\",\n        \"by_field_name\": \"airline\" } ],\n    \"influencers\": [ \"airline\" ]\n  },\n  \"data_description\": {\n    \"time_field\": \"time\",\n    \"time_format\": \"yyyy-MM-dd'T'HH:mm:ssX\"\n  }\n}\n--------------------------------------------------\n// TEST[skip:needs-licence]\n\nWhen the validation is complete, you receive the following results:\n\n[source,console-result]\n----\n{\n  \"acknowledged\": true\n}\n----\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.585070",
+        "size": 2111,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mapper-size.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "mapper-size",
+        "version": "8.15"
+    },
+    "doc": "[[mapper-size]]\n=== Mapper size plugin\n\nThe mapper-size plugin provides the `_size` metadata field which, when enabled,\nindexes the size in bytes of the original\n{ref}/mapping-source-field.html[`_source`] field.\n\n:plugin_name: mapper-size\ninclude::install_remove.asciidoc[]\n\n[[mapper-size-usage]]\n==== Using the `_size` field\n\nIn order to enable the `_size` field, set the mapping as follows:\n\n[source,console]\n--------------------------\nPUT my-index-000001\n{\n  \"mappings\": {\n    \"_size\": {\n      \"enabled\": true\n    }\n  }\n}\n--------------------------\n\nThe value of the `_size` field is accessible in queries, aggregations, scripts,\nand when sorting. It can be retrieved using the {ref}/search-fields.html#search-fields-param[fields parameter]:\n\n[source,console]\n--------------------------\n# Example documents\nPUT my-index-000001/_doc/1\n{\n  \"text\": \"This is a document\"\n}\n\nPUT my-index-000001/_doc/2\n{\n  \"text\": \"This is another document\"\n}\n\nGET my-index-000001/_search\n{\n  \"query\": {\n    \"range\": {\n      \"_size\": {                      <1>\n        \"gt\": 10\n      }\n    }\n  },\n  \"aggs\": {\n    \"sizes\": {\n      \"terms\": {\n        \"field\": \"_size\",             <2>\n        \"size\": 10\n      }\n    }\n  },\n  \"sort\": [\n    {\n      \"_size\": {                      <3>\n        \"order\": \"desc\"\n      }\n    }\n  ],\n  \"fields\": [\"_size\"],                <4>\n  \"script_fields\": {\n    \"size\": {\n      \"script\": \"doc['_size']\"        <5>\n    }\n  }\n}\n--------------------------\n// TEST[continued]\n\n<1> Querying on the `_size` field\n<2> Aggregating on the `_size` field\n<3> Sorting on the `_size` field\n<4> Use the `fields` parameter to return the `_size` in the search response.\n<5> Uses a\n{ref}/search-fields.html#script-fields[script field]\nto return the `_size` field in the search response.\n\n[NOTE]\n.Using `_size` in {kib}\n================================================\n\nTo use the `_size` field in {kib}, update the `metaFields` setting and add \n`_size` to the list of meta fields. `metaFields` can be configured in {kib} \nfrom the Advanced Settings page in Management.\n\n================================================"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.616073",
+        "size": 1302,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-functions-system.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "sql-functions-system",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[sql-functions-system]]\n=== System Functions\n\nThese functions return metadata type of information about the system being queried.\n\n[[sql-functions-system-database]]\n==== `DATABASE`\n\n.Synopsis:\n[source, sql]\n--------------------------------------------------\nDATABASE()\n--------------------------------------------------\n\n*Input*: _none_\n\n*Output*: string\n\n*Description*: Returns the name of the database being queried. In the case of Elasticsearch SQL, this\nis the name of the Elasticsearch cluster. This function should always return a non-null\nvalue.\n\n[source, sql]\n--------------------------------------------------\ninclude-tagged::{sql-specs}/docs/docs.csv-spec[database]\n--------------------------------------------------\n\n[[sql-functions-system-user]]\n==== `USER`\n\n.Synopsis:\n[source, sql]\n--------------------------------------------------\nUSER()\n--------------------------------------------------\n*Input*: _none_\n\n*Output*: string\n\n*Description*: Returns the username of the authenticated user executing the query. This function can\nreturn `null` in case <<configuring-stack-security,security>> is disabled.\n\n[source, sql]\n--------------------------------------------------\ninclude-tagged::{sql-specs}/docs/docs.csv-spec[user]\n--------------------------------------------------\n"
+}

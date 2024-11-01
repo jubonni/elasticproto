@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.090066",
+        "size": 772,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/fail-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "fail-processor",
+        "version": "8.15"
+    },
+    "doc": "[[fail-processor]]\n=== Fail processor\n++++\n<titleabbrev>Fail</titleabbrev>\n++++\n\nRaises an exception. This is useful for when\nyou expect a pipeline to fail and want to relay a specific message\nto the requester.\n\n[[fail-options]]\n.Fail Options\n[options=\"header\"]\n|======\n| Name       | Required  | Default  | Description\n| `message`  | yes       | -        | The error message thrown by the processor. Supports <<template-snippets,template snippets>>.\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"fail\": {\n    \"if\" : \"ctx.tags.contains('production') != true\",\n    \"message\": \"The production tag is not present, found tags: {{{tags}}}\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

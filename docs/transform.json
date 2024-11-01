@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.717067",
+        "size": 2136,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/transform.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "transform",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[transform]]\n== {watcher-transforms-cap}\n++++\n<titleabbrev>Transforms</titleabbrev>\n++++\n\nA _{watcher-transform}_ processes and changes the payload in the watch execution\ncontext to prepare it for the watch actions. {watcher} supports three types of \n{watcher-transforms}: \n\n* <<transform-search,`search`>>\n* <<transform-script,`script`>>\n* <<transform-chain,`chain`>>\n\n\nNOTE: {watcher-transforms-cap} are optional. When none are defined, the actions\nhave access to the payload as loaded by the watch input.\n\nYou can define {watcher-transforms} in two places:\n\n* As a top level construct in the watch definition. In this case, the payload is\n  transformed before any of the watch actions are executed.\n\n* As part of the definition of an action. In this case, the payload is\n  transformed before that action is executed. The transformation is only applied\n  to the payload for that specific action.\n\nIf all actions require the same view of the payload, define a {watcher-transform}\nas part of the watch definition. If each action requires a different view of the\npayload, define different {watcher-transforms} as part of the action definitions\nso each action has the payload prepared by its own dedicated {watcher-transform}.\n\nThe following example defines two {watcher-transforms}, one at the watch level\nand one as part of the definition of the `my_webhook` action.\n\n[source,js]\n--------------------------------------------------\n{\n  \"trigger\" : { ...}\n  \"input\" : { ... },\n  \"condition\" : { ... },\n  \"transform\" : { <1>\n    \"search\" : {\n      \"request\": {\n        \"body\" : { \"query\" : { \"match_all\" : {} } }\n      }\n    }\n  },\n  \"actions\" : {\n    \"my_webhook\": {\n      \"transform\" : { <2>\n      \t\"script\" : \"return ctx.payload.hits\"\n      },\n      \"webhook\" : {\n      \t\"host\" : \"host.domain\",\n      \t\"port\" : 8089,\n      \t\"path\" : \"/notify/{{ctx.watch_id}}\"\n      }\n    }\n  ]\n}\n--------------------------------------------------\n// NOTCONSOLE\n<1> A watch level `transform`\n<2> An action level `transform`\n\ninclude::transform/search.asciidoc[]\n\ninclude::transform/script.asciidoc[]\n\ninclude::transform/chain.asciidoc[]\n"
+}

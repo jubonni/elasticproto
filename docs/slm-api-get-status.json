@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.471068",
+        "size": 1405,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/slm-api-get-status.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "slm-api-get-status",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[slm-api-get-status]]\n=== Get {slm} status API\n\n[subs=\"attributes\"]\n++++\n<titleabbrev>Get {slm} status</titleabbrev>\n++++\n\nRetrieves the status of {slm} ({slm-init}).\n\n[[slm-api-get-status-request]]\n==== {api-request-title}\n\n`GET /_slm/status`\n\n[[slm-api-get-status-desc]]\n==== {api-description-title}\n\nReturns the status of the {slm-init} plugin. \nThe `operation_mode` field in the response shows one of three states: \n`RUNNING`, `STOPPING`, or `STOPPED`. \nYou halt and restart the {slm-init} plugin with the\n<<slm-api-stop, stop>> and <<slm-api-start, start>>  APIs.\n\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n\n[[slm-api-get-status-prereqs]]\n==== {api-prereq-title}\n\nIf the {es} {security-features} are enabled, you must have the \n`manage_slm` or `read_slm` cluster privileges to use this API. \nFor more information, see <<security-privileges>>.\n\n[[slm-api-get-status-example]]\n==== {api-examples-title}\n\n\n[source,console]\n--------------------------------------------------\nGET _slm/status\n--------------------------------------------------\n\nThe API returns the following result:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"operation_mode\": \"RUNNING\"\n}\n--------------------------------------------------\n// TESTRESPONSE[s/\"operation_mode\": \"RUNNING\"/\"operation_mode\": $body.operation_mode/]\n"
+}

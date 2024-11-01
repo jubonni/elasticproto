@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.812070",
+        "size": 2540,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/uri-parts-processor.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "uri-parts-processor",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[uri-parts-processor]]\n=== URI parts processor\n++++\n<titleabbrev>URI parts</titleabbrev>\n++++\n\nParses a Uniform Resource Identifier (URI) string and extracts its components as\nan object. This URI object includes properties for the URI's domain, path, fragment,\nport, query, scheme, user info, username, and password.\n\n[[uri-parts-options]]\n.URI Parts Options\n[options=\"header\"]\n|======\n| Name               | Required  | Default | Description\n| `field`            | yes       | -       | Field containing the URI string.\n| `target_field`     | no        | `url`   | Output field for the URI object.\n| `keep_original`    | no        | true    | If `true`, the processor copies the\nunparsed URI to `<target_field>.original`.\n| `remove_if_successful` | no    | false   | If `true`, the processor removes\nthe `field` after parsing the URI string. If parsing fails, the processor does not\nremove the `field`.\n| `ignore_missing`   | no        | `false`          | If `true` and `field` does not exist, the processor quietly exits without modifying the document\n\ninclude::common-options.asciidoc[]\n|======\n\nHere is an example definition of the URI parts processor:\n\n[source,js]\n--------------------------------------------------\n{\n  \"description\" : \"...\",\n  \"processors\" : [\n    {\n      \"uri_parts\": {\n        \"field\": \"input_field\",\n        \"target_field\": \"url\",\n        \"keep_original\": true,\n        \"remove_if_successful\": false\n      }\n    }\n  ]\n}\n--------------------------------------------------\n// NOTCONSOLE\n\nWhen the above processor executes on the following document:\n\n[source,js]\n--------------------------------------------------\n{\n  \"_source\": {\n    \"input_field\": \"http://myusername:mypassword@www.example.com:80/foo.gif?key1=val1&key2=val2#fragment\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n\nIt produces this result:\n\n[source,js]\n--------------------------------------------------\n\"_source\" : {\n  \"input_field\" : \"http://myusername:mypassword@www.example.com:80/foo.gif?key1=val1&key2=val2#fragment\",\n  \"url\" : {\n    \"path\" : \"/foo.gif\",\n    \"fragment\" : \"fragment\",\n    \"extension\" : \"gif\",\n    \"password\" : \"mypassword\",\n    \"original\" : \"http://myusername:mypassword@www.example.com:80/foo.gif?key1=val1&key2=val2#fragment\",\n    \"scheme\" : \"http\",\n    \"port\" : 80,\n    \"user_info\" : \"myusername:mypassword\",\n    \"domain\" : \"www.example.com\",\n    \"query\" : \"key1=val1&key2=val2\",\n    \"username\" : \"myusername\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

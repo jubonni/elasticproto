@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.553067",
+        "size": 1926,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/behavioral-analytics-cors.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "behavioral-analytics-cors",
+        "version": "8.15"
+    },
+    "doc": "[[behavioral-analytics-cors]]\n=== Set up CORS for Behavioral Analytics\n++++\n<titleabbrev>Set up CORs</titleabbrev>\n++++\n\nBehavioral Analytics sends events directly to the {es} API.\nThis means that the browser makes requests to the {es} API directly.\n{es} supports https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS[Cross-Origin Resource Sharing (CORS)^], but this feature is disabled by default.\nTherefore the browser will block these requests.\n\nThere are two workarounds for this:\n\n* <<behavioral-analytics-cors-enable-cors-elasticsearch, Enable CORS on {es}>>\n* <<behavioral-analytics-cors-proxy-request, Proxy the request through a server that supports CORS>>\n\n[discrete]\n[[behavioral-analytics-cors-enable-cors-elasticsearch]]\n==== Enable CORS on {es}\n\nThis is the simplest option.\nEnable CORS on {es} by adding the following to your `elasticsearch.yml` file:\n\n[source,yaml]\n----\nhttp.cors.allow-origin: \"*\" # Only use unrestricted value for local development\n# Use a specific origin value in production, like `http.cors.allow-origin: \"https://<my-website-domain.example>\"`\nhttp.cors.enabled: true\nhttp.cors.allow-credentials: true\nhttp.cors.allow-methods: OPTIONS, POST\nhttp.cors.allow-headers: X-Requested-With, X-Auth-Token, Content-Type, Content-Length, Authorization, Access-Control-Allow-Headers, Accept\n----\n\nOn Elastic Cloud, you can do this by {cloud}/ec-add-user-settings.html#ec-add-user-settings[editing your {es} user settings].\n\n. From your deployment menu, go to the *Edit* page.\n. In the *{es}* section, select *Manage user settings and extensions*.\n. Update the user settings with the configuration above.\n. Select *Save changes*.\n\n[discrete]\n[[behavioral-analytics-cors-proxy-request]]\n==== Proxy the request through a server that supports CORS\n\nIf you are unable to enable CORS on {es}, you can proxy the request through a server that supports CORS.\nThis is more complicated, but is a viable option."
+}

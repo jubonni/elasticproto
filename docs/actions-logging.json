@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.565066",
+        "size": 1718,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/actions-logging.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "actions-logging",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[actions-logging]]\n=== {watcher} logging Action\n++++\n<titleabbrev>Logging action</titleabbrev>\n++++\n\nUse the `logging` action to log text to the standard Elasticsearch\nlogs. See <<logging-action-attributes>> for the supported attributes.\n\nThis action is primarily used during development and for debugging purposes.\n\n[[configuring-logging-actions]]\n==== Configuring logging actions\n\nYou configure logging actions in the `actions` array. Action-specific attributes\nare specified using the `logging` keyword.\n\nThe following snippet shows a simple logging action definition:\n\n[source,js]\n--------------------------------------------------\n\"actions\" : {\n  \"log\" : { <1>\n    \"transform\" : { ... }, <2>\n    \"logging\" : {\n      \"text\" : \"executed at {{ctx.execution_time}}\" <3>\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n<1> The id of the action.\n<2> An optional <<transform, transform>> to transform the payload before\n    executing the `logging` action.\n<3> The text to be logged.\n\n\n[[logging-action-attributes]]\n==== Logging action attributes\n\n[options=\"header\"]\n|======\n| Name        |Required | Default                       | Description\n\n| `text`      | yes     | -                             | The text that should be logged. Can be static text or\n                                                          include Mustache <<templates, templates>>.\n\n| `category`  | no      | xpack.watcher.actions.logging | The category under which the text will be logged.\n\n| `level`     | no      | info                          | The logging level. Valid values are: `error`, `warn`,\n                                                          `info`, `debug` and `trace`.\n|======\n"
+}

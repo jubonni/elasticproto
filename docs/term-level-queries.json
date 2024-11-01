@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.641073",
+        "size": 2329,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/term-level-queries.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "term-level-queries",
+        "version": "8.15"
+    },
+    "doc": "[[term-level-queries]]\n== Term-level queries\n\nYou can use **term-level queries** to find documents based on precise values in\nstructured data. Examples of structured data include date ranges, IP addresses,\nprices, or product IDs.\n\nUnlike <<full-text-queries, full-text queries>>, term-level queries do not\nanalyze search terms. Instead, term-level queries match the exact terms stored\nin a field.\n\n\n[NOTE]\n====\nTerm-level queries still normalize search terms for `keyword` fields with the\n`normalizer` property. For more details, see <<normalizer, `normalizer`>>.\n====\n\n[discrete]\n[[term-level-query-types]]\n=== Types of term-level queries\n\n<<query-dsl-exists-query,`exists` query>>::\nReturns documents that contain any indexed value for a field.\n\n<<query-dsl-fuzzy-query,`fuzzy` query>>::\nReturns documents that contain terms similar to the search term. {es} measures\nsimilarity, or fuzziness, using a\n{wikipedia}/Levenshtein_distance[Levenshtein edit distance].\n\n<<query-dsl-ids-query,`ids` query>>::\nReturns documents based on their <<mapping-id-field, document IDs>>. \n\n<<query-dsl-prefix-query,`prefix` query>>::\nReturns documents that contain a specific prefix in a provided field.\n\n<<query-dsl-range-query,`range` query>>::\nReturns documents that contain terms within a provided range.\n\n<<query-dsl-regexp-query,`regexp` query>>::\nReturns documents that contain terms matching a\n{wikipedia}/Regular_expression[regular expression].\n\n<<query-dsl-term-query,`term` query>>::\nReturns documents that contain an exact term in a provided field.\n\n<<query-dsl-terms-query,`terms` query>>::\nReturns documents that contain one or more exact terms in a provided field.\n\n<<query-dsl-terms-set-query,`terms_set` query>>::\nReturns documents that contain a minimum number of exact terms in a provided\nfield. You can define the minimum number of matching terms using a field or\nscript.\n\n<<query-dsl-wildcard-query,`wildcard` query>>::\nReturns documents that contain terms matching a wildcard pattern.\n\n\ninclude::exists-query.asciidoc[]\n\ninclude::fuzzy-query.asciidoc[]\n\ninclude::ids-query.asciidoc[]\n\ninclude::prefix-query.asciidoc[]\n\ninclude::range-query.asciidoc[]\n\ninclude::regexp-query.asciidoc[]\n\ninclude::term-query.asciidoc[]\n\ninclude::terms-query.asciidoc[]\n\ninclude::terms-set-query.asciidoc[]\n\ninclude::wildcard-query.asciidoc[]\n"
+}

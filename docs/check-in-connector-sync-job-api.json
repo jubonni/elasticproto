@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.617067",
+        "size": 1765,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/check-in-connector-sync-job-api.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "check-in-connector-sync-job-api",
+        "version": "8.15"
+    },
+    "doc": "[[check-in-connector-sync-job-api]]\n=== Check in connector sync job API\n++++\n<titleabbrev>Check in connector sync job</titleabbrev>\n++++\n\npreview::[]\n\nChecks in a connector sync job (updates `last_seen` to the current time).\n\nTo get started with Connector APIs, check out <<es-connectors-tutorial-api, our tutorial>>.\n\n\n[[check-in-connector-sync-job-api-request]]\n==== {api-request-title}\n`PUT _connector/_sync_job/<connector_sync_job_id>/_check_in/`\n\n[[check-in-connector-sync-job-api-prereqs]]\n==== {api-prereq-title}\n\n* To sync data using self-managed connectors, you need to deploy the <<es-connectors-deploy-connector-service,Elastic connector service>>. on your own infrastructure. This service runs automatically on Elastic Cloud for Elastic managed connectors.\n* The `connector_sync_job_id` parameter should reference an existing connector sync job.\n\n[[check-in-connector-sync-job-api-desc]]\n==== {api-description-title}\n\nChecks in a connector sync job and sets `last_seen` to the time right before updating it in the internal index.\n\n[[check-in-connector-sync-job-path-params]]\n==== {api-path-parms-title}\n\n`<connector_sync_job_id>`::\n(Required, string)\n\n[[check-in-connector-sync-job-api-response-codes]]\n==== {api-response-codes-title}\n\n`200`::\nConnector sync job was successfully checked in.\n\n`404`::\nNo connector sync job matching `connector_sync_job_id` could be found.\n\n[[check-in-connector-sync-job-api-example]]\n==== {api-examples-title}\n\nThe following example checks in the connector sync job `my-connector-sync-job`:\n\n[source,console]\n----\nPUT _connector/_sync_job/my-connector-sync-job/_check_in\n----\n// TEST[skip:there's no way to clean up after creating a connector sync job, as we don't know the id ahead of time. Therefore, skip this test.]\n"
+}

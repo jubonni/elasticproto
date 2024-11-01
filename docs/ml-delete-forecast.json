@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.889068",
+        "size": 2411,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-delete-forecast.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ml-delete-forecast",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-delete-forecast]]\n= Delete forecasts API\n++++\n<titleabbrev>Delete forecasts</titleabbrev>\n++++\n\nDeletes forecasts from a {ml} job.\n\n[[ml-delete-forecast-request]]\n== {api-request-title}\n\n`DELETE _ml/anomaly_detectors/<job_id>/_forecast` +\n\n`DELETE _ml/anomaly_detectors/<job_id>/_forecast/<forecast_id>` +\n\n`DELETE _ml/anomaly_detectors/<job_id>/_forecast/_all`\n\n[[ml-delete-forecast-prereqs]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n[[ml-delete-forecast-desc]]\n== {api-description-title}\n\nBy default, forecasts are retained for 14 days. You can specify a different\nretention period with the `expires_in` parameter in the\n<<ml-forecast,forecast jobs API>>. The delete forecast API enables you to delete\none or more forecasts before they expire.\n\nNOTE: When you delete a job, its associated forecasts are deleted.\n\nFor more information, see\n{ml-docs}/ml-ad-forecast.html[Forecasting the future].\n\n[[ml-delete-forecast-path-parms]]\n== {api-path-parms-title}\n\n`<forecast_id>`::\n(Optional, string) A comma-separated list of forecast identifiers. If you do not\nspecify this optional parameter or if you specify `_all` or `*` the API deletes all\nforecasts from the job.\n\n`<job_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=job-id-anomaly-detection]\n\n\n[[ml-delete-forecast-query-parms]]\n== {api-query-parms-title}\n\n`allow_no_forecasts`::\n  (Optional, Boolean) Specifies whether an error occurs when there are no\n  forecasts. In particular, if this parameter is set to `false` and there are no\n  forecasts associated with the job, attempts to delete all forecasts return an\n  error. The default value is `true`.\n\n`timeout`::\n  (Optional, <<time-units, time units>>) Specifies the period of time to wait\n  for the completion of the delete operation. When this period of time elapses,\n  the API fails and returns an error. The default value is `30s`.\n\n[[ml-delete-forecast-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nDELETE _ml/anomaly_detectors/total-requests/_forecast/_all\n--------------------------------------------------\n// TEST[skip:setup:server_metrics_openjob]\n\nIf the request does not encounter errors, you receive the following result:\n\n[source,js]\n----\n{\n  \"acknowledged\": true\n}\n----\n// NOTCONSOLE\n"
+}

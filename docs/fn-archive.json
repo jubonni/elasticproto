@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.656065",
+        "size": 933,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/fn-archive.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "fn-archive",
+        "version": "8.15"
+    },
+    "doc": "[cols=\"^,^,^,^,^,^\"]\n|====\n| 5+^h| Cluster version\nh| Index creation version   | 6.8        | 7.0\u20137.1    | 7.2\u2013{prev-major-last} | 8.0\u20138.2    | 8.3-{minor-version}\n| 5.0\u20135.6                   | {yes-icon} | {no-icon}  | {no-icon}             | {no-icon}  | {yes-icon}<<fn-archive,^[1]^>>\n| 6.0\u20136.7                   | {yes-icon} | {yes-icon} | {yes-icon}            | {no-icon}  | {yes-icon}<<fn-archive,^[1]^>>\n| 6.8                       | {yes-icon} | {no-icon}  | {yes-icon}            | {no-icon}  | {yes-icon}<<fn-archive,^[1]^>>\n| 7.0\u20137.1                   | {no-icon}  | {yes-icon} | {yes-icon}            | {yes-icon} | {yes-icon}\n| 7.2\u2013{prev-major-last}     | {no-icon}  | {no-icon}  | {yes-icon}            | {yes-icon} | {yes-icon}\n| 8.0\u2013{minor-version}       | {no-icon}  | {no-icon}  | {no-icon}             | {yes-icon} | {yes-icon}\n|====\n[[fn-archive]]\n[small]#1. Supported with <<archive-indices,archive indices>>.#\n"
+}

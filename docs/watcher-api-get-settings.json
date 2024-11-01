@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.271067",
+        "size": 734,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-get-settings.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "watcher-api-get-settings",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[watcher-api-get-settings]]\n=== Get Watcher index settings\n++++\n<titleabbrev>Get Watcher settings</titleabbrev>\n++++\n\nThis API allows a user to retrieve the user-configurable settings for the Watcher internal index (`.watches`). Only a subset of the index settings\u2014those that are user-configurable\u2014will be shown. This includes:\n\n- `index.auto_expand_replicas`\n- `index.number_of_replicas`\n\nAn example of retrieving the Watcher settings:\n\n[source,console]\n-----------------------------------------------------------\nGET /_watcher/settings\n-----------------------------------------------------------\n\nThe configurable settings can be modified using the <<watcher-api-update-settings,Update Watcher index settings>> API.\n"
+}

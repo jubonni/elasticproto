@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.819068",
+        "size": 532,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/data-rollup-transform.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "data-rollup-transform",
+        "version": "8.15"
+    },
+    "doc": "[[data-rollup-transform]]\n= Roll up or transform your data\n\n[partintro]\n--\n\n{es} offers the following methods for manipulating your data:\n\n* <<xpack-rollup,Rolling up your historical data>>\n+\ndeprecated::[8.11.0,\"Rollups will be removed in a future version. Use <<downsampling,downsampling>> instead.\"]\n+\ninclude::rollup/index.asciidoc[tag=rollup-intro]\n\n* <<transforms,Transforming your data>>\n+\ninclude::transform/transforms.asciidoc[tag=transform-intro]\n\n--\n\ninclude::rollup/index.asciidoc[]\n\ninclude::transform/index.asciidoc[]\n"
+}

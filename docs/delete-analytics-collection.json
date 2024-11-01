@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.864067",
+        "size": 1146,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-analytics-collection.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "delete-analytics-collection",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-analytics-collection]]\n=== Delete Analytics Collection\n\nbeta::[]\n\n++++\n<titleabbrev>Delete Analytics Collection</titleabbrev>\n++++\n\n////\n[source,console]\n----\nPUT _application/analytics/my_analytics_collection\n----\n// TESTSETUP\n\n////\n\nRemoves a <<behavioral-analytics-overview,Behavioral Analytics>> Collection and its associated data stream.\n\n[[delete-analytics-collection-request]]\n==== {api-request-title}\n\n`DELETE _application/analytics/<name>`\n\n[[delete-analytics-collection-prereq]]\n==== {api-prereq-title}\n\nRequires the `manage_behavioral_analytics` cluster privilege.\n\n[[delete-analytics-collection-path-params]]\n==== {api-path-parms-title}\n\n`<name>`::\n(Required, string)\n\n[[delete-analytics-collection-response-codes]]\n==== {api-response-codes-title}\n\n`400`::\nThe `name` was not provided.\n\n`404` (Missing resources)::\nNo Analytics Collection matching `name` could be found.\n\n[[delete-analytics-collection-example]]\n==== {api-examples-title}\n\nThe following example deletes the Analytics Collection named `my_analytics_collection`:\n\n[source,console]\n----\nDELETE _application/analytics/my_analytics_collection/\n----\n"
+}

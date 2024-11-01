@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.806066",
+        "size": 882,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/oidc-realm.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "oidc-realm",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[oidc-realm]]\n=== OpenID Connect authentication\n\nThe OpenID Connect realm enables {es} to serve as an OpenID Connect Relying\nParty (RP) and provides single sign-on (SSO) support in {kib}. \n\nIt is specifically designed to support authentication via an interactive web\nbrowser, so it does not operate as a standard authentication realm. Instead,\nthere are {kib} and {es} {security-features} that work together to enable\ninteractive OpenID Connect sessions.\n\nThis means that the OpenID Connect realm is not suitable for use by standard\nREST clients. If you configure an OpenID Connect realm for use in {kib}, you\nshould also configure another realm, such as the <<native-realm, native realm>>\nin your authentication chain.\n\nIn order to simplify the process of configuring OpenID Connect authentication\nwithin the {stack}, there is a step-by-step guide: <<oidc-guide>>.\n"
+}

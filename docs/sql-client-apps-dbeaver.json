@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.850085",
+        "size": 2129,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-client-apps-dbeaver.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "sql-client-apps-dbeaver",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[sql-client-apps-dbeaver]]\n=== DBeaver\n\nYou can use the {es} JDBC driver to access {es} data from DBeaver.\n\nIMPORTANT: Elastic does not endorse, promote or provide support for this application; for native Elasticsearch integration in this product, please reach out to its vendor.\n\n==== Prerequisites\n\n* https://dbeaver.io/[DBeaver] version 6.0.0 or higher\n* {es-sql} <<sql-jdbc, JDBC driver>>\n\n==== New Connection\n\nCreate a new connection either through the menu *File* > *New* > *Database Connection* menu or directly through the *Database Connection* panel.\n\nimage:images/sql/client-apps/dbeaver-1-new-conn.png[]\n\n==== Select {es} type\nSelect the {es} type from the available connection types:\n\nimage:images/sql/client-apps/dbeaver-2-conn-es.png[]\n\n==== Specify the {es} cluster information\n\nConfigure the {es-sql} connection appropriately:\n\nimage:images/sql/client-apps/dbeaver-3-conn-props.png[]\n\n==== Verify the driver version\n\nMake sure the correct JDBC driver version is used by using the *Edit Driver Settings* button:\n\nimage:images/sql/client-apps/dbeaver-4-driver-ver.png[]\n\nDBeaver is aware of the {es} JDBC maven repository so simply *Download/Update* the artifact or add a new one. As an alternative one can add a local file instead if the {es} Maven repository is not an option.\n\nWhen changing the driver, make sure to click on the *Find Class* button at the bottom - the Driver class should be picked out automatically however this provides a sanity check that the driver jar is properly found and it is not corrupt.\n\n==== Test connectivity\n\nOnce the driver version and the settings are in place, use *Test Connection* to check that everything works. If things are okay, one should get a confirmation window with the version of the driver and that of {es-sql}:\n\nimage:images/sql/client-apps/dbeaver-5-test-conn.png[]\n\nClick *Finish* and the new {es} connection appears in the *Database Connection* panel.\n\nDBeaver is now configured to talk to {es}.\n\n==== Connect to {es}\n\nSimply click on the {es} connection and start querying and exploring {es}:\n\nimage:images/sql/client-apps/dbeaver-6-data.png[]\n"
+}

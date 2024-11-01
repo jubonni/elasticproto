@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.913070",
+        "size": 1499,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-trained-models-aliases.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "delete-trained-models-aliases",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-trained-models-aliases]]\n= Delete trained model aliases API\n[subs=\"attributes\"]\n++++\n<titleabbrev>Delete trained model aliases</titleabbrev>\n++++\n\nDeletes a trained model alias.\n\n\n[[ml-delete-trained-models-aliases-request]]\n== {api-request-title}\n\n`DELETE _ml/trained_models/<model_id>/model_aliases/<model_alias>`\n\n\n[[ml-delete-trained-models-aliases-prereq]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n\n[[ml-delete-trained-models-aliases-desc]]\n== {api-description-title}\n\nThis API deletes an existing model alias that refers to a trained model.\n\nIf the model alias is missing or refers to a model other than the one identified\nby the `model_id`, this API returns an error.\n\n[[ml-delete-trained-models-aliases-path-params]]\n== {api-path-parms-title}\n\n`model_alias`::\n(Required, string)\nThe model alias to delete.\n\n`model_id`::\n(Required, string)\nThe trained model ID to which the model alias refers.\n\n[[ml-delete-trained-models-aliases-example]]\n== {api-examples-title}\n\nThe following example shows how to delete a model alias (`flight_delay_model`)\nfor a trained model ID (`flight-delay-prediction-1574775339910`):\n\n[source,console]\n--------------------------------------------------\nDELETE _ml/trained_models/flight-delay-prediction-1574775339910/model_aliases/flight_delay_model\n--------------------------------------------------\n// TEST[skip:setup kibana sample data]\n"
+}

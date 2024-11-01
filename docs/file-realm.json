@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.108069",
+        "size": 1360,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/file-realm.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "file-realm",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[file-realm]]\n=== File-based user authentication\n\nYou can manage and authenticate users with the built-in `file` realm.\nWith the `file` realm, users are defined in local files on each node in the cluster.\n\nIMPORTANT:  As the administrator of the cluster, it is your responsibility to\nensure the same users are defined on every node in the cluster. The {stack}\n{security-features} do not deliver any mechanism to guarantee this. You should\nalso be aware that you cannot add or manage users in the `file` realm via the\n<<security-user-apis, user APIs>> and you cannot add or manage them in {kib} on the\n*Management / Security / Users* page\n\nThe `file` realm is very useful as a fallback or recovery realm. For example in cases where\nthe cluster is unresponsive or the security index is unavailable, or when you forget the\npassword for your administrative users.\nIn this type of scenario, the `file` realm is a convenient way out - you can\ndefine a new `admin` user in the `file` realm and use it to log in and reset the\ncredentials of all other users.\n\nTo define users, the {security-features} provide the\n<<users-command,users>> command-line tool. This tool enables you to add\nand remove users, assign user roles, and manage user passwords.\n\n[[file-realm-configuration]]\n==== Configuring a file realm\n\ninclude::configuring-file-realm.asciidoc[]\n"
+}

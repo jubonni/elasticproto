@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.292069",
+        "size": 1562,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-get-user-privileges.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-get-user-privileges",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-get-user-privileges]]\n=== Get user privileges API\n++++\n<titleabbrev>Get user privileges</titleabbrev>\n++++\n\nRetrieves the <<security-privileges,security privileges>> for the logged in \nuser.\n\n[[security-api-get-user-privileges-request]]\n==== {api-request-title}\n\n`GET /_security/user/_privileges`\n\n[[security-api-get-user-privileges-prereqs]]\n==== {api-prereq-title}\n\n* All users can use this API, but only to determine their own privileges. To \ncheck the privileges of other users, you must use the run as feature. For\nmore information, see <<run-as-privilege>>.\n\n[[security-api-get-user-privileges-desc]]\n==== {api-description-title}\n\nTo check whether a user has a specific list of privileges, use the\n<<security-api-has-privileges,has privileges API>>.\n\n\n[[security-api-get-user-privileges-example]]\n==== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nGET /_security/user/_privileges\n--------------------------------------------------\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"cluster\" : [\n    \"all\"\n  ],\n  \"global\" : [ ],\n  \"indices\" : [\n    {\n      \"names\" : [\n        \"*\"\n      ],\n      \"privileges\" : [\n        \"all\"\n      ],\n      \"allow_restricted_indices\" : true\n    }\n  ],\n  \"applications\" : [\n    {\n      \"application\" : \"*\",\n      \"privileges\" : [\n        \"*\"\n      ],\n      \"resources\" : [\n        \"*\"\n      ]\n    }\n  ],\n  \"run_as\" : [\n    \"*\"\n  ]\n}\n--------------------------------------------------\n// TESTRESPONSE[s/: false/: true/]\n"
+}

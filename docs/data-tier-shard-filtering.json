@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.833080",
+        "size": 1395,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/data-tier-shard-filtering.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "data-tier-shard-filtering",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[data-tier-shard-filtering]]\n=== Index-level data tier allocation filtering\n\nYou can use the index-level `_tier_preference` setting to control\nwhich <<data-tiers, data tier>> an index is allocated to.\n\nThis setting corresponds to the data node roles:\n\n* <<data-content-node, data_content>>\n* <<data-hot-node, data_hot>>\n* <<data-warm-node, data_warm>>\n* <<data-cold-node, data_cold>>\n* <<data-frozen-node, data_frozen>>\n\nNOTE: The <<data-node, data>> role is not a valid data tier and cannot be used\nwith the `_tier_preference` setting. The frozen tier stores <<partially-mounted,partially\nmounted indices>> exclusively.\n\n[discrete]\n[[data-tier-allocation-filters]]\n==== Data tier allocation settings\n\n[[tier-preference-allocation-filter]]\n`index.routing.allocation.include._tier_preference`::\n\n    Assign the index to the first tier in the list that has an available node.\n    This prevents indices from remaining unallocated if no nodes are available\n    in the preferred tier.\n    For example, if you set `index.routing.allocation.include._tier_preference`\n    to `data_warm,data_hot`, the index is allocated to the warm tier if there\n    are nodes with the `data_warm` role. If there are no nodes in the warm tier,\n    but there are nodes with the `data_hot` role, the index is allocated to\n    the hot tier.\n    Used in conjunction with <<data-tier-allocation,data tiers>>.\n"
+}

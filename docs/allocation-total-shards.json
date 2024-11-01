@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.687070",
+        "size": 1545,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/allocation-total-shards.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "allocation-total-shards",
+        "version": "8.15"
+    },
+    "doc": "[[allocation-total-shards]]\n=== Total shards per node\n\nThe cluster-level shard allocator tries to spread the shards of a single index\nacross as many nodes as possible. However, depending on how many shards and\nindices you have, and how big they are, it may not always be possible to spread\nshards evenly.\n\nThe following _dynamic_ setting allows you to specify a hard limit on the total\nnumber of shards from a single index allowed per node:\n\n[[total-shards-per-node]]\n`index.routing.allocation.total_shards_per_node`::\n\n    The maximum number of shards (replicas and primaries) that will be\n    allocated to a single node. Defaults to unbounded.\n\nYou can also limit the amount of shards a node can have regardless of the index:\n\n[[cluster-total-shards-per-node]]\n`cluster.routing.allocation.total_shards_per_node`::\n+\n--\n(<<dynamic-cluster-setting,Dynamic>>)\nMaximum number of primary and replica shards allocated to each node. Defaults to\n`-1` (unlimited).\n\n{es} checks this setting during shard allocation. For example, a cluster has a\n`cluster.routing.allocation.total_shards_per_node` setting of `100` and three\nnodes with the following shard allocations:\n\n- Node A: 100 shards\n- Node B: 98 shards\n- Node C: 1 shard\n\nIf node C fails, {es} reallocates its shard to node B. Reallocating the shard to\nnode A would exceed node A's shard limit.\n--\n\n[WARNING]\n=======================================\nThese settings impose a hard limit which can result in some shards not being\nallocated.\n\nUse with caution.\n=======================================\n"
+}

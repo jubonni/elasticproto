@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.982065",
+        "size": 1013,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-analytics-collection.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "put-analytics-collection",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[put-analytics-collection]]\n=== Put Analytics Collection\n\nbeta::[]\n\n++++\n<titleabbrev>Put Analytics Collection</titleabbrev>\n++++\n\n////\n[source,console]\n----\nDELETE _application/analytics/my_analytics_collection\n----\n// TEARDOWN\n////\n\nCreates a <<behavioral-analytics-overview,Behavioral Analytics>> Collection.\n\n[[put-analytics-collection-request]]\n==== {api-request-title}\n\n`PUT _application/analytics/<name>`\n\n[[put-analytics-collection-path-params]]\n==== {api-path-parms-title}\n\n`<name>`::\n(Required, string)\n\n[[put-analytics-collection-prereqs]]\n==== {api-prereq-title}\n\nRequires the `manage_behavioral_analytics` cluster privilege.\n\n[[put-analytics-collection-response-codes]]\n==== {api-response-codes-title}\n\n`400`::\nAnalytics Collection `<name>` exists.\n\n[[put-analytics-collection-example]]\n==== {api-examples-title}\n\nThe following example creates a new Analytics Collection called `my_analytics_collection`:\n\n[source,console]\n----\nPUT _application/analytics/my_analytics_collection\n----\n"
+}

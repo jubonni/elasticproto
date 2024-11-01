@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.868067",
+        "size": 2232,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ccr-delete-auto-follow-pattern.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ccr-delete-auto-follow-pattern",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ccr-delete-auto-follow-pattern]]\n=== Delete auto-follow pattern API\n++++\n<titleabbrev>Delete auto-follow pattern</titleabbrev>\n++++\n\nDelete {ccr} <<ccr-auto-follow,auto-follow patterns>>.\n\n[[ccr-delete-auto-follow-pattern-request]]\n==== {api-request-title}\n\n//////////////////////////\n\n[source,console]\n--------------------------------------------------\nPUT /_ccr/auto_follow/my_auto_follow_pattern\n{\n  \"remote_cluster\" : \"remote_cluster\",\n  \"leader_index_patterns\" :\n  [\n    \"leader_index\"\n  ],\n  \"follow_index_pattern\" : \"{{leader_index}}-follower\"\n}\n--------------------------------------------------\n// TEST[setup:remote_cluster]\n// TESTSETUP\n\n//////////////////////////\n\n[source,console]\n--------------------------------------------------\nDELETE /_ccr/auto_follow/<auto_follow_pattern_name>\n--------------------------------------------------\n// TEST[s/<auto_follow_pattern_name>/my_auto_follow_pattern/]\n\n[[ccr-delete-auto-follow-pattern-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have `manage_ccr` cluster\nprivileges on the cluster that contains the follower index. For more information,\nsee <<security-privileges>>.\n\n[[ccr-delete-auto-follow-pattern-desc]]\n==== {api-description-title}\n\nThis API deletes a configured collection of\n<<ccr-auto-follow,auto-follow patterns>>.\n\n[[ccr-delete-auto-follow-pattern-path-parms]]\n==== {api-path-parms-title}\n\n`<auto_follow_pattern_name>`::\n  (Required, string) Specifies the auto-follow pattern collection to delete.\n\n[[ccr-delete-auto-follow-pattern-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\n[[ccr-delete-auto-follow-pattern-examples]]\n==== {api-examples-title}\n\nThis example deletes an auto-follow pattern collection named\n`my_auto_follow_pattern`:\n\n[source,console]\n--------------------------------------------------\nDELETE /_ccr/auto_follow/my_auto_follow_pattern\n--------------------------------------------------\n// TEST[setup:remote_cluster]\n\nThe API returns the following result:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"acknowledged\" : true\n}\n--------------------------------------------------\n"
+}

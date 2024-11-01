@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.766064",
+        "size": 2312,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/constant-keyword-field-type.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "constant-keyword-field-type",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n\n[discrete]\n[[constant-keyword-field-type]]\n=== Constant keyword field type\n\nConstant keyword is a specialization of the `keyword` field for\nthe case that all documents in the index have the same value.\n\n[source,console]\n--------------------------------\nPUT logs-debug\n{\n  \"mappings\": {\n    \"properties\": {\n      \"@timestamp\": {\n        \"type\": \"date\"\n      },\n      \"message\": {\n        \"type\": \"text\"\n      },\n      \"level\": {\n        \"type\": \"constant_keyword\",\n        \"value\": \"debug\"\n      }\n    }\n  }\n}\n--------------------------------\n\n`constant_keyword` supports the same queries and aggregations as `keyword`\nfields do, but takes advantage of the fact that all documents have the same\nvalue per index to execute queries more efficiently.\n\nIt is both allowed to submit documents that don't have a value for the field or\nthat have a value equal to the value configured in mappings. The two below\nindexing requests are equivalent:\n\n[source,console]\n--------------------------------\nPOST logs-debug/_doc\n{\n  \"date\": \"2019-12-12\",\n  \"message\": \"Starting up Elasticsearch\",\n  \"level\": \"debug\"\n}\n\nPOST logs-debug/_doc\n{\n  \"date\": \"2019-12-12\",\n  \"message\": \"Starting up Elasticsearch\"\n}\n--------------------------------\n//TEST[continued]\n\nHowever providing a value that is different from the one configured in the\nmapping is disallowed.\n\nIn case no `value` is provided in the mappings, the field will automatically\nconfigure itself based on the value contained in the first indexed document.\nWhile this behavior can be convenient, note that it means that a single\npoisonous document can cause all other documents to be rejected if it had a\nwrong value.\n\nBefore a value has been provided (either through the mappings or from a\ndocument), queries on the field will not match any documents. This includes\n <<query-dsl-exists-query,`exists`>> queries.\n\nThe `value` of the field cannot be changed after it has been set.\n\n[discrete]\n[[constant-keyword-params]]\n==== Parameters for constant keyword fields\n\nThe following mapping parameters are accepted:\n\n[horizontal]\n\n<<mapping-field-meta,`meta`>>::\n\n    Metadata about the field.\n\n`value`::\n\n    The value to associate with all documents in the index. If this parameter\n    is not provided, it is set based on the first document that gets indexed.\n\n"
+}

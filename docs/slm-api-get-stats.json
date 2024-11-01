@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.476067",
+        "size": 1634,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/slm-api-get-stats.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "slm-api-get-stats",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[slm-api-get-stats]]\n=== Get snapshot lifecycle stats API\n++++\n<titleabbrev>Get snapshot lifecycle stats</titleabbrev>\n++++\n\nReturns global and policy-level statistics about actions taken by {slm}.\n\n[[slm-api-stats-request]]\n==== {api-request-title}\n\n`GET /_slm/stats`\n\n[[slm-api-stats-prereqs]]\n==== {api-prereq-title}\n\nIf the {es} {security-features} are enabled, you must have the `manage_slm`\ncluster privilege to use this API. For more information, see\n<<security-privileges>>.\n\n[[slm-api-stats-example]]\n==== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nGET /_slm/stats\n--------------------------------------------------\n\nThe API returns the following response:\n\n[source,js]\n--------------------------------------------------\n{\n  \"retention_runs\": 13,\n  \"retention_failed\": 0,\n  \"retention_timed_out\": 0,\n  \"retention_deletion_time\": \"1.4s\",\n  \"retention_deletion_time_millis\": 1404,\n  \"policy_stats\": [ ],\n  \"total_snapshots_taken\": 1,\n  \"total_snapshots_failed\": 1,\n  \"total_snapshots_deleted\": 0,\n  \"total_snapshot_deletion_failures\": 0\n}\n--------------------------------------------------\n// TESTRESPONSE[s/runs\": 13/runs\": $body.retention_runs/ s/_failed\": 0/_failed\": $body.retention_failed/ s/_timed_out\": 0/_timed_out\": $body.retention_timed_out/ s/\"1.4s\"/$body.retention_deletion_time/ s/1404/$body.retention_deletion_time_millis/ s/total_snapshots_taken\": 1/total_snapshots_taken\": $body.total_snapshots_taken/ s/total_snapshots_failed\": 1/total_snapshots_failed\": $body.total_snapshots_failed/ s/\"policy_stats\": \\[.*\\]/\"policy_stats\": $body.policy_stats/]\n"
+}

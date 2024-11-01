@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.892066",
+        "size": 1568,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-painless.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "modules-scripting-painless",
+        "version": "8.15"
+    },
+    "doc": "[[modules-scripting-painless]]\n== Painless scripting language\n\n_Painless_ is a performant, secure scripting language designed specifically for\n{es}. You can use Painless to safely write inline and stored scripts anywhere\nscripts are supported in {es}.\n\n[[painless-features]]\nPainless provides numerous capabilities that center around the following\ncore principles:\n\n* **Safety**: Ensuring the security of your cluster is of utmost importance. To\nthat end, Painless uses a fine-grained allowlist with a granularity down to the\nmembers of a class. Anything that is not part of the allowlist results in a\ncompilation error. See the\n{painless}/painless-api-reference.html[Painless API Reference]\nfor a complete list of available classes, methods, and fields per script\ncontext.\n* **Performance**: Painless compiles directly into JVM bytecode to take\nadvantage of all possible optimizations that the JVM provides. Also, Painless\ntypically avoids features that require additional slower checks at runtime.\n* **Simplicity**: Painless implements a syntax with a natural familiarity to\nanyone with some basic coding experience. Painless uses a subset of Java syntax\nwith some additional improvements to enhance readability and remove\nboilerplate.\n\n[discrete]\n=== Start scripting\nReady to start scripting with Painless? Learn how to\n<<modules-scripting-using,write your first script>>.\n\nIf you're already familiar with Painless, see the\n{painless}/painless-lang-spec.html[Painless Language Specification] for a\ndetailed description of the Painless syntax and language features.\n"
+}

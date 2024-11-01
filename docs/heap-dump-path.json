@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.321067",
+        "size": 861,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-dump-path.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "heap-dump-path",
+        "version": "8.15"
+    },
+    "doc": "[[heap-dump-path]]\n[discrete]\n==== JVM heap dump path setting\n\nBy default, {es} configures the JVM to dump the heap on out of\nmemory exceptions to the default data directory. On <<rpm,RPM>> and\n<<deb,Debian>> packages, the data directory is `/var/lib/elasticsearch`. On\n<<targz,Linux and MacOS>> and <<zip-windows,Windows>> distributions,\nthe `data` directory is located under the root of the {es} installation.\n\nIf this path is not suitable for receiving heap dumps, modify the\n`-XX:HeapDumpPath=...` entry in <<set-jvm-options,`jvm.options`>>:\n\n* If you specify a directory, the JVM will generate a filename for the heap\ndump based on the PID of the running instance.\n* If you specify a fixed filename instead of a directory, the file must\nnot exist when the JVM needs to perform a heap dump on an out of memory\nexception. Otherwise, the heap dump will fail.\n"
+}

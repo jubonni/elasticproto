@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.209068",
+        "size": 812,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/repository.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "repository",
+        "version": "8.15"
+    },
+    "doc": "[[repository]]\n== Snapshot/restore repository plugins\n\nRepository plugins extend the {ref}/snapshot-restore.html[Snapshot/Restore]\nfunctionality in Elasticsearch by adding repositories backed by the cloud or\nby distributed file systems:\n\n[discrete]\n==== Official repository plugins\n\nNOTE: Support for S3, GCS and Azure repositories is now bundled in {es} by\ndefault.\n\nThe official repository plugins are:\n\n<<repository-hdfs,HDFS Repository>>::\n\nThe Hadoop HDFS Repository plugin adds support for using HDFS as a repository.\n\n[discrete]\n=== Community contributed repository plugins\n\nThe following plugin has been contributed by our community:\n\n* https://github.com/BigDataBoutique/elasticsearch-repository-swift[Openstack Swift] (by Wikimedia Foundation and BigData Boutique)\n\ninclude::repository-hdfs.asciidoc[]\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.155067",
+        "size": 2117,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/full-text-queries.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "full-text-queries",
+        "version": "8.15"
+    },
+    "doc": "[[full-text-queries]]\n== Full text queries\n\nThe full text queries enable you to search <<analysis,analyzed text fields>> such as the\nbody of an email. The query string is processed using the same analyzer that was applied to\nthe field during indexing.\n\nThe queries in this group are:\n\n<<query-dsl-intervals-query,`intervals` query>>::\nA full text query that allows fine-grained control of the ordering and\nproximity of matching terms.\n\n<<query-dsl-match-query,`match` query>>::\nThe standard query for performing full text queries, including fuzzy matching\nand phrase or proximity queries.\n\n<<query-dsl-match-bool-prefix-query,`match_bool_prefix` query>>::\nCreates a `bool` query that matches each term as a `term` query, except for\nthe last term, which is matched as a `prefix` query\n\n<<query-dsl-match-query-phrase,`match_phrase` query>>::\nLike the `match` query but used for matching exact phrases or word proximity matches.\n\n<<query-dsl-match-query-phrase-prefix,`match_phrase_prefix` query>>::\nLike the `match_phrase` query, but does a wildcard search on the final word.\n\n<<query-dsl-multi-match-query,`multi_match` query>>::\nThe multi-field version of the `match` query.\n\n<<query-dsl-combined-fields-query,`combined_fields` query>>::\nMatches over multiple fields as if they had been indexed into one combined field.\n\n<<query-dsl-query-string-query,`query_string` query>>::\nSupports the compact Lucene <<query-string-syntax,query string syntax>>,\nallowing you to specify AND|OR|NOT conditions and multi-field search\nwithin a single query string. For expert users only.\n\n<<query-dsl-simple-query-string-query,`simple_query_string` query>>::\nA simpler, more robust version of the `query_string` syntax suitable\nfor exposing directly to users.\n\n\ninclude::intervals-query.asciidoc[]\n\ninclude::match-query.asciidoc[]\n\ninclude::match-bool-prefix-query.asciidoc[]\n\ninclude::match-phrase-query.asciidoc[]\n\ninclude::match-phrase-prefix-query.asciidoc[]\n\ninclude::combined-fields-query.asciidoc[]\n\ninclude::multi-match-query.asciidoc[]\n\ninclude::query-string-query.asciidoc[]\n\ninclude::simple-query-string-query.asciidoc[]\n"
+}

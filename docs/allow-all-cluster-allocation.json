@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.994068",
+        "size": 609,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/allow-all-cluster-allocation.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "allow-all-cluster-allocation",
+        "version": "8.15"
+    },
+    "doc": "[[allow-all-cluster-allocation]]\n== Allow Elasticsearch to allocate the data in the system\n\nThe allocation of data in an {es} deployment can be controlled using the <<cluster-routing-allocation-enable, enable \ncluster allocation configuration>>.\nIn certain circumstances users might want to temporarily disable or restrict the\nallocation of data in the system. \n\nForgetting to re-allow all data allocations can lead to unassigned shards.\n\nIn order to (re)allow all data to be allocated follow these steps:\n\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/data/enable-cluster-allocation-widget.asciidoc[]\n\n\n\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.670068",
+        "size": 2396,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/tls-active-directory.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "tls-active-directory",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[tls-active-directory]]\n==== Encrypting communications between {es} and Active Directory\n\nTo protect the user credentials that are sent for authentication, it's highly\nrecommended to encrypt communications between {es} and your Active Directory \nserver. Connecting via SSL/TLS ensures that the identity of the Active Directory \nserver is authenticated before {es} transmits the user credentials and the \nusernames and passwords are encrypted in transit. \n\nClients and nodes that connect via SSL/TLS to the Active Directory server need \nto have the Active Directory server's certificate or the server's root CA \ncertificate installed in their keystore or truststore. \n\n. Create the realm configuration for the `xpack.security.authc.realms` namespace \nin the `elasticsearch.yml` file. See <<ad-realm-configuration>>. \n\n. Set the `url` attribute in the realm configuration to specify the LDAPS protocol\nand the secure port number. For example, `url: ldaps://ad.example.com:636`.\n\n. Configure each node to trust certificates signed by the certificate authority \n(CA) that signed your Active Directory server certificates. \n+\n--\nThe following example demonstrates how to trust a CA certificate (`cacert.pem`), \nwhich is located within the configuration directory:\n\n[source,shell]\n--------------------------------------------------\nxpack:\n  security:\n    authc:\n      realms:\n        active_directory:\n          ad_realm:\n            order: 0\n            domain_name: ad.example.com\n            url: ldaps://ad.example.com:636\n            ssl:\n              certificate_authorities: [ \"ES_PATH_CONF/cacert.pem\" ]\n--------------------------------------------------\n\nThe CA cert must be a PEM encoded certificate.\n\nFor more information about these settings, see <<ref-ad-settings>>. \n--\n\n. Restart {es}.\n\nNOTE: By default, when you configure {es} to connect to Active Directory\n      using SSL/TLS, it attempts to verify the hostname or IP address\n      specified with the `url` attribute in the realm configuration with the\n      values in the certificate. If the values in the certificate and realm\n      configuration do not match, {es} does not allow a connection to the\n      Active Directory server. This is done to protect against man-in-the-middle\n      attacks. If necessary, you can disable this behavior by setting the \n      `ssl.verification_mode` property to `certificate`.\n"
+}

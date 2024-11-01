@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.811070",
+        "size": 918,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/uppercase-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "uppercase-processor",
+        "version": "8.15"
+    },
+    "doc": "[[uppercase-processor]]\n=== Uppercase processor\n++++\n<titleabbrev>Uppercase</titleabbrev>\n++++\n\nConverts a string to its uppercase equivalent. If the field is an array of strings, all members of the array will be converted.\n\n[[uppercase-options]]\n.Uppercase Options\n[options=\"header\"]\n|======\n| Name             | Required  | Default  | Description\n| `field`          | yes       | -        | The field to make uppercase\n| `target_field`   | no        | `field`  | The field to assign the converted value to, by default `field` is updated in-place\n| `ignore_missing` | no        | `false`  | If `true` and `field` does not exist or is `null`, the processor quietly exits without modifying the document\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"uppercase\": {\n    \"field\": \"foo\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

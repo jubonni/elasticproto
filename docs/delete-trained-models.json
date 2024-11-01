@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.915069",
+        "size": 1486,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-trained-models.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "delete-trained-models",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-trained-models]]\n= Delete trained models API\n[subs=\"attributes\"]\n++++\n<titleabbrev>Delete trained models</titleabbrev>\n++++\n\nDeletes an existing trained {infer} model.\n\n\n[[ml-delete-trained-models-request]]\n== {api-request-title}\n\n`DELETE _ml/trained_models/<model_id>`\n\n\n[[ml-delete-trained-models-prereq]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n\n[[ml-delete-trained-models-path-params]]\n== {api-path-parms-title}\n\n`<model_id>`::\n(Optional, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=model-id]\n\n[[ml-delete-trained-models-query-parms]]\n== {api-query-parms-title}\n\n`force`::\n  (Optional, Boolean) Use to forcefully delete a trained model that is referenced\n  by ingest pipelines or has a started deployment.\n\n[[ml-delete-trained-models-response-codes]]\n== {api-response-codes-title}\n\n`409`::\n  The code indicates that the trained model is referenced by an ingest pipeline\n  and cannot be deleted.\n\n\n[[ml-delete-trained-models-example]]\n== {api-examples-title}\n\nThe following example deletes the `regression-job-one-1574775307356` trained\nmodel:\n\n[source,console]\n--------------------------------------------------\nDELETE _ml/trained_models/regression-job-one-1574775307356\n--------------------------------------------------\n// TEST[skip:TBD]\n\nThe API returns the following result:\n\n\n[source,console-result]\n----\n{\n  \"acknowledged\" : true\n}\n----\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.605066",
+        "size": 1143,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query-phrase.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "query-dsl-match-query-phrase",
+        "version": "8.15"
+    },
+    "doc": "[[query-dsl-match-query-phrase]]\n=== Match phrase query\n++++\n<titleabbrev>Match phrase</titleabbrev>\n++++\n\nThe `match_phrase` query analyzes the text and creates a `phrase` query\nout of the analyzed text. For example:\n\n[source,console]\n--------------------------------------------------\nGET /_search\n{\n  \"query\": {\n    \"match_phrase\": {\n      \"message\": \"this is a test\"\n    }\n  }\n}\n--------------------------------------------------\n\nA phrase query matches terms up to a configurable `slop`\n(which defaults to 0) in any order. Transposed terms have a slop of 2.\n\nThe `analyzer` can be set to control which analyzer will perform the\nanalysis process on the text. It defaults to the field explicit mapping\ndefinition, or the default search analyzer, for example:\n\n[source,console]\n--------------------------------------------------\nGET /_search\n{\n  \"query\": {\n    \"match_phrase\": {\n      \"message\": {\n        \"query\": \"this is a test\",\n        \"analyzer\": \"my_analyzer\"\n      }\n    }\n  }\n}\n--------------------------------------------------\n\nThis query also accepts `zero_terms_query`, as explained in <<query-dsl-match-query, `match` query>>.\n"
+}

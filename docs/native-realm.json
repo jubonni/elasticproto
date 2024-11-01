@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.758067",
+        "size": 669,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/native-realm.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "native-realm",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[native-realm]]\n=== Native user authentication\n\nThe easiest way to manage and authenticate users is with the internal `native`\nrealm. You can use the REST APIs or Kibana to add and remove users, assign user\nroles, and manage user passwords.\n\n[[native-realm-configuration]]\n==== Configuring a native realm\n\ninclude::configuring-native-realm.asciidoc[]\n\n[[managing-native-users]]\n==== Managing native users\n\nThe {stack} {security-features} enable you to easily manage users in {kib} on the \n*Management / Security / Users* page. \n\nAlternatively, you can manage users through the `user` API. For more \ninformation and examples, see\n<<security-user-apis>>.\n"
+}

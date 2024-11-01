@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.779074",
+        "size": 2248,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-nodes-hot-threads.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "cluster-nodes-hot-threads",
+        "version": "8.15"
+    },
+    "doc": "[[cluster-nodes-hot-threads]]\n=== Nodes hot threads API\n++++\n<titleabbrev>Nodes hot threads</titleabbrev>\n++++\n\nReturns the hot threads on each selected node in the cluster.\n\n[[cluster-nodes-hot-threads-api-request]]\n==== {api-request-title}\n\n`GET /_nodes/hot_threads` +\n\n`GET /_nodes/<node_id>/hot_threads`\n\n[[cluster-nodes-hot-threads-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `monitor` or\n`manage` <<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[cluster-nodes-hot-threads-api-desc]]\n==== {api-description-title}\n\nThis API yields a breakdown of the hot threads on each selected node in the\ncluster. The output is plain text with a breakdown of each node's top hot \nthreads.\n\n\n[[cluster-nodes-hot-threads-api-path-params]]\n==== {api-path-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=node-id]\n\n\n[[cluster-nodes-hot-threads-api-query-params]]\n==== {api-query-parms-title}\n\n\n`ignore_idle_threads`::\n\t\t(Optional, Boolean) If true, known idle threads (e.g. waiting in a socket \n\t\tselect, or to get a task from an empty queue) are filtered out. Defaults to \n\t\ttrue.\n\n`interval`::\n\t\t(Optional, <<time-units, time units>>) The interval to do the second \n\t\tsampling of threads. Defaults to `500ms`.\n\t\t\n`snapshots`::\n\t\t(Optional, integer) Number of samples of thread stacktrace. Defaults to \n\t\t`10`.\n\n`threads`::\n\t\t(Optional, integer) Specifies the number of hot threads to provide \n                information for. Defaults to `3`. If you are using this API for\n                troubleshooting, set this parameter to a large number (e.g.\n                `9999`) to get information about all the threads in the system.\n\n`timeout`::\n\t\t(Optional, <<time-units, time units>>) Specifies how long to wait for a\n                response from each node. If omitted, waits forever.\n\n`type`::\n\t\t(Optional, string) The type to sample. Available options are `block`, `cpu`, and \n\t\t`wait`. Defaults to `cpu`.\n\n\n[[cluster-nodes-hot-threads-api-example]]\n==== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nGET /_nodes/hot_threads\nGET /_nodes/nodeId1,nodeId2/hot_threads\n--------------------------------------------------\n"
+}

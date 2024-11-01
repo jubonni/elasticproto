@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.198070",
+        "size": 2589,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-async-eql-search-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack",
+            "child_attributes"
+        ],
+        "has_code": false,
+        "title": "get-async-eql-search-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n\n[[get-async-eql-search-api]]\n=== Get async EQL search API\n++++\n<titleabbrev>Get async EQL search</titleabbrev>\n++++\n\nReturns the current status and available results for an <<eql-search-async,async\nEQL search>> or a <<eql-search-store-sync-eql-search,stored synchronous EQL\nsearch>>.\n\n[source,console]\n----\nGET /_eql/search/FkpMRkJGS1gzVDRlM3g4ZzMyRGlLbkEaTXlJZHdNT09TU2VTZVBoNDM3cFZMUToxMDM=\n----\n// TEST[skip: no access to search ID]\n\n[[get-async-eql-search-api-request]]\n==== {api-request-title}\n\n`GET /_eql/search/<search_id>`\n\n[[get-async-eql-search-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, only the user who first submitted\nthe EQL search can retrieve the search using this API.\n\n* See <<eql-required-fields>>.\n\n[[get-async-eql-search-api-limitations]]\n===== Limitations\n\nSee <<eql-syntax-limitations,EQL limitations>>.\n\n[[get-async-eql-search-api-path-params]]\n==== {api-path-parms-title}\n\n`<search_id>`::\n(Required, string)\nIdentifier for the search.\n+\nA search ID is provided in the <<eql-search-api,EQL search API>>'s response for\nan <<eql-search-async,async search>>. A search ID is also provided if the\nrequest's <<eql-search-api-keep-on-completion,`keep_on_completion`>> parameter\nis `true`.\n\n[[get-async-eql-search-api-query-params]]\n==== {api-query-parms-title}\n\n`keep_alive`::\n(Optional, <<time-units,time value>>)\nPeriod for which the search and its results are stored on the cluster. Defaults\nto the `keep_alive` value set by the search's <<eql-search-api,EQL search\nAPI>> request.\n+\nIf specified, this parameter sets a new `keep_alive` period for the search,\nstarting when the get async EQL search API request executes. This new period\noverwrites the one specified in the EQL search API request.\n+\nWhen this period expires, the search and its results are deleted, even if the\nsearch is ongoing.\n\n`wait_for_completion_timeout`::\n(Optional, <<time-units,time value>>)\nTimeout duration to wait for the request to finish. Defaults to no timeout,\nmeaning the request waits for complete search results.\n+\nIf this parameter is specified and the request completes during this period,\ncomplete search results are returned.\n+\nIf the request does not complete during this period, the response returns an\n`is_partial` value of `true` and no search results.\n\n[role=\"child_attributes\"]\n[[get-async-eql-search-api-response-body]]\n==== {api-response-body-title}\n\nThe async EQL search API returns the same response body as the EQL search API.\nSee the EQL search API's <<eql-search-api-response-body,response body\nparameters>>."
+}

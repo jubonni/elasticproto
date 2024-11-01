@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.274066",
+        "size": 949,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-row.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-row",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[esql-row]]\n=== `ROW`\n\nThe `ROW` source command produces a row with one or more columns with values\nthat you specify. This can be useful for testing.\n\n**Syntax**\n\n[source,esql]\n----\nROW column1 = value1[, ..., columnN = valueN]\n----\n\n*Parameters*\n\n`columnX`::\nThe column name.\nIn case of duplicate column names, only the rightmost duplicate creates a column.\n\n`valueX`::\nThe value for the column. Can be a literal, an expression, or a\n<<esql-functions,function>>.\n\n*Examples*\n\n[source.merge.styled,esql]\n----\ninclude::{esql-specs}/row.csv-spec[tag=example]\n----\n[%header.monospaced.styled,format=dsv,separator=|]\n|===\ninclude::{esql-specs}/row.csv-spec[tag=example-result]\n|===\n\nUse square brackets to create multi-value columns:\n\n[source,esql]\n----\ninclude::{esql-specs}/row.csv-spec[tag=multivalue]\n----\n\n`ROW` supports the use of <<esql-functions,functions>>:\n\n[source,esql]\n----\ninclude::{esql-specs}/row.csv-spec[tag=function]\n----\n"
+}

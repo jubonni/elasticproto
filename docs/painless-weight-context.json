@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.891080",
+        "size": 1419,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-weight-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-weight-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-weight-context]]\n=== Weight context\n\nUse a Painless script to create a\n{ref}/index-modules-similarity.html[weight] for use in a\n<<painless-similarity-context, similarity script>>. The weight makes up the\npart of the similarity calculation that is independent of the document being\nscored, and so can be built up front and cached.\n\nQueries that contain multiple terms calculate a separate weight for each term.\n\n*Variables*\n\n`query.boost` (`float`, read-only)::\n        The boost value if provided by the query. If this is not provided the\n        value is `1.0f`.\n\n`field.docCount` (`long`, read-only)::\n        The number of documents that have a value for the current field.\n\n`field.sumDocFreq` (`long`, read-only)::\n        The sum of all terms that exist for the current field. If this is not\n        available the value is `-1`.\n\n`field.sumTotalTermFreq` (`long`, read-only)::\n        The sum of occurrences in the index for all the terms that exist in the\n        current field. If this is not available the value is `-1`.\n\n`term.docFreq` (`long`, read-only)::\n        The number of documents that contain the current term in the index.\n\n`term.totalTermFreq` (`long`, read-only)::\n        The total occurrences of the current term in the index.\n\n*Return*\n\n`double`::\n        A scoring factor used across all documents.\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n"
+}

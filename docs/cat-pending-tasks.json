@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.914074",
+        "size": 2317,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-pending-tasks.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "cat-pending-tasks",
+        "version": "8.15"
+    },
+    "doc": "[[cat-pending-tasks]]\n=== cat pending tasks API\n++++\n<titleabbrev>cat pending tasks</titleabbrev>\n++++\n\n[IMPORTANT]\n====\ncat APIs are only intended for human consumption using the command line or {kib} \nconsole. They are _not_ intended for use by applications. For application \nconsumption, use the <<cluster-pending,pending cluster tasks API>>.\n====\n\nReturns <<cluster-state-publishing,cluster-level changes>> that have not yet been executed.\n\n[[cat-pending-tasks-api-request]]\n==== {api-request-title}\n\n`GET /_cat/pending_tasks`\n\n[[cat-pending-tasks-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `monitor` or\n`manage` <<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[cat-pending-tasks-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=http-format]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=cat-h]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=help]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=local]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=cat-s]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=time]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=cat-v]\n\n\n[[cat-pending-tasks-api-example]]\n==== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nGET /_cat/pending_tasks?v=true\n--------------------------------------------------\n\nThe API returns the following response:\n\n[source,txt]\n--------------------------------------------------\ninsertOrder timeInQueue priority source\n       1685       855ms HIGH     update-mapping [foo][t]\n       1686       843ms HIGH     update-mapping [foo][t]\n       1693       753ms HIGH     refresh-mapping [foo][[t]]\n       1688       816ms HIGH     update-mapping [foo][t]\n       1689       802ms HIGH     update-mapping [foo][t]\n       1690       787ms HIGH     update-mapping [foo][t]\n       1691       773ms HIGH     update-mapping [foo][t]\n--------------------------------------------------\n// TESTRESPONSE[s/(\\n.+)+/(\\\\n.+)*/ non_json]\n// We can't assert anything about the tasks in progress here because we don't\n// know what might be in progress....\n"
+}

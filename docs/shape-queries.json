@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.413080",
+        "size": 761,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/shape-queries.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "shape-queries",
+        "version": "8.15"
+    },
+    "doc": "[[shape-queries]]\n[role=\"xpack\"]\n== Shape queries\n\n\nLike <<geo-shape,`geo_shape`>> Elasticsearch supports the ability to index\narbitrary two dimension (non Geospatial) geometries making it possible to\nmap out virtual worlds, sporting venues, theme parks, and CAD diagrams.\n\nElasticsearch supports two types of cartesian data:\n<<point,`point`>> fields which support x/y pairs, and\n<<shape,`shape`>> fields, which support points, lines, circles, polygons, multi-polygons, etc.\n\nThe queries in this group are:\n\n<<query-dsl-shape-query,`shape`>> query::\nFinds documents with:\n* `shapes` which either intersect, are contained by, are within or do not intersect\nwith the specified shape\n* `points` which intersect the specified shape\n\ninclude::shape-query.asciidoc[]\n"
+}

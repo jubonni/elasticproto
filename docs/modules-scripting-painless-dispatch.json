@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.850079",
+        "size": 1703,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-painless-dispatch.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "modules-scripting-painless-dispatch",
+        "version": "8.15"
+    },
+    "doc": "[[modules-scripting-painless-dispatch]]\n=== How painless dispatches functions\n\nPainless uses receiver, name, and {wikipedia}/Arity[arity]\nfor method dispatch. For example, `s.foo(a, b)` is resolved by first getting\nthe class of `s` and then looking up the method `foo` with two parameters. This\nis different from Groovy which uses the\n{wikipedia}/Multiple_dispatch[runtime types] of the\nparameters and Java which uses the compile time types of the parameters.\n\nThe consequence of this that Painless doesn't support overloaded methods like\nJava, leading to some trouble when it allows classes from the Java\nstandard library. For example, in Java and Groovy, `Matcher` has two methods:\n`group(int)` and `group(String)`. Painless can't allow both of these methods\nbecause they have the same name and the same number of parameters. So instead it\nhas `group(int)` and `namedGroup(String)`.\n\nWe have a few justifications for this different way of dispatching methods:\n\n1. It makes operating on `def` types simpler and, presumably, faster. Using\nreceiver, name, and arity means that when Painless sees a call on a `def` object it\ncan dispatch the appropriate method without having to do expensive comparisons\nof the types of the parameters. The same is true for invocations with `def`\ntyped parameters.\n2. It keeps things consistent. It would be genuinely weird for Painless to\nbehave like Groovy if any `def` typed parameters were involved and Java\notherwise. It'd be slow for it to behave like Groovy all the time.\n3. It keeps Painless maintainable. Adding the Java or Groovy like method\ndispatch *feels* like it'd add a ton of complexity which'd make maintenance and\nother improvements much more difficult.\n"
+}

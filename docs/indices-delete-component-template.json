@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.876066",
+        "size": 1799,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-component-template.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "indices-delete-component-template",
+        "version": "8.15"
+    },
+    "doc": "[[indices-delete-component-template]]\n=== Delete component template API\n++++\n<titleabbrev>Delete component template</titleabbrev>\n++++\n\nDeletes an existing component template.\n\n////\n[source,console]\n--------------------------------------------------\nPUT _component_template/template_1\n{\n  \"template\": {\n    \"settings\": {\n      \"index.number_of_replicas\": 0\n    }\n  }\n}\n--------------------------------------------------\n// TESTSETUP\n////\n\n[source,console]\n--------------------------------------------------\nDELETE _component_template/template_1\n--------------------------------------------------\n\nThe provided <component-template> may contain multiple template names separated by a comma.\nIf multiple template names are specified then there is no wildcard support and the\nprovided names should match completely with existing component templates.\n\n[[delete-component-template-api-request]]\n==== {api-request-title}\n\n`DELETE /_component_template/<component-template>`\n\n[[delete-component-template-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`manage_index_templates` or `manage` <<privileges-list-cluster,cluster\nprivilege>> to use this API.\n\n[[delete-component-template-api-desc]]\n==== {api-description-title}\n\nUse the delete component template API to delete one or more component templates\nComponent templates are building blocks for constructing <<index-templates,index templates>>\nthat specify index mappings, settings, and aliases.\n\n[[delete-component-template-api-path-params]]\n==== {api-path-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=component-template]\n\n\n[[delete-component-template-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n"
+}

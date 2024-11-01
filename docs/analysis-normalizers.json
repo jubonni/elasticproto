@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.791067",
+        "size": 1770,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-normalizers.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "analysis-normalizers",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-normalizers]]\n== Normalizers\n\nNormalizers are similar to analyzers except that they may only emit a single\ntoken. As a consequence, they do not have a tokenizer and only accept a subset\nof the available char filters and token filters. Only the filters that work on\na per-character basis are allowed. For instance a lowercasing filter would be\nallowed, but not a stemming filter, which needs to look at the keyword as a\nwhole. The current list of filters that can be used in a normalizer definition\nare: `arabic_normalization`, `asciifolding`, `bengali_normalization`,\n`cjk_width`, `decimal_digit`, `elision`, `german_normalization`,\n`hindi_normalization`, `indic_normalization`, `lowercase`, `pattern_replace`,\n`persian_normalization`, `scandinavian_folding`, `serbian_normalization`,\n`sorani_normalization`, `trim`, `uppercase`.\n\nElasticsearch ships with a `lowercase` built-in normalizer. For other forms of\nnormalization, a custom configuration is required.\n\n[discrete]\n=== Custom normalizers\n\nCustom normalizers take a list of\n<<analysis-charfilters, character filters>> and a list of\n<<analysis-tokenfilters,token filters>>.\n\n[source,console]\n--------------------------------\nPUT index\n{\n  \"settings\": {\n    \"analysis\": {\n      \"char_filter\": {\n        \"quote\": {\n          \"type\": \"mapping\",\n          \"mappings\": [\n            \"\u00ab => \\\"\",\n            \"\u00bb => \\\"\"\n          ]\n        }\n      },\n      \"normalizer\": {\n        \"my_normalizer\": {\n          \"type\": \"custom\",\n          \"char_filter\": [\"quote\"],\n          \"filter\": [\"lowercase\", \"asciifolding\"]\n        }\n      }\n    }\n  },\n  \"mappings\": {\n    \"properties\": {\n      \"foo\": {\n        \"type\": \"keyword\",\n        \"normalizer\": \"my_normalizer\"\n      }\n    }\n  }\n}\n--------------------------------\n"
+}

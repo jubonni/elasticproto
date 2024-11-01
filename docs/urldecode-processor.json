@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.813069",
+        "size": 899,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/urldecode-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "urldecode-processor",
+        "version": "8.15"
+    },
+    "doc": "[[urldecode-processor]]\n=== URL decode processor\n++++\n<titleabbrev>URL decode</titleabbrev>\n++++\n\nURL-decodes a string. If the field is an array of strings, all members of the array will be decoded.\n\n[[urldecode-options]]\n.URL Decode Options\n[options=\"header\"]\n|======\n| Name             | Required  | Default  | Description\n| `field`          | yes       | -        | The field to decode\n| `target_field`   | no        | `field`  | The field to assign the converted value to, by default `field` is updated in-place\n| `ignore_missing` | no        | `false`  | If `true` and `field` does not exist or is `null`, the processor quietly exits without modifying the document\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"urldecode\": {\n    \"field\": \"my_url_to_decode\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

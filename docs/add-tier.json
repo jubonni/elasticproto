@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.237807",
+        "size": 390,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/add-tier.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "add-tier",
+        "version": "8.15"
+    },
+    "doc": "[[add-tier]]\n== Add a missing tier to the system\n\nThe allocation of indices in an {es} deployment can be allocated on <<data-tiers, data tiers>>.\n\nIn order to allow indices to be allocated, follow these steps to add the <<data-tiers, data tier>>\nthe indices expect to be allocated on to your deployment:\n\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/data/add-tier-widget.asciidoc[]\n\n\n\n"
+}

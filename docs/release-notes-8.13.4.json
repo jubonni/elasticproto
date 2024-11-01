@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.923070",
+        "size": 1735,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/release-notes-8.13.4.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "release-notes-8.13.4",
+        "version": "8.15"
+    },
+    "doc": "[[release-notes-8.13.4]]\n== {es} version 8.13.4\n\nAlso see <<breaking-changes-8.13,Breaking changes in 8.13>>.\n\n[[known-issues-8.13.4]]\n[float]\n=== Known issues\n* When upgrading clusters from version 8.11.4 or earlier, if your cluster contains non-master-eligible nodes,\ninformation about the new functionality of these upgraded nodes may not be registered properly with the master node.\nThis can lead to some new functionality added since 8.12.0 not being accessible on the upgraded cluster.\nIf your cluster is running on ECK 2.12.1 and above, this may cause problems with finalizing the upgrade.\nTo resolve this issue, perform a rolling restart on the non-master-eligible nodes once all Elasticsearch nodes\nare upgraded. This issue is fixed in 8.15.0.\n\n* The `pytorch_inference` process used to run Machine Learning models can consume large amounts of memory.\nIn environments where the available memory is limited, the OS Out of Memory Killer will kill the `pytorch_inference`\nprocess to reclaim memory. This can cause inference requests to fail.\nElasticsearch will automatically restart the `pytorch_inference` process\nafter it is killed up to four times in 24 hours. (issue: {es-issue}110530[#110530])\n\n[[bug-8.13.4]]\n[float]\n=== Bug fixes\n\nAggregations::\n* Fix Bucket ordering for partial reduction in date histogram and histogram aggregation {es-pull}108184[#108184] (issue: {es-issue}108181[#108181])\n\nES|QL::\n* Fix `BlockHash` `DirectEncoder` {es-pull}108283[#108283] (issue: {es-issue}108268[#108268])\n\nSnapshot/Restore::\n* Ensure necessary security context for s3 bulk deletions {es-pull}108280[#108280] (issue: {es-issue}108049[#108049])\n\nTSDB::\n* Fix tsdb codec when doc-values spread in two blocks {es-pull}108276[#108276]\n"
+}

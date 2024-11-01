@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.378071",
+        "size": 1101,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-set-priority.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ilm-set-priority",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ilm-set-priority]]\n=== Set priority\n\nPhases allowed: hot, warm, cold.\n\nSets the <<recovery-prioritization, priority>> of the index as\nsoon as the policy enters the hot, warm, or cold phase.\nHigher priority indices are recovered before indices with lower priorities following a node restart.\n\nGenerally, indexes in the hot phase should have the highest value and\nindexes in the cold phase should have the lowest values.\nFor example: 100 for the hot phase, 50 for the warm phase, and 0 for the cold phase.\nIndices that don't set this value have a default priority of 1.\n\n[[ilm-set-priority-options]]\n==== Options\n\n`priority`::\n(Required, integer)\nThe priority for the index.\nMust be 0 or greater.\nSet to `null` to remove the priority.\n\n[[ilm-set-priority-ex]]\n==== Example\n\n[source,console]\n--------------------------------------------------\nPUT _ilm/policy/my_policy\n{\n  \"policy\": {\n    \"phases\": {\n      \"warm\": {\n        \"actions\": {\n          \"set_priority\" : {\n            \"priority\": 50\n          }\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n"
+}

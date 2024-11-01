@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.550075",
+        "size": 1883,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/stop-trained-model-deployment.html",
+        "type": "documentation",
+        "role": [
+            "xpack",
+            "child_attributes"
+        ],
+        "has_code": true,
+        "title": "stop-trained-model-deployment",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[stop-trained-model-deployment]]\n= Stop trained model deployment API\n[subs=\"attributes\"]\n++++\n<titleabbrev>Stop trained model deployment</titleabbrev>\n++++\n\nStops a trained model deployment.\n\n[[stop-trained-model-deployment-request]]\n== {api-request-title}\n\n`POST _ml/trained_models/<deployment_id>/deployment/_stop`\n\n[[stop-trained-model-deployment-prereq]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the\n`machine_learning_admin` built-in role.\n\n[[stop-trained-model-deployment-desc]]\n== {api-description-title}\n\nDeployment is required only for trained models that have a PyTorch `model_type`.\n\n[[stop-trained-model-deployment-path-params]]\n== {api-path-parms-title}\n\n`<deployment_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=deployment-id]\n\n\n[[stop-trained-model-deployment-query-params]]\n== {api-query-parms-title}\n\n`allow_no_match`::\n(Optional, Boolean)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=allow-no-match-deployments]\n\n`force`::\n(Optional, Boolean) If true, the deployment is stopped even if it or one of its\nmodel aliases is referenced by ingest pipelines. You can't use these pipelines\nuntil you restart the model deployment.\n\n`finish_pending_work`::\n(Optional, Boolean) If true, the deployment is stopped after any queued work is completed. Defaults to `false`.\n\n////\n[role=\"child_attributes\"]\n[[stop-trained-model-deployment-results]]\n== {api-response-body-title}\n////\n\n////\n[[stop-trained-models-response-codes]]\n== {api-response-codes-title}\n////\n\n[[stop-trained-model-deployment-example]]\n== {api-examples-title}\n\nThe following example stops the `my_model_for_search` deployment:\n\n[source,console]\n--------------------------------------------------\nPOST _ml/trained_models/my_model_for_search/deployment/_stop\n--------------------------------------------------\n"
+}

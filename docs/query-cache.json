@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.037071",
+        "size": 1625,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-cache.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "query-cache",
+        "version": "8.15"
+    },
+    "doc": "[[query-cache]]\n=== Node query cache settings\n\nThe results of queries used in the filter context are cached in the node query \ncache for fast lookup. There is one query cache per node that is shared by all \nshards. The cache uses an LRU eviction policy: when the cache is full, the least \nrecently used query results are evicted to make way for new data. You cannot \ninspect the contents of the query cache.\n\nTerm queries and queries used outside of a filter context are not eligible for \ncaching.\n\nBy default, the cache holds a maximum of 10000 queries in up to 10% of the total \nheap space. To determine if a query is eligible for caching, {es} maintains a \nquery history to track occurrences.\n\nCaching is done on a per segment basis if a segment contains at least 10000 \ndocuments and the segment has at least 3% of the total documents of a shard. \nBecause caching is per segment, merging segments can invalidate cached queries.\n\nThe following setting is _static_ and must be configured on every data node in\nthe cluster:\n\n`indices.queries.cache.size`::\n(<<static-cluster-setting,Static>>)\nControls the memory size for the filter cache. Accepts\neither a percentage value, like `5%`, or an exact value, like `512mb`. Defaults to `10%`.\n\n[[query-cache-index-settings]]\n==== Query cache index settings\n\nThe following setting is an _index_ setting that can be configured on a \nper-index basis. Can only be set at index creation time or on a\n<<indices-open-close,closed index>>:\n\n`index.queries.cache.enabled`::\n(<<index-modules-settings,Static>>)\nControls whether to enable query caching. Accepts `true` (default) or\n`false`.\n"
+}

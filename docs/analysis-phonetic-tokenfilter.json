@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.924070",
+        "size": 216,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-phonetic-tokenfilter.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "analysis-phonetic-tokenfilter",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-phonetic-tokenfilter]]\n=== Phonetic token filter\n++++\n<titleabbrev>Phonetic</titleabbrev>\n++++\n\nThe `phonetic` token filter is provided as the {plugins}/analysis-phonetic.html[`analysis-phonetic`] plugin.\n"
+}

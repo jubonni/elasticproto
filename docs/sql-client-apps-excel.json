@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.072067",
+        "size": 2288,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-client-apps-excel.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "sql-client-apps-excel",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[sql-client-apps-excel]]\n=== Microsoft Excel\n\nYou can use the {es} ODBC driver to access {es} data from Microsoft Excel.\n\nIMPORTANT: Elastic does not endorse, promote or provide support for this application; for native Elasticsearch integration in this product, please reach out to its vendor.\n\n==== Prerequisites\n\n* https://products.office.com/en/excel[Microsoft Office] 2016 or higher\n* {es-sql} <<sql-odbc, ODBC driver>>\n* A preconfigured User or System DSN (see <<dsn-configuration,Configuration>> section on how to configure a DSN).\n\n==== Load data into a spreadsheet\n\nFirst, you'll need to choose ODBC as the source to load data from. To do so, click on the _Data_ tab, then _New Query_ button, in the\ndrop-down menu expand _From Other Sources_, then choose _From ODBC_:\n\n[[apps_excel_fromodbc]]\n.ODBC as data source\nimage:images/sql/odbc/apps_excel_fromodbc.png[]\n\nThis will open a new window with a drop down menu populated with the DSNs that Excel found on the system. Choose a DSN configured to\nconnect to your {es} instance and press the _OK_ button:\n\n[[apps_excel_dsn]]\n.Choose a DSN\nimage:images/sql/odbc/apps_excel_dsn.png[]\n\nThis will lead to a new window, allowing the user to input the connection credentials.\n\nA username might be required by Excel even if the {es} instance has no security enabled. Providing a bogus username with no password in\nthis case will not hinder the connectivity. Note however that Excel will cache these credentials (so in case you do have security enabled,\nyou won't be prompted for the credentials a second time).\n\nFill in the username and the password and press\n_Connect_.\n\n[[apps_excel_cred]]\n.Provide connection credentials\nimage:images/sql/odbc/apps_excel_cred.png[]\n\nOnce connected, Excel will read {es}'s catalog and offer the user a choice of tables (indices) to load data from. Clicking on one of the\ntables will load a preview of the data within:\n\n[[apps_excel_picktable]]\n.Pick table to load\nimage:images/sql/odbc/apps_excel_picktable.png[]\n\nNow click the _Load_ button, which will have Excel load all the data from the table into a spreadsheet:\n\n[[apps_excel_loaded]]\n.Data loaded in spreadsheet\nimage:images/sql/odbc/apps_excel_loaded.png[]\n\n\n// vim: set noet fenc=utf-8 ff=dos sts=0 sw=4 ts=4 tw=138 columns=140\n"
+}

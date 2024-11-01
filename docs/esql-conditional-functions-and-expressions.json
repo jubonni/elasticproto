@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.693069",
+        "size": 559,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-conditional-functions-and-expressions.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-conditional-functions-and-expressions",
+        "version": "8.15"
+    },
+    "doc": "[[esql-conditional-functions-and-expressions]]\n==== {esql} conditional functions and expressions\n\n++++\n<titleabbrev>Conditional functions and expressions</titleabbrev>\n++++\n\nConditional functions return one of their arguments by evaluating in an if-else\nmanner. {esql} supports these conditional functions:\n\n// tag::cond_list[]\n* <<esql-case>>\n* <<esql-coalesce>>\n* <<esql-greatest>>\n* <<esql-least>>\n// end::cond_list[]\n\ninclude::layout/case.asciidoc[]\ninclude::layout/coalesce.asciidoc[]\ninclude::layout/greatest.asciidoc[]\ninclude::layout/least.asciidoc[]\n"
+}

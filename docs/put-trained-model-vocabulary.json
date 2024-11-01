@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.020069",
+        "size": 2132,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/put-trained-model-vocabulary.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "put-trained-model-vocabulary",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[put-trained-model-vocabulary]]\n= Create trained model vocabulary API\n[subs=\"attributes\"]\n++++\n<titleabbrev>Create trained model vocabulary</titleabbrev>\n++++\n\nCreates a trained model vocabulary.\nThis is supported only for natural language processing (NLP) models.\n\n[[ml-put-trained-model-vocabulary-request]]\n== {api-request-title}\n\n`PUT _ml/trained_models/<model_id>/vocabulary/`\n\n\n[[ml-put-trained-model-vocabulary-prereq]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the\n`machine_learning_admin` built-in role.\n\n\n[[ml-put-trained-model-vocabulary-desc]]\n== {api-description-title}\n\nThe vocabulary is stored in the index as described in\n`inference_config.*.vocabulary` of the trained model definition.\n\n\n[[ml-put-trained-model-vocabulary-path-params]]\n== {api-path-parms-title}\n\n`<model_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=model-id]\n\n[[ml-put-trained-model-vocabulary-request-body]]\n== {api-request-body-title}\n\n`vocabulary`::\n(array)\nThe model vocabulary. Must not be empty.\n\n`merges`::\n(Optional, array)\nThe model merges used in byte-pair encoding. The merges must be sub-token pairs, space delimited, and in order of\npreference. Example: [\"f o\", \"fo o\"]. Must be provided for RoBERTa and BART style models.\n\n`scores`::\n(Optional, array)\nVocabulary value scores used by sentence-piece tokenization. Must have the same length as `vocabulary`.\nRequired for unigram sentence-piece tokenized models like XLMRoberta and T5.\n\n[[ml-put-trained-model-vocabulary-example]]\n== {api-examples-title}\n\nThe following example shows how to create a model vocabulary for a\npreviously stored trained model configuration.\n\n[source,console]\n--------------------------------------------------\nPUT _ml/trained_models/elastic__distilbert-base-uncased-finetuned-conll03-english/vocabulary\n{\n  \"vocabulary\": [\n    \"[PAD]\",\n    \"[unused0]\",\n    ...\n  ]\n}\n--------------------------------------------------\n// TEST[s/\\.\\.\\./\"[PAD]\"/ skip:TBD]\n\nThe API returns the following results:\n\n[source,console-result]\n----\n{\n    \"acknowledged\": true\n}\n----\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.856069",
+        "size": 2515,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/schedule-weekly.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "schedule-weekly",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[schedule-weekly]]\n==== {watcher} weekly schedule\n++++\n<titleabbrev>Weekly schedule</titleabbrev>\n++++\n\nA <<trigger-schedule,`schedule`>> that triggers at a specific day and time\nevery week. To use the `weekly` schedule, you specify the day and time (or days\nand times) when you want the scheduler to start the watch execution with the `on`\nand `at` attributes.\n\nYou can specify the day of the week by name, abbreviation, or number (with Sunday\nbeing the first day of the week):\n\n* `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday` and `saturday`\n* `sun`, `mon`, `tue`, `wed`, `thu`, `fri` and `sat`\n* `1`, `2`, `3`, `4`, `5`, `6` and `7`\n\nTimes are specified in the form `HH:mm` on a 24-hour clock. You can also use the\nreserved values `midnight` and `noon` for `00:00` and `12:00`.\n\n===== Configuring a weekly schedule\n\nTo configure a once a week schedule, you specify the day with the `on` attribute\nand the time with the `at` attribute. For example, the following `weekly` schedule\ntriggers once a week on Friday at 5:00 PM:\n\n[source,js]\n--------------------------------------------------\n{\n  \"trigger\" : {\n    \"schedule\" : {\n      \"weekly\" : { \"on\" : \"friday\", \"at\" : \"17:00\" }\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n\nNOTE: You can also specify the day and time with the `day` and `time` attributes,\n      they are interchangeable with `on` and `at`.\n\n===== Configuring a multiple times weekly schedule\n\nTo configure a `weekly` schedule that triggers multiple times a week, you can\nspecify an array of day and time values. For example, the following `weekly`\nschedule triggers every Tuesday at 12:00 PM and every Friday at 5:00 PM:\n\n[source,js]\n--------------------------------------------------\n{\n  \"trigger\" : {\n    \"schedule\" : {\n      \"weekly\" : [\n        { \"on\" : \"tuesday\", \"at\" : \"noon\" },\n        { \"on\" : \"friday\", \"at\" : \"17:00\" }\n      ]\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n\nAlternatively, you can specify days and times in an object that has `on` and\n`minute` attributes that contain an array of values. For example, the following\n`weekly` schedule triggers every Tuesday and Friday at 12:00 PM and 17:00 PM:\n\n[source,js]\n--------------------------------------------------\n{\n  \"trigger\" : {\n    \"schedule\" : {\n      \"weekly\" : {\n        \"on\" : [ \"tuesday\", \"friday\" ],\n        \"at\" : [ \"noon\", \"17:00\" ]\n      }\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE"
+}

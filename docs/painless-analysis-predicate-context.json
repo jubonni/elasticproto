@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.821074",
+        "size": 1176,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-analysis-predicate-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-analysis-predicate-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-analysis-predicate-context]]\n=== Analysis Predicate Context\n\nUse a painless script to determine whether or not the current token in an\nanalysis chain matches a predicate.\n\n*Variables*\n\n`params` (`Map`, read-only)::\n        User-defined parameters passed in as part of the query.\n\n`token.term` (`CharSequence`, read-only)::\n        The characters of the current token\n\n`token.position` (`int`, read-only)::\n        The position of the current token\n\n`token.positionIncrement` (`int`, read-only)::\n        The position increment of the current token\n\n`token.positionLength` (`int`, read-only)::\n        The position length of the current token\n\n`token.startOffset` (`int`, read-only)::\n        The start offset of the current token\n\n`token.endOffset` (`int`, read-only)::\n        The end offset of the current token\n\n`token.type` (`String`, read-only)::\n        The type of the current token\n\n`token.keyword` (`boolean`, read-only)::\n        Whether or not the current token is marked as a keyword\n\n*Return*\n\n`boolean`::\n        Whether or not the current token matches the predicate\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n"
+}

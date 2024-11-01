@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.723067",
+        "size": 1362,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-translate.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "sql-translate",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[sql-translate]]\n== SQL Translate API\n\nThe SQL Translate API accepts SQL in a JSON document and translates it\ninto native {es} queries. For example:\n\n[source,console]\n--------------------------------------------------\nPOST /_sql/translate\n{\n  \"query\": \"SELECT * FROM library ORDER BY page_count DESC\",\n  \"fetch_size\": 10\n}\n--------------------------------------------------\n// TEST[setup:library]\n\nWhich returns:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"size\": 10,\n  \"_source\": false,\n  \"fields\": [\n    {\n      \"field\": \"author\"\n    },\n    {\n      \"field\": \"name\"\n    },\n    {\n      \"field\": \"page_count\"\n    },\n    {\n      \"field\": \"release_date\",\n      \"format\": \"strict_date_optional_time_nanos\"\n    }\n  ],\n  \"sort\": [\n    {\n      \"page_count\": {\n        \"order\": \"desc\",\n        \"missing\": \"_first\",\n        \"unmapped_type\": \"short\"\n      }\n    }\n  ],\n  \"track_total_hits\": -1\n}\n--------------------------------------------------\n\nWhich is the request that SQL will run to provide the results.\nIn this case, SQL will use the <<scroll-search-results,scroll>>\nAPI. If the result contained an aggregation then SQL would use\nthe normal <<search-search,search API>>.\n\nThe request body accepts the same <<sql-search-api-request-body,parameters>> as\nthe <<sql-search-api,SQL search API>>, excluding `cursor`.\n"
+}

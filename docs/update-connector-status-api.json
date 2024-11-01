@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.784067",
+        "size": 2362,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/update-connector-status-api.html",
+        "type": "documentation",
+        "role": [
+            "child_attributes"
+        ],
+        "has_code": true,
+        "title": "update-connector-status-api",
+        "version": "8.15"
+    },
+    "doc": "[[update-connector-status-api]]\n=== Update connector status API\n++++\n<titleabbrev>Update connector status</titleabbrev>\n++++\n\npreview::[]\n\nUpdates the `status` of a connector.\n\nTo get started with Connector APIs, check out <<es-connectors-tutorial-api, our tutorial>>.\n\n\n[[update-connector-status-api-request]]\n==== {api-request-title}\n\n`PUT _connector/<connector_id>/_status`\n\n[[update-connector-status-api-prereq]]\n==== {api-prereq-title}\n\n* To sync data using self-managed connectors, you need to deploy the <<es-connectors-deploy-connector-service,Elastic connector service>>. on your own infrastructure. This service runs automatically on Elastic Cloud for Elastic managed connectors.\n* The `connector_id` parameter should reference an existing connector.\n* The change of `status` must be a valid status transition according to the https://github.com/elastic/connectors/blob/main/docs/CONNECTOR_PROTOCOL.md[Connector Protocol].\n\n[[update-connector-status-api-path-params]]\n==== {api-path-parms-title}\n\n`<connector_id>`::\n(Required, string)\n\n[role=\"child_attributes\"]\n[[update-connector-status-api-request-body]]\n==== {api-request-body-title}\n\n`status`::\n(Required, string) A valid connector status string, defined in the Connector Framework.\n\n[[update-connector-status-api-response-codes]]\n==== {api-response-codes-title}\n\n`200`::\nConnector `status` field was successfully updated.\n\n`400`::\nThe `connector_id` was not provided, the request payload was malformed, or the given status transition is not supported.\n\n`404` (Missing resources)::\nNo connector matching `connector_id` could be found.\n\n[[update-connector-status-api-example]]\n==== {api-examples-title}\n\nThe following example updates the `status` of the connector with ID `my-connector`:\n\n////\n[source, console]\n--------------------------------------------------\nPUT _connector/my-connector\n{\n  \"index_name\": \"search-google-drive\",\n  \"name\": \"My Connector\",\n  \"service_type\": \"needs_configuration\"\n}\n--------------------------------------------------\n// TESTSETUP\n\n[source,console]\n--------------------------------------------------\nDELETE _connector/my-connector\n--------------------------------------------------\n// TEARDOWN\n////\n\n[source,console]\n----\nPUT _connector/my-connector/_status\n{\n    \"status\": \"needs_configuration\"\n}\n----\n\n[source,console-result]\n----\n{\n    \"result\": \"updated\"\n}\n----\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.931069",
+        "size": 799,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/pki-realm.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "pki-realm",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[pki-realm]]\n=== PKI user authentication\n\nYou can configure {es} to use Public Key Infrastructure (PKI) certificates to\nauthenticate users. In this scenario, clients connecting directly to {es} must\npresent X.509 certificates. First, the certificates must be accepted for\nauthentication on the SSL/TLS layer on {es}. Then they are optionally\nfurther validated by a PKI realm. See <<pki-realm-for-direct-clients>>.\n\nYou can also use PKI certificates to authenticate to {kib}, however this\nrequires some additional configuration. On {es}, this configuration enables {kib} \nto act as a proxy for SSL/TLS authentication and to submit the client\ncertificates to {es} for further validation by a PKI realm. See\n<<pki-realm-for-proxied-clients>>.\n\ninclude::configuring-pki-realm.asciidoc[]\n"
+}

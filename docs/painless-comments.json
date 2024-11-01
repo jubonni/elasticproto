@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.827070",
+        "size": 1094,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-comments.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-comments",
+        "version": "8.15"
+    },
+    "doc": "[[painless-comments]]\n=== Comments\n\nUse a comment to annotate or explain code within a script. Use the `//` token\nanywhere on a line to specify a single-line comment. All characters from the\n`//` token to the end of the line are ignored. Use an opening `/*` token and a\nclosing `*/` token to specify a multi-line comment. Multi-line comments can\nstart anywhere on a line, and all characters in between the `/*` token and `*/`\ntoken are ignored. A comment is included anywhere within a script.\n\n*Grammar*\n\n[source,ANTLR4]\n----\nSINGLE_LINE_COMMENT: '//' .*? [\\n\\r];\nMULTI_LINE_COMMENT: '/*' .*? '*/';\n----\n\n*Examples*\n\n* Single-line comments.\n+\n[source,Painless]\n----\n// single-line comment\n\nint value; // single-line comment\n----\n+\n* Multi-line comments.\n+\n[source,Painless]\n----\n/* multi-\n   line\n   comment */\n\nint value; /* multi-\n              line\n              comment */ value = 0;\n\nint value; /* multi-line\n              comment */\n\n/* multi-line\n   comment */ int value;\n\nint value; /* multi-line\n              comment */ value = 0;\n\nint value; /* multi-line comment */ value = 0;\n----\n"
+}

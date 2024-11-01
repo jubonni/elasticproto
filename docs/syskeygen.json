@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.612071",
+        "size": 1414,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/syskeygen.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "syskeygen",
+        "version": "8.15"
+    },
+    "doc": "[[syskeygen]]\n== elasticsearch-syskeygen\n\nThe `elasticsearch-syskeygen` command creates a system key file in the\nelasticsearch config directory.\n\n[discrete]\n=== Synopsis\n\n[source,shell]\n--------------------------------------------------\nbin/elasticsearch-syskeygen\n[-E <KeyValuePair>] [-h, --help]\n([-s, --silent] | [-v, --verbose])\n--------------------------------------------------\n\n[discrete]\n=== Description\n\nThe command generates a `system_key` file, which you can use to symmetrically\nencrypt sensitive data. For example, you can use this key to prevent {watcher}\nfrom returning and storing information that contains clear text credentials. See\n<<encrypting-data>>. \n\nIMPORTANT: The system key is a symmetric key, so the same key must be used on\nevery node in the cluster.\n\n[discrete]\n[[syskeygen-parameters]]\n=== Parameters\n\n`-E <KeyValuePair>`:: Configures a setting. For example, if you have a custom\ninstallation of {es}, you can use this parameter to specify the `ES_PATH_CONF`\nenvironment variable.\n\n`-h, --help`:: Returns all of the command parameters.\n\n`-s, --silent`:: Shows minimal output.\n\n`-v, --verbose`:: Shows verbose output.\n\n\n[discrete]\n=== Examples\n\nThe following command generates a `system_key` file in the\ndefault `$ES_HOME/config` directory:\n\n[source, sh]\n--------------------------------------------------\nbin/elasticsearch-syskeygen\n--------------------------------------------------\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.130071",
+        "size": 2218,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-remote-info.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "cluster-remote-info",
+        "version": "8.15"
+    },
+    "doc": "[[cluster-remote-info]]\n=== Remote cluster info API\n++++\n<titleabbrev>Remote cluster info</titleabbrev>\n++++\n\nReturns configured remote cluster information.\n\n\n[[cluster-remote-info-api-request]]\n==== {api-request-title}\n\n`GET /_remote/info`\n\n[[cluster-remote-info-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `monitor` or\n`manage` <<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[cluster-remote-info-api-desc]]\n==== {api-description-title}\n\nThe cluster remote info API allows you to retrieve all of the configured\nremote cluster information. It returns connection and endpoint information keyed\nby the configured remote cluster alias.\n\n\n[[cluster-remote-info-api-response-body]]\n==== {api-response-body-title}\n\n`mode`::\n    Connection mode for the remote cluster. Returned values are `sniff` and\n    `proxy`.\n\n`connected`::\n\tTrue if there is at least one connection to the remote cluster.\n\n`initial_connect_timeout`::\n\tThe initial connect timeout for remote cluster connections.\n\n[[skip-unavailable]]\n`skip_unavailable`::\nWhether a {ccs} skips the remote cluster if its nodes are unavailable during the\nsearch. If `true`, a {ccs} also ignores errors returned by the remote cluster.\nRefer to <<skip-unavailable-clusters>>.\n\n`seeds`::\n    Initial seed transport addresses of the remote cluster when sniff mode is\n    configured.\n\n`num_nodes_connected`::\n    Number of connected nodes in the remote cluster when sniff mode is\n    configured.\n\n`max_connections_per_cluster`::\n    Maximum number of connections maintained for the remote cluster when sniff\n    mode is configured.\n\n`proxy_address`::\n    Address for remote connections when proxy mode is configured.\n\n`num_proxy_sockets_connected`::\n    Number of open socket connections to the remote cluster when proxy mode\n    is configured.\n\n`max_proxy_socket_connections`::\n    The maximum number of socket connections to the remote cluster when proxy\n    mode is configured.\n\n`cluster_credentials`::\nThis field presents and has value of `::es_redacted::` only when the\n<<remote-clusters-api-key,remote cluster is configured with the API key based model>>.\nOtherwise, the field is not present.\n"
+}

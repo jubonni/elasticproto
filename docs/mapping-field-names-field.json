@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.102072",
+        "size": 1001,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-field-names-field.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "mapping-field-names-field",
+        "version": "8.15"
+    },
+    "doc": "[[mapping-field-names-field]]\n=== `_field_names` field\n\nThe `_field_names` field used to index the names of every field in a document that\ncontains any value other than `null`. This field was used by the\n<<query-dsl-exists-query,`exists`>> query to find documents that\neither have or don't have any non-+null+ value for a particular field.\n\nNow the `_field_names` field only indexes the names of fields that have\n`doc_values` and `norms` disabled. For fields which have either `doc_values`\nor `norm` enabled the <<query-dsl-exists-query,`exists`>> query will still\nbe available but will not use the `_field_names` field.\n\n[[disable-field-names]]\n==== Disabling `_field_names`\n\nDisabling `_field_names` is no longer possible. It is now enabled by default\nbecause it no longer carries the index overhead it once did.\n\nNOTE: Support for disabling `_field_names` has been removed. Using it on new\nindices will throw an error. Using it in pre-8.0 indices is still allowed but\nissues a deprecation warning.\n"
+}

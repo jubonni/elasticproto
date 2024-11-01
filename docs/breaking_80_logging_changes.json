@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.562087",
+        "size": 1530,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/breaking_80_logging_changes.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "breaking_80_logging_changes",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[breaking_80_logging_changes]]\n==== Logging changes\n\n.{es} JSON logs now comply with ECS.\n[%collapsible]\n====\n*Details* +\n{es}'s {ref}/logging.html[JSON logs] now comply with the\n{ecs-ref}/index.html[Elastic Common Schema (ECS)]. Previously, {es}'s JSON logs\nused a custom schema.\n\n*Impact* +\nIf your application parses {es}'s JSON logs, update it to support the new ECS\nformat.\n====\n\n.{es} no longer emits deprecation logs or slow logs in plaintext.\n[%collapsible]\n====\n*Details* +\n{es} no longer emits a plaintext version of the following logs:\n\n* Deprecation logs\n* Indexing slow logs\n* Search slow logs\n\nThese logs are now only available in JSON.\n\nServer logs are still available in both a JSON and plaintext format.\n\n*Impact* +\nIf your application parses {es}'s plaintext logs, update it to use the new ECS\nJSON logs.\n====\n\n[[audit-logs-are-rolled-over-and-archived-by-size]]\n.Audit logs are rolled-over and archived by size.\n[%collapsible]\n====\n*Details* +\nIn addition to the existing daily rollover, the security audit logs are\nnow rolled-over by disk size limit as well. Moreover, the rolled-over logs\nare also gzip compressed.\n\n*Impact* +\nThe names of rolled over audit log files (but not the name of the current log)\nhave changed.\nIf you've set up automated tools to consume these files, you must configure them\nto use the new names and to possibly account for `gzip` archives instead of\nplain text. The Docker build of {es} is not affected because it logs on `stdout`,\nwhere rollover is not performed.\n====\n"
+}

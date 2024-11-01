@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.076068",
+        "size": 1650,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-exists-query.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "query-dsl-exists-query",
+        "version": "8.15"
+    },
+    "doc": "[[query-dsl-exists-query]]\n=== Exists query\n++++\n<titleabbrev>Exists</titleabbrev>\n++++\n\nReturns documents that contain an indexed value for a field.\n\nAn indexed value may not exist for a document's field due to a variety of reasons:\n\n* The field in the source JSON is `null` or `[]`\n* The field has `\"index\" : false` and `\"doc_values\" : false` set in the mapping\n* The length of the field value exceeded an `ignore_above` setting in the mapping\n* The field value was malformed and `ignore_malformed` was defined in the mapping\n\n[[exists-query-ex-request]]\n==== Example request\n\n[source,console]\n----\nGET /_search\n{\n  \"query\": {\n    \"exists\": {\n      \"field\": \"user\"\n    }\n  }\n}\n----\n\n[[exists-query-top-level-params]]\n==== Top-level parameters for `exists`\n`field`::\n(Required, string) Name of the field you wish to search.\n+\nWhile a field is deemed non-existent if the JSON value is `null` or `[]`, these\nvalues will indicate the field does exist:\n+\n* Empty strings, such as `\"\"` or `\"-\"`\n* Arrays containing `null` and another value, such as `[null, \"foo\"]`\n* A custom <<null-value, `null-value`>>, defined in field mapping\n\n[[exists-query-notes]]\n==== Notes\n\n[[find-docs-null-values]]\n===== Find documents missing indexed values\nTo find documents that are missing an indexed value for a field,\nuse the `must_not` <<query-dsl-bool-query, boolean query>> with the `exists`\nquery.\n\nThe following search returns documents that are missing an indexed value for\nthe `user.id` field.\n\n[source,console]\n----\nGET /_search\n{\n  \"query\": {\n    \"bool\": {\n      \"must_not\": {\n        \"exists\": {\n          \"field\": \"user.id\"\n        }\n      }\n    }\n  }\n}\n----\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.918067",
+        "size": 985,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/api-java-delete-watch.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "api-java-delete-watch",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[api-java-delete-watch]]\n=== Delete watch API\n\nThe delete watch API removes a watch (identified by its `id`) from {watcher}.\nOnce removed, the document representing the watch in the `.watches` index is\ngone and it will never be executed again.\n\nPlease note that deleting a watch **does not** delete any watch execution records\nrelated to this watch from the watch history.\n\nIMPORTANT:  Deleting a watch must be done via this API only. Do not delete the\n            watch directly from the `.watches` index using Elasticsearch's DELETE\n            Document API. If the {es} {security-features} are enabled, make sure\n            no `write` privileges are granted to anyone over the `.watches` index.\n\nThe following example deletes a watch with the `my-watch` id:\n\n[source,java]\n--------------------------------------------------\nDeleteWatchResponse deleteWatchResponse = watcherClient.prepareDeleteWatch(\"my-watch\").get();\n--------------------------------------------------\n"
+}

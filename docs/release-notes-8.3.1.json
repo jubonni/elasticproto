@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.942068",
+        "size": 1367,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/release-notes-8.3.1.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "release-notes-8.3.1",
+        "version": "8.15"
+    },
+    "doc": "[[release-notes-8.3.1]]\n== {es} version 8.3.1\n\nAlso see <<breaking-changes-8.3,Breaking changes in 8.3>>.\n[[known-issues-8.3.1]]\n[float]\n=== Known issues\n\ninclude::8.0.0.asciidoc[tag=jackson-filtering-bug]\n[[bug-8.3.1]]\n[float]\n=== Bug fixes\n\nAudit::\n* Support removing ignore filters for audit logging {es-pull}87675[#87675] (issue: {es-issue}68588[#68588])\n\nIngest::\n* Don't ignore pipeline for upserts in bulk api {es-pull}87719[#87719] (issue: {es-issue}87131[#87131])\n* Geoip processor should respect the `ignore_missing` in case of missing database {es-pull}87793[#87793] (issue: {es-issue}87345[#87345])\n\nMachine Learning::\n* Improve trained model stats API performance {es-pull}87978[#87978]\n\nSnapshot/Restore::\n* Use the provided SAS token without SDK sanitation that can produce invalid signatures {es-pull}88155[#88155] (issue: {es-issue}88140[#88140])\n\nStats::\n* Run `TransportClusterInfoActions` on MANAGEMENT pool {es-pull}87679[#87679]\n\nTransform::\n* Execute `_refresh` (with system permissions) separately from `delete by query` (with user permissions) {es-pull}88005[#88005] (issue: {es-issue}88001[#88001])\n\n[[enhancement-8.3.1]]\n[float]\n=== Enhancements\n\nDiscovery-Plugins::\n* Remove redundant jackson dependencies from discovery-azure {es-pull}87898[#87898]\n\nPerformance::\n* Warn about impact of large readahead on search {es-pull}88007[#88007]\n\n\n"
+}

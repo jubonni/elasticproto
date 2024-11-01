@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.728069",
+        "size": 566,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/trigger.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "trigger",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[trigger]]\n== {watcher} triggers\n++++\n<titleabbrev>Triggers</titleabbrev>\n++++\n\nEvery watch must have a `trigger` that defines when the watch execution process\nshould start. When you create a watch, its trigger is registered with the\nappropriate _Trigger Engine_. The trigger engine is responsible for evaluating\nthe trigger and triggering the watch when needed.\n\n{watcher} is designed to support different types of triggers, but only time-based\n<<trigger-schedule,`schedule`>> triggers are currently available.\n\ninclude::trigger/schedule.asciidoc[]\n"
+}

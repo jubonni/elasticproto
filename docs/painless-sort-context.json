@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.877071",
+        "size": 1470,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-sort-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-sort-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-sort-context]]\n=== Sort context\n\nUse a Painless script to\n{ref}/sort-search-results.html[sort] the documents in a query.\n\n*Variables*\n\n`params` (`Map`, read-only)::\n        User-defined parameters passed in as part of the query.\n\n`doc` (`Map`, read-only)::\n        Contains the fields of the current document. For single-valued fields,\n        the value can be accessed via `doc['fieldname'].value`. For multi-valued\n        fields, this returns the first value; other values can be accessed\n        via `doc['fieldname'].get(index)`\n\n`_score` (`double` read-only)::\n        The similarity score of the current document.\n\n*Return*\n\n`double` or `String`::\n        The sort key. The return type depends on the value of the `type` parameter\n        in the script sort config (`\"number\"` or `\"string\"`).\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n\n*Example*\n\nTo run this example, first follow the steps in\n<<painless-context-examples, context examples>>.\n\nTo sort results by the length of the `theatre` field, submit the following query:\n\n[source,console]\n----\nGET /_search\n{\n  \"query\": {\n    \"term\": {\n      \"sold\": \"true\"\n    }\n  },\n  \"sort\": {\n    \"_script\": {\n      \"type\": \"number\",\n      \"script\": {\n        \"lang\": \"painless\",\n        \"source\": \"doc['theatre'].value.length() * params.factor\",\n        \"params\": {\n          \"factor\": 1.1\n        }\n      },\n      \"order\": \"asc\"\n    }\n  }\n}\n----\n// TEST[setup:seats]\n"
+}

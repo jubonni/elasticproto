@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.311069",
+        "size": 1227,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/gsub-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "gsub-processor",
+        "version": "8.15"
+    },
+    "doc": "[[gsub-processor]]\n=== Gsub processor\n++++\n<titleabbrev>Gsub</titleabbrev>\n++++\n\nConverts a string field by applying a regular expression and a replacement.\nIf the field is an array of string, all members of the array will be converted. If any non-string values are encountered, the processor will throw an exception. \n\n[[gsub-options]]\n.Gsub Options\n[options=\"header\"]\n|======\n| Name              | Required  | Default  | Description\n| `field`           | yes       | -        | The field to apply the replacement to\n| `pattern`         | yes       | -        | The pattern to be replaced\n| `replacement`     | yes       | -        | The string to replace the matching patterns with\n| `target_field`    | no        | `field`  | The field to assign the converted value to, by default `field` is updated in-place\n| `ignore_missing`  | no        | `false`  | If `true` and `field` does not exist or is `null`, the processor quietly exits without modifying the document\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"gsub\": {\n    \"field\": \"field1\",\n    \"pattern\": \"\\\\.\",\n    \"replacement\": \"-\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

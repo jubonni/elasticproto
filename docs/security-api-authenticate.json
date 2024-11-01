@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.541066",
+        "size": 1711,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-authenticate.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-authenticate",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-authenticate]]\n=== Authenticate API\n++++\n<titleabbrev>Authenticate</titleabbrev>\n++++\n\nEnables you to submit a request with a basic auth header to\nauthenticate a user and retrieve information about the authenticated user.\n\n\n[[security-api-authenticate-request]]\n==== {api-request-title}\n\n`GET /_security/_authenticate`\n\n[[security-api-authenticate-desc]]\n==== {api-description-title}\n\nA successful call returns a JSON structure that shows user information such as their username, the roles that are\nassigned to the user, any assigned metadata, and information about the realms that authenticated and authorized the user.\n\n[[security-api-authenticate-response-codes]]\n==== {api-response-codes-title}\n\nIf the user cannot be authenticated, this API returns a 401 status code.\n\n[[security-api-authenticate-example]]\n==== {api-examples-title}\n\nTo authenticate a user, submit a GET request to the\n`/_security/_authenticate` endpoint:\n\n[source,console]\n--------------------------------------------------\nGET /_security/_authenticate\n--------------------------------------------------\n\nThe following example output provides information about the \"rdeniro\" user:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"username\": \"rdeniro\",\n  \"roles\": [\n    \"admin\"\n  ],\n  \"full_name\": null,\n  \"email\":  null,\n  \"metadata\": { },\n  \"enabled\": true,\n  \"authentication_realm\": {\n    \"name\" : \"file\",\n    \"type\" : \"file\"\n  },\n  \"lookup_realm\": {\n    \"name\" : \"file\",\n    \"type\" : \"file\"\n  },\n  \"authentication_type\": \"realm\"\n}\n--------------------------------------------------\n// TESTRESPONSE[s/\"rdeniro\"/\"$body.username\"/]\n// TESTRESPONSE[s/\"admin\"/\"_es_test_root\"/]\n"
+}

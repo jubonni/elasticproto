@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.547067",
+        "size": 767,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-limitations.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "watcher-limitations",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[watcher-limitations]]\n== {watcher} limitations\n[subs=\"attributes\"]\n++++\n<titleabbrev>Limitations</titleabbrev>\n++++\n\n[discrete]\n=== Watches are not updated when file based scripts change\n\nWhen you refer to a file script in a watch, the watch itself is not updated\nif you change the script on the filesystem.\n\nCurrently, the only way to reload a file script in a watch is to delete \nthe watch and recreate it.\n\n[discrete]\n=== Security integration\n\nWhen the {security-features} are enabled, a watch stores information about what\nthe user who stored the watch is allowed to execute **at that time**. This means,\nif those permissions change over time, the watch will still be able to execute\nwith the permissions that existed when the watch was created.\n"
+}

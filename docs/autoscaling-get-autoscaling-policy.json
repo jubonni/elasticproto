@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.204081",
+        "size": 2092,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-get-autoscaling-policy.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "autoscaling-get-autoscaling-policy",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[autoscaling-get-autoscaling-policy]]\n=== Get autoscaling policy API\n++++\n<titleabbrev>Get autoscaling policy</titleabbrev>\n++++\n\nNOTE: {cloud-only}\n\nGet {cloud}/ec-autoscaling.html[autoscaling] policy.\n\n[[autoscaling-get-autoscaling-policy-request]]\n==== {api-request-title}\n\n//////////////////////////\n[source,console]\n--------------------------------------------------\nPUT /_autoscaling/policy/my_autoscaling_policy\n{\n  \"roles\" : [],\n  \"deciders\": {\n    \"fixed\": {\n    }\n  }\n}\n--------------------------------------------------\n// TESTSETUP\n\n\n[source,console]\n--------------------------------------------------\nDELETE /_autoscaling/policy/my_autoscaling_policy\n--------------------------------------------------\n// TEST\n// TEARDOWN\n\n//////////////////////////\n\n[source,console]\n--------------------------------------------------\nGET /_autoscaling/policy/<name>\n--------------------------------------------------\n// TEST[s/<name>/my_autoscaling_policy/]\n\n[[autoscaling-get-autoscaling-policy-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have\n`manage_autoscaling` cluster privileges. For more information, see\n<<security-privileges>>.\n\n[[autoscaling-get-autoscaling-policy-desc]]\n==== {api-description-title}\n\nThis API gets an autoscaling policy with the provided name.\n\n[[autoscaling-get-autoscaling-policy-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\n[[autoscaling-get-autoscaling-policy-examples]]\n==== {api-examples-title}\n\nThis example gets an autoscaling policy named `my_autoscaling_policy`.\n\n[source,console]\n--------------------------------------------------\nGET /_autoscaling/policy/my_autoscaling_policy\n--------------------------------------------------\n// TEST\n\nThe API returns the following result:\n\n[source,console-result]\n--------------------------------------------------\n{\n   \"roles\": <roles>,\n   \"deciders\": <deciders>\n}\n--------------------------------------------------\n// TEST[s/<roles>/$body.roles/]\n// TEST[s/<deciders>/$body.deciders/]\n"
+}

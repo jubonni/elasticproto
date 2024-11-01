@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.402070",
+        "size": 1642,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/set-security-user-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "set-security-user-processor",
+        "version": "8.15"
+    },
+    "doc": "[[set-security-user-processor]]\n==== Pre-processing documents to add security details\n\n// If an index is shared by many small users it makes sense to put all these users\n// into the same index. Having a dedicated index or shard per user is wasteful.\n// TBD: It's unclear why we're putting users in an index here.\n\nTo guarantee that a user reads only their own documents, it makes sense to set up\ndocument level security. In this scenario, each document must have the username\nor role name associated with it, so that this information can be used by the\nrole query for document level security. This is a situation where the\n<<ingest-node-set-security-user-processor,set security user processor>> ingest processor can help.\n\nNOTE: Document level security doesn't apply to write APIs. You must use unique\nids for each user that uses the same data stream or index, otherwise they might overwrite other\nusers' documents. The ingest processor just adds properties for the current\nauthenticated user to the documents that are being indexed.\n\nThe <<ingest-node-set-security-user-processor,set security user processor>> attaches user-related details (such as\n`username`,  `roles`, `email`, `full_name` and `metadata` ) from the current\nauthenticated user to the current document by pre-processing the ingest. When\nyou index data with an ingest pipeline, user details are automatically attached\nto the document. If the authenticating credential is an API key, the API key\n`id`, `name` and `metadata` (if it exists and is non-empty) are also attached to\nthe document.\n\nFor more information see <<ingest>> and\n<<ingest-node-set-security-user-processor>>\n"
+}

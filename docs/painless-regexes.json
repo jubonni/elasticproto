@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.868068",
+        "size": 1573,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-regexes.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "painless-regexes",
+        "version": "8.15"
+    },
+    "doc": "[[painless-regexes]]\n=== Regexes\n\nRegular expression constants are directly supported. To ensure fast performance,\nthis is the only mechanism for creating patterns. Regular expressions\nare always constants and compiled efficiently a single time.\n\n[source,painless]\n---------------------------------------------------------\nPattern p = /[aeiou]/\n---------------------------------------------------------\n\nWARNING: A poorly written regular expression can significantly slow performance.\nIf possible, avoid using regular expressions, particularly in frequently run\nscripts.\n\n[[pattern-flags]]\n==== Pattern flags\n\nYou can define flags on patterns in Painless by adding characters after the\ntrailing `/` like `/foo/i` or `/foo \\w #comment/iUx`. Painless exposes all of\nthe flags from Java's\nhttps://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html[\nPattern class] using these characters:\n\n[cols=\"<,<,<\",options=\"header\",]\n|=======================================================================\n| Character | Java Constant | Example\n|`c` | CANON_EQ                  | `'\u00e5' ==~ /a\u030a/c` (open in hex editor to see)\n|`i` | CASE_INSENSITIVE          | `'A' ==~ /a/i`\n|`l` | LITERAL                   | `'[a]' ==~ /[a]/l`\n|`m` | MULTILINE                 | `'a\\nb\\nc' =~ /^b$/m`\n|`s` | DOTALL (aka single line)  | `'a\\nb\\nc' =~ /.b./s`\n|`U` | UNICODE_CHARACTER_CLASS   | `'\u0190' ==~ /\\\\w/U`\n|`u` | UNICODE_CASE              | `'\u0190' ==~ /\u025b/iu`\n|`x` | COMMENTS (aka extended)   | `'a' ==~ /a #comment/x`\n|======================================================================="
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.897067",
+        "size": 1224,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-license.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "delete-license",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-license]]\n=== Delete license API\n++++\n<titleabbrev>Delete license</titleabbrev>\n++++\n\nThis API enables you to delete licensing information.\n\n[discrete]\n==== Request\n\n`DELETE /_license`\n\n[discrete]\n==== Description\n\nWhen your license expires, {xpack} operates in a degraded mode. For more\ninformation, see\n{kibana-ref}/managing-licenses.html#license-expiration[License expiration].\n\n[[delete-license-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n* If the <<operator-privileges,{operator-feature}>> is enabled, only operator\nusers can use this API.\n\n[discrete]\n==== Examples\n\nThe following example queries the info API:\n\n[source,console]\n------------------------------------------------------------\nDELETE /_license\n------------------------------------------------------------\n// TEST[skip:license testing issues]\n\nWhen the license is successfully deleted, the API returns the following response:\n[source,js]\n------------------------------------------------------------\n{\n  \"acknowledged\": true\n}\n------------------------------------------------------------\n// NOTCONSOLE"
+}

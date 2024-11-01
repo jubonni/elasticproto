@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.654068",
+        "size": 2063,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/test-grok-pattern.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "test-grok-pattern",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[test-grok-pattern]]\n= Test Grok pattern API\n\n++++\n<titleabbrev>Test Grok pattern</titleabbrev>\n++++\n\nTests a Grok pattern on lines of text, see also <<grok,Grokking grok>>.\n\n[discrete]\n[[test-grok-pattern-request]]\n== {api-request-title}\n\n`GET _text_structure/test_grok_pattern` +\n\n`POST _text_structure/test_grok_pattern` +\n\n[discrete]\n[[test-grok-pattern-desc]]\n== {api-description-title}\n\nThe test Grok pattern API allows you to execute a Grok pattern on one\nor more lines of text. It returns whether the lines match the pattern\ntogether with the offsets and lengths of the matched substrings.\n\n[discrete]\n[[test-grok-pattern-query-parms]]\n== {api-query-parms-title}\n\n`ecs_compatibility`::\n(Optional, string) The mode of compatibility with ECS compliant Grok patterns.\nUse this parameter to specify whether to use ECS Grok patterns instead of\nlegacy ones when the structure finder creates a Grok pattern. Valid values\nare `disabled` and `v1`. The default value is `disabled`.\n\n[discrete]\n[[test-grok-pattern-request-body]]\n== {api-request-body-title}\n\n`grok_pattern`::\n(Required, string)\nThe Grok pattern to run on the lines of text.\n\n`text`::\n(Required, array of strings)\nThe lines of text to run the Grok pattern on.\n\n[discrete]\n[[test-grok-pattern-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nGET _text_structure/test_grok_pattern\n{\n  \"grok_pattern\": \"Hello %{WORD:first_name} %{WORD:last_name}\",\n  \"text\": [\n    \"Hello John Doe\",\n    \"this does not match\"\n  ]\n}\n--------------------------------------------------\n\nThe API returns the following response:\n\n[source,console-result]\n----\n{\n  \"matches\": [\n    {\n      \"matched\": true,\n      \"fields\": {\n        \"first_name\": [\n          {\n            \"match\": \"John\",\n            \"offset\": 6,\n            \"length\": 4\n          }\n        ],\n        \"last_name\": [\n          {\n            \"match\": \"Doe\",\n            \"offset\": 11,\n            \"length\": 3\n          }\n        ]\n      }\n    },\n    {\n      \"matched\": false\n    }\n  ]\n}\n----\n"
+}

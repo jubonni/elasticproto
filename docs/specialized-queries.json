@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.507066",
+        "size": 1891,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/specialized-queries.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "specialized-queries",
+        "version": "8.15"
+    },
+    "doc": "[[specialized-queries]]\n\n== Specialized queries\n\nThis group contains queries which do not fit into the other groups:\n\n<<query-dsl-distance-feature-query,`distance_feature` query>>::\nA query that computes scores based on the dynamically computed distances\nbetween the origin and documents' `date`, `date_nanos`, and `geo_point` fields.\nIt is able to efficiently skip non-competitive hits.\n\n<<query-dsl-mlt-query,`more_like_this` query>>::\nThis query finds documents which are similar to the specified text, document,\nor collection of documents.\n\n<<query-dsl-percolate-query,`percolate` query>>::\nThis query finds queries that are stored as documents that match with\nthe specified document.\n\n<<query-dsl-rank-feature-query,`rank_feature` query>>::\nA query that computes scores based on the values of numeric features and is\nable to efficiently skip non-competitive hits.\n\n<<query-dsl-script-query,`script` query>>::\nThis query allows a script to act as a filter. Also see the\n<<query-dsl-function-score-query,`function_score` query>>.\n\n<<query-dsl-script-score-query,`script_score` query>>::\nA query that allows to modify the score of a sub-query with a script.\n\n<<query-dsl-wrapper-query,`wrapper` query>>::\nA query that accepts other queries as json or yaml string.\n\n<<query-dsl-pinned-query,`pinned` query>>::\nA query that promotes selected documents over others matching a given query.\n\n<<query-dsl-rule-query,`rule` query>>::\nA query that supports applying query-based contextual rules, defined using the <<query-rules-apis,Query Rules API>>, to a given query.\n\ninclude::distance-feature-query.asciidoc[]\n\ninclude::mlt-query.asciidoc[]\n\ninclude::percolate-query.asciidoc[]\n\ninclude::rank-feature-query.asciidoc[]\n\ninclude::script-query.asciidoc[]\n\ninclude::script-score-query.asciidoc[]\n\ninclude::wrapper-query.asciidoc[]\n\ninclude::pinned-query.asciidoc[]\n\ninclude::rule-query.asciidoc[]\n"
+}

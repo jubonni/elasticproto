@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.856071",
+        "size": 2104,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-min-should-match-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-min-should-match-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-min-should-match-context]]\n=== Minimum should match context\n\nUse a Painless script to specify the\n{ref}/query-dsl-terms-set-query.html[minimum] number of terms that a\nspecified field needs to match with for a document to be part of the query\nresults.\n\n*Variables*\n\n`params` (`Map`, read-only)::\n        User-defined parameters passed in as part of the query.\n\n`params['num_terms']` (`int`, read-only)::\n        The number of terms specified to match with.\n\n`doc` (`Map`, read-only)::\n        Contains the fields of the current document where each field is a\n        `List` of values.\n\n*Return*\n\n`int`::\n        The minimum number of terms required to match the current document.\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n\n*Example*\n\nTo run this example, first follow the steps in\n<<painless-context-examples, context examples>>.\n\nImagine that you want to find seats to performances by your favorite\nactors. You have a list of favorite actors in mind, and you want\nto find performances where the cast includes at least a certain\nnumber of them.\n\nTo achieve this result, use a `terms_set` query with\n`minimum_should_match_script`. To make the query request more configurable,\nyou can define `min_actors_to_see` as a script parameter.\n\nTo ensure that the parameter `min_actors_to_see` doesn't exceed\nthe number of favorite actors, you can use `num_terms` to get\nthe number of actors in the list and `Math.min` to get the lesser\nof the two.\n\n[source,Painless]\n----\nMath.min(params['num_terms'], params['min_actors_to_see'])\n----\n\nThe following request finds seats to performances with at least\ntwo of the three specified actors.\n\n[source,console]\n----\nGET seats/_search\n{\n  \"query\": {\n    \"terms_set\": {\n      \"actors\": {\n        \"terms\": [\n          \"smith\",\n          \"earns\",\n          \"black\"\n        ],\n        \"minimum_should_match_script\": {\n          \"source\": \"Math.min(params['num_terms'], params['min_actors_to_see'])\",\n          \"params\": {\n            \"min_actors_to_see\": 2\n          }\n        }\n      }\n    }\n  }\n}\n----\n// TEST[setup:seats]\n"
+}

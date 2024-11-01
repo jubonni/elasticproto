@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.783069",
+        "size": 2162,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/create-connector-sync-job-api.html",
+        "type": "documentation",
+        "role": [
+            "child_attributes",
+            "child_attributes"
+        ],
+        "has_code": true,
+        "title": "create-connector-sync-job-api",
+        "version": "8.15"
+    },
+    "doc": "[[create-connector-sync-job-api]]\n=== Create connector sync job API\n++++\n<titleabbrev>Create connector sync job</titleabbrev>\n++++\n\nbeta::[]\n\n\nCreates a connector sync job.\n\nTo get started with Connector APIs, check out <<es-connectors-tutorial-api, our tutorial>>.\n\n\n[source, console]\n--------------------------------------------------\nPOST _connector/_sync_job\n{\n  \"id\": \"connector-id\",\n  \"job_type\": \"full\",\n  \"trigger_method\": \"on_demand\"\n}\n--------------------------------------------------\n// TEST[skip:there's no way to clean up after this code snippet, as we don't know the id ahead of time]\n\n\n[[create-connector-sync-job-api-request]]\n==== {api-request-title}\n`POST _connector/_sync_job`\n\n\n[[create-connector-sync-job-api-prereqs]]\n==== {api-prereq-title}\n\n* To sync data using self-managed connectors, you need to deploy the <<es-connectors-deploy-connector-service,Elastic connector service>>. on your own infrastructure. This service runs automatically on Elastic Cloud for Elastic managed connectors.\n* The `id` parameter should reference an existing connector.\n\n[[create-connector-sync-job-api-desc]]\n==== {api-description-title}\n\nCreates a connector sync job document in the internal index and initializes its counters and timestamps with default values.\nCertain values can be updated via the API.\n\n[role=\"child_attributes\"]\n[[create-connector-sync-job-api-request-body]]\n==== {api-request-body-title}\n\n`id`::\n(Required, string) The id of the connector to create the sync job for.\n\n`job_type`::\n(Optional, string) The job type of the created sync job. Defaults to `full`.\n\n`trigger_method`::\n(Optional, string) The trigger method of the created sync job. Defaults to `on_demand`.\n\n\n[role=\"child_attributes\"]\n[[create-connector-sync-job-api-response-body]]\n==== {api-response-body-title}\n\n`id`::\n(string) The ID associated with the connector sync job document.\n\n[[create-connector-sync-job-api-response-codes]]\n==== {api-response-codes-title}\n\n`201`::\nIndicates that the connector sync job was created successfully.\n\n`400`::\nIndicates that the request was malformed.\n\n`404`::\nIndicates that either the index or the referenced connector is missing.\n"
+}

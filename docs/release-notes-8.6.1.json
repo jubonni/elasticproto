@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.956067",
+        "size": 1489,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/release-notes-8.6.1.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "release-notes-8.6.1",
+        "version": "8.15"
+    },
+    "doc": "[[release-notes-8.6.1]]\n== {es} version 8.6.1\n\nAlso see <<breaking-changes-8.6,Breaking changes in 8.6>>.\n\n[[known-issues-8.6.1]]\n[float]\n=== Known issues\n\ninclude::8.6.0.asciidoc[tag=reconciliation-imbalance-known-issue]\n\ninclude::8.4.0.asciidoc[tag=ingest-processor-log4j-cluster-instability-known-issue]\n\n[[bug-8.6.1]]\n[float]\n=== Bug fixes\n\nData streams::\n* Fix wildcard expansion for delete-by-query on data streams {es-pull}92891[#92891]\n* Fix wildcard expansion for update-by-query on data streams {es-pull}92717[#92717] (issue: {es-issue}90272[#90272])\n* Patch jackson-core with locally modified class #92984\nThis fixes an issue in jackson parsing (issue: {es-issue}92480[#92480])\n\nDistributed::\n* Fix `ByteArrayIndexInput` with nonzero offset {es-pull}93205[#93205]\n\nILM+SLM::\n* Get repository metadata from the cluster state doesn't throw an exception if a repo is missing {es-pull}92914[#92914]\n\nInfra/Core::\n* Don't announce ready until file settings are applied {es-pull}92856[#92856] (issue: {es-issue}92812[#92812])\n\nMachine Learning::\n* Utilise parallel allocations where the inference request contains multiple documents {es-pull}92359[#92359]\n\nMapping::\n* Fix `_bulk` api `dynamic_templates` and explicit `op_type` {es-pull}92687[#92687]\n\nSearch::\n* Avoid doing I/O when fetching min and max for keyword fields {es-pull}92026[#92026]\n* Reduce memory required for search responses when many shards are unavailable {es-pull}91365[#91365] (issue: {es-issue}90622[#90622])\n\n\n"
+}

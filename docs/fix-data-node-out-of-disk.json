@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.129074",
+        "size": 1262,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/fix-data-node-out-of-disk.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "fix-data-node-out-of-disk",
+        "version": "8.15"
+    },
+    "doc": "[[fix-data-node-out-of-disk]]\n== Fix data nodes out of disk\n\n{es} is using data nodes to distribute your data inside the cluster. If one or more of these nodes are running\nout of space, {es} takes action to redistribute your data within the nodes so all nodes have enough available\ndisk space. If {es} cannot facilitate enough available space in a node, then you will need to intervene in one\nof two ways:\n\n. <<increase-capacity-data-node, Increase the disk capacity of your cluster>>\n. <<decrease-disk-usage-data-node, Reduce the disk usage by decreasing your data volume>>\n\n[[increase-capacity-data-node]]\n=== Increase the disk capacity of data nodes\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/disk/increase-data-node-capacity-widget.asciidoc[]\n\n[[decrease-disk-usage-data-node]]\n=== Decrease the disk usage of data nodes\nIn order to decrease the disk usage in your cluster without losing any data, you can try reducing the replicas of indices.\n\nNOTE: Reducing the replicas of an index can potentially reduce search throughput and data redundancy. However, it\ncan quickly give the cluster breathing room until a more permanent solution is in place.\n\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/disk/decrease-data-node-disk-usage-widget.asciidoc[]\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.679079",
+        "size": 412,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-apis.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "ml-apis",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-apis]]\n= {ml-cap} APIs\n\nYou can use the following APIs to retrieve information related to the\n{stack-ml-features}:\n\n* <<get-ml-info,Get machine learning info>>\n* <<get-ml-memory,Get machine learning memory stats>>\n\nThe following API is useful when you upgrade:\n\n* <<ml-set-upgrade-mode,Set upgrade mode>>\n\nSee also <<ml-ad-apis>>, <<ml-df-analytics-apis>>, and <<ml-df-trained-models-apis>>.\n"
+}

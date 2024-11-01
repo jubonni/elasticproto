@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.137068",
+        "size": 2746,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/fleet-search.html",
+        "type": "documentation",
+        "role": [
+            "xpack",
+            "child_attributes"
+        ],
+        "has_code": false,
+        "title": "fleet-search",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[fleet-search]]\n=== Fleet search API\n++++\n<titleabbrev>Fleet search</titleabbrev>\n++++\n\nThe purpose of the fleet search api is to provide a search api where the search\nwill only be executed after provided checkpoint has been processed and is visible\nfor searches inside of Elasticsearch.\n\nNOTE: The fleet search API is designed for indirect use through fleet server. Direct use is\nnot supported. Elastic reserves the right to change or remove this feature in future releases\nwithout prior notice.\n\n[discrete]\n[[wait-for-checkpoint-functionality]]\n== Wait for checkpoint functionality\n\nThe fleet search API supports the optional parameter `wait_for_checkpoints`. This parameter\nis a list of sequence number checkpoints. When this parameter is present, the search will\nonly be executed on local shards after the all operations up to and including the provided\nsequence number checkpoint are visible for search. Indexed operations become visible after a\nrefresh. The checkpoints are indexed by shard.\n\nIf a timeout occurs before the checkpoint has been refreshed into Elasticsearch,\nthe search request will timeout.\n\nThe fleet search API only supports searches against a single target. If an index alias\nis supplied as the search target, it must resolve to a single concrete index.\n\n[discrete]\n[[fleet-search-partial-responses]]\n== Allow partial results\n\nBy default, the Elasticsearch search api will allow <<search-partial-responses,partial search results>>.\nWith this fleet API, it is common to configure this to be `false` or to check in the response\nto ensure each shard search was successful. If these precautions are not taken, it is\npossible for search results to be successfully returned even if one or more shards\ntimed out.\n\n[[fleet-search-api-request]]\n==== {api-request-title}\n\n`GET /<target>/_fleet/_fleet_search`\n\n[[fleet-search-api-path-params]]\n==== {api-path-parms-title}\n\n`<target>`::\n(Required, string)\nA single target to search. If the target is an index alias, it must resolve to a single index.\n\n[role=\"child_attributes\"]\n[[fleet-search-api-query-parms]]\n==== {api-query-parms-title}\n\n`wait_for_checkpoints`::\n(Optional, list) A comma separated list of checkpoints. When configured, the search API will\nonly be executed on a shard after the relevant checkpoint has become visible for search.\nDefaults to an empty list which will cause Elasticsearch to immediately execute the search.\n\n`allow_partial_search_results`::\n(Optional, Boolean)\nIf `true`, returns partial results if there are shard request timeouts or\n<<shard-failures,shard failures>>. If `false`, returns an error with\nno partial results. Defaults to the configured cluster setting `search.default_allow_partial_results` which\nis `true` by default.\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.774072",
+        "size": 458,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/node-name.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "node-name",
+        "version": "8.15"
+    },
+    "doc": "[[node-name]]\n[discrete]\n==== Node name setting\n\n{es} uses `node.name` as a human-readable identifier for a\nparticular instance of {es}. This name is included in the response\nof many APIs. The node name defaults to the hostname of the machine when\n{es} starts, but can be configured explicitly in\n`elasticsearch.yml`:\n\n[source,yaml]\n--------------------------------------------------\nnode.name: prod-data-2\n--------------------------------------------------\n"
+}

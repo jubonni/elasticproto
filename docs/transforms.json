@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.721072",
+        "size": 845,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/transforms.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "transforms",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[transforms]]\n= Transforming data\n\n// tag::transform-intro[]\n{transforms-cap} enable you to convert existing {es} indices into summarized\nindices, which provide opportunities for new insights and analytics.\n// end::transform-intro[]\nFor example, you can use {transforms} to pivot your data into entity-centric\nindices that summarize the behavior of users or sessions or other entities in\nyour data. Or you can use {transforms} to find the latest document among all the\ndocuments that have a certain unique key.\n\n* <<transform-overview>>\n* <<transform-setup>>\n* <<transform-usage>>\n* <<transform-alerts>>\n* <<transform-scale>>\n* <<transform-checkpoints>>\n* <<transform-api-quickref>>\n* <<ecommerce-transforms>>\n* <<transform-examples>>\n* <<transform-painless-examples>>\n* <<transform-troubleshooting>>\n* <<transform-limitations>>\n"
+}

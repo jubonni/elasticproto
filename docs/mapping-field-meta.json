@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.622066",
+        "size": 1693,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-field-meta.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "mapping-field-meta",
+        "version": "8.15"
+    },
+    "doc": "[[mapping-field-meta]]\n=== `meta`\n\nMetadata attached to the field. This metadata is opaque to Elasticsearch, it is\nonly useful for multiple applications that work on the same indices to share\nmeta information about fields such as units\n\n[source,console]\n------------\nPUT my-index-000001\n{\n  \"mappings\": {\n    \"properties\": {\n      \"latency\": {\n        \"type\": \"long\",\n        \"meta\": {\n          \"unit\": \"ms\"\n        }\n      }\n    }\n  }\n}\n------------\n// TEST\n\nNOTE: Field metadata enforces at most 5 entries, that keys have a length that\nis less than or equal to 20, and that values are strings whose length is less\nthan or equal to 50.\n\nNOTE: Field metadata is updatable by submitting a mapping update. The metadata\nof the update will override the metadata of the existing field.\n\nNOTE: Field metadata is not supported on object or nested fields.\n\nElastic products use the following standard metadata entries for fields. You\ncan follow these same metadata conventions to get a better out-of-the-box\nexperience with your data.\n\nunit::\n\n  The unit associated with a numeric field: `\"percent\"`, `\"byte\"` or a\n  <<time-units,time unit>>. By default, a field does not have a unit.\n  Only valid for numeric fields. The convention for percents is to use\n  value `1` to mean `100%`.\n\nmetric_type::\n\n  The metric type of a numeric field: `\"gauge\"` or `\"counter\"`. A gauge is a\n  single-value measurement that can go up or down over time, such as a\n  temperature. A counter is a single-value cumulative counter that only goes\n  up, such as the number of requests processed by a web server, or resets to 0 (zero).\n  By default, no metric type is associated with a field. Only valid for numeric fields.\n"
+}

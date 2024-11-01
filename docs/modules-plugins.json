@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.937067",
+        "size": 486,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-plugins.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "modules-plugins",
+        "version": "8.15"
+    },
+    "doc": "[[modules-plugins]]\n== Plugins\n\nPlugins are a way to enhance the basic Elasticsearch functionality in a\ncustom manner. They range from adding custom mapping types, custom\nanalyzers (in a more built in fashion), custom script engines, custom discovery\nand more.\n\nFor information about selecting and installing plugins, see\n{plugins}/index.html[{es} Plugins and Integrations].\n\nFor information about developing your own plugin, see\n{plugins}/plugin-authors.html[Help for plugin authors].\n"
+}

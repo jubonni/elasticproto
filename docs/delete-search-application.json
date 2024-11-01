@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.905066",
+        "size": 1447,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-search-application.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "delete-search-application",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-search-application]]\n=== Delete Search Application\n\nbeta::[]\n\n++++\n<titleabbrev>Delete Search Application</titleabbrev>\n++++\n\nRemoves a Search Application and its associated alias.\nIndices attached to the Search Application are not removed.\n\n[[delete-search-application-request]]\n==== {api-request-title}\n\n`DELETE _application/search_application/<name>`\n\n[[delete-search-application-prereq]]\n==== {api-prereq-title}\n\nRequires the `manage_search_application` cluster privilege.\nAlso requires <<privileges-list-indices,manage privileges>> on all indices that are included in the Search Application.\n\n[[delete-search-application-path-params]]\n==== {api-path-parms-title}\n\n`<name>`::\n(Required, string)\n\n[[delete-search-application-response-codes]]\n==== {api-response-codes-title}\n\n`400`::\nThe `name` was not provided.\n\n`404` (Missing resources)::\nNo Search Application matching `name` could be found.\n\n[[delete-search-application-example]]\n==== {api-examples-title}\n\nThe following example deletes the Search Application named `my-app`:\n\n////\n[source,console]\n----\nPUT /index1\n\nPUT _application/search_application/my-app\n{\n  \"indices\": [ \"index1\" ],\n  \"template\": {\n    \"script\": {\n      \"source\": {\n        \"query\": {\n          \"query_string\": {\n            \"query\": \"{{query_string}}\"\n          }\n        }\n      }\n    }\n  }\n}\n----\n// TESTSETUP\n////\n\n[source,console]\n----\nDELETE _application/search_application/my-app/\n----\n"
+}

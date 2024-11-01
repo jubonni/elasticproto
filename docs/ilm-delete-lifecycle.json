@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.897067",
+        "size": 2050,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-delete-lifecycle.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ilm-delete-lifecycle",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ilm-delete-lifecycle]]\n=== Delete lifecycle policy API\n++++\n<titleabbrev>Delete policy</titleabbrev>\n++++\n\nDeletes an index <<index-lifecycle-management,lifecycle>> policy.\n\n[[ilm-delete-lifecycle-request]]\n==== {api-request-title}\n\n`DELETE _ilm/policy/<policy_id>`\n\n[[ilm-delete-lifecycle-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage_ilm`\ncluster privilege to use this API. For more information, see\n<<security-privileges>>.\n\n[[ilm-delete-lifecycle-desc]]\n==== {api-description-title}\n\nDeletes the specified lifecycle policy definition. You cannot delete policies\nthat are currently in use. If the policy is being used to manage any indices,\nthe request fails and returns an error.\n\n[[ilm-delete-lifecycle-path-params]]\n==== {api-path-parms-title}\n\n`<policy_id>`::\n  (Required, string) Identifier for the policy.\n\n[[ilm-delete-lifecycle-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n\n[[ilm-delete-lifecycle-example]]\n==== {api-examples-title}\n\nThe following example deletes `my_policy`:\n\n//////////////////////////\n\n[source,console]\n--------------------------------------------------\nPUT _ilm/policy/my_policy\n{\n  \"policy\": {\n    \"phases\": {\n      \"warm\": {\n        \"min_age\": \"10d\",\n        \"actions\": {\n          \"forcemerge\": {\n            \"max_num_segments\": 1\n          }\n        }\n      },\n      \"delete\": {\n        \"min_age\": \"30d\",\n        \"actions\": {\n          \"delete\": {}\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n// TEST\n\n//////////////////////////\n\n[source,console]\n--------------------------------------------------\nDELETE _ilm/policy/my_policy\n--------------------------------------------------\n// TEST[continued]\n\nWhen the policy is successfully deleted, you receive the following result:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"acknowledged\": true\n}\n--------------------------------------------------\n"
+}

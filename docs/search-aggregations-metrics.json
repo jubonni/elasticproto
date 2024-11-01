@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.624066",
+        "size": 2249,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "search-aggregations-metrics",
+        "version": "8.15"
+    },
+    "doc": "[[search-aggregations-metrics]]\n== Metrics aggregations\n\nThe aggregations in this family compute metrics based on values extracted in one way or another from the documents that\nare being aggregated. The values are typically extracted from the fields of the document (using the field data), but\ncan also be generated using scripts.\n\nNumeric metrics aggregations are a special type of metrics aggregation which output numeric values. Some aggregations output\na single numeric metric (e.g. `avg`) and are called `single-value numeric metrics aggregation`, others generate multiple\nmetrics (e.g. `stats`) and are called `multi-value numeric metrics aggregation`. The distinction between single-value and\nmulti-value numeric metrics aggregations plays a role when these aggregations serve as direct sub-aggregations of some\nbucket aggregations (some bucket aggregations enable you to sort the returned buckets based on the numeric metrics in each bucket).\n\ninclude::metrics/avg-aggregation.asciidoc[]\n\ninclude::metrics/boxplot-aggregation.asciidoc[]\n\ninclude::metrics/cardinality-aggregation.asciidoc[]\n\ninclude::metrics/extendedstats-aggregation.asciidoc[]\n\ninclude::metrics/geobounds-aggregation.asciidoc[]\n\ninclude::metrics/geocentroid-aggregation.asciidoc[]\n\ninclude::metrics/geoline-aggregation.asciidoc[]\n\ninclude::metrics/cartesian-bounds-aggregation.asciidoc[]\n\ninclude::metrics/cartesian-centroid-aggregation.asciidoc[]\n\ninclude::metrics/matrix-stats-aggregation.asciidoc[]\n\ninclude::metrics/max-aggregation.asciidoc[]\n\ninclude::metrics/median-absolute-deviation-aggregation.asciidoc[]\n\ninclude::metrics/min-aggregation.asciidoc[]\n\ninclude::metrics/percentile-rank-aggregation.asciidoc[]\n\ninclude::metrics/percentile-aggregation.asciidoc[]\n\ninclude::metrics/rate-aggregation.asciidoc[]\n\ninclude::metrics/scripted-metric-aggregation.asciidoc[]\n\ninclude::metrics/stats-aggregation.asciidoc[]\n\ninclude::metrics/string-stats-aggregation.asciidoc[]\n\ninclude::metrics/sum-aggregation.asciidoc[]\n\ninclude::metrics/t-test-aggregation.asciidoc[]\n\ninclude::metrics/tophits-aggregation.asciidoc[]\n\ninclude::metrics/top-metrics-aggregation.asciidoc[]\n\ninclude::metrics/valuecount-aggregation.asciidoc[]\n\ninclude::metrics/weighted-avg-aggregation.asciidoc[]\n"
+}

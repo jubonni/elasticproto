@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.479084",
+        "size": 291,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-ip-functions.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-ip-functions",
+        "version": "8.15"
+    },
+    "doc": "[[esql-ip-functions]]\n==== {esql} IP functions\n\n++++\n<titleabbrev>IP functions</titleabbrev>\n++++\n\n{esql} supports these IP functions:\n\n// tag::ip_list[]\n* <<esql-cidr_match>>\n* <<esql-ip_prefix>>\n// end::ip_list[]\n\ninclude::layout/cidr_match.asciidoc[]\ninclude::layout/ip_prefix.asciidoc[]\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.850066",
+        "size": 1064,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "watcher-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[watcher-api]]\n== Watcher APIs\n\n* <<watcher-api-put-watch>>\n* <<watcher-api-get-watch>>\n* <<watcher-api-query-watches>>\n* <<watcher-api-delete-watch>>\n* <<watcher-api-execute-watch>>\n* <<watcher-api-ack-watch>>\n* <<watcher-api-activate-watch>>\n* <<watcher-api-deactivate-watch>>\n* <<watcher-api-update-settings>>\n* <<watcher-api-get-settings>>\n* <<watcher-api-stats>>\n* <<watcher-api-stop>>\n* <<watcher-api-start>>\n\n//ACK\ninclude::watcher/ack-watch.asciidoc[]\n//ACTIVATE\ninclude::watcher/activate-watch.asciidoc[]\n//DEACTIVATE\ninclude::watcher/deactivate-watch.asciidoc[]\n//DELETE\ninclude::watcher/delete-watch.asciidoc[]\n//EXECUTE\ninclude::watcher/execute-watch.asciidoc[]\n//GET\ninclude::watcher/get-watch.asciidoc[]\ninclude::watcher/stats.asciidoc[]\n//QUERY\ninclude::watcher/query-watches.asciidoc[]\n//PUT\ninclude::watcher/put-watch.asciidoc[]\n// UPDATE-SETTINGS\ninclude::watcher/update-settings.asciidoc[]\n// GET-SETTINGS\ninclude::watcher/get-settings.asciidoc[]\n//START\ninclude::watcher/start.asciidoc[]\n//STOP\ninclude::watcher/stop.asciidoc[]\n"
+}

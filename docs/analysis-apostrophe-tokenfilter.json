@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.521066",
+        "size": 2191,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-apostrophe-tokenfilter.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "analysis-apostrophe-tokenfilter",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-apostrophe-tokenfilter]]\n=== Apostrophe token filter\n++++\n<titleabbrev>Apostrophe</titleabbrev>\n++++\n\nStrips all characters after an apostrophe, including the apostrophe itself.\n\nThis filter is included in {es}'s built-in <<turkish-analyzer,Turkish language\nanalyzer>>. It uses Lucene's\n{lucene-analysis-docs}/tr/ApostropheFilter.html[ApostropheFilter], which was\nbuilt for the Turkish language.\n\n\n[[analysis-apostrophe-tokenfilter-analyze-ex]]\n==== Example\n\nThe following <<indices-analyze,analyze API>> request demonstrates how the\napostrophe token filter works.\n\n[source,console]\n--------------------------------------------------\nGET /_analyze\n{\n  \"tokenizer\" : \"standard\",\n  \"filter\" : [\"apostrophe\"],\n  \"text\" : \"Istanbul'a veya Istanbul'dan\"\n}\n--------------------------------------------------\n\nThe filter produces the following tokens:\n\n[source,text]\n--------------------------------------------------\n[ Istanbul, veya, Istanbul ]\n--------------------------------------------------\n\n/////////////////////\n[source,console-result]\n--------------------------------------------------\n{\n  \"tokens\" : [\n    {\n      \"token\" : \"Istanbul\",\n      \"start_offset\" : 0,\n      \"end_offset\" : 10,\n      \"type\" : \"<ALPHANUM>\",\n      \"position\" : 0\n    },\n    {\n      \"token\" : \"veya\",\n      \"start_offset\" : 11,\n      \"end_offset\" : 15,\n      \"type\" : \"<ALPHANUM>\",\n      \"position\" : 1\n    },\n    {\n      \"token\" : \"Istanbul\",\n      \"start_offset\" : 16,\n      \"end_offset\" : 28,\n      \"type\" : \"<ALPHANUM>\",\n      \"position\" : 2\n    }\n  ]\n}\n--------------------------------------------------\n/////////////////////\n\n[[analysis-apostrophe-tokenfilter-analyzer-ex]]\n==== Add to an analyzer\n\nThe following <<indices-create-index,create index API>> request uses the\napostrophe token filter to configure a new \n<<analysis-custom-analyzer,custom analyzer>>.\n\n[source,console]\n--------------------------------------------------\nPUT /apostrophe_example\n{\n  \"settings\": {\n    \"analysis\": {\n      \"analyzer\": {\n        \"standard_apostrophe\": {\n          \"tokenizer\": \"standard\",\n          \"filter\": [ \"apostrophe\" ]\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n"
+}

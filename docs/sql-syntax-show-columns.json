@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.432067",
+        "size": 738,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/sql-syntax-show-columns.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "sql-syntax-show-columns",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[sql-syntax-show-columns]]\n=== SHOW COLUMNS\n\n.Synopsis:\n[source, sql]\n----\nSHOW COLUMNS\n    [CATALOG identifier]? <1>\n    [INCLUDE FROZEN]?     <2>\n    [FROM | IN]\n    [table_identifier |   <3>\n     LIKE pattern]        <4>\n----\n\n<1> Catalog (cluster) identifier. Supports wildcards (`*`).\n<2> Whether or not to include frozen indices.\n<3> Single table (index or data stream) identifier or double-quoted multi-target pattern.\n<4> SQL LIKE pattern matching table names.\n\nSee <<sql-index-patterns, index patterns>> for more information about\npatterns.\n\n*Description*: List the columns in table and their data type (and other attributes).\n\n[source, sql]\n----\ninclude-tagged::{sql-specs}/docs/docs.csv-spec[showColumns]\n----\n\n"
+}

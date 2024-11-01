@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.882068",
+        "size": 1203,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-desired-balance.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "delete-desired-balance",
+        "version": "8.15"
+    },
+    "doc": "[[delete-desired-balance]]\n=== Reset desired balance API\n++++\n<titleabbrev>Reset desired balance</titleabbrev>\n++++\n\nNOTE: {cloud-only}\n\nDiscards the current <<shards-rebalancing-heuristics,desired balance>> and computes a new desired balance starting from the current allocation of shards.\nThis can sometimes help {es} find a desired balance which needs fewer shard movements to achieve, especially if the\ncluster has experienced changes so substantial that the current desired balance is no longer optimal without {es} having\ndetected that the current desired balance will take more shard movements to achieve than needed. However, this API\nimposes a heavy load on the elected master node and may not always have the expected effect. Calling this API should\nnever be necessary. Consider instead <<shards-rebalancing-heuristics,increasing the value of\n`cluster.routing.allocation.balance.threshold`>> to avoid excessive shard movements.\n\n[[delete-desired-balance-request]]\n==== {api-request-title}\n\n[source,console]\n--------------------------------------------------\nDELETE /_internal/desired_balance\n--------------------------------------------------\n// TEST[skip:Can't reliably test desired balance]\n"
+}

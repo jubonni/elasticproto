@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.349066",
+        "size": 1560,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/idp-saml-delete-sp.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "idp-saml-delete-sp",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[idp-saml-delete-sp]]\n=== Remove a SAML service provider\n++++\n<titleabbrev>Remove a SAML service provider</titleabbrev>\n++++\nRemoves a SAML service provider definition from this identity provider.\n\n[[idp-saml-delete-sp-request]]\n==== {api-request-title}\n\n`DELETE /_idp/saml/sp/{sp_entity_id}`\n\n[[idp-saml-delete-sp-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have a role that grants the `cluster:admin/idp/saml/sp/delete` privilege.\n\n[[idp-saml-delete-desc]]\n==== {api-description-title}\n\nThis API removes a service provider from the identity provider by deleting the underlying document that stores\nthe service provider definition.\n\n[[idp-saml-delete-sp-path-params]]\n==== {api-path-parms-title}\n\n`sp_entity_id::\n(string) The SAML entity Id of the service provider to be removed. In case the entity Id is a URL, it should be urlencoded.\n\n[[idp-saml-delete-sp-params]]\n==== {api-query-parms-title}\n\n`refresh`::\n(Optional, string) One of `true`, `false`, or `wait_for`.\nThese values have the same meaning as in the <<docs-refresh, Index API>>,\nbut the default value for this API is `false`.\n\n[[idp-saml-delete-example]]\n==== {api-examples-title}\n\nThe following example deletes a service provider definition from the identity provider\n\n[source, console]\n--------------------------------------------------------------------\nDELETE /_idp/saml/sp/https%3A%2F%2Fsome.sp.org%2F\n--------------------------------------------------------------------\n// TEST[skip:Do not enable identity provider for the docs cluster, at least not yet]\n"
+}

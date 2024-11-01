@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.520068",
+        "size": 2211,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/kv-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "kv-processor",
+        "version": "8.15"
+    },
+    "doc": "[[kv-processor]]\n=== KV processor\n++++\n<titleabbrev>KV</titleabbrev>\n++++\n\nThis processor helps automatically parse messages (or specific event fields) which are of the `foo=bar` variety.\n\nFor example, if you have a log message which contains `ip=1.2.3.4 error=REFUSED`, you can parse those fields automatically by configuring:\n\n[source,js]\n--------------------------------------------------\n{\n  \"kv\": {\n    \"field\": \"message\",\n    \"field_split\": \" \",\n    \"value_split\": \"=\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n\nTIP: Using the KV Processor can result in field names that you cannot control. Consider using the <<flattened>> data type instead, which maps an entire object as a single field and allows for simple searches over its contents.\n\n[[kv-options]]\n.KV Options\n[options=\"header\"]\n|======\n| Name             | Required  | Default  | Description\n| `field`          | yes       | -        | The field to be parsed. Supports <<template-snippets,template snippets>>.\n| `field_split`    | yes       | -        | Regex pattern to use for splitting key-value pairs\n| `value_split`    | yes       | -        | Regex pattern to use for splitting the key from the value within a key-value pair\n| `target_field`   | no        | `null`   | The field to insert the extracted keys into. Defaults to the root of the document. Supports <<template-snippets,template snippets>>.\n| `include_keys`   | no        | `null`   | List of keys to filter and insert into document. Defaults to including all keys\n| `exclude_keys`   | no        | `null`   | List of keys to exclude from document\n| `ignore_missing` | no        | `false`  | If `true` and `field` does not exist or is `null`, the processor quietly exits without modifying the document\n| `prefix`         | no        | `null`   | Prefix to be added to extracted keys\n| `trim_key`       | no        | `null`   | String of characters to trim from extracted keys\n| `trim_value`     | no        | `null`   | String of characters to trim from extracted values\n| `strip_brackets` | no        | `false`  | If `true` strip brackets `()`, `<>`, `[]` as well as quotes `'` and `\"` from extracted values\ninclude::common-options.asciidoc[]\n|======\n"
+}

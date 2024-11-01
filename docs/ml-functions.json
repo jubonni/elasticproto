@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.694074",
+        "size": 2336,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-functions.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "ml-functions",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-functions]]\n= Function reference\n\nThe {ml-features} include analysis functions that provide a wide variety of\nflexible ways to analyze data for anomalies.\n\nWhen you create {anomaly-jobs}, you specify one or more detectors, which define\nthe type of analysis that needs to be done. If you are creating your job by\nusing {ml} APIs, you specify the functions in detector configuration objects.\nIf you are creating your job in {kib}, you specify the functions differently\ndepending on whether you are creating single metric, multi-metric, or advanced\njobs.\n//For a demonstration of creating jobs in {kib}, see <<ml-getting-started>>.\n\nMost functions detect anomalies in both low and high values. In statistical\nterminology, they apply a two-sided test. Some functions offer low and high\nvariations (for example, `count`, `low_count`, and `high_count`). These variations\napply one-sided tests, detecting anomalies only when the values are low or\nhigh, depending one which alternative is used.\n\nYou can specify a `summary_count_field_name` with any function except `metric`.\nWhen you use `summary_count_field_name`, the {ml} features expect the input\ndata to be pre-aggregated. The value of the `summary_count_field_name` field\nmust contain the count of raw events that were summarized. In {kib}, use the\n**summary_count_field_name** in advanced {anomaly-jobs}. Analyzing aggregated\ninput data provides a significant boost in performance. For more information, see\n<<ml-configuring-aggregation>>.\n\nIf your data is sparse, there may be gaps in the data which means you might have\nempty buckets. You might want to treat these as anomalies or you might want these\ngaps to be ignored. Your decision depends on your use case and what is important\nto you. It also depends on which functions you use. The `sum` and `count`\nfunctions are strongly affected by empty buckets. For this reason, there are\n`non_null_sum` and `non_zero_count` functions, which are tolerant to sparse data.\nThese functions effectively ignore empty buckets.\n\n* <<ml-count-functions,Count functions>>\n* <<ml-geo-functions,Geographic functions>>\n* <<ml-info-functions,Information content functions>>\n* <<ml-metric-functions,Metric functions>>\n* <<ml-rare-functions,Rare functions>>\n* <<ml-sum-functions,Sum functions>>\n* <<ml-time-functions,Time functions>>\n"
+}

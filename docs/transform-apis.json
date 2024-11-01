@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.714068",
+        "size": 314,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/transform-apis.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "transform-apis",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[transform-apis]]\n= {transform-cap} APIs\n\n* <<put-transform>> \n* <<delete-transform>>\n* <<get-transform>>\n* <<get-transform-stats>>\n* <<preview-transform>>\n* <<reset-transform>>\n* <<schedule-now-transform>>\n* <<start-transform>>\n* <<stop-transform>>\n* <<update-transform>>\n* <<upgrade-transforms>>\n"
+}

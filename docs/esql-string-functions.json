@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.558069",
+        "size": 1269,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-string-functions.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-string-functions",
+        "version": "8.15"
+    },
+    "doc": "[[esql-string-functions]]\n==== {esql} string functions\n\n++++\n<titleabbrev>String functions</titleabbrev>\n++++\n\n{esql} supports these string functions:\n\n// tag::string_list[]\n* <<esql-concat>>\n* <<esql-ends_with>>\n* <<esql-from_base64>>\n* <<esql-left>>\n* <<esql-length>>\n* <<esql-locate>>\n* <<esql-ltrim>>\n* <<esql-repeat>>\n* <<esql-replace>>\n* <<esql-reverse>>\n* <<esql-right>>\n* <<esql-rtrim>>\n* <<esql-space>>\n* <<esql-split>>\n* <<esql-starts_with>>\n* <<esql-substring>>\n* <<esql-to_base64>>\n* <<esql-to_lower>>\n* <<esql-to_upper>>\n* <<esql-trim>>\n// end::string_list[]\n\ninclude::layout/concat.asciidoc[]\ninclude::layout/ends_with.asciidoc[]\ninclude::layout/from_base64.asciidoc[]\ninclude::layout/left.asciidoc[]\ninclude::layout/length.asciidoc[]\ninclude::layout/locate.asciidoc[]\ninclude::layout/ltrim.asciidoc[]\ninclude::layout/repeat.asciidoc[]\ninclude::layout/replace.asciidoc[]\ninclude::layout/reverse.asciidoc[]\ninclude::layout/right.asciidoc[]\ninclude::layout/rtrim.asciidoc[]\ninclude::layout/space.asciidoc[]\ninclude::layout/split.asciidoc[]\ninclude::layout/starts_with.asciidoc[]\ninclude::layout/substring.asciidoc[]\ninclude::layout/to_base64.asciidoc[]\ninclude::layout/to_lower.asciidoc[]\ninclude::layout/to_upper.asciidoc[]\ninclude::layout/trim.asciidoc[]\n"
+}

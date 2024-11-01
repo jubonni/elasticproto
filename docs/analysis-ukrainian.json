@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.503068",
+        "size": 455,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-ukrainian.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "analysis-ukrainian",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-ukrainian]]\n=== Ukrainian analysis plugin\n\nThe Ukrainian analysis plugin integrates Lucene's UkrainianMorfologikAnalyzer into elasticsearch.\n\nIt provides stemming for Ukrainian using the https://github.com/morfologik/morfologik-stemming[Morfologik project].\n\n:plugin_name: analysis-ukrainian\ninclude::install_remove.asciidoc[]\n\n[[analysis-ukrainian-analyzer]]\n[discrete]\n==== `ukrainian` analyzer\n\nThe plugin provides the `ukrainian` analyzer.\n"
+}

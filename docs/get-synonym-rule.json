@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.280072",
+        "size": 1449,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-synonym-rule.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "get-synonym-rule",
+        "version": "8.15"
+    },
+    "doc": "[[get-synonym-rule]]\n=== Get synonym rule\n\n++++\n<titleabbrev>Get synonym rule</titleabbrev>\n++++\n\nRetrieves a synonym rule from a synonyms set.\n\n[[get-synonym-rule-request]]\n==== {api-request-title}\n\n`GET _synonyms/<synonyms_set>/<synonym_rule>`\n\n[[get-synonym-rule-prereqs]]\n==== {api-prereq-title}\n\nRequires the `manage_search_synonyms` cluster privilege.\n\n[[get-synonym-rule-path-params]]\n==== {api-path-parms-title}\n\n`<synonyms_set>`::\n(Required, string)\nSynonyms set identifier to retrieve the synonym rule from.\n\n`<synonym_rule>`::\n(Required, string)\nSynonym rule identifier to retrieve.\n\n[[get-synonym-rule-response-codes]]\n==== {api-response-codes-title}\n\n`404` (Missing resources)::\nThe `synonyms_set` identifier was not found, or the synonym rule specified by `synonym_rule` was not found in the synonyms set.\n\n[[get-synonym-rule-example]]\n==== {api-examples-title}\n\nThe following example retrieves an existing synonym rule called `test-1` for the synonyms set `my-synonyms-set`:\n\n////\n[source,console]\n----\nPUT _synonyms/my-synonyms-set\n{\n  \"synonyms_set\": [\n    {\n      \"id\": \"test-1\",\n      \"synonyms\": \"hello, hi\"\n    },\n    {\n      \"id\": \"test-3\",\n      \"synonyms\": \"bye, goodbye\"\n    },\n    {\n      \"id\": \"test-2\",\n      \"synonyms\": \"test => check\"\n    }\n  ]\n}\n----\n// TESTSETUP\n////\n\n[source,console]\n----\nGET _synonyms/my-synonyms-set/test-1\n----\n\n[source,console-result]\n----\n{\n  \"id\": \"test-1\",\n  \"synonyms\": \"hello, hi\"\n}\n----\n\n"
+}

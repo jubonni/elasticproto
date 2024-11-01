@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.609068",
+        "size": 1783,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/system-config.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "system-config",
+        "version": "8.15"
+    },
+    "doc": "[[system-config]]\n== Important system configuration\n\nIdeally, {es} should run alone on a server and use all of the\nresources available to it. In order to do so, you need to configure your\noperating system to allow the user running {es} to access more\nresources than allowed by default.\n\nThe following settings *must* be considered before going to production:\n\n* <<setting-system-settings,Configure system settings>>\n* <<setup-configuration-memory,Disable swapping>>\n* <<file-descriptors,Increase file descriptors>>\n* <<vm-max-map-count,Ensure sufficient virtual memory>>\n* <<max-number-of-threads,Ensure sufficient threads>>\n* <<networkaddress-cache-ttl,JVM DNS cache settings>>\n* <<executable-jna-tmpdir,Temporary directory not mounted with `noexec`>>\n* <<system-config-tcpretries,TCP retransmission timeout>>\n\n[[dev-vs-prod]]\n[discrete]\n=== Development mode vs production mode\n\nBy default, {es} assumes that you are working in development mode.\nIf any of the above settings are not configured correctly, a warning will be\nwritten to the log file, but you will be able to start and run your\n{es} node.\n\nAs soon as you configure a network setting like `network.host`, {es}\nassumes that you are moving to production and will upgrade the above warnings\nto exceptions. These exceptions will prevent your {es} node from\nstarting. This is an important safety measure to ensure that you will not\nlose data because of a malconfigured server.\n\ninclude::sysconfig/configuring.asciidoc[]\n\ninclude::sysconfig/swap.asciidoc[]\n\ninclude::sysconfig/file-descriptors.asciidoc[]\n\ninclude::sysconfig/virtual-memory.asciidoc[]\n\ninclude::sysconfig/threads.asciidoc[]\n\ninclude::sysconfig/dns-cache.asciidoc[]\n\ninclude::sysconfig/executable-jna-tmpdir.asciidoc[]\n\ninclude::sysconfig/tcpretries.asciidoc[]\n"
+}

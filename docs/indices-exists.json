@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.429076",
+        "size": 1429,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-exists.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-exists",
+        "version": "8.15"
+    },
+    "doc": "[[indices-exists]]\n=== Exists API\n++++\n<titleabbrev>Exists</titleabbrev>\n++++\n\nChecks if a data stream, index, or alias exists.\n\n[source,console]\n----\nHEAD my-data-stream\n----\n// TEST[setup:my_data_stream]\n// TEST[teardown:data_stream_cleanup]\n\n[[indices-exists-api-request]]\n==== {api-request-title}\n\n`HEAD <target>`\n\n[[indices-exists-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`view_index_metadata` or `manage` <<privileges-list-indices,index privilege>>\nfor the target.\n\n[[indices-exists-api-path-params]]\n==== {api-path-parms-title}\n\n`<target>`::\n(Optional, string) Comma-separated list of data streams, indices, and aliases.\nSupports wildcards (`*`).\n\n[[indices-exists-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=allow-no-indices]\n+\nDefaults to `true`.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=expand-wildcards]\n+\nDefaults to `open`.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=flat-settings]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=include-defaults]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=index-ignore-unavailable]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=local]\n\n[[indices-exists-api-response-codes]]\n==== {api-response-codes-title}\n\n`200`::\nAll targets exist.\n\n`404`::\nOne or more specified targets do not exist.\n"
+}

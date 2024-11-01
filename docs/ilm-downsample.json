@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.369067",
+        "size": 1643,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-downsample.html",
+        "type": "documentation",
+        "role": [
+            "xpack",
+            "child_attributes"
+        ],
+        "has_code": false,
+        "title": "ilm-downsample",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ilm-downsample]]\n=== Downsample\n\nPhases allowed: hot, warm, cold.\n\nAggregates a time series (TSDS) index and stores\npre-computed statistical summaries (`min`, `max`, `sum`, `value_count` and\n`avg`) for each metric field grouped by a configured time interval. For example,\na TSDS index that contains metrics sampled every 10 seconds can be downsampled\nto an hourly index. All documents within an hour interval are summarized and\nstored as a single document and stored in the downsample index.\n\nThis action corresponds to the  <<indices-downsample-data-stream,downsample API>>.\n\nThe name of the resulting downsample index is\n`downsample-<original-index-name>-<random-uuid>`. If {ilm-init} performs the\n`downsample` action on a backing index for a data stream, the downsample index\nbecomes a backing index for the same stream and the source index is deleted.\n\nTo use the `downsample` action in the `hot` phase, the `rollover` action *must*\nbe present. If no rollover action is configured, {ilm-init} will reject the\npolicy.\n\n[role=\"child_attributes\"]\n[[ilm-downsample-options]]\n==== Options\n\n`fixed_interval`:: (Required, string) The\n<<rollup-understanding-group-intervals,fixed time interval>> into which the data\nwill be downsampled.\n\n[[ilm-downsample-ex]]\n==== Example \n\n[source,console]\n----\nPUT _ilm/policy/datastream_policy   \n{\n  \"policy\": {                       \n    \"phases\": {\n      \"hot\": {                      \n        \"actions\": {\n          \"rollover\": {             \n            \"max_docs\": 1\n          },\n          \"downsample\": {\n  \t          \"fixed_interval\": \"1h\"\n  \t      }\n        }\n      }\n    }\n  }\n}\n----"
+}

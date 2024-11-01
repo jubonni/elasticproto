@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.870069",
+        "size": 1933,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-reindex-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-reindex-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-reindex-context]]\n=== Reindex context\n\nUse a Painless script in a {ref}/docs-reindex.html[reindex] operation to\nadd, modify, or delete fields within each document in an original index as its\nreindexed into a target index.\n\n*Variables*\n\n`params` (`Map`, read-only)::\n        User-defined parameters passed in as part of the query.\n\n`ctx['op']` (`String`)::\n        The name of the operation.\n\n{ref}/mapping-routing-field.html[`ctx['_routing']`] (`String`)::\n        The value used to select a shard for document storage.\n\n{ref}/mapping-index-field.html[`ctx['_index']`] (`String`)::\n        The name of the index.\n\n{ref}/mapping-id-field.html[`ctx['_id']`] (`String`)::\n        The unique document id.\n\n`ctx['_version']` (`int`)::\n        The current version of the document.\n\n{ref}/mapping-source-field.html[`ctx['_source']`] (`Map`)::\n        Contains extracted JSON in a `Map` and `List` structure for the fields\n        existing in a stored document.\n\n*Side Effects*\n\n`ctx['op']`::\n        Use the default of `index` to update a document. Set to `noop` to\n        specify no operation or `delete` to delete the current document from\n        the index.\n\n{ref}/mapping-routing-field.html[`ctx['_routing']`]::\n        Modify this to change the routing value for the current document.\n\n{ref}/mapping-index-field.html[`ctx['_index']`]::\n        Modify this to change the destination index for the current document.\n\n{ref}/mapping-id-field.html[`ctx['_id']`]::\n        Modify this to change the id for the current document.\n\n`ctx['_version']` (`int`)::\n        Modify this to modify the version for the current document.\n\n{ref}/mapping-source-field.html[`ctx['_source']`]::\n        Modify the values in the `Map/List` structure to add, modify, or delete\n        the fields of a document.\n\n*Return*\n\n`void`::\n        No expected return value.\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n"
+}

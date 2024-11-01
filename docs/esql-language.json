@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.046066",
+        "size": 682,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-language.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-language",
+        "version": "8.15"
+    },
+    "doc": "[[esql-language]]\n== {esql} reference\n++++\n<titleabbrev>{esql} reference</titleabbrev>\n++++\n\nDetailed reference documentation for the {esql} language:\n\n* <<esql-syntax>>\n* <<esql-commands>>\n* <<esql-functions>>\n* <<esql-metadata-fields>>\n* <<esql-multivalued-fields>>\n* <<esql-enrich-data>>\n* <<esql-process-data-with-dissect-and-grok>>\n* <<esql-implicit-casting>>\n\ninclude::esql-syntax.asciidoc[]\ninclude::esql-commands.asciidoc[]\ninclude::esql-functions-operators.asciidoc[]\ninclude::metadata-fields.asciidoc[]\ninclude::multivalued-fields.asciidoc[]\ninclude::esql-process-data-with-dissect-grok.asciidoc[]\ninclude::esql-enrich-data.asciidoc[]\ninclude::implicit-casting.asciidoc[]\n"
+}

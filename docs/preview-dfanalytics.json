@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.966066",
+        "size": 2282,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/preview-dfanalytics.html",
+        "type": "documentation",
+        "role": [
+            "xpack",
+            "child_attributes"
+        ],
+        "has_code": true,
+        "title": "preview-dfanalytics",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[preview-dfanalytics]]\n= Preview {dfanalytics} API\n\n[subs=\"attributes\"]\n++++\n<titleabbrev>Preview {dfanalytics}</titleabbrev>\n++++\n\nPreviews the features used by a {dataframe-analytics-config}.\n\n\n[[ml-preview-dfanalytics-request]]\n== {api-request-title}\n\n`GET _ml/data_frame/analytics/_preview` +\n\n`POST _ml/data_frame/analytics/_preview` +\n\n`GET _ml/data_frame/analytics/<data_frame_analytics_id>/_preview` +\n\n`POST _ml/data_frame/analytics/<data_frame_analytics_id>/_preview`\n\n\n[[ml-preview-dfanalytics-prereq]]\n== {api-prereq-title}\n\nRequires the `monitor_ml` cluster privilege. This privilege is included in the \n`machine_learning_user` built-in role.\n\n\n[[ml-preview-dfanalytics-desc]]\n== {api-description-title}\n\nThis API provides preview of the extracted features for a {dataframe-analytics-config}\nthat either exists already or one that has not been created yet.\n\n\n[[ml-preview-dfanalytics-path-params]]\n== {api-path-parms-title}\n\n`<data_frame_analytics_id>`::\n(Optional, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=job-id-data-frame-analytics]\n\n[[ml-preview-dfanalytics-request-body]]\n== {api-request-body-title}\n\n`config`::\n(Optional, object)\nA {dataframe-analytics-config} as described in <<put-dfanalytics>>.\nNote that `id` and `dest` don't need to be provided in the context of this API.\n\n[role=\"child_attributes\"]\n[[ml-preview-dfanalytics-results]]\n== {api-response-body-title}\n\nThe API returns a response that contains the following:\n\n`feature_values`::\n(array)\nAn array of objects that contain feature name and value pairs. The features have\nbeen processed and indicate what will be sent to the model for training.\n\n[[ml-preview-dfanalytics-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nPOST _ml/data_frame/analytics/_preview\n{\n  \"config\": {\n    \"source\": {\n      \"index\": \"houses_sold_last_10_yrs\"\n    },\n    \"analysis\": {\n      \"regression\": {\n        \"dependent_variable\": \"price\"\n      }\n    }\n  }\n}\n--------------------------------------------------\n// TEST[skip:TBD]\n\nThe API returns the following results:\n\n[source,console-result]\n----\n{\n  \"feature_values\": [\n    {\n      \"number_of_bedrooms\": \"1\",\n      \"postcode\": \"29655\",\n      \"price\": \"140.4\"\n    },\n    ...\n  ]\n}\n----\n"
+}

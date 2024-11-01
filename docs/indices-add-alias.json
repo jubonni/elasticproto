@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.231802",
+        "size": 1356,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-add-alias.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-add-alias",
+        "version": "8.15"
+    },
+    "doc": "[[indices-add-alias]]\n=== Create or update alias API\n++++\n<titleabbrev>Create or update alias</titleabbrev>\n++++\n\nAdds a data stream or index to an <<aliases,alias>>.\n\n[source,console]\n----\nPUT my-data-stream/_alias/my-alias\n----\n// TEST[setup:my_data_stream]\n// TEST[teardown:data_stream_cleanup]\n\n[[add-alias-api-request]]\n==== {api-request-title}\n\n`POST <target>/_alias/<alias>`\n\n`POST <target>/_aliases/<alias>`\n\n`PUT <target>/_alias/<alias>`\n\n`PUT <target>/_aliases/<alias>`\n\n[[add-alias-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-indices,index privilege>> for the alias and its data streams\nor indices.\n\n[[add-alias-api-path-params]]\n==== {api-path-parms-title}\n\n`<alias>`::\n(Required, string) Alias to update. If the alias doesn't exist, the request\ncreates it. Index alias names support <<api-date-math-index-names,date math>>.\n\n`<target>`::\n(Required, string) Comma-separated list of data streams or indices to add.\nSupports wildcards (`*`). Wildcard patterns that match both data streams and\nindices return an error.\n\n[[add-alias-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n\n[[add-alias-api-request-body]]\n==== {api-request-body-title}\n\ninclude::aliases.asciidoc[tag=alias-options]\n"
+}

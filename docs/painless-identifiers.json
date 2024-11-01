@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.841075",
+        "size": 505,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-identifiers.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-identifiers",
+        "version": "8.15"
+    },
+    "doc": "[[painless-identifiers]]\n=== Identifiers\n\nUse an identifier as a named token to specify a\n<<painless-variables, variable>>, <<painless-types, type>>,\n<<field-access-operator, field>>, <<method-call-operator, method>>, or\n<<painless-functions, function>>.\n\n*Errors*\n\nIf a <<painless-keywords, keyword>> is used as an identifier.\n\n*Grammar*\n[source,ANTLR4]\n----\nID: [_a-zA-Z] [_a-zA-Z-0-9]*;\n----\n\n*Examples*\n\n* Variations of identifiers.\n+\n[source,Painless]\n----\na\nZ\nid\nlist\nlist0\nMAP25\n_map25\nMap_25\n----\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.615078",
+        "size": 1882,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-chargroup-tokenizer.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "analysis-chargroup-tokenizer",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-chargroup-tokenizer]]\n=== Character group tokenizer\n++++\n<titleabbrev>Character group</titleabbrev>\n++++\n\nThe `char_group` tokenizer breaks text into terms whenever it encounters a\ncharacter which is in a defined set. It is mostly useful for cases where a simple\ncustom tokenization is desired, and the overhead of use of the <<analysis-pattern-tokenizer, `pattern` tokenizer>>\nis not acceptable.\n\n[discrete]\n=== Configuration\n\nThe `char_group` tokenizer accepts one parameter:\n\n[horizontal]\n`tokenize_on_chars`::\n    A list containing a list of characters to tokenize the string on. Whenever a character\n    from this list is encountered, a new token is started. This accepts either single\n    characters like e.g. `-`, or character groups: `whitespace`, `letter`, `digit`,\n    `punctuation`, `symbol`.\n\n`max_token_length`::\n    The maximum token length. If a token is seen that exceeds this length then\n    it is split at `max_token_length` intervals. Defaults to `255`.\n\n\n[discrete]\n=== Example output\n\n[source,console]\n---------------------------\nPOST _analyze\n{\n  \"tokenizer\": {\n    \"type\": \"char_group\",\n    \"tokenize_on_chars\": [\n      \"whitespace\",\n      \"-\",\n      \"\\n\"\n    ]\n  },\n  \"text\": \"The QUICK brown-fox\"\n}\n---------------------------\n\nreturns\n\n[source,console-result]\n---------------------------\n{\n  \"tokens\": [\n    {\n      \"token\": \"The\",\n      \"start_offset\": 0,\n      \"end_offset\": 3,\n      \"type\": \"word\",\n      \"position\": 0\n    },\n    {\n      \"token\": \"QUICK\",\n      \"start_offset\": 4,\n      \"end_offset\": 9,\n      \"type\": \"word\",\n      \"position\": 1\n    },\n    {\n      \"token\": \"brown\",\n      \"start_offset\": 10,\n      \"end_offset\": 15,\n      \"type\": \"word\",\n      \"position\": 2\n    },\n    {\n      \"token\": \"fox\",\n      \"start_offset\": 16,\n      \"end_offset\": 19,\n      \"type\": \"word\",\n      \"position\": 3\n    }\n  ]\n}\n---------------------------\n"
+}

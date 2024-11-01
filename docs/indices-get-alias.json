@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.194072",
+        "size": 1640,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-get-alias.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-get-alias",
+        "version": "8.15"
+    },
+    "doc": "[[indices-get-alias]]\n=== Get alias API\n++++\n<titleabbrev>Get alias</titleabbrev>\n++++\n\nRetrieves information for one or more <<aliases,aliases>>.\n\n[source,console]\n----\nGET my-data-stream/_alias/my-alias\n----\n// TEST[setup:my_data_stream]\n// TEST[s/^/PUT my-data-stream\\/_alias\\/my-alias\\n/]\n// TEST[teardown:data_stream_cleanup]\n\n[[get-alias-api-request]]\n==== {api-request-title}\n\n`GET _alias/<alias>`\n\n`GET _alias`\n\n`GET <target>/_alias/<alias>`\n\n[[get-alias-api-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`view_index_metadata` or `manage` <<privileges-list-indices,index privilege>>\nfor the alias. If you specify a target, you must also have `view_index_metadata`\nor `manage` index privilege for the target.\n\n[[get-alias-api-path-params]]\n==== {api-path-parms-title}\n\n`<alias>`::\n(Optional, string) Comma-separated list of aliases to retrieve. Supports\nwildcards (`*`). To retrieve all aliases, omit this parameter or use `*` or\n`_all`.\n\n`<target>`::\n(Optional, string) Comma-separated list of data streams or indices used to limit\nthe request. Supports wildcards (`*`). To target all data streams and indices,\nomit this parameter or use `*` or `_all`.\n\n[[get-alias-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=allow-no-indices]\n+\nDefaults to `true`.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=expand-wildcards]\n+\nDefaults to `all`.\n\n`ignore_unavailable`::\n(Optional, Boolean) If `false`, requests that include a missing data stream or\nindex in the `<target>` return an error. Defaults to `false`.\n"
+}

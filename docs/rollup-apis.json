@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.262071",
+        "size": 982,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/rollup-apis.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "rollup-apis",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[rollup-apis]]\n== Rollup APIs\n\ndeprecated::[8.11.0,\"Rollups will be removed in a future version. Please <<rollup-migrating-to-downsampling,migrate>> to <<downsampling,downsampling>> instead.\"]\n\n[discrete]\n[[rollup-jobs-endpoint]]\n=== Jobs\n\n* <<rollup-put-job,Create>> or <<rollup-delete-job,delete {rollup-jobs}>>\n* <<rollup-start-job,Start>> or <<rollup-stop-job,stop {rollup-jobs}>>\n* <<rollup-get-job,Get {rollup-jobs}>>\n\n[discrete]\n[[rollup-data-endpoint]]\n=== Data\n\n* <<rollup-get-rollup-caps,Get rollup capabilities>>\n* <<rollup-get-rollup-index-caps,Get rollup index capabilities>>\n\n[discrete]\n[[rollup-search-endpoint]]\n=== Search\n\n* <<rollup-search,Rollup search>>\n\n\ninclude::apis/put-job.asciidoc[]\ninclude::apis/delete-job.asciidoc[]\ninclude::apis/get-job.asciidoc[]\ninclude::apis/rollup-caps.asciidoc[]\ninclude::apis/rollup-index-caps.asciidoc[]\ninclude::apis/rollup-search.asciidoc[]\ninclude::apis/start-job.asciidoc[]\ninclude::apis/stop-job.asciidoc[]\n"
+}

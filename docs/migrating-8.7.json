@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.655083",
+        "size": 1670,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/migrating-8.7.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "migrating-8.7",
+        "version": "8.15"
+    },
+    "doc": "[[migrating-8.7]]\n== Migrating to 8.7\n++++\n<titleabbrev>8.7</titleabbrev>\n++++\n\nThis section discusses the changes that you need to be aware of when migrating\nyour application to {es} 8.7.\n\nSee also <<release-highlights>> and <<es-release-notes>>.\n\n[discrete]\n[[breaking-changes-8.7]]\n=== Breaking changes\n\nThe following changes in {es} 8.7 might affect your applications\nand prevent them from operating normally.\nBefore upgrading to 8.7, review these changes and take the described steps\nto mitigate the impact.\n\nThere are no notable breaking changes in {es} 8.7.\nBut there are some less critical breaking changes.\n\n[discrete]\n[[breaking_87_ingest_changes]]\n==== Ingest changes\n\n[[making_jsonprocessor_stricter_so_it_does_not_silently_drop_data]]\n.Making `JsonProcessor` stricter so that it does not silently drop data\n[%collapsible]\n====\n*Details* +\nThe ingest node's `json` processor was previously lenient. It would accept invalid JSON data if it started with valid JSON data.\nAnything after the valid part would be silently discarded. From 8.7 onwards, the default behavior is to reject invalid JSON data with\nan exception so that data is not silently lost. The old behavior can be reproduced by passing `false` as the value of the new\n`strict_json_parsing` processor parameter.\nWe consider this change to be a bugfix but list it here as a breaking change since it may affect the behavior of applications which\nwere sending invalid JSON data to the `json` processor.\n\n*Impact* +\nEnsure your application only sends valid JSON data to the `json` processor, or modify the `json` processors in your pipelines to set\nthe `strict_json_parsing` parameter to `false`.\n====\n"
+}

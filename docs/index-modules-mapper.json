@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.587076",
+        "size": 373,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules-mapper.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "index-modules-mapper",
+        "version": "8.15"
+    },
+    "doc": "[[index-modules-mapper]]\n== Mapper\n\nThe mapper module acts as a registry for the type mapping definitions\nadded to an index either when creating it or by using the update mapping\nAPI. It also handles the dynamic mapping support for types that have no\nexplicit mappings pre defined. For more information about mapping\ndefinitions, check out the <<mapping,mapping section>>.\n"
+}

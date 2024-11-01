@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.570073",
+        "size": 1063,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/async-search-intro.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "async-search-intro",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[async-search-intro]]\n=== Long-running searches\n\n{es} generally allows you to quickly search across big amounts of data. There are\nsituations where a search executes on many shards, possibly against\nlarge data sets or multiple <<remote-clusters,remote clusters>>, for which\nresults are not expected to be returned in milliseconds. When you need to\nexecute long-running searches, synchronously\nwaiting for its results to be returned is not ideal. Instead, Async search lets\nyou submit a search request that gets executed _asynchronously_,\nmonitor the progress of the request, and retrieve results at a later stage.\nYou can also retrieve partial results as they become available but\nbefore the search has completed.\n\nYou can submit an async search request using the <<submit-async-search,submit\nasync search>> API. The <<get-async-search,get async search>> API allows you to\nmonitor the progress of an async search request and retrieve its results. An\nongoing async search can be deleted through the <<delete-async-search,delete\nasync search>> API.\n"
+}

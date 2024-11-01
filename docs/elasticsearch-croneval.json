@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.801066",
+        "size": 1385,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-croneval.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "elasticsearch-croneval",
+        "version": "8.15"
+    },
+    "doc": "[[elasticsearch-croneval]]\n== elasticsearch-croneval\n\nValidates and evaluates a <<api-cron-expressions,cron expression>>. \n\n[discrete]\n=== Synopsis\n\n[source,shell]\n--------------------------------------------------\nbin/elasticsearch-croneval <expression>\n[-c, --count <integer>] [-h, --help]\n([-s, --silent] | [-v, --verbose])\n--------------------------------------------------\n\n[discrete]\n=== Description\n\nThis command enables you to verify that your\ncron expressions are valid for use with\n{es} and produce the expected results.\n\nThis command is provided in the `$ES_HOME/bin` directory.\n\n[discrete]\n[[elasticsearch-croneval-parameters]]\n=== Parameters\n\n`-c, --count` <Integer>::\n  The number of future times this expression will be triggered. The default\n  value is `10`.\n\n`-d, --detail`::\n  Shows detail for invalid cron expression. It will print the stacktrace if the\n  expression is not valid.\n\n`-h, --help`::\n  Returns all of the command parameters.\n\n`-s, --silent`::\n  Shows minimal output.\n                                 \n`-v, --verbose`::\n  Shows verbose output.\n\n[discrete]\n=== Example\n\nIf the cron expression is valid, the following command displays the next\n20 times that the schedule will be triggered:\n\n[source,bash]\n--------------------------------------------------\nbin/elasticsearch-croneval \"0 0/1 * * * ?\" -c 20\n--------------------------------------------------\n"
+}

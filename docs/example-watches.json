@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.068065",
+        "size": 452,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/example-watches.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "example-watches",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[example-watches]]\n== Example watches\nThe following example shows how to set up a watch to:\n\n* <<watch-cluster-status,Monitor the status of an Elasticsearch cluster>>\n\nFor more example watches you can use as a starting point for building custom\nwatches, refer to the\nhttps://github.com/elastic/examples/tree/master/Alerting[Example watches] in the\nElastic Examples repo.\n\ninclude::example-watches/example-watch-clusterstatus.asciidoc[]\n"
+}

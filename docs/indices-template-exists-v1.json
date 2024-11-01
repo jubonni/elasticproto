@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.415067",
+        "size": 1843,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-template-exists-v1.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-template-exists-v1",
+        "version": "8.15"
+    },
+    "doc": "[[indices-template-exists-v1]]\n=== Index template exists API\n++++\n<titleabbrev>Index template exists (legacy)</titleabbrev>\n++++\n\nIMPORTANT: This documentation is about <<indices-templates-v1,legacy index\ntemplates>>, which are deprecated and will be replaced by the composable\ntemplates introduced in {es} 7.8. For information about composable templates,\nsee <<index-templates>>.\n\nChecks if an <<indices-templates-v1,legacy index template>> exists.\n\n\n\n[source,console]\n-----------------------------------------------\nHEAD /_template/template_1\n-----------------------------------------------\n\n\n[[template-exists-api-request]]\n==== {api-request-title}\n\n`HEAD /_template/<index-template>`\n\n[[template-exists-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`manage_index_templates` or `manage` <<privileges-list-cluster,cluster\nprivilege>> to use this API.\n\n[[template-exists-api-desc]]\n==== {api-description-title}\n\nUse the index template exists API\nto determine whether one or more index templates exist.\n\nIndex templates define <<index-modules-settings,settings>>, <<mapping,mappings>>, \nand <<aliases,aliases>> that can be applied automatically to new indices. \n\n[[template-exists-api-path-params]]\n==== {api-path-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=index-template]\n\n\n[[template-exists-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=flat-settings]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=local]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\n\n[[template-exists-api-response-codes]]\n==== {api-response-codes-title}\n\n`200`::\nIndicates all specified index templates exist.\n\n`404`::\nIndicates one or more specified index templates **do not** exist.\n"
+}

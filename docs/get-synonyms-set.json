@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.281069",
+        "size": 1930,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-synonyms-set.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "get-synonyms-set",
+        "version": "8.15"
+    },
+    "doc": "[[get-synonyms-set]]\n=== Get synonyms set\n\n++++\n<titleabbrev>Get synonyms set</titleabbrev>\n++++\n\nRetrieves a synonyms set.\n\n[[get-synonyms-set-request]]\n==== {api-request-title}\n\n`GET _synonyms/<synonyms_set>`\n\n[[get-synonyms-set-prereqs]]\n==== {api-prereq-title}\n\nRequires the `manage_search_synonyms` cluster privilege.\n\n[[get-synonyms-set-path-params]]\n==== {api-path-parms-title}\n\n`<synonyms_set>`::\n(Required, string)\nSynonyms set identifier to retrieve.\n\n[[get-synonyms-set-query-params]]\n==== {api-query-parms-title}\n\n`from`::\n(Optional, integer) Starting offset for synonyms rules to retrieve. Defaults to `0`.\n\n`size`::\n(Optional, integer) Specifies the maximum number of synonyms rules to retrieve. Defaults to `10`.\n\n[[get-synonyms-set-response-codes]]\n==== {api-response-codes-title}\n\n`400`::\nThe `synonyms_set` identifier was not provided.\n\n`404` (Missing resources)::\nNo synonyms set with the identifier `synonyms_set` was found.\n\n[[get-synonyms-set-example]]\n==== {api-examples-title}\n\nThe following example retrieves a synonyms set called `my-synonyms-set`:\n\n////\n[source,console]\n----\nPUT _synonyms/my-synonyms-set\n{\n  \"synonyms_set\": [\n    {\n      \"id\": \"test-1\",\n      \"synonyms\": \"hello, hi\"\n    },\n    {\n      \"id\": \"test-2\",\n      \"synonyms\": \"bye, goodbye\"\n    },\n    {\n      \"id\": \"test-3\",\n      \"synonyms\": \"test => check\"\n    }\n  ]\n}\n----\n// TESTSETUP\n////\n\n[source,console]\n----\nGET _synonyms/my-synonyms-set\n----\n\nThe synonyms set information returned will include the total number of synonyms rules that the synonyms set contains, and the synonyms rules according to the `from` and `size` parameters.\n\nA sample response:\n\n[source,console-result]\n----\n{\n  \"count\": 3,\n  \"synonyms_set\": [\n    {\n      \"id\": \"test-1\",\n      \"synonyms\": \"hello, hi\"\n    },\n    {\n      \"id\": \"test-2\",\n      \"synonyms\": \"bye, goodbye\"\n    },\n    {\n      \"id\": \"test-3\",\n      \"synonyms\": \"test => check\"\n    }\n  ]\n}\n----\n"
+}

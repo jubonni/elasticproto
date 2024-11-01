@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.797067",
+        "size": 1627,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-update-snapshot.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ml-update-snapshot",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-update-snapshot]]\n= Update model snapshots API\n++++\n<titleabbrev>Update model snapshots</titleabbrev>\n++++\n\nUpdates certain properties of a snapshot.\n\n[[ml-update-snapshot-request]]\n== {api-request-title}\n\n`POST _ml/anomaly_detectors/<job_id>/model_snapshots/<snapshot_id>/_update`\n\n[[ml-update-snapshot-prereqs]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n[[ml-update-snapshot-path-parms]]\n== {api-path-parms-title}\n\n`<job_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=job-id-anomaly-detection]\n\n`<snapshot_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=snapshot-id]\n\n[[ml-update-snapshot-request-body]]\n== {api-request-body-title}\n\nThe following properties can be updated after the model snapshot is created:\n\n`description`::\n(Optional, string) A description of the model snapshot.\n\n`retain`::\n(Optional, Boolean)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=retain]\n\n\n[[ml-update-snapshot-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nPOST\n_ml/anomaly_detectors/it_ops_new_logs/model_snapshots/1491852978/_update\n{\n  \"description\": \"Snapshot 1\",\n  \"retain\": true\n}\n--------------------------------------------------\n// TEST[skip:todo]\n\nWhen the snapshot is updated, you receive the following results:\n[source,js]\n----\n{\n  \"acknowledged\": true,\n  \"model\": {\n    \"job_id\": \"it_ops_new_logs\",\n    \"timestamp\": 1491852978000,\n    \"description\": \"Snapshot 1\",\n...\n    \"retain\": true\n  }\n}\n----\n"
+}

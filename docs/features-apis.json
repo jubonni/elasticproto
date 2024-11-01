@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.093066",
+        "size": 344,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/features-apis.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "features-apis",
+        "version": "8.15"
+    },
+    "doc": "[[features-apis]]\n== Features APIs\n\nYou can use the following APIs to introspect and manage Features provided\nby Elasticsearch and Elasticsearch plugins.\n\n[discrete]\n=== Features APIs\n* <<get-features-api,Get Features API>>\n* <<reset-features-api,Rest Features API>>\n\ninclude::get-features-api.asciidoc[]\ninclude::reset-features-api.asciidoc[]\n"
+}

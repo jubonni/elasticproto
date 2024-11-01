@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.450079",
+        "size": 1248,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/input-simple.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "input-simple",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[input-simple]]\n=== {watcher} simple input\n++++\n<titleabbrev>Simple input</titleabbrev>\n++++\n\nUse the `simple` input to load static data into the execution\ncontext when the watch is triggered. This enables you to store the data \ncentrally and reference it with templates.\n\nYou can define the static data as a string (`str`), numeric value (`num`), or\nan object (`obj`):\n\n[source,js]\n--------------------------------------------------\n\"input\" : {\n  \"simple\" : {\n    \"str\" : \"val1\",\n    \"num\" : 23,\n    \"obj\" : {\n      \"str\" : \"val2\"\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n\nFor example, the following watch uses the `simple` input to set the recipient\nname for a daily reminder email:\n\n[source,js]\n--------------------------------------------------\n{\n  \"trigger\" : {\n    \"schedule\" : {\n      \"daily\" : { \"at\" : \"noon\" }\n    }\n  },\n  \"input\" : {\n    \"simple\" : {\n      \"name\" : \"John\"\n    }\n  },\n  \"actions\" : {\n    \"reminder_email\" : {\n      \"email\" : {\n        \"to\" : \"to@host.domain\",\n        \"subject\" : \"Reminder\",\n        \"body\" : \"Dear {{ctx.payload.name}}, by the time you read these lines, I'll be gone\"\n      }\n    }\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE"
+}

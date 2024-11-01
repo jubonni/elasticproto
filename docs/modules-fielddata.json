@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.104084",
+        "size": 1609,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-fielddata.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "modules-fielddata",
+        "version": "8.15"
+    },
+    "doc": "[[modules-fielddata]]\n=== Field data cache settings\n\nThe field data cache contains <<fielddata-mapping-param, field data>> and <<eager-global-ordinals, global ordinals>>,\nwhich are both used to support aggregations on certain field types.\nSince these are on-heap data structures, it is important to monitor the cache's use.\n\n[discrete]\n[[fielddata-sizing]]\n==== Cache size\n\nThe entries in the cache are expensive to build, so the default behavior is\nto keep the cache loaded in memory. The default cache size is unlimited,\ncausing the cache to grow until it reaches the limit set by the <<fielddata-circuit-breaker, field data circuit breaker>>. This behavior can be configured.\n\nIf the cache size limit is set, the cache will begin clearing the least-recently-updated\nentries in the cache. This setting can automatically avoid the circuit breaker limit,\nat the cost of rebuilding the cache as needed.\n\nIf the circuit breaker limit is reached, further requests that increase the cache\nsize will be prevented. In this case you should manually <<indices-clearcache, clear the cache>>.\n\n`indices.fielddata.cache.size`::\n(<<static-cluster-setting,Static>>)\nThe max size of the field data cache, eg `38%` of node heap space, or an\nabsolute value, eg `12GB`. Defaults to unbounded. If you choose to set it,\nit should be smaller than <<fielddata-circuit-breaker>> limit.\n\n[discrete]\n[[fielddata-monitoring]]\n==== Monitoring field data\n\nYou can monitor memory usage for field data as well as the field data circuit\nbreaker using\nthe <<cluster-nodes-stats,nodes stats API>> or the <<cat-fielddata,cat fielddata API>>.\n"
+}

@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.383066",
+        "size": 1840,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-unfollow.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ilm-unfollow",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ilm-unfollow]]\n=== Unfollow\n\nPhases allowed: hot, warm, cold, frozen.\n\nConverts a {ref}/ccr-apis.html[{ccr-init}] follower index into a regular index. \nThis enables the shrink, rollover, and searchable snapshot actions\nto be performed safely on follower indices.\nYou can also use unfollow directly when moving follower indices through the lifecycle.\nHas no effect on indices that are not followers, phase execution just moves to the next action.\n\n[NOTE]\nThis action is triggered automatically by the <<ilm-rollover, rollover>>,\n<<ilm-shrink, shrink>>, and\n<<ilm-searchable-snapshot, searchable snapshot>> actions when they are\napplied to follower indices.\n\nThis action waits until is it safe to convert a follower index into a regular index. \nThe following conditions must be met:\n\n* The leader index must have `index.lifecycle.indexing_complete` set to `true`.\nThis happens automatically if the leader index is rolled over using the\n<<ilm-rollover, rollover>> action, and can be set manually using\nthe <<indices-update-settings,index settings>> API.\n* All operations performed on the leader index have been replicated to the follower index. \nThis ensures that no operations are lost when the index is converted.\n\nOnce these conditions are met, unfollow performs the following operations:\n\n* Pauses indexing following for the follower index.\n* Closes the follower index.\n* Unfollows the leader index.\n* Opens the follower index (which is at this point is a regular index).\n\n[[ilm-unfollow-options]]\n==== Options\n\nNone.\n\n[[ilm-unfollow-ex]]\n==== Example\n\n[source,console]\n--------------------------------------------------\nPUT _ilm/policy/my_policy\n{\n  \"policy\": {\n    \"phases\": {\n      \"hot\": {\n        \"actions\": {\n          \"unfollow\" : {}\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n"
+}

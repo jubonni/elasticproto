@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.638064",
+        "size": 1724,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-clear-privilege-cache.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-clear-privilege-cache",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-clear-privilege-cache]]\n=== Clear privileges cache API\n++++\n<titleabbrev>Clear privileges cache</titleabbrev>\n++++\n\nEvicts privileges from the native application privilege cache.\nThe cache is also automatically cleared for applications that have their privileges updated.\n\n[[security-api-clear-privilege-cache-request]]\n==== {api-request-title}\n\n`POST /_security/privilege/<applications>/_clear_cache`\n\n[[security-api-clear-privilege-cache-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have at least the `manage_security` cluster\nprivilege.\n\n[[security-api-clear-privilege-cache-desc]]\n==== {api-description-title}\n\nFor more information about the native realm, see\n<<realms>> and <<native-realm>>.\n\n[[security-api-clear-privilege-cache-path-params]]\n==== {api-path-parms-title}\n\n`<applications>`::\n(Required, string)\nComma-separated list of applications to clear. To clear all applications, use\n`*`. Does not support other wildcard patterns.\n\n[[security-api-clear-privilege-cache-example]]\n==== {api-examples-title}\n\nThe clear privileges cache API evicts privileges from the native application privilege cache.\nFor example, to clear the cache for `myapp`:\n\n[source,console]\n--------------------------------------------------\nPOST /_security/privilege/myapp/_clear_cache\n--------------------------------------------------\n\nSpecify multiple applications as a comma-separated list.\n\n[source,console]\n--------------------------------------------------\nPOST /_security/privilege/myapp,my-other-app/_clear_cache\n--------------------------------------------------\n\nTo clear the cache for all applications, use `*`.\n\n[source,console]\n----\nPOST /_security/privilege/*/_clear_cache\n----\n"
+}

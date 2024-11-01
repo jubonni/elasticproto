@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.608069",
+        "size": 1397,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-math-functions.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-math-functions",
+        "version": "8.15"
+    },
+    "doc": "[[esql-math-functions]]\n==== {esql} mathematical functions\n\n++++\n<titleabbrev>Mathematical functions</titleabbrev>\n++++\n\n{esql} supports these mathematical functions:\n\n// tag::math_list[]\n* <<esql-abs>>\n* <<esql-acos>>\n* <<esql-asin>>\n* <<esql-atan>>\n* <<esql-atan2>>\n* <<esql-cbrt>>\n* <<esql-ceil>>\n* <<esql-cos>>\n* <<esql-cosh>>\n* <<esql-e>>\n* <<esql-exp>>\n* <<esql-floor>>\n* <<esql-hypot>>\n* <<esql-log>>\n* <<esql-log10>>\n* <<esql-pi>>\n* <<esql-pow>>\n* <<esql-round>>\n* <<esql-signum>>\n* <<esql-sin>>\n* <<esql-sinh>>\n* <<esql-sqrt>>\n* <<esql-tan>>\n* <<esql-tanh>>\n* <<esql-tau>>\n// end::math_list[]\n\ninclude::layout/abs.asciidoc[]\ninclude::layout/acos.asciidoc[]\ninclude::layout/asin.asciidoc[]\ninclude::layout/atan.asciidoc[]\ninclude::layout/atan2.asciidoc[]\ninclude::layout/cbrt.asciidoc[]\ninclude::layout/ceil.asciidoc[]\ninclude::layout/cos.asciidoc[]\ninclude::layout/cosh.asciidoc[]\ninclude::layout/e.asciidoc[]\ninclude::layout/exp.asciidoc[]\ninclude::layout/floor.asciidoc[]\ninclude::layout/hypot.asciidoc[]\ninclude::layout/log.asciidoc[]\ninclude::layout/log10.asciidoc[]\ninclude::layout/pi.asciidoc[]\ninclude::layout/pow.asciidoc[]\ninclude::layout/round.asciidoc[]\ninclude::layout/signum.asciidoc[]\ninclude::layout/sin.asciidoc[]\ninclude::layout/sinh.asciidoc[]\ninclude::layout/sqrt.asciidoc[]\ninclude::layout/tan.asciidoc[]\ninclude::layout/tanh.asciidoc[]\ninclude::layout/tau.asciidoc[]\n"
+}

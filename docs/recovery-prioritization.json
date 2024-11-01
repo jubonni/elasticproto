@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.969070",
+        "size": 1346,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/recovery-prioritization.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "recovery-prioritization",
+        "version": "8.15"
+    },
+    "doc": "[[recovery-prioritization]]\n=== Index recovery prioritization\n\nUnallocated shards are recovered in order of priority, whenever possible.\nIndices are sorted into priority order as follows:\n\n* the optional `index.priority` setting (higher before lower)\n* the index creation date (higher before lower)\n* the index name (higher before lower)\n\nThis means that, by default, newer indices will be recovered before older indices.\n\nUse the per-index dynamically updatable `index.priority` setting to customise\nthe index prioritization order. For instance:\n\n[source,console]\n------------------------------\nPUT index_1\n\nPUT index_2\n\nPUT index_3\n{\n  \"settings\": {\n    \"index.priority\": 10\n  }\n}\n\nPUT index_4\n{\n  \"settings\": {\n    \"index.priority\": 5\n  }\n}\n------------------------------\n\nIn the above example:\n\n* `index_3` will be recovered first because it has the highest `index.priority`.\n* `index_4` will be recovered next because it has the next highest priority.\n* `index_2` will be recovered next because it was created more recently.\n* `index_1` will be recovered last.\n\nThis setting accepts an integer, and can be updated on a live index with the\n<<indices-update-settings,update index settings API>>:\n\n[source,console]\n------------------------------\nPUT index_4/_settings\n{\n  \"index.priority\": 1\n}\n------------------------------\n// TEST[continued]\n"
+}

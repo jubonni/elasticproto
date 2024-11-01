@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.267079",
+        "size": 2423,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-search-application.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "get-search-application",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[get-search-application]]\n=== Get Search Application\n\nbeta::[]\n\n++++\n<titleabbrev>Get Search Application</titleabbrev>\n++++\n\nRetrieves information about a search application.\n\n[[get-search-application-request]]\n==== {api-request-title}\n\n`GET _application/search_application/<name>`\n\n[[get-search-application-prereq]]\n==== {api-prereq-title}\n\nRequires the `manage_search_application` cluster privilege.\n\n[[get-search-application-path-params]]\n==== {api-path-parms-title}\n\n`<name>`::\n(Required, string)\n\n[[get-search-application-response-codes]]\n==== {api-response-codes-title}\n\n`400`::\nThe `name` was not provided.\n\n`404` (Missing resources)::\nNo Search Application matching `name` could be found.\n\n[[get-search-application-example]]\n==== {api-examples-title}\n\nThe following example gets the Search Application named `my-app`:\n\n////\n\n[source,console]\n--------------------------------------------------\nPUT index1\n\nPUT index2\n\nPUT _application/search_application/my-app\n{\n    \"indices\": [\"index1\", \"index2\"],\n    \"updated_at_millis\": 1682105622204,\n    \"template\": {\n      \"script\": {\n        \"source\": {\n          \"query\": {\n            \"query_string\": {\n              \"query\": \"{{query_string}}\",\n              \"default_field\": \"{{default_field}}\"\n            }\n          }\n        },\n        \"params\": {\n          \"query_string\": \"*\",\n          \"default_field\": \"*\"\n        }\n      }\n  }\n}\n--------------------------------------------------\n// TESTSETUP\n\n[source,console]\n--------------------------------------------------\nDELETE _application/search_application/my-app\n\nDELETE index1\n\nDELETE index2\n--------------------------------------------------\n// TEARDOWN\n\n////\n\n[source,console]\n----\nGET _application/search_application/my-app/\n----\n\nA sample response:\n\n[source,console-result]\n----\n{\n  \"name\": \"my-app\",\n  \"indices\": [ \"index1\", \"index2\" ],\n  \"updated_at_millis\": 1682105622204,\n  \"template\": {\n    \"script\": {\n      \"source\": {\n        \"query\": {\n          \"query_string\": {\n            \"query\": \"{{query_string}}\",\n            \"default_field\": \"{{default_field}}\"\n          }\n        }\n      },\n      \"lang\": \"mustache\",\n      \"options\": {\n        \"content_type\": \"application/json;charset=utf-8\"\n      },\n      \"params\": {\n        \"query_string\": \"*\",\n        \"default_field\": \"*\"\n      }\n    }\n  }\n}\n----\n// TESTRESPONSE[s/\"updated_at_millis\": 1682105622204/\"updated_at_millis\": $body.$_path/]\n"
+}

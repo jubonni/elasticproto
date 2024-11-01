@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.384065",
+        "size": 1140,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-wait-for-snapshot.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ilm-wait-for-snapshot",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ilm-wait-for-snapshot]]\n=== Wait for snapshot\n\nPhases allowed: delete.\n\nWaits for the specified {slm-init} policy to be executed before removing the index.\nThis ensures that a snapshot of the deleted index is available.\n\n[[ilm-wait-for-snapshot-options]]\n==== Options\n\n`policy`::\n(Required, string)\nName of the {slm-init} policy that the delete action should wait for.\n\n[[ilm-wait-for-snapshot-ex]]\n==== Example\n////\n[source,console]\n--------------------------------------------------\nPUT /_snapshot/backing_repo\n{\n \"type\": \"fs\",\n  \"settings\": {\n    \"location\": \"my_backup_location\"\n  }\n}\n\nPUT /_slm/policy/slm-policy-name\n{\n  \"schedule\": \"0 30 1 * * ?\",\n  \"name\": \"<daily-snap-{now/d}>\",\n  \"repository\": \"backing_repo\"\n}\n--------------------------------------------------\n// TESTSETUP\n////\n[source,console]\n--------------------------------------------------\nPUT _ilm/policy/my_policy\n{\n  \"policy\": {\n    \"phases\": {\n      \"delete\": {\n        \"actions\": {\n          \"wait_for_snapshot\" : {\n            \"policy\": \"slm-policy-name\"\n          }\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n"
+}

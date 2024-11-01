@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.167071",
+        "size": 1833,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-repositories.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "cat-repositories",
+        "version": "8.15"
+    },
+    "doc": "[[cat-repositories]]\n=== cat repositories API\n++++\n<titleabbrev>cat repositories</titleabbrev>\n++++\n\n[IMPORTANT]\n====\ncat APIs are only intended for human consumption using the command line or {kib} \nconsole. They are _not_ intended for use by applications. For application \nconsumption, use the <<get-snapshot-repo-api,get snapshot repository API>>.\n====\n\nReturns the <<snapshots-register-repository,snapshot repositories>> for a cluster.\n\n\n[[cat-repositories-api-request]]\n==== {api-request-title}\n\n`GET /_cat/repositories`\n\n[[cat-repositories-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`monitor_snapshot`, `create_snapshot`, or `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[cat-repositories-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=http-format]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=cat-h]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=help]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=local]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=cat-s]\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=cat-v]\n\n\n[[cat-repositories-api-example]]\n==== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nGET /_cat/repositories?v=true\n--------------------------------------------------\n// TEST[s/^/PUT \\/_snapshot\\/repo1\\n{\"type\": \"fs\", \"settings\": {\"location\": \"repo\\/1\"}}\\n/]\n\nThe API returns the following response:\n\n[source,txt]\n--------------------------------------------------\nid    type\nrepo1   fs\nrepo2   s3\n--------------------------------------------------\n// TESTRESPONSE[s/\\nrepo2   s3// non_json]\n"
+}

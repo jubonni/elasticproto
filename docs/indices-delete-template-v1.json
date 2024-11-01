@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.891066",
+        "size": 1524,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-delete-template-v1.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "indices-delete-template-v1",
+        "version": "8.15"
+    },
+    "doc": "[[indices-delete-template-v1]]\n=== Delete index template API\n++++\n<titleabbrev>Delete index template (legacy)</titleabbrev>\n++++\n\nIMPORTANT: This documentation is about <<indices-templates-v1,legacy index\ntemplates>>, which are deprecated and will be replaced by the composable\ntemplates introduced in {es} 7.8. For information about composable templates,\nsee <<index-templates>>.\n\nDeletes a legacy index template.\n\n////\n[source,console]\n--------------------------------------------------\nPUT _template/my-legacy-index-template\n{\n \"index_patterns\" : [\"te*\"],\n  \"settings\": {\n    \"number_of_shards\": 1\n  }\n}\n--------------------------------------------------\n// TESTSETUP\n////\n\n[source,console]\n--------------------------------------------------\nDELETE /_template/my-legacy-index-template\n--------------------------------------------------\n\n\n[[delete-template-api-v1-request]]\n==== {api-request-title}\n\n`DELETE /_template/<legacy-index-template>`\n\n[[delete-template-api-v1-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the\n`manage_index_templates` or `manage` <<privileges-list-cluster,cluster\nprivilege>> to use this API.\n\n[[delete-template-api-v1-path-params]]\n==== {api-path-parms-title}\n\n`<legacy-index-template>`::\n(Required, string)\nThe name of the legacy index template to delete. Wildcard (`*`)\nexpressions are supported.\n\n\n[[delete-template-api-v1-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=master-timeout]\n"
+}

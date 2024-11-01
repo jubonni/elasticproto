@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.555067",
+        "size": 2510,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/list-search-applications.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "list-search-applications",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[list-search-applications]]\n=== List Search Applications\n\nbeta::[]\n\n++++\n<titleabbrev>List Search Applications</titleabbrev>\n++++\n\nReturns information about Search Applications.\n\n[[list-search-applications-request]]\n==== {api-request-title}\n\n`GET _application/search_application/`\n\n[[list-search-applications-prereq]]\n==== {api-prereq-title}\n\nRequires the `manage_search_application` cluster privilege.\n\n[[list-search-applications-path-params]]\n==== {api-path-parms-title}\n\n`q`::\n(Optional, string) Query in the Lucene query string syntax, to return only search applications matching the query.\n\n`size`::\n(Optional, integer) Maximum number of results to retrieve.\n\n`from`::\n(Optional, integer) The offset from the first result to fetch.\n\n[[list-search-applications-response-codes]]\n==== {api-response-codes-title}\n\n[[list-search-applications-example]]\n==== {api-examples-title}\n\nThe following example lists all configured search applications:\n\n////\n\n[source,console]\n--------------------------------------------------\nPUT index1\n\nPUT _application/search_application/app-1\n{\n  \"indices\": [ \"index1\" ],\n  \"template\": {\n    \"script\": {\n      \"source\": {\n        \"query\": {\n          \"query_string\": {\n            \"query\": \"{{query_string}}\"\n          }\n        }\n      }\n    }\n  }\n}\n\nPUT _application/search_application/app-2\n{\n  \"indices\": [ \"index1\" ],\n  \"template\": {\n    \"script\": {\n      \"source\": {\n        \"query\": {\n          \"query_string\": {\n            \"query\": \"{{query_string}}\"\n          }\n        }\n      }\n    }\n  }\n}\n--------------------------------------------------\n// TESTSETUP\n\n[source,console]\n--------------------------------------------------\nDELETE _application/search_application/app-1\n\nDELETE _application/search_application/app-2\n--------------------------------------------------\n// TEARDOWN\n\n////\n\n[source,console]\n----\nGET _application/search_application/\n----\n\nThe following example queries the first three search applications whose names start with `app`:\n\n[source,console]\n----\nGET _application/search_application?from=0&size=3&q=app*\n----\n\nA sample response:\n\n[source,console-result]\n----\n{\n  \"count\": 2,\n  \"results\": [\n    {\n      \"name\": \"app-1\",\n      \"updated_at_millis\": 1690981129366\n    },\n    {\n      \"name\": \"app-2\",\n      \"updated_at_millis\": 1691501823939\n    }\n  ]\n}\n----\n// TESTRESPONSE[s/\"updated_at_millis\": 1690981129366/\"updated_at_millis\": $body.$_path/]\n// TESTRESPONSE[s/\"updated_at_millis\": 1691501823939/\"updated_at_millis\": $body.$_path/]\n"
+}

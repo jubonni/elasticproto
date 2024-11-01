@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.894067",
+        "size": 2273,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-inference-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "delete-inference-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-inference-api]]\n=== Delete {infer} API\n\nDeletes an {infer} endpoint.\n\nIMPORTANT: The {infer} APIs enable you to use certain services, such as built-in {ml} models (ELSER, E5), models uploaded through Eland, Cohere, OpenAI, Azure, Google AI Studio, Google Vertex AI, Anthropic, Watsonx.ai, or Hugging Face.\nFor built-in models and models uploaded through Eland, the {infer} APIs offer an alternative way to use and manage trained models.\nHowever, if you do not plan to use the {infer} APIs to use these models or if you want to use non-NLP models, use the <<ml-df-trained-models-apis>>.\n\n\n[discrete]\n[[delete-inference-api-request]]\n==== {api-request-title}\n\n`DELETE /_inference/<inference_id>`\n\n`DELETE /_inference/<task_type>/<inference_id>`\n\n[discrete]\n[[delete-inference-api-prereqs]]\n==== {api-prereq-title}\n\n* Requires the `manage_inference` <<privileges-list-cluster,cluster privilege>>\n(the built-in `inference_admin` role grants this privilege)\n\n\n[discrete]\n[[delete-inference-api-path-params]]\n==== {api-path-parms-title}\n\n<inference_id>::\n(Required, string)\nThe unique identifier of the {infer} endpoint to delete.\n\n<task_type>::\n(Optional, string)\nThe type of {infer} task that the model performs.\n\n\n[discrete]\n[[delete-inference-query-parms]]\n== {api-query-parms-title}\n\n`dry_run`::\n(Optional, Boolean)\nWhen `true`, checks the `semantic_text` fields and  {infer} processors that reference the endpoint and returns them in a list, but does not delete the endpoint.\nDefaults to `false`.\n\n`force`::\n(Optional, Boolean)\nDeletes the endpoint regardless if it's used in a `semantic_text` field or in an {infer} pipeline.\n\n\n[discrete]\n[[delete-inference-api-example]]\n==== {api-examples-title}\n\nThe following API call deletes the `my-elser-model` {infer} model that can\nperform `sparse_embedding` tasks.\n\n\n[source,console]\n------------------------------------------------------------\nDELETE /_inference/sparse_embedding/my-elser-model\n------------------------------------------------------------\n// TEST[skip:TBD]\n\n\nThe API returns the following response:\n\n[source,console-result]\n------------------------------------------------------------\n{\n  \"acknowledged\": true\n}\n------------------------------------------------------------\n// NOTCONSOLE\n"
+}

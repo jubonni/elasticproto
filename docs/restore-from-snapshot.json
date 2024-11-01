@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.236069",
+        "size": 736,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/restore-from-snapshot.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "restore-from-snapshot",
+        "version": "8.15"
+    },
+    "doc": "[[restore-from-snapshot]]\n== Restore from snapshot\n\nElasticsearch is using snapshots to store a copy of your data outside a cluster. You can restore a snapshot to recover\nindices and data streams for which there are no copies of the shards in the cluster. This can happen if the data\n(indices or data streams) was deleted or if the cluster membership changed and the current nodes in the system do not\ncontain a copy of the data anymore.\n\nIMPORTANT: Restoring the missing data requires you to have a backup of the affected indices and data streams that is\nup-to-date enough for your use case. Please do not proceed without confirming this.\n\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/data/restore-from-snapshot-widget.asciidoc[]\n"
+}

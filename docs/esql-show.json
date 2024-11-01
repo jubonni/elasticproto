@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.435068",
+        "size": 557,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-show.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-show",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[esql-show]]\n=== `SHOW`\n\nThe `SHOW` source command returns information about the deployment and\nits capabilities.\n\n**Syntax**\n\n[source,esql]\n----\nSHOW item\n----\n\n*Parameters*\n\n`item`::\nCan only be `INFO`.\n\n*Examples*\n\nUse `SHOW INFO` to return the deployment's version, build date and hash.\n\n[source,esql]\n----\nSHOW INFO\n----\n[%header.monospaced.styled,format=dsv,separator=|]\n|===\n    version    |             date             |                  hash\n8.13.0         |2024-02-23T10:04:18.123117961Z|04ba8c8db2507501c88f215e475de7b0798cb3b3\n|===\n"
+}

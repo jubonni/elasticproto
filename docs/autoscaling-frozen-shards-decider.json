@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.151066",
+        "size": 768,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-frozen-shards-decider.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "autoscaling-frozen-shards-decider",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[autoscaling-frozen-shards-decider]]\n=== Frozen shards decider\n\nThe {cloud}/ec-autoscaling.html[autoscaling] frozen shards decider (`frozen_shards`) calculates the memory required to search\nthe current set of partially mounted indices in the frozen tier. Based on a\nrequired memory amount per shard, it calculates the necessary memory in the frozen tier.\n\n[[autoscaling-frozen-shards-decider-settings]]\n==== Configuration settings\n\n`memory_per_shard`::\n(Optional, <<byte-units,byte value>>)\nThe memory needed per shard, in bytes. Defaults to 2000 shards per 64 GB node (roughly 32 MB per shard).\nNotice that this is total memory, not heap, assuming that the Elasticsearch default heap sizing\nmechanism is used and that nodes are not bigger than 64 GB.\n"
+}

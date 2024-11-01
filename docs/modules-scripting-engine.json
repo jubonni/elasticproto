@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.002067",
+        "size": 1976,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting-engine.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "modules-scripting-engine",
+        "version": "8.15"
+    },
+    "doc": "[[modules-scripting-engine]]\n== Advanced scripts using script engines\n\nA `ScriptEngine` is a backend for implementing a scripting language. It may also\nbe used to write scripts that need to use advanced internals of scripting. For example,\na script that wants to use term frequencies while scoring.\n\nThe plugin {plugins}/plugin-authors.html[documentation] has more information on\nhow to write a plugin so that Elasticsearch will properly load it. To register\nthe `ScriptEngine`, your plugin should implement the `ScriptPlugin` interface\nand override the `getScriptEngine(Settings settings)` method.\n\nThe following is an example of a custom `ScriptEngine` which uses the language\nname `expert_scripts`. It implements a single script called `pure_df` which\nmay be used as a search script to override each document's score as\nthe document frequency of a provided term.\n\n[\"source\",\"java\",subs=\"attributes,callouts,macros\"]\n--------------------------------------------------\ninclude-tagged::{elasticsearch-root}/plugins/examples/script-expert-scoring/src/main/java/org/elasticsearch/example/expertscript/ExpertScriptPlugin.java[expert_engine]\n--------------------------------------------------\n\nYou can execute the script by specifying its `lang` as `expert_scripts`, and the name\nof the script as the script source:\n\n\n[source,console]\n--------------------------------------------------\nPOST /_search\n{\n  \"query\": {\n    \"function_score\": {\n      \"query\": {\n        \"match\": {\n          \"body\": \"foo\"\n        }\n      },\n      \"functions\": [\n        {\n          \"script_score\": {\n            \"script\": {\n                \"source\": \"pure_df\",\n                \"lang\" : \"expert_scripts\",\n                \"params\": {\n                    \"field\": \"body\",\n                    \"term\": \"foo\"\n                }\n            }\n          }\n        }\n      ]\n    }\n  }\n}\n--------------------------------------------------\n// TEST[skip:we don't have an expert script plugin installed to test this]\n"
+}

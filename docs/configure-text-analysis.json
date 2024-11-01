@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.698068",
+        "size": 1180,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/configure-text-analysis.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "configure-text-analysis",
+        "version": "8.15"
+    },
+    "doc": "[[configure-text-analysis]]\n== Configure text analysis\n\nBy default, {es} uses the <<analysis-standard-analyzer,`standard` analyzer>> for\nall text analysis. The `standard` analyzer gives you out-of-the-box support for\nmost natural languages and use cases. If you chose to use the `standard`\nanalyzer as-is, no further configuration is needed.\n\nIf the standard analyzer does not fit your needs, review and test {es}'s other\nbuilt-in <<analysis-analyzers,built-in analyzers>>. Built-in analyzers don't\nrequire configuration, but some support options that can be used to adjust their\nbehavior. For example, you can configure the `standard` analyzer with a list of\ncustom stop words to remove.\n\nIf no built-in analyzer fits your needs, you can test and create a custom\nanalyzer. Custom analyzers involve selecting and combining different\n<<analyzer-anatomy,analyzer components>>, giving you greater control over\nthe process.\n\n* <<test-analyzer>>\n* <<configuring-analyzers>>\n* <<analysis-custom-analyzer>>\n* <<specify-analyzer>>\n\n\ninclude::testing.asciidoc[]\n\ninclude::analyzers/configuring.asciidoc[]\n\ninclude::analyzers/custom-analyzer.asciidoc[]\n\ninclude::specify-analyzer.asciidoc[]"
+}

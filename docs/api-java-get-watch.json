@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.296070",
+        "size": 1054,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/api-java-get-watch.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "api-java-get-watch",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[api-java-get-watch]]\n=== Get watch API\n\nThis API retrieves a watch by its id.\n\nThe following example gets a watch with `my-watch` id:\n\n[source,java]\n--------------------------------------------------\nGetWatchResponse getWatchResponse = watcherClient.prepareGetWatch(\"my-watch\").get();\n--------------------------------------------------\n\nYou can access the watch definition by accessing the source of the response:\n\n[source,java]\n--------------------------------------------------\nXContentSource source = getWatchResponse.getSource();\n--------------------------------------------------\n\nThe `XContentSource` provides you methods to explore the source:\n\n[source,java]\n--------------------------------------------------\nMap<String, Object> map = source.getAsMap();\n--------------------------------------------------\n\nOr get a specific value associated with a known key:\n\n[source,java]\n--------------------------------------------------\nString host = source.getValue(\"input.http.request.host\");\n--------------------------------------------------"
+}

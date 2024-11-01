@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.866068",
+        "size": 1398,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-async-eql-search-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "delete-async-eql-search-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n\n[[delete-async-eql-search-api]]\n=== Delete async EQL search API\n++++\n<titleabbrev>Delete async EQL search</titleabbrev>\n++++\n\nDeletes an <<eql-search-async,async EQL search>> or a\n<<eql-search-store-sync-eql-search,stored synchronous EQL search>>. The API also\ndeletes results for the search.\n\n[source,console]\n----\nDELETE /_eql/search/FkpMRkJGS1gzVDRlM3g4ZzMyRGlLbkEaTXlJZHdNT09TU2VTZVBoNDM3cFZMUToxMDM=\n----\n// TEST[skip: no access to search ID]\n\n[[delete-async-eql-search-api-request]]\n==== {api-request-title}\n\n`DELETE /_eql/search/<search_id>`\n\n[[delete-async-eql-search-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, only the following users can\nuse this API to delete a search:\n\n** Users with the `cancel_task` <<privileges-list-cluster,cluster privilege>>\n** The user who first submitted the search\n\n* See <<eql-required-fields>>.\n\n[[delete-async-eql-search-api-limitations]]\n===== Limitations\n\nSee <<eql-syntax-limitations,EQL limitations>>.\n\n[[delete-async-eql-search-api-path-params]]\n==== {api-path-parms-title}\n\n`<search_id>`::\n(Required, string)\nIdentifier for the search to delete.\n+\nA search ID is provided in the <<eql-search-api,EQL search API>>'s response for\nan <<eql-search-async,async search>>. A search ID is also provided if the\nrequest's <<eql-search-api-keep-on-completion,`keep_on_completion`>> parameter\nis `true`.\n"
+}

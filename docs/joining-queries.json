@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.492070",
+        "size": 1408,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/joining-queries.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "joining-queries",
+        "version": "8.15"
+    },
+    "doc": "[[joining-queries]]\n== Joining queries\n\nPerforming full SQL-style joins in a distributed system like Elasticsearch is\nprohibitively expensive. Instead, Elasticsearch offers two forms of join\nwhich are designed to scale horizontally.\n\n<<query-dsl-nested-query,`nested` query>>::\nDocuments may contain fields of type <<nested,`nested`>>. These\nfields are used to index arrays of objects, where each object can be queried\n(with the `nested` query) as an independent document.\n\n<<query-dsl-has-child-query,`has_child`>> and <<query-dsl-has-parent-query,`has_parent`>> queries::\nA <<parent-join,`join` field relationship>> can exist between\ndocuments within a single index. The `has_child` query returns parent\ndocuments whose child documents match the specified query, while the\n`has_parent` query returns child documents whose parent document matches the\nspecified query.\n\nAlso see the <<query-dsl-terms-lookup,terms-lookup mechanism>> in the `terms`\nquery, which allows you to build a `terms` query from values contained in\nanother document.\n\n[discrete]\n[[joining-queries-notes]]\n==== Notes\n\n[discrete]\n===== Allow expensive queries\nJoining queries will not be executed if <<query-dsl-allow-expensive-queries, `search.allow_expensive_queries`>>\nis set to false.\n\ninclude::nested-query.asciidoc[]\n\ninclude::has-child-query.asciidoc[]\n\ninclude::has-parent-query.asciidoc[]\n\ninclude::parent-id-query.asciidoc[]\n\n\n"
+}

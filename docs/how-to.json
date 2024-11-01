@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.337067",
+        "size": 850,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/how-to.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "how-to",
+        "version": "8.15"
+    },
+    "doc": "[[how-to]]\n= How to\n\n[partintro]\n--\nElasticsearch ships with defaults which are intended to give a good out of\nthe box experience. Full text search, highlighting, aggregations, and indexing\nshould all just work without the user having to change anything.\n\nOnce you better understand how you want to use Elasticsearch, however,\nthere are a number of optimizations you can make to improve performance\nfor your use case.\n\nThis section provides guidance about which changes should and shouldn't be\nmade.\n--\n\ninclude::how-to/general.asciidoc[]\n\ninclude::how-to/recipes.asciidoc[]\n\ninclude::how-to/indexing-speed.asciidoc[]\n\ninclude::how-to/search-speed.asciidoc[]\n\ninclude::how-to/knn-search.asciidoc[]\n\ninclude::how-to/disk-usage.asciidoc[]\n\ninclude::how-to/size-your-shards.asciidoc[]\n\ninclude::how-to/use-elasticsearch-for-time-series-data.asciidoc[]\n\n"
+}

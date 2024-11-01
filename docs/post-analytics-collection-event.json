@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.943068",
+        "size": 2289,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/post-analytics-collection-event.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "post-analytics-collection-event",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[post-analytics-collection-event]]\n=== Post Event to an Analytics Collection\n\nbeta::[]\n\n++++\n<titleabbrev>Post Analytics Collection Event</titleabbrev>\n++++\n\n////\n[source,console]\n----\nPUT _application/analytics/my_analytics_collection\n----\n// TESTSETUP\n\n[source,console]\n----\nDELETE _application/analytics/my_analytics_collection\n----\n// TEARDOWN\n////\n\nPost an event to a <<behavioral-analytics-overview,Behavioral Analytics>> Collection.\n\n[[post-analytics-collection-event-request]]\n==== {api-request-title}\n\n`POST _application/analytics/<collection_name>/event/<event_type>`\n\n[[post-analytics-collection-event-path-params]]\n==== {api-path-parms-title}\n\n`<collection_name>`::\n(Required, string) Analytics collection name you want to ingest event in.\n\n`<event_type>`::\n(Required, string) Analytics event type. Can be one of `page_view`, `search`, `search_click`.\n\n[[post-analytics-collection-event-request-body]]\n==== {api-request-body-title}\n\nFull request body parameters can be found in: <<behavioral-analytics-event-reference>>.\n\n[[post-analytics-collection-event-prereqs]]\n==== {api-prereq-title}\n\nRequires the `post_behavioral_analytics_event` cluster privilege.\n\n[[post-analytics-collection-event-response-codes]]\n==== {api-response-codes-title}\n\n`202`::\nEvent has been accepted and will be ingested.\n\n`404`::\nAnalytics Collection `<collection_name>` does not exists.\n\n`400`::\nOccurs either when the event type is unknown or when event payload contains invalid data.\n\n[[post-analytics-collection-event-example]]\n==== {api-examples-title}\n\nThe following example send a `search_click` event to an Analytics Collection called `my_analytics_collection`:\n\n[source,console]\n----\nPOST _application/analytics/my_analytics_collection/event/search_click\n{\n  \"session\": {\n    \"id\": \"1797ca95-91c9-4e2e-b1bd-9c38e6f386a9\"\n  },\n  \"user\": {\n    \"id\": \"5f26f01a-bbee-4202-9298-81261067abbd\"\n  },\n  \"search\":{\n    \"query\": \"search term\",\n    \"results\": {\n      \"items\": [\n        {\n          \"document\": {\n            \"id\": \"123\",\n            \"index\": \"products\"\n          }\n        }\n      ],\n      \"total_results\": 10\n    },\n    \"sort\": {\n      \"name\": \"relevance\"\n    },\n    \"search_application\": \"website\"\n  },\n  \"document\":{\n    \"id\": \"123\",\n    \"index\": \"products\"\n  }\n}\n----\n"
+}

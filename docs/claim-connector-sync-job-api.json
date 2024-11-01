@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.629086",
+        "size": 2521,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/claim-connector-sync-job-api.html",
+        "type": "documentation",
+        "role": [
+            "child_attributes"
+        ],
+        "has_code": false,
+        "title": "claim-connector-sync-job-api",
+        "version": "8.15"
+    },
+    "doc": "[[claim-connector-sync-job-api]]\n=== Claim connector sync job API\n++++\n<titleabbrev>Claim connector sync job</titleabbrev>\n++++\n\npreview::[]\n\nClaims a connector sync job.\n\nThe `_claim` endpoint is not intended for direct connector management by users. It is there to support the implementation of services that utilize the https://github.com/elastic/connectors/blob/main/docs/CONNECTOR_PROTOCOL.md[Connector Protocol] to communicate with {es}.\n\nTo get started with Connector APIs, check out <<es-connectors-tutorial-api, our tutorial>>.\n\n\n[[claim-connector-sync-job-api-request]]\n==== {api-request-title}\n`PUT _connector/_sync_job/<connector_sync_job_id>/_claim`\n\n[[claim-connector-sync-job-api-prereqs]]\n==== {api-prereq-title}\n\n* To sync data using self-managed connectors, you need to deploy the <<es-connectors-deploy-connector-service,Elastic connector service>>. on your own infrastructure. This service runs automatically on Elastic Cloud for Elastic managed connectors.\n* The `connector_sync_job_id` parameter should reference an existing connector sync job.\n\n[[claim-connector-sync-job-api-desc]]\n==== {api-description-title}\n\nClaims a connector sync job. This action updates the job's status to `in_progress` and sets the `last_seen` and `started_at` timestamps to the current time. Additionally, it can set the `sync_cursor` property for the sync job.\n\n[[claim-connector-sync-job-api-path-params]]\n==== {api-path-parms-title}\n\n`connector_sync_job_id`::\n(Required, string)\n\n[role=\"child_attributes\"]\n[[claim-connector-sync-job-api-request-body]]\n==== {api-request-body-title}\n\n`worker_hostname`::\n(Required, string) The host name of the current system that will execute the job.\n\n`sync_cursor`::\n(Optional, Object) The cursor object from the last incremental sync job. This should reference the `sync_cursor` field in the connector state for which the job is executed.\n\n\n[[claim-connector-sync-job-api-response-codes]]\n==== {api-response-codes-title}\n\n`200`::\nConnector sync job was successfully claimed.\n\n`404`::\nNo connector sync job matching `connector_sync_job_id` could be found.\n\n[[claim-connector-sync-job-api-example]]\n==== {api-examples-title}\n\nThe following example claims the connector sync job with ID `my-connector-sync-job-id`:\n\n[source,console]\n----\nPUT _connector/_sync_job/my-connector-sync-job-id/_claim\n{\n  \"worker_hostname\": \"some-machine\"\n}\n----\n// TEST[skip:there's no way to clean up after creating a connector sync job, as we don't know the id ahead of time. Therefore, skip this test.]\n"
+}

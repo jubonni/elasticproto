@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.459066",
+        "size": 273,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest-user-agent.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "ingest-user-agent",
+        "version": "8.15"
+    },
+    "doc": "[[ingest-user-agent]]\n=== Ingest `user_agent` Processor Plugin\n\nThe `user_agent` processor is no longer distributed as a plugin, but is now a module\ndistributed by default with Elasticsearch. See the\n{ref}/user-agent-processor.html[User Agent processor] for more details.\n\n"
+}

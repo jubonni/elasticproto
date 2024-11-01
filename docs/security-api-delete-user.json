@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.917068",
+        "size": 1243,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-delete-user.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "security-api-delete-user",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[security-api-delete-user]]\n=== Delete users API\n++++\n<titleabbrev>Delete users</titleabbrev>\n++++\n\nDeletes users from the native realm. \n\n[[security-api-delete-user-request]]\n==== {api-request-title}\n\n`DELETE /_security/user/<username>` \n\n[[security-api-delete-user-prereqs]]\n==== {api-prereq-title}\n\n* To use this API, you must have at least the `manage_security` cluster privilege.\n\n[[security-api-delete-user-desc]]\n==== {api-description-title}\n\nFor more information about the native realm, see \n<<realms>> and <<native-realm>>. \n\n[[security-api-delete-user-path-params]]\n==== {api-path-parms-title}\n\n`username`::\n  (Required, string) An identifier for the user. \n\n\n[[security-api-delete-user-example]]\n==== {api-examples-title}\n\nThe following example deletes the user `jacknich`:\n\n[source,console]\n--------------------------------------------------\nDELETE /_security/user/jacknich\n--------------------------------------------------\n// TEST[setup:jacknich_user]\n\nIf the user is successfully deleted, the request returns `{\"found\": true}`.\nOtherwise, `found` is set to false.\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"found\" : true\n}\n--------------------------------------------------\n"
+}

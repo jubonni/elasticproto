@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.970067",
+        "size": 934,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/docs.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "docs",
+        "version": "8.15"
+    },
+    "doc": "[[docs]]\n== Document APIs\n\nThis section starts with a short introduction to {es}'s <<docs-replication,data\nreplication model>>, followed by a detailed description of the following CRUD\nAPIs:\n\n.Single document APIs\n* <<docs-index_>>\n* <<docs-get>>\n* <<docs-delete>>\n* <<docs-update>>\n\n.Multi-document APIs\n* <<docs-multi-get>>\n* <<docs-bulk>>\n* <<docs-delete-by-query>>\n* <<docs-update-by-query>>\n* <<docs-reindex>>\n\ninclude::docs/data-replication.asciidoc[]\n\ninclude::docs/index_.asciidoc[]\n\ninclude::docs/get.asciidoc[]\n\ninclude::docs/delete.asciidoc[]\n\ninclude::docs/delete-by-query.asciidoc[]\n\ninclude::docs/update.asciidoc[]\n\ninclude::docs/update-by-query.asciidoc[]\n\ninclude::docs/multi-get.asciidoc[]\n\ninclude::docs/bulk.asciidoc[]\n\ninclude::docs/reindex.asciidoc[]\n\ninclude::docs/termvectors.asciidoc[]\n\ninclude::docs/multi-termvectors.asciidoc[]\n\ninclude::docs/refresh.asciidoc[]\n\ninclude::docs/concurrency-control.asciidoc[]\n"
+}

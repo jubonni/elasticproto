@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.809065",
+        "size": 2076,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-open-job.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ml-open-job",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-open-job]]\n= Open {anomaly-jobs} API\n++++\n<titleabbrev>Open jobs</titleabbrev>\n++++\n\nOpens one or more {anomaly-jobs}.\n\n[[ml-open-job-request]]\n== {api-request-title}\n\n`POST _ml/anomaly_detectors/{job_id}/_open`\n\n[[ml-open-job-prereqs]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n[[ml-open-job-desc]]\n== {api-description-title}\n\nAn {anomaly-job} must be opened in order for it to be ready to receive and\nanalyze data. It can be opened and closed multiple times throughout its\nlifecycle.\n\nWhen you open a new job, it starts with an empty model.\n\nWhen you open an existing job, the most recent model state is automatically\nloaded. The job is ready to resume its analysis from where it left off, once new\ndata is received.\n\n[[ml-open-job-path-parms]]\n== {api-path-parms-title}\n\n`<job_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=job-id-anomaly-detection]\n\n[[ml-open-job-query-parms]]\n== {api-query-parms-title}\n\n`timeout`::\n(Optional, time) Controls the time to wait until a job has opened. The default\nvalue is 30 minutes.\n\n[[ml-open-job-request-body]]\n== {api-request-body-title}\n\nYou can also specify the `timeout` query parameter in the request body.\n\n[[ml-open-job-response-body]]\n== {api-response-body-title}\n\n`node`::\n  (string) The ID of the node that the job was opened on. If the job is allowed to \nopen lazily and has not yet been assigned to a node, this value is an empty string.\n\n`opened`::\n  (Boolean) For a successful response, this value is always `true`. On failure, an\n  exception is returned instead.\n\n[[ml-open-job-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nPOST _ml/anomaly_detectors/low_request_rate/_open\n{\n  \"timeout\": \"35m\"\n}\n--------------------------------------------------\n// TEST[skip:Kibana sample data]\n\nWhen the job opens, you receive the following results:\n\n[source,console-result]\n----\n{\n  \"opened\" : true,\n  \"node\" : \"node-1\"\n}\n----\n"
+}

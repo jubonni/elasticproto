@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.894070",
+        "size": 2159,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-params.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "mapping-params",
+        "version": "8.15"
+    },
+    "doc": "[[mapping-params]]\n== Mapping parameters\n\nThe following pages provide detailed explanations of the various mapping\nparameters that are used by <<mapping-types,field mappings>>:\n\n\nThe following mapping parameters are common to some or all field data types:\n\n* <<analyzer,`analyzer`>>\n* <<coerce,`coerce`>>\n* <<copy-to,`copy_to`>>\n* <<doc-values,`doc_values`>>\n* <<dynamic,`dynamic`>>\n* <<eager-global-ordinals,`eager_global_ordinals`>>\n* <<enabled,`enabled`>>\n* <<fielddata-mapping-param,`fielddata`>>\n* <<multi-fields,`fields`>>\n* <<mapping-date-format,`format`>>\n* <<ignore-above,`ignore_above`>>\n* <<ignore-malformed,`ignore_malformed`>>\n* <<index-options,`index_options`>>\n* <<index-phrases,`index_phrases`>>\n* <<index-prefixes,`index_prefixes`>>\n* <<mapping-index,`index`>>\n* <<mapping-field-meta,`meta`>>\n* <<normalizer, `normalizer`>>\n* <<norms,`norms`>>\n* <<null-value,`null_value`>>\n* <<position-increment-gap,`position_increment_gap`>>\n* <<properties,`properties`>>\n* <<search-analyzer,`search_analyzer`>>\n* <<similarity,`similarity`>>\n* <<subobjects,`subobjects`>>\n* <<mapping-store,`store`>>\n* <<term-vector,`term_vector`>>\n\n\ninclude::params/analyzer.asciidoc[]\n\ninclude::params/coerce.asciidoc[]\n\ninclude::params/copy-to.asciidoc[]\n\ninclude::params/doc-values.asciidoc[]\n\ninclude::params/dynamic.asciidoc[]\n\ninclude::params/eager-global-ordinals.asciidoc[]\n\ninclude::params/enabled.asciidoc[]\n\ninclude::params/format.asciidoc[]\n\ninclude::params/ignore-above.asciidoc[]\n\ninclude::params/ignore-malformed.asciidoc[]\n\ninclude::params/index.asciidoc[]\n\ninclude::params/index-options.asciidoc[]\n\ninclude::params/index-phrases.asciidoc[]\n\ninclude::params/index-prefixes.asciidoc[]\n\ninclude::params/meta.asciidoc[]\n\ninclude::params/multi-fields.asciidoc[]\n\ninclude::params/normalizer.asciidoc[]\n\ninclude::params/norms.asciidoc[]\n\ninclude::params/null-value.asciidoc[]\n\ninclude::params/position-increment-gap.asciidoc[]\n\ninclude::params/properties.asciidoc[]\n\ninclude::params/search-analyzer.asciidoc[]\n\ninclude::params/similarity.asciidoc[]\n\ninclude::params/store.asciidoc[]\n\ninclude::params/subobjects.asciidoc[]\n\ninclude::params/term-vector.asciidoc[]\n"
+}

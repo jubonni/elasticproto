@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.398066",
+        "size": 948,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/api-java-service.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "api-java-service",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[api-java-service]]\n=== {watcher} service API\n\nThe {watcher} `service` API allows the control the lifecycle of the {watcher}\nservice. The following example starts the watcher service:\n\n[source,java]\n--------------------------------------------------\nWatcherServiceResponse watcherServiceResponse = watcherClient.prepareWatchService().start().get();\n--------------------------------------------------\n\nThe following example stops the watcher service:\n\n[source,java]\n--------------------------------------------------\nWatcherServiceResponse watcherServiceResponse = watcherClient.prepareWatchService().stop().get();\n--------------------------------------------------\n\nThe following example restarts the watcher service:\n\n[source,java]\n--------------------------------------------------\nWatcherServiceResponse watcherServiceResponse = watcherClient.prepareWatchService().restart().get();\n--------------------------------------------------\n"
+}

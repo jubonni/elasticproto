@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.026068",
+        "size": 1328,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-async-query-delete-api.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-async-query-delete-api",
+        "version": "8.15"
+    },
+    "doc": "[[esql-async-query-delete-api]]\n=== {esql} async query delete API\n++++\n<titleabbrev>{esql} async query delete API</titleabbrev>\n++++\n\nThe <<esql,{esql}>> async query delete API is used to manually delete an async query\nby ID. If the query is still running, the query will be cancelled. Otherwise,\nthe stored results are deleted.\n\n[source,console]\n----\nDELETE /query/async/FkpMRkJGS1gzVDRlM3g4ZzMyRGlLbkEaTXlJZHdNT09TU2VTZVBoNDM3cFZMUToxMDM=\n----\n// TEST[skip: no access to query ID]\n\n[[esql-async-query-delete-api-request]]\n==== {api-request-title}\n\n`DELETE /_query/async/<query_id>`\n\n[[esql-async-query-delete-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, only the following users can\nuse this API to delete a query:\n\n** The authenticated user that submitted the original query request\n** Users with the `cancel_task` <<privileges-list-cluster,cluster privilege>>\n\n\n[[esql-async-query-delete-api-path-params]]\n==== {api-path-parms-title}\n\n`<query_id>`::\n(Required, string)\nIdentifier for the query to delete.\n+\nA query ID is provided in the <<esql-async-query-api,{esql} async query API>>'s\nresponse for a query that does not complete in the awaited time. A query ID is\nalso provided if the request's <<esql-async-query-api-keep-on-completion,`keep_on_completion`>>\nparameter is `true`.\n"
+}

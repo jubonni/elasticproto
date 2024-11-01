@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.499066",
+        "size": 579,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-span-or-query.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "query-dsl-span-or-query",
+        "version": "8.15"
+    },
+    "doc": "[[query-dsl-span-or-query]]\n=== Span or query\n++++\n<titleabbrev>Span or</titleabbrev>\n++++\n\nMatches the union of its span clauses. Here is an example:\n\n[source,console]\n--------------------------------------------------\nGET /_search\n{\n  \"query\": {\n    \"span_or\" : {\n      \"clauses\" : [\n        { \"span_term\" : { \"field\" : \"value1\" } },\n        { \"span_term\" : { \"field\" : \"value2\" } },\n        { \"span_term\" : { \"field\" : \"value3\" } }\n      ]\n    }\n  }\n}\n--------------------------------------------------\n\nThe `clauses` element is a list of one or more other span type queries.\n"
+}

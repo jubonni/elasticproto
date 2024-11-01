@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.796066",
+        "size": 1153,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/watcher-api-update-settings.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "watcher-api-update-settings",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[watcher-api-update-settings]]\n=== Update Watcher index settings\n++++\n<titleabbrev>Update Watcher settings</titleabbrev>\n++++\n\nThis API allows a user to modify the settings for the Watcher internal index (`.watches`). Only a subset of settings are allowed to by modified. This includes:\n\n- `index.auto_expand_replicas`\n- `index.number_of_replicas`\n\nAn example of modifying the Watcher settings:\n\n[source,console]\n----------------------------------------------------------------\nPUT /_watcher/watch/test_watch\n{\n  \"trigger\": {\n    \"schedule\": {\n      \"hourly\": {\n        \"minute\": [ 0, 5 ]\n        }\n      }\n  },\n  \"input\": {\n    \"simple\": {\n      \"payload\": {\n        \"send\": \"yes\"\n      }\n    }\n  },\n  \"condition\": {\n    \"always\": {}\n  }\n}\n----------------------------------------------------------------\n// TESTSETUP\n\n[source,console]\n-----------------------------------------------------------\nPUT /_watcher/settings\n{\n  \"index.auto_expand_replicas\": \"0-4\"\n}\n-----------------------------------------------------------\n\nThe configurable settings can be retrieved using the <<watcher-api-get-settings,Get Watcher index settings>> API.\n"
+}

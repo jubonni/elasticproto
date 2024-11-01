@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.908080",
+        "size": 1401,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-delete-snapshot.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ml-delete-snapshot",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-delete-snapshot]]\n= Delete model snapshots API\n++++\n<titleabbrev>Delete model snapshots</titleabbrev>\n++++\n\nDeletes an existing model snapshot.\n\n[[ml-delete-snapshot-request]]\n== {api-request-title}\n\n`DELETE _ml/anomaly_detectors/<job_id>/model_snapshots/<snapshot_id>`\n\n[[ml-delete-snapshot-prereqs]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n[[ml-delete-snapshot-desc]]\n== {api-description-title}\n\nIMPORTANT: You cannot delete the active model snapshot. To delete that snapshot,\nfirst revert to a different one. To identify the active model snapshot, refer to\nthe `model_snapshot_id` in the results from the get jobs API.\n\n[[ml-delete-snapshot-path-parms]]\n== {api-path-parms-title}\n\n`<job_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=job-id-anomaly-detection]\n\n`<snapshot_id>`::\n(Required, string)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=snapshot-id]\n\n[[ml-delete-snapshot-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nDELETE _ml/anomaly_detectors/farequote/model_snapshots/1491948163\n--------------------------------------------------\n// TEST[skip:todo]\n\nWhen the snapshot is deleted, you receive the following results:\n\n[source,console-result]\n----\n{\n  \"acknowledged\": true\n}\n----\n"
+}

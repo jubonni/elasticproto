@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.238069",
+        "size": 2492,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-inference-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "get-inference-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[get-inference-api]]\n=== Get {infer} API\n\nRetrieves {infer} endpoint information.\n\nIMPORTANT: The {infer} APIs enable you to use certain services, such as built-in {ml} models (ELSER, E5), models uploaded through Eland, Cohere, OpenAI, Azure, Google AI Studio, Google Vertex AI, Anthropic, Watsonx.ai, or Hugging Face.\nFor built-in models and models uploaded through Eland, the {infer} APIs offer an alternative way to use and manage trained models.\nHowever, if you do not plan to use the {infer} APIs to use these models or if you want to use non-NLP models, use the <<ml-df-trained-models-apis>>.\n\n\n[discrete]\n[[get-inference-api-request]]\n==== {api-request-title}\n\n`GET /_inference`\n\n`GET /_inference/_all`\n\n`GET /_inference/<inference_id>`\n\n`GET /_inference/<task_type>/_all`\n\n`GET /_inference/<task_type>/<inference_id>`\n\n[discrete]\n[[get-inference-api-prereqs]]\n==== {api-prereq-title}\n\n* Requires the `monitor_inference` <<privileges-list-cluster,cluster privilege>>\n(the built-in `inference_admin` and `inference_user` roles grant this privilege)\n\n[discrete]\n[[get-inference-api-desc]]\n==== {api-description-title}\n\nYou can get information in a single API request for:\n\n* a single {infer} endpoint by providing the task type and the {infer} ID,\n* all of the {infer} endpoints for a certain task type by providing the task\ntype and a wildcard expression,\n* all of the {infer} endpoints by using a wildcard expression.\n\n\n[discrete]\n[[get-inference-api-path-params]]\n==== {api-path-parms-title}\n\n`<inference_id>`::\n(Optional, string)\nThe unique identifier of the {infer} endpoint.\n\n\n`<task_type>`::\n(Optional, string)\nThe type of {infer} task that the model performs.\n\n\n[discrete]\n[[get-inference-api-example]]\n==== {api-examples-title}\n\nThe following API call retrieves information about the `my-elser-model` {infer}\nmodel that can perform `sparse_embedding` tasks.\n\n\n[source,console]\n------------------------------------------------------------\nGET _inference/sparse_embedding/my-elser-model\n------------------------------------------------------------\n// TEST[skip:TBD]\n\n\nThe API returns the following response:\n\n[source,console-result]\n------------------------------------------------------------\n{\n  \"inference_id\": \"my-elser-model\",\n  \"task_type\": \"sparse_embedding\",\n  \"service\": \"elser\",\n  \"service_settings\": {\n    \"num_allocations\": 1,\n    \"num_threads\": 1\n  },\n  \"task_settings\": {}\n}\n------------------------------------------------------------\n// NOTCONSOLE\n"
+}

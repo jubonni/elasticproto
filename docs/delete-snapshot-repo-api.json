@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.901069",
+        "size": 1256,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-snapshot-repo-api.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "delete-snapshot-repo-api",
+        "version": "8.15"
+    },
+    "doc": "[[delete-snapshot-repo-api]]\n=== Delete snapshot repository API\n++++\n<titleabbrev>Delete snapshot repository</titleabbrev>\n++++\n\nUnregisters one or more <<snapshots-register-repository,snapshot repositories>>.\n\nWhen a repository is unregistered, {es} only removes the reference to the\nlocation where the repository is storing the snapshots. The snapshots themselves\nare left untouched and in place.\n\n////\n[source,console]\n----\nPUT /_snapshot/my_repository\n{\n  \"type\": \"fs\",\n  \"settings\": {\n    \"location\": \"my_backup_location\"\n  }\n}\n----\n////\n\n[source,console]\n----\nDELETE /_snapshot/my_repository\n----\n// TEST[continued]\n\n[[delete-snapshot-repo-api-request]]\n==== {api-request-title}\n\n`DELETE /_snapshot/<repository>`\n\n[[delete-snapshot-repo-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[delete-snapshot-repo-api-path-params]]\n==== {api-path-parms-title}\n\n`<repository>`::\n(Required, string)\nName of the snapshot repository to unregister. Wildcard (`*`) patterns are\nsupported.\n\n[[delete-snapshot-repo-api-query-params]]\n==== {api-query-parms-title}\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n"
+}

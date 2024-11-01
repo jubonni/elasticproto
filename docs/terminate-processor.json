@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.646070",
+        "size": 774,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/terminate-processor.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "terminate-processor",
+        "version": "8.15"
+    },
+    "doc": "[[terminate-processor]]\n=== Terminate processor\n\n++++\n<titleabbrev>Terminate</titleabbrev>\n++++\n\nTerminates the current ingest pipeline, causing no further processors to be run.\nThis will normally be executed conditionally, using the `if` option.\n\nIf this pipeline is being called from another pipeline, the calling pipeline is *not* terminated.\n\n[[terminate-options]]\n.Terminate Options\n[options=\"header\"]\n|======\n| Name        | Required | Default | Description\ninclude::common-options.asciidoc[]\n|======\n\n[source,js]\n--------------------------------------------------\n{\n  \"description\" : \"terminates the current pipeline if the error field is present\",\n  \"terminate\": {\n    \"if\": \"ctx.error != null\"\n  }\n}\n--------------------------------------------------\n// NOTCONSOLE\n"
+}

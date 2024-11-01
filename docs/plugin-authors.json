@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.542066",
+        "size": 960,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/plugin-authors.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "plugin-authors",
+        "version": "8.15"
+    },
+    "doc": "[[plugin-authors]]\n== Creating an {es} plugin\n\n{es} plugins are modular bits of code that add functionality to\n{es}. Plugins are written in Java and implement Java interfaces that\nare defined in the source code. Plugins are composed of JAR files and metadata\nfiles, compressed in a single zip file.\n\nThere are two ways to create a plugin:\n\n<<creating-stable-plugins>>:: \nText analysis plugins can be developed against the stable plugin API to provide\n{es} with custom Lucene analyzers, token filters, character filters, and\ntokenizers.\n\n<<creating-classic-plugins>>::\nOther plugins can be developed against the classic plugin API to provide custom\nauthentication, authorization, or scoring mechanisms, and more.\n\n:plugin-type: stable\ninclude::development/creating-stable-plugins.asciidoc[]\ninclude::development/example-text-analysis-plugin.asciidoc[]\n:!plugin-type:\n\n:plugin-type: classic\ninclude::development/creating-classic-plugins.asciidoc[]\n:!plugin-type:"
+}

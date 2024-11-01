@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.635067",
+        "size": 1834,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/searchable-snapshots-api-clear-cache.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "searchable-snapshots-api-clear-cache",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[searchable-snapshots-api-clear-cache]]\n=== Clear cache API\n++++\n<titleabbrev>Clear cache</titleabbrev>\n++++\n\nexperimental::[]\n\nClears indices and data streams from the shared cache for\n<<partially-mounted,partially mounted indices>>.\n\n[[searchable-snapshots-api-clear-cache-request]]\n==== {api-request-title}\n\n`POST /_searchable_snapshots/cache/clear`\n\n`POST /<target>/_searchable_snapshots/cache/clear`\n\n[[searchable-snapshots-api-clear-cache-prereqs]]\n==== {api-prereq-title}\n\nIf the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API. You must also\nhave the `manage` <<privileges-list-indices,index privileges>> for the target\ndata stream, index, or alias.\n\n[[searchable-snapshots-api-clear-cache-path-params]]\n==== {api-path-parms-title}\n\n`<target>`::\n(Optional, string)\nComma-separated list of data streams, indices, and aliases to clear from the\ncache. Supports wildcards (`*`). To clear the entire cache, omit this parameter.\n\n[[searchable-snapshots-api-clear-cache-example]]\n==== {api-examples-title}\n////\n[source,console]\n-----------------------------------\nPUT /docs\n{\n  \"settings\" : {\n    \"index.number_of_shards\" : 1,\n    \"index.number_of_replicas\" : 0\n  }\n}\n\nPUT /_snapshot/my_repository/my_snapshot?wait_for_completion=true\n{\n  \"include_global_state\": false,\n  \"indices\": \"docs\"\n}\n\nDELETE /docs\n\nPOST /_snapshot/my_repository/my_snapshot/_mount?wait_for_completion=true\n{\n  \"index\": \"docs\",\n  \"renamed_index\": \"my-index\"\n}\n-----------------------------------\n// TEST[setup:setup-repository]\n////\n\nClears the cache of the index `my-index`:\n\n[source,console]\n--------------------------------------------------\nPOST /my-index/_searchable_snapshots/cache/clear\n--------------------------------------------------\n// TEST[continued]\n"
+}

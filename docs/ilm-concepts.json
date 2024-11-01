@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.367067",
+        "size": 299,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-concepts.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "ilm-concepts",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ilm-concepts]]\n== {ilm-init} concepts\n\n++++\n<titleabbrev>Concepts</titleabbrev>\n++++\n\n* <<ilm-index-lifecycle>>\n* <<index-rollover>>\n* <<update-lifecycle-policy>>\n\ninclude::ilm-index-lifecycle.asciidoc[]\ninclude::index-rollover.asciidoc[]\ninclude::update-lifecycle-policy.asciidoc[]"
+}

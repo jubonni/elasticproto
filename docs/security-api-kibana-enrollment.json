@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.006067",
+        "size": 1612,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-kibana-enrollment.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "security-api-kibana-enrollment",
+        "version": "8.15"
+    },
+    "doc": "[[security-api-kibana-enrollment]]\n=== Enroll {kib} API\n++++\n<titleabbrev>Enroll {kib}</titleabbrev>\n++++\n\nEnables a {kib} instance to configure itself for communication with a secured {es} cluster.\n\nNOTE: This API is currently intended for internal use only by {kib}.\n\n[[security-api-kibana-enrollment-request]]\n==== {api-request-title}\n\n`GET /_security/enroll/kibana`\n\n[[security-api-kibana-enrollment-desc]]\n==== {api-description-title}\n\n{kib} uses this API internally to configure itself for communications with an\n{es} cluster that already has security features enabled.\n\n[[security-api-client-enrollment-examples]]\n==== {api-examples-title}\n\nThe following example shows how to enroll a {kib} instance.\n\n[source,console]\n----\nGET /_security/enroll/kibana\n----\n// TEST[skip:we need to enable HTTP TLS for the docs cluster]\n\nThe API returns the following response:\n\n[source,console_result]\n----\n{\n  \"token\" : {\n    \"name\" : \"enroll-process-token-1629123923000\", <1>\n    \"value\": \"AAEAAWVsYXN0aWM...vZmxlZXQtc2VydmVyL3Rva2VuMTo3TFdaSDZ\" <2>\n  },\n  \"http_ca\" : \"MIIJlAIBAzVoGCSqGSIb3...vsDfsA3UZBAjEPfhubpQysAICAA=\", <3>\n}\n----\n<1> The name of the bearer token for the `elastic/kibana` service account.\n<2> The value of the bearer token for the `elastic/kibana` service account.\nUse this value to {ref}/service-accounts.html#authenticate-with-service-account-token[authenticate the service account] with {es}.\n<3> The CA certificate used to sign the node certificates that {es} uses for TLS\non the HTTP layer. The certificate is returned as a Base64 encoded string of the\nASN.1 DER encoding of the certificate.\n"
+}

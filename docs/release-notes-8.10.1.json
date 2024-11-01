@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.904067",
+        "size": 757,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/release-notes-8.10.1.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "release-notes-8.10.1",
+        "version": "8.15"
+    },
+    "doc": "[[release-notes-8.10.1]]\n== {es} version 8.10.1\n\nAlso see <<breaking-changes-8.10,Breaking changes in 8.10>>.\n\n[[known-issues-8.10.1]]\n[float]\n=== Known issues\n\ninclude::8.10.0.asciidoc[tag=repositorydata-format-change]\n\ninclude::8.7.1.asciidoc[tag=no-preventive-gc-issue]\n\n[[bug-8.10.1]]\n[float]\n=== Bug fixes\n\nAggregations::\n* Use long in Centroid count {es-pull}99491[#99491] (issue: {es-issue}80153[#80153])\n\nInfra/Core::\n* Fix deadlock between Cache.put and Cache.invalidateAll {es-pull}99480[#99480] (issue: {es-issue}99326[#99326])\n\nInfra/Node Lifecycle::\n* Fork computation in `TransportGetShutdownStatusAction` {es-pull}99490[#99490] (issue: {es-issue}99487[#99487])\n\nSearch::\n* Fix PIT when resolving with deleted indices {es-pull}99281[#99281]\n\n\n"
+}

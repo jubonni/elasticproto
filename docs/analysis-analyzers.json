@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.509068",
+        "size": 2303,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "analysis-analyzers",
+        "version": "8.15"
+    },
+    "doc": "[[analysis-analyzers]]\n== Built-in analyzer reference\n\nElasticsearch ships with a wide range of built-in analyzers, which can be used\nin any index without further configuration:\n\n<<analysis-standard-analyzer,Standard Analyzer>>::\n\nThe `standard` analyzer divides text into terms on word boundaries, as defined\nby the Unicode Text Segmentation algorithm. It removes most punctuation,\nlowercases terms, and supports removing stop words.\n\n<<analysis-simple-analyzer,Simple Analyzer>>::\n\nThe `simple` analyzer divides text into terms whenever it encounters a\ncharacter which is not a letter. It lowercases all terms.\n\n<<analysis-whitespace-analyzer,Whitespace Analyzer>>::\n\nThe `whitespace` analyzer divides text into terms whenever it encounters any\nwhitespace character. It does not lowercase terms.\n\n<<analysis-stop-analyzer,Stop Analyzer>>::\n\nThe `stop` analyzer is like the `simple` analyzer, but also supports removal\nof stop words.\n\n<<analysis-keyword-analyzer,Keyword Analyzer>>::\n\nThe `keyword` analyzer is a ``noop'' analyzer that accepts whatever text it is\ngiven and outputs the exact same text as a single term.\n\n<<analysis-pattern-analyzer,Pattern Analyzer>>::\n\nThe `pattern` analyzer uses a regular expression to split the text into terms.\nIt supports lower-casing and stop words.\n\n<<analysis-lang-analyzer,Language Analyzers>>::\n\nElasticsearch provides many language-specific analyzers like `english` or\n`french`.\n\n<<analysis-fingerprint-analyzer,Fingerprint Analyzer>>::\n\nThe `fingerprint` analyzer is a specialist analyzer which creates a\nfingerprint which can be used for duplicate detection.\n\n[discrete]\n=== Custom analyzers\n\nIf you do not find an analyzer suitable for your needs, you can create a\n<<analysis-custom-analyzer,`custom`>> analyzer which combines the appropriate\n<<analysis-charfilters, character filters>>,\n<<analysis-tokenizers,tokenizer>>, and <<analysis-tokenfilters,token filters>>.\n\n\ninclude::analyzers/fingerprint-analyzer.asciidoc[]\n\ninclude::analyzers/keyword-analyzer.asciidoc[]\n\ninclude::analyzers/lang-analyzer.asciidoc[]\n\ninclude::analyzers/pattern-analyzer.asciidoc[]\n\ninclude::analyzers/simple-analyzer.asciidoc[]\n\ninclude::analyzers/standard-analyzer.asciidoc[]\n\ninclude::analyzers/stop-analyzer.asciidoc[]\n\ninclude::analyzers/whitespace-analyzer.asciidoc[]"
+}

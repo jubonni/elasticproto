@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.813080",
+        "size": 1471,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/dangling-index-delete.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "dangling-index-delete",
+        "version": "8.15"
+    },
+    "doc": "[[dangling-index-delete]]\n=== Delete dangling index API\n++++\n<titleabbrev>Delete dangling index</titleabbrev>\n++++\n\nDeletes a dangling index.\n\n[[dangling-index-delete-api-request]]\n==== {api-request-title}\n\n[source,console]\n--------------------------------------------------\nDELETE /_dangling/<index-uuid>?accept_data_loss=true\n--------------------------------------------------\n// TEST[skip:Difficult to set up]\n\n[[dangling-index-delete-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[dangling-index-delete-api-desc]]\n==== {api-description-title}\n\ninclude::{es-ref-dir}/indices/dangling-indices-list.asciidoc[tag=dangling-index-description]\n\n\nDeletes a dangling index by referencing its UUID. Use the\n<<dangling-indices-list,List dangling indices API>> to locate the UUID of an index.\n\n\n[[dangling-index-delete-api-path-params]]\n==== {api-path-parms-title}\n\n`<index-uuid>`::\n(Required, string)\nUUID of the index to delete. You can find this using the\n<<dangling-indices-list,List dangling indices API>>.\n\n[[dangling-index-delete-api-query-params]]\n==== {api-query-parms-title}\n\n`accept_data_loss`::\n(Optional, Boolean)\nThis field must be set to `true` in order to carry out the import, since it will\nno longer be possible to recover the data from the dangling index.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n"
+}

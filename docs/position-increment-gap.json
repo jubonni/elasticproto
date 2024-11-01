@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.942067",
+        "size": 2004,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/position-increment-gap.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "position-increment-gap",
+        "version": "8.15"
+    },
+    "doc": "[[position-increment-gap]]\n=== `position_increment_gap`\n\n<<mapping-index,Analyzed>> text fields take term <<index-options,positions>>\ninto account, in order to be able to support\n<<query-dsl-match-query-phrase,proximity or phrase queries>>.\nWhen indexing text fields with multiple values a \"fake\" gap is added between\nthe values to prevent most phrase queries from matching across the values. The\nsize of this gap is configured using `position_increment_gap` and defaults to\n`100`.\n\nFor example:\n\n[source,console]\n--------------------------------------------------\nPUT my-index-000001/_doc/1\n{\n  \"names\": [ \"John Abraham\", \"Lincoln Smith\"]\n}\n\nGET my-index-000001/_search\n{\n  \"query\": {\n    \"match_phrase\": {\n      \"names\": {\n        \"query\": \"Abraham Lincoln\" <1>\n      }\n    }\n  }\n}\n\nGET my-index-000001/_search\n{\n  \"query\": {\n    \"match_phrase\": {\n      \"names\": {\n        \"query\": \"Abraham Lincoln\",\n        \"slop\": 101 <2>\n      }\n    }\n  }\n}\n--------------------------------------------------\n\n<1> This phrase query doesn't match our document which is totally expected.\n<2> This phrase query matches our document, even though `Abraham` and `Lincoln`\n    are in separate strings, because `slop` > `position_increment_gap`.\n\n\nThe `position_increment_gap` can be specified in the mapping. For instance:\n\n[source,console]\n--------------------------------------------------\nPUT my-index-000001\n{\n  \"mappings\": {\n    \"properties\": {\n      \"names\": {\n        \"type\": \"text\",\n        \"position_increment_gap\": 0 <1>\n      }\n    }\n  }\n}\n\nPUT my-index-000001/_doc/1\n{\n  \"names\": [ \"John Abraham\", \"Lincoln Smith\"]\n}\n\nGET my-index-000001/_search\n{\n  \"query\": {\n    \"match_phrase\": {\n      \"names\": \"Abraham Lincoln\" <2>\n    }\n  }\n}\n--------------------------------------------------\n\n<1> The first term in the next array element will be 0 terms apart from the\n    last term in the previous array element.\n<2> The phrase query matches our document which is weird, but its what we asked\n    for in the mapping.\n\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.163082",
+        "size": 2086,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/gc-logging.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "gc-logging",
+        "version": "8.15"
+    },
+    "doc": "[[gc-logging]]\n[discrete]\n==== GC logging settings\n\nBy default, {es} enables garbage collection (GC) logs. These are configured in\n<<set-jvm-options,`jvm.options`>> and output to the same default location as\nthe {es} logs. The default configuration rotates the logs every 64 MB and\ncan consume up to 2 GB of disk space.\n\nYou can reconfigure JVM logging using the command line options described in\nhttps://openjdk.java.net/jeps/158[JEP 158: Unified JVM Logging]. Unless you\nchange the default `jvm.options` file directly, the {es} default\nconfiguration is applied in addition to your own settings. To disable the\ndefault configuration, first disable logging by supplying the\n`-Xlog:disable` option, then supply your own command line options. This\ndisables __all__ JVM logging, so be sure to review the available options\nand enable everything that you require.\n\nTo see further options not contained in the original JEP, see\nhttps://docs.oracle.com/en/java/javase/13/docs/specs/man/java.html#enable-logging-with-the-jvm-unified-logging-framework[Enable\nLogging with the JVM Unified Logging Framework].\n\n[[gc-logging-examples]]\n[discrete]\n==== Examples\n\nChange the default GC log output location to `/opt/my-app/gc.log` by\n  creating `$ES_HOME/config/jvm.options.d/gc.options` with some sample\n  options:\n\n[source,shell]\n----\n# Turn off all previous logging configuratons\n-Xlog:disable\n\n# Default settings from JEP 158, but with `utctime` instead of `uptime` to match the next line\n-Xlog:all=warning:stderr:utctime,level,tags\n\n# Enable GC logging to a custom location with a variety of options\n-Xlog:gc*,gc+age=trace,safepoint:file=/opt/my-app/gc.log:utctime,level,pid,tags:filecount=32,filesize=64m\n----\n\nConfigure an {es} <<docker,Docker container>> to send GC debug logs to\n  standard error (`stderr`). This lets the container orchestrator\n  handle the output. If using the `ES_JAVA_OPTS` environment variable,\n  specify:\n\n[source,sh]\n----\nMY_OPTS=\"-Xlog:disable -Xlog:all=warning:stderr:utctime,level,tags -Xlog:gc=debug:stderr:utctime\"\ndocker run -e ES_JAVA_OPTS=\"$MY_OPTS\" # etc\n----\n"
+}

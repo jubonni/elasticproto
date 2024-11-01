@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.591083",
+        "size": 171,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-synced-flush-api.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "indices-synced-flush-api",
+        "version": "8.15"
+    },
+    "doc": "[[indices-synced-flush-api]]\n=== Synced flush API\n++++\n<titleabbrev>Synced flush</titleabbrev>\n++++\n\nSynced flush was removed. Use normal <<indices-flush,flush>> instead.\n"
+}

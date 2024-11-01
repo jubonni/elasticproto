@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.199067",
+        "size": 1896,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/get-async-sql-search-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "get-async-sql-search-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[get-async-sql-search-api]]\n=== Get async SQL search API\n++++\n<titleabbrev>Get async SQL search</titleabbrev>\n++++\n\nReturns results for an <<sql-async,async SQL search>> or a\n<<sql-store-searches,stored synchronous SQL search>>.\n\n[source,console]\n----\nGET _sql/async/FmdMX2pIang3UWhLRU5QS0lqdlppYncaMUpYQ05oSkpTc3kwZ21EdC1tbFJXQToxOTI=?format=json\n----\n// TEST[skip: no access to search ID]\n\n[[get-async-sql-search-api-request]]\n==== {api-request-title}\n\n`GET _sql/async/<search_id>`\n\n[[get-async-sql-search-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, only the user who first submitted\nthe SQL search can retrieve the search using this API.\n\n[[get-async-sql-search-api-limitations]]\n===== Limitations\n\nSee <<sql-limitations>>.\n\n[[get-async-sql-search-api-path-params]]\n==== {api-path-parms-title}\n\n`<search_id>`::\n(Required, string) Identifier for the search.\n\n[[get-async-sql-search-api-query-params]]\n==== {api-query-parms-title}\n\n`delimiter`::\n(Optional, string) Separator for CSV results. Defaults to `,`. The API only\nsupports this parameter for CSV responses.\n\n`format`::\n(Required, string) Format for the response. You must specify a format using this\nparameter or the `Accept` HTTP header. If you specify both, the API uses this\nparameter. For valid values, see <<sql-rest-format>>.\n\n`keep_alive`::\n(Optional, <<time-units,time value>>) Retention period for the search and its\nresults. Defaults to the `keep_alive` period for the original SQL search.\n\n`wait_for_completion_timeout`::\n(Optional, <<time-units,time value>>) Period to wait for complete results.\nDefaults to no timeout, meaning the request waits for complete search results.\n\n[[get-async-sql-search-api-response-body]]\n==== {api-response-body-title}\n\nThe get async SQL search API returns the same response body as the\n<<sql-search-api-response-body,SQL search API>>.\n"
+}

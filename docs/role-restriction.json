@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.257068",
+        "size": 1172,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/role-restriction.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "role-restriction",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[role-restriction]]\n=== Role restriction\n\nRole restriction can be used to specify conditions under which a role should be effective.\nWhen conditions are not met, the role will be disabled, which will result in access being denied.\nNot specifying restriction means the role is not restricted and thus always effective.\nThis is the default behaviour.\n\n--\nNOTE: Currently, the role restriction is only supported for <<security-api-create-api-key, API keys>>,\nwith limitation that the API key can only have a single role descriptor.\n--\n\n[[workflows-restriction]]\n==== Workflows\n\nWorkflows allow to restrict the role to be effective exclusively when calling certain REST APIs.\nCalling a REST API that is not allowed by a workflow, will result in the role being disabled.\nThe below section lists workflows that you can restrict the role to:\n\n`search_application_query`::: This workflow restricts the role to the <<search-application-search, Search Application Search API>> only.\n\n--\nNOTE: Workflow names are case-sensitive.\n--\n\n[discrete]\n==== Examples\n\ninclude::../../rest-api/security/create-api-keys.asciidoc[tag=create-api-key-with-role-restriction-example]\n"
+}

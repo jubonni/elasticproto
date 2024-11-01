@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.540066",
+        "size": 1193,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/api-java-stats.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "api-java-stats",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[api-java-stats]]\n=== {watcher} stats API\n\nThe `stats` API returns the current {watcher} metrics. You can control what\nmetrics this API returns using the `metric` parameter.\n\nThe following example queries the `stats` API :\n\n[source,java]\n--------------------------------------------------\nWatcherStatsResponse watcherStatsResponse = watcherClient.prepareWatcherStats().get();\n--------------------------------------------------\n\nA successful call returns a response structure that can be accessed as shown:\n\n[source,java]\n--------------------------------------------------\nWatcherBuild build = watcherStatsResponse.getBuild();\n\n// The current size of the watcher execution queue\nlong executionQueueSize = watcherStatsResponse.getThreadPoolQueueSize();\n\n// The maximum size the watch execution queue has grown to\nlong executionQueueMaxSize = watcherStatsResponse.getThreadPoolQueueSize();\n\n// The total number of watches registered in the system\nlong totalNumberOfWatches = watcherStatsResponse.getWatchesCount();\n\n// {watcher} state (STARTING,STOPPED or STARTED)\nWatcherState watcherState = watcherStatsResponse.getWatcherState();\n--------------------------------------------------\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.571068",
+        "size": 1626,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/esql-lookup.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "esql-lookup",
+        "version": "8.15"
+    },
+    "doc": "[discrete]\n[[esql-lookup]]\n=== `LOOKUP`\n\nexperimental::[\"LOOKUP is highly experimental and only available in SNAPSHOT versions.\"]\n\n`LOOKUP` matches values from the input against a `table` provided in the request,\nadding the other fields from the `table` to the output.\n\n**Syntax**\n\n[source,esql]\n----\nLOOKUP table ON match_field1[, match_field2, ...]\n----\n\n*Parameters*\n\n`table`::\nThe name of the `table` provided in the request to match.\nIf the table's column names conflict with existing columns, the existing columns will be dropped.\n\n`match_field`::\nThe fields in the input to match against the table.\n\n*Examples*\n\n// tag::examples[]\n[source,console,id=esql-lookup-example]\n----\nPOST /_query?format=txt\n{\n  \"query\": \"\"\"\n      FROM library\n    | SORT page_count DESC\n    | KEEP name, author\n    | LOOKUP era ON author\n    | LIMIT 5\n  \"\"\",\n  \"tables\": {\n    \"era\": {\n      \"author\": {\"keyword\": [\"Frank Herbert\", \"Peter F. Hamilton\", \"Vernor Vinge\", \"Alastair Reynolds\", \"James S.A. Corey\"]},\n      \"era\":    {\"keyword\": [ \"The New Wave\",           \"Diamond\",      \"Diamond\",           \"Diamond\",           \"Hadron\"]}\n    }\n  }\n}\n----\n// TEST[setup:library]\n\nWhich returns:\n\n[source,text]\n----\n        name        |     author      |      era\n--------------------+-----------------+---------------\nPandora's Star      |Peter F. Hamilton|Diamond\nA Fire Upon the Deep|Vernor Vinge     |Diamond\nDune                |Frank Herbert    |The New Wave\nRevelation Space    |Alastair Reynolds|Diamond\nLeviathan Wakes     |James S.A. Corey |Hadron\n----\n// TESTRESPONSE[s/\\|/\\\\|/ s/\\+/\\\\+/]\n// TESTRESPONSE[non_json]\n// end::examples[]\n"
+}

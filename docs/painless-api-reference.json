@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.821074",
+        "size": 517,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-api-reference.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-api-reference",
+        "version": "8.15"
+    },
+    "doc": "[[painless-api-reference]]\n== Painless API Reference\n\nPainless has a strict list of allowed methods and classes per context to\nensure all Painless scripts are secure. Most of these methods are\nexposed directly from the Java Runtime Environment (JRE) while others\nare part of Elasticsearch or Painless itself. Below is a list of the available\nAPIs per context. The shared API is available to all contexts, while the\nspecialized API available differs between contexts.\n\ninclude::painless-api-reference/index.asciidoc[]\n"
+}

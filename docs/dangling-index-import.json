@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.814067",
+        "size": 2174,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/dangling-index-import.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": true,
+        "title": "dangling-index-import",
+        "version": "8.15"
+    },
+    "doc": "[[dangling-index-import]]\n=== Import dangling index API\n++++\n<titleabbrev>Import dangling index</titleabbrev>\n++++\n\nImports a dangling index.\n\n[[dangling-index-import-api-request]]\n==== {api-request-title}\n\n[source,console]\n--------------------------------------------------\nPOST /_dangling/<index-uuid>?accept_data_loss=true\n--------------------------------------------------\n// TEST[skip:Difficult to set up]\n\n[[dangling-index-import-api-prereqs]]\n==== {api-prereq-title}\n\n* If the {es} {security-features} are enabled, you must have the `manage`\n<<privileges-list-cluster,cluster privilege>> to use this API.\n\n[[dangling-index-import-api-desc]]\n==== {api-description-title}\n\ninclude::{es-ref-dir}/indices/dangling-indices-list.asciidoc[tag=dangling-index-description]\n\nImport a single index into the cluster by referencing its UUID. Use the\n<<dangling-indices-list,List dangling indices API>> to locate the UUID of an index.\n\n\n[[dangling-index-import-api-path-params]]\n==== {api-path-parms-title}\n\n`<index-uuid>`::\n(Required, string)\nUUID of the index to import, which you can find using the\n<<dangling-indices-list,List dangling indices API>>.\n\n[[dangling-index-import-api-query-params]]\n==== {api-query-parms-title}\n\n`accept_data_loss`::\n(Required, Boolean)\nThis field must be set to `true` to import a dangling index. Because {es}\ncannot know where the dangling index data came from or determine which shard\ncopies are fresh and which are stale, it cannot guarantee that the imported data\nrepresents the latest state of the index when it was last in the cluster.\n\ninclude::{es-ref-dir}/rest-api/common-parms.asciidoc[tag=timeoutparms]\n\n[[dangling-index-import-api-example]]\n==== {api-examples-title}\n\nThe following example shows how to import a dangling index:\n\n[source,console]\n--------------------------------------------------\nPOST /_dangling/zmM4e0JtBkeUjiHD-MihPQ?accept_data_loss=true\n--------------------------------------------------\n// TEST[skip:Difficult to set up]\n\nThe API returns following response:\n\n[source,console-result]\n--------------------------------------------------\n{\n  \"acknowledged\" : true\n}\n--------------------------------------------------\n"
+}

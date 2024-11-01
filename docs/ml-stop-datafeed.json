@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:26.546066",
+        "size": 2216,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/ml-stop-datafeed.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "ml-stop-datafeed",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[ml-stop-datafeed]]\n= Stop {dfeeds} API\n\n[subs=\"attributes\"]\n++++\n<titleabbrev>Stop {dfeeds}</titleabbrev>\n++++\n\nStops one or more {dfeeds}.\n\n[[ml-stop-datafeed-request]]\n== {api-request-title}\n\n`POST _ml/datafeeds/<feed_id>/_stop` +\n\n`POST _ml/datafeeds/<feed_id>,<feed_id>/_stop` +\n\n`POST _ml/datafeeds/_all/_stop`\n\n[[ml-stop-datafeed-prereqs]]\n== {api-prereq-title}\n\nRequires the `manage_ml` cluster privilege. This privilege is included in the \n`machine_learning_admin` built-in role.\n\n[[ml-stop-datafeed-desc]]\n== {api-description-title}\n\nA {dfeed} that is stopped ceases to retrieve data from {es}.\nA {dfeed} can be started and stopped multiple times throughout its lifecycle.\n\n[[ml-stop-datafeed-path-parms]]\n== {api-path-parms-title}\n\n`<feed_id>`::\n(Required, string)\nIdentifier for the datafeed. You can stop multiple {dfeeds} in a single API\nrequest by using a comma-separated list of {dfeeds} or a wildcard expression.\nYou can close all {dfeeds} by using `_all` or by specifying `*` as the\nidentifier.\n\n[[ml-stop-datafeed-query-parms]]\n== {api-query-parms-title}\n\n`allow_no_match`::\n(Optional, Boolean)\ninclude::{es-ref-dir}/ml/ml-shared.asciidoc[tag=allow-no-match-datafeeds]\n\n`force`::\n  (Optional, Boolean) If true, the {dfeed} is stopped forcefully.\n\n`timeout`::\n  (Optional, time) Specifies the amount of time to wait until a {dfeed} stops.\n  The default value is 20 seconds.\n\n[[ml-stop-datafeed-request-body]]\n== {api-request-body-title}\n\nYou can also specify the query parameters (such as `allow_no_match` and\n`force`) in the request body.\n\n[[ml-stop-datafeed-response-codes]]\n== {api-response-codes-title}\n\n`404` (Missing resources)::\n  If `allow_no_match` is `false`, this code indicates that there are no\n  resources that match the request or only partial matches for the request.\n\n[[ml-stop-datafeed-example]]\n== {api-examples-title}\n\n[source,console]\n--------------------------------------------------\nPOST _ml/datafeeds/datafeed-low_request_rate/_stop\n{\n  \"timeout\": \"30s\"\n}\n--------------------------------------------------\n// TEST[skip:Kibana sample data]\n\nWhen the {dfeed} stops, you receive the following results:\n\n[source,console-result]\n----\n{\n  \"stopped\": true\n}\n----\n"
+}

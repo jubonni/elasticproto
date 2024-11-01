@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.392066",
+        "size": 842,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/increase-cluster-shard-limit.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "increase-cluster-shard-limit",
+        "version": "8.15"
+    },
+    "doc": "[[increase-cluster-shard-limit]]\n== Total number of shards per node has been reached\n\nElasticsearch tries to take advantage of all the available resources by \ndistributing data (index shards) amongst the cluster nodes.\n\nUsers might want to influence this data distribution by configuring the \n<<cluster-total-shards-per-node,`cluster.routing.allocation.total_shards_per_node`>>\nsystem setting to restrict the number of shards that can be hosted on a single\nnode in the system, regardless of the index.\nVarious configurations limiting how many shards can be hosted on a single node \ncan lead to shards being unassigned due to the cluster not having enough nodes to\nsatisfy the configuration.\n\nIn order to fix this follow the next steps:\n\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/data/increase-cluster-shard-limit-widget.asciidoc[]\n\n\n\n"
+}

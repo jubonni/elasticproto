@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.546091",
+        "size": 700,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/autoscaling-apis.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": false,
+        "title": "autoscaling-apis",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[autoscaling-apis]]\n== Autoscaling APIs\n\nNOTE: {cloud-only}\n\nYou can use the following APIs to perform {cloud}/ec-autoscaling.html[autoscaling operations].\n\n[discrete]\n[[autoscaling-api-top-level]]\n=== Top-Level\n\n* <<autoscaling-get-autoscaling-capacity,Get autoscaling capacity>>\n* <<autoscaling-put-autoscaling-policy,Create or update autoscaling policy>>\n* <<autoscaling-delete-autoscaling-policy,Delete autoscaling policy>>\n* <<autoscaling-get-autoscaling-policy,Get autoscaling policy>>\n\n// top-level\ninclude::put-autoscaling-policy.asciidoc[]\ninclude::get-autoscaling-capacity.asciidoc[]\ninclude::delete-autoscaling-policy.asciidoc[]\ninclude::get-autoscaling-policy.asciidoc[]\n\n"
+}

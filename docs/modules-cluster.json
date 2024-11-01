@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.661068",
+        "size": 1241,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cluster.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "modules-cluster",
+        "version": "8.15"
+    },
+    "doc": "[[modules-cluster]]\n=== Cluster-level shard allocation and routing settings\n\ninclude::{es-ref-dir}/modules/shard-allocation-desc.asciidoc[]\n\nOne of the main roles of the master is to decide which shards to allocate to\nwhich nodes, and when to move shards between nodes in order to rebalance the\ncluster.\n\nThere are a number of settings available to control the shard allocation process:\n\n*   <<cluster-shard-allocation-settings>> control allocation and\n    rebalancing operations.\n\n*   <<disk-based-shard-allocation>> explains how Elasticsearch takes available\n    disk space into account, and the related settings.\n\n*   <<shard-allocation-awareness>> and <<forced-awareness>> control how shards\n    can be distributed across different racks or availability zones.\n\n*   <<cluster-shard-allocation-filtering>> allows certain nodes or groups of\n    nodes excluded from allocation so that they can be decommissioned.\n\nBesides these, there are a few other <<misc-cluster-settings,miscellaneous cluster-level settings>>.\n\ninclude::cluster/shards_allocation.asciidoc[]\n\ninclude::cluster/disk_allocator.asciidoc[]\n\ninclude::cluster/allocation_awareness.asciidoc[]\n\ninclude::cluster/allocation_filtering.asciidoc[]\n\ninclude::cluster/misc.asciidoc[]\n"
+}

@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:25.855069",
+        "size": 930,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/painless-metric-agg-reduce-context.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "painless-metric-agg-reduce-context",
+        "version": "8.15"
+    },
+    "doc": "[[painless-metric-agg-reduce-context]]\n=== Metric aggregation reduce context\n\nUse a Painless script to\n{ref}/search-aggregations-metrics-scripted-metric-aggregation.html[reduce]\nvalues to produce the result of a scripted metric aggregation. A reduce script\nis run once on the coordinating node following a\n<<painless-metric-agg-combine-context, combine script>> (or a\n<<painless-metric-agg-map-context, map script>> if no combine script is\nspecified) and is optional as part of a full metric aggregation.\n\n*Variables*\n\n`params` (`Map`, read-only)::\n        User-defined parameters passed in as part of the query.\n\n`states` (`Map`)::\n        `Map` with values available from the prior combine script (or a map\n        script if no combine script is specified).\n\n*Return*\n\n`List`, `Map`, `String`, or primitive::\n        A value used as the result.\n\n*API*\n\nThe standard <<painless-api-reference-shared, Painless API>> is available.\n"
+}

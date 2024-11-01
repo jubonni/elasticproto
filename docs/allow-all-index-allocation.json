@@ -1,0 +1,13 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.996067",
+        "size": 553,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/allow-all-index-allocation.html",
+        "type": "documentation",
+        "role": [],
+        "has_code": false,
+        "title": "allow-all-index-allocation",
+        "version": "8.15"
+    },
+    "doc": "[[allow-all-index-allocation]]\n== Allow Elasticsearch to allocate the index\n\nThe allocation of data can be controlled using the <<index-routing-allocation-enable-setting, enable \nallocation configuration>>.\nIn certain circumstances users might want to temporarily disable or restrict the\nallocation of data. \n\nForgetting to re-allow all data allocation can lead to unassigned shards.\n\nIn order to (re)allow all data to be allocated follow these steps:\n\ninclude::{es-ref-dir}/tab-widgets/troubleshooting/data/enable-index-allocation-widget.asciidoc[]\n\n\n\n"
+}

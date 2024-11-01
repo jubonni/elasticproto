@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "timestamp": "2024-11-01T02:49:24.885083",
+        "size": 1382,
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/delete-enrich-policy-api.html",
+        "type": "documentation",
+        "role": [
+            "xpack"
+        ],
+        "has_code": true,
+        "title": "delete-enrich-policy-api",
+        "version": "8.15"
+    },
+    "doc": "[role=\"xpack\"]\n[[delete-enrich-policy-api]]\n=== Delete enrich policy API\n++++\n<titleabbrev>Delete enrich policy</titleabbrev>\n++++\n\nDeletes an existing <<enrich-policy,enrich policy>> and its\n<<enrich-index,enrich index>>.\n\n////\n[source,console]\n----\nPUT /users\n{\n  \"mappings\": {\n    \"properties\": {\n      \"email\": { \"type\": \"keyword\" }\n    }\n  }\n}\n\nPUT /_enrich/policy/my-policy\n{\n  \"match\": {\n    \"indices\": \"users\",\n    \"match_field\": \"email\",\n    \"enrich_fields\": [ \"first_name\", \"last_name\", \"city\", \"zip\", \"state\" ]\n  }\n}\n----\n// TESTSETUP\n////\n\n[source,console]\n--------------------------------------------------\nDELETE /_enrich/policy/my-policy\n--------------------------------------------------\n\n\n[[delete-enrich-policy-api-request]]\n==== {api-request-title}\n\n`DELETE /_enrich/policy/<enrich-policy>`\n\n\n[[delete-enrich-policy-api-prereqs]]\n==== {api-prereq-title}\n\ninclude::put-enrich-policy.asciidoc[tag=enrich-policy-api-prereqs]\n\n\n[[delete-enrich-policy-api-desc]]\n==== {api-description-title}\n\nUse the delete enrich policy API\nto delete an existing enrich policy\nand its enrich index.\n\n[IMPORTANT]\n====\nYou must remove an enrich policy\nfrom any in-use ingest pipelines\nbefore deletion.\nYou cannot remove in-use enrich policies.\n====\n\n\n[[delete-enrich-policy-api-path-params]]\n==== {api-path-parms-title}\n\n`<enrich-policy>`::\n(Required, string)\nEnrich policy to delete.\n"
+}

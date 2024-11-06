@@ -4,7 +4,8 @@
 
 .env
 .ipynb_checkpoints
-# _docs*
+_docs*
+elastic_venv
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files

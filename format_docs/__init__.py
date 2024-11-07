@@ -1,0 +1,2 @@
+from format_docs.elastic_guide import format_to_doc as format_elastic_docs
+from format_docs.elastic_api_spec import format_to_doc as format_elastic_api_specs

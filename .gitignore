@@ -6,6 +6,8 @@
 .ipynb_checkpoints
 _docs*
 elastic_venv
+.vscode
+.pytest_cache
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files

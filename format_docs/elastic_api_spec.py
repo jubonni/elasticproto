@@ -154,3 +154,6 @@ def _transform_api_spec_to_doc(api_spec: str) -> json:
 
 def format_to_doc(content: str) -> json:
     return _transform_api_spec_to_doc(content)
+
+def title(content: str) -> str:
+    return list(json.loads(content).keys())[0]

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: "postgres:13"
+    container_name: "localpostgres"
+    environment:
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_USER: "admin"
+    ports:
+      - "5432:5432"
+    volumes:
+      - /var/lib/docker/volumes/elastic-postgres-vol/_data

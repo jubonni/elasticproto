@@ -71,3 +71,5 @@ def _format_documentation_page_to_doc(source):
 def format_to_doc(source: str) -> json:
     return _format_documentation_page_to_doc(source)
 
+def title(content: str) -> str:
+    return _extract_text_between_markers(content)

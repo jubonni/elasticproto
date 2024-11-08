@@ -1,5 +1,5 @@
 import unittest
-from format_docs.elastic_api_spec import format_to_doc
+from format_docs.elastic_api_spec import format_to_doc_content
 
 
 class TestTransformApiSpecToDoc(unittest.TestCase):
@@ -30,7 +30,7 @@ class TestTransformApiSpecToDoc(unittest.TestCase):
             }
         }
         '''
-        result = format_to_doc(api_spec)
+        result = format_to_doc_content(api_spec)
         self.assertIn('"api_name": "indices.create"', result)
         self.assertIn('"stability": "stable"', result)
         self.assertIn('"treat_json_as_key_value": true', result)
@@ -47,7 +47,7 @@ class TestTransformApiSpecToDoc(unittest.TestCase):
             }
         }
         '''
-        result = format_to_doc(api_spec)
+        result = format_to_doc_content(api_spec)
         self.assertIn('"api_name": "indices.create"', result)
         self.assertIn('"stability": "stable"', result)
         self.assertIn('"title": "Creates an index."', result)
@@ -56,7 +56,7 @@ class TestTransformApiSpecToDoc(unittest.TestCase):
     def test_empty_api_spec(self):
         api_spec = '{}'
         with self.assertRaises(IndexError):
-            format_to_doc(api_spec)
+            format_to_doc_content(api_spec)
 
 if __name__ == '__main__':
     unittest.main()

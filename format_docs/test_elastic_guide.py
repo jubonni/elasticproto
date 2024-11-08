@@ -5,7 +5,7 @@ from format_docs.elastic_guide import (
     _extract_role, 
     _includes_code, 
     _format_documentation_page_to_doc, 
-    format_to_doc
+    format_to_doc_content
 )
 
 def test_extract_text_between_markers():
@@ -42,7 +42,7 @@ def test_valid_documentation_page():
     --------------------------------------------------
     This is an example documentation page.
     """
-    result = json.loads(format_to_doc(source))
+    result = json.loads(format_to_doc_content(source))
     assert "meta" in result
     assert "timestamp" in result["meta"]
     assert result["meta"]["size"] == len(source)
@@ -58,7 +58,7 @@ def test_missing_optional_fields():
     Title: Example Documentation
     --------------------------------------------------
     """
-    result = json.loads(format_to_doc(source))
+    result = json.loads(format_to_doc_content(source))
     assert "meta" in result
     assert "timestamp" in result["meta"]
     assert result["meta"]["size"] == len(source)
@@ -70,7 +70,7 @@ def test_missing_optional_fields():
 
 def test_empty_documentation_page():
     source = ""
-    result = json.loads(format_to_doc(source))
+    result = json.loads(format_to_doc_content(source))
     assert "meta" in result
     assert "timestamp" in result["meta"]
     assert result["meta"]["size"] == len(source)

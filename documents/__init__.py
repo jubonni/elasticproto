@@ -1,1 +1,1 @@
-from documents.document import docify
+from documents.docify import docify

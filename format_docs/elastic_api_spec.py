@@ -152,7 +152,7 @@ def _transform_api_spec_to_doc(api_spec: str) -> json:
     
     return json.dumps(doc, indent=4)
 
-def format_to_doc(content: str) -> json:
+def format_to_doc_content(content: str) -> json:
     return _transform_api_spec_to_doc(content)
 
 def title(content: str) -> str:

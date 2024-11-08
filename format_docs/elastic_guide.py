@@ -68,7 +68,7 @@ def _format_documentation_page_to_doc(source):
     return json.dumps(doc, indent=4)
     
 
-def format_to_doc(source: str) -> json:
+def format_to_doc_content(source: str) -> json:
     return _format_documentation_page_to_doc(source)
 
 def title(content: str) -> str:

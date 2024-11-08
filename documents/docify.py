@@ -7,6 +7,13 @@ from documents.document import (
 
 
 def docify(doc_type: str, file_path: str = None):
+    """
+    Creates documents from files in the data/documentation folder.
+    Args:
+        doc_type (str): The type of document to create.
+        file_path (str): The path to a file to create a document from.
+    """
+
     if file_path:
         _create_doc_from_file(
             file_path,

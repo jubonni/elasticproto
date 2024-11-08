@@ -1,11 +1,12 @@
-# Elastic API prototype
+# Elastic prototype 1 - Format
 ## Steps
 1. Generate docs
 2. Push docs to elastic
 3. Inference agent
 4. Search & Action 
-
  ___
+
+![Conceptual diagram - Overview](https://github.com/jubonni/elasticproto/blob/first_poc/proto1.png)
 
 
 # ElasticProto

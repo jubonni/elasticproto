@@ -1,4 +1,4 @@
-# Elastic prototype 1 - docify
+# [WIP] Elastic prototype 1 - docify
 
 ## Concept
 Here is how the prototype fits in the Elastic stack. Focusing on facilitating the ingestion of data into the elastic environment. The formatter takes in a reference to a file, loads it and format it into something suitable for a search in Elastic.
@@ -34,17 +34,11 @@ doc.run_elser()
 ```
 
 
-## Table of Contents
+<!-- ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-  - [Elastic API Specification](#elastic-api-specification)
-  - [Elastic Guide](#elastic-guide)
-  - [Proto Notebook](#proto-notebook)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+  - [Proto Notebook](#proto-notebook) -->
 
 ## Installation
 
@@ -78,5 +72,6 @@ doc.run_elser()
 ### 
 TODO
 
-## Usage
+# proto-notebook
 See https://github.com/jubonni/elasticproto/blob/first_poc/proto.ipynb
+
